@@ -6,7 +6,7 @@
     <h1>{{ $brand->name }}</h1>
     <div class="row mb-3">
         <div class="col">
-            <img class="img" src="http://localhost:8000/storage/photos/brand/400px/{{$brand->photo['400px']}}"/>
+            <img class="img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}"/>
         </div>
         <div class="col">
             @foreach($brand->branches as $branch)
