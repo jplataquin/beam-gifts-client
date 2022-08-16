@@ -214,5 +214,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
-    'api_base_url' => 'http://localhost:8000/',
+    'api_base_url' => env('API_BASE_URL'),
 ];
