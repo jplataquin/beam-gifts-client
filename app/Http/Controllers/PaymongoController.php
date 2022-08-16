@@ -49,7 +49,6 @@ class PaymongoController extends Controller
             'message'=>'',
             
             'data'=> [
-                'paymentMethodId' => $response['data']['id'],
                 'clientKey'       => $response['data']['attributes']['client_key'],
                 'key'             => base64_encode( config('paymongo')['public_key'].':' )
             ]

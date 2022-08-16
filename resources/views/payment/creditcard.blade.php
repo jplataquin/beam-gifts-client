@@ -65,7 +65,7 @@
 
         window.util.$post('/payment/creditcard').then(reply=>{
 
-            let paymentMethodId = reply.data.paymentMethodId;
+        
             let clientKey       = reply.data.clientKey;
             let key             = reply.data.key;
 
@@ -99,8 +99,11 @@
                 }
             }).then((response)=>{
 
+                let paymentMethodId = response.data.attributes.id;
+                
+                
                 console.log('payment method',response);
-
+                
                 return wtf(paymentMethodId,clientKey,key);
             });
         });
