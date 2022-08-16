@@ -81,12 +81,18 @@
                         },
                         billing:{
                             address:{
-                                name:'JP',
-                                email:'jp.lataquin@gmail.com',
-                                phone:'09088189764',
-                                metadata:{
-                                    hello:'world'
-                                }
+                                line1:'address 1',
+                                line2:'address 2',
+                                city:'city',
+                                state:'state',
+                                postal_code:'postal_code',
+                                country:'PH'
+                            },
+                            name:'JasdadP',
+                            email:'jp.lataquin@gmail.com',
+                            phone:'09088189764',
+                            metadata:{
+                                hello:'world'
                             }
                         }
                     }
