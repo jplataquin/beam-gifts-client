@@ -42,6 +42,19 @@ class PaymongoController extends Controller
             ]
         ]);
 
+        $data = $response->throw(function ($response, $e) {
+            return response()->json([
+                'status' => 0,
+                'message'=>'',
+                'data'=> $response
+            ]);
+        })->json();
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> $data
+        ]);
         /**require_once('vendor/autoload.php');
 
 $client = new \GuzzleHttp\Client();

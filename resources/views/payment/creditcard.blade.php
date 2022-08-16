@@ -50,7 +50,7 @@
 
     payBtn.onclick = (e)=>{
         e.preventDefault();
-
+        
         const formData = new FormData();
 
         formData.append('name',name.value);
