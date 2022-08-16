@@ -75,8 +75,8 @@
                         type:'card',
                         details:{
                             card_number:ccno.value,
-                            exp_month: exp[0],
-                            exp_year: exp[1],
+                            exp_month: parseInt(exp[0]),
+                            exp_year: parseInt(exp[1]),
                             cvc: cvc.value
                         },
                         billing:{
@@ -102,6 +102,8 @@
 
 
     function paymentMethod(key,data){
+        
+        console.log(data);
 
         const options = {
             method: 'POST',
