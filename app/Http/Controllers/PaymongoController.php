@@ -46,7 +46,8 @@ class PaymongoController extends Controller
         return response()->json([
             'status' => 1,
             'message'=>'',
-            'data'=> $response
+            'data'=> $response,
+            'key' => .config('paymongo')['secret_key']
         ]);
         /**require_once('vendor/autoload.php');
 
