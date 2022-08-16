@@ -42,8 +42,8 @@
     <script type="module">
         import {Template} from '/adarna.js';
 
-        const apiBaseUrl = 'http://127.0.0.1:8000/api/';
-        const imgBaseUrl = 'http://127.0.0.1:8000/';
+        const apiBaseUrl = '{{config("app")["api_base_url"]}}api/';
+        const imgBaseUrl = '{{config("app")["api_base_url"]}}';
 
         const brandsContainer = document.querySelector('#brandsContainer');
 
