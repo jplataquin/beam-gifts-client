@@ -26,6 +26,7 @@ class PaymongoController extends Controller
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
+            'Authorization' => 'Basic '.config('paymongo')['secret_key']
         ])->post('https://api.paymongo.com/v1/payment_intents', [
             "data"=>[
                 "attributes"=>[
