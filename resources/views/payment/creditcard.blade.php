@@ -141,7 +141,7 @@
         },{
             headers: {
                 // Base64 encoded public PayMongo API key.
-                Authorization: `Basic ${window.btoa(key)}`
+                Authorization: `Basic ${key}`
             }
         }).then(function(response) {
             
