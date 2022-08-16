@@ -26,7 +26,7 @@ class PaymongoController extends Controller
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
-            'Authorization' => 'Basic '.config('paymongo')['secret_key']
+            'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
         ])->post('https://api.paymongo.com/v1/payment_intents', [
             "data"=>[
                 "attributes"=>[
@@ -46,8 +46,7 @@ class PaymongoController extends Controller
         return response()->json([
             'status' => 1,
             'message'=>'',
-            'data'=> $response,
-            'key' => config('paymongo')['secret_key']
+            'data'=> $response
         ]);
         /**require_once('vendor/autoload.php');
 
