@@ -43,15 +43,15 @@ class PaymongoController extends Controller
             ]
         ])->json();
 
-        print_r( $response);
+        //print_r( $response);
         return response()->json([
             'status' => 1,
             'message'=>'',
             
-            //'data'=> [
-               // 'paymentMethodId' => $response['id'],
-               // 'clientKey' => $response['attributes']['client_key']
-           // ]
+            'data'=> [
+                'paymentMethodId' => $response['data']['id'],
+                'clientKey' => $response['data']['attributes']['client_key']
+            ]
         ]);
         /**require_once('vendor/autoload.php');
 
