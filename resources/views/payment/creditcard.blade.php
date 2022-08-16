@@ -99,9 +99,9 @@
                 }
             }).then((response)=>{
 
-                let paymentMethodId = response.data.attributes.id;
+                let paymentMethodId = response.data.id;
                 
-                
+
                 console.log('payment method',response);
                 
                 return wtf(paymentMethodId,clientKey,key);
