@@ -47,8 +47,8 @@ class PaymongoController extends Controller
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'paymentMethodId' => $response->id,
-                'clientKey' => $response->attributes->client_key
+                'paymentMethodId' => $response['id'],
+                'clientKey' => $response['attributes']['client_key']
             ]
         ]);
         /**require_once('vendor/autoload.php');
