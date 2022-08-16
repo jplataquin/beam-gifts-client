@@ -41,7 +41,7 @@ class PaymongoController extends Controller
                     "capture_type"=>"automatic"
                 ]
             ]
-        ]);
+        ])->json();
 
         return response()->json([
             'status' => 1,
