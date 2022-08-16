@@ -41,20 +41,12 @@ class PaymongoController extends Controller
                     "capture_type"=>"automatic"
                 ]
             ]
-        ]);
-
-        $data = $response->throw(function ($response, $e) {
-            return response()->json([
-                'status' => 0,
-                'message'=>'',
-                'data'=> $response
-            ]);
-        })->json();
+        ])->json();
 
         return response()->json([
             'status' => 1,
             'message'=>'',
-            'data'=> $data
+            'data'=> $response
         ]);
         /**require_once('vendor/autoload.php');
 
