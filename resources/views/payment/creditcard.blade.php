@@ -59,7 +59,7 @@
         formData.append('ccv',ccv.value);
         formData.append('amount',1000);
 
-        window.util.$post('/',formData).then(reply=>{
+        window.util.$post('/payment/creditcard',formData).then(reply=>{
 
             console.log(reply)
         });
