@@ -47,7 +47,7 @@ class PaymongoController extends Controller
             'status' => 1,
             'message'=>'',
             'data'=> $response,
-            'key' => .config('paymongo')['secret_key']
+            'key' => config('paymongo')['secret_key']
         ]);
         /**require_once('vendor/autoload.php');
 
