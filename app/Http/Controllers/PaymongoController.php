@@ -30,7 +30,7 @@ class PaymongoController extends Controller
         ])->post('https://api.paymongo.com/v1/payment_intents', [
             "data"=>[
                 "attributes"=>[
-                    "amount"=>1000,
+                    "amount"=>50000,
                     "payment_method_allowed"=>["card"],
                     "payment_method_options"=>[
                         "card"=>[
