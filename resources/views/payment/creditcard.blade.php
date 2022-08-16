@@ -46,7 +46,7 @@
     const ccno      = document.querySelector('#ccno');
     const expiry    = document.querySelector('#expiry');
     const ccv       = document.querySelector('#ccv');
-    const payBtn    = document.querySelector('payBtn');
+    const payBtn    = document.querySelector('#payBtn');
 
     payBtn.onclick = (e)=>{
         e.preventDefault();
