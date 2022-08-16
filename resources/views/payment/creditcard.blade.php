@@ -31,7 +31,7 @@
         <div class="col">
             <div class="form-group">
                 <label>CCV</label>
-                <input type="text" id="ccv" class="form-control"/>
+                <input type="text" id="cvc" class="form-control"/>
             </div>
         </div>
     </div>
@@ -45,12 +45,13 @@
     const name      = document.querySelector('#name');
     const ccno      = document.querySelector('#ccno');
     const expiry    = document.querySelector('#expiry');
-    const ccv       = document.querySelector('#ccv');
+    const cvc       = document.querySelector('#cvc');
     const payBtn    = document.querySelector('#payBtn');
 
     payBtn.onclick = (e)=>{
         e.preventDefault();
         
+        /**
         const formData = new FormData();
 
         formData.append('name',name.value);
@@ -58,24 +59,70 @@
         formData.append('expiry',expiry.value);
         formData.append('ccv',ccv.value);
         formData.append('amount',1000);
+        **/
 
-        window.util.$post('/payment/creditcard',formData).then(reply=>{
+        let exp = expiry.value.split('/');
+
+        window.util.$post('/payment/creditcard').then(reply=>{
 
             let paymentMethodId = reply.data.paymentMethodId;
             let clientKey       = reply.data.clientKey;
             let key             = reply.data.key;
 
-            wtf(paymentMethodId,clientKey,key);
+            paymentMethod(key,{
+                'data':{
+                    'attributes':{
+                        type:'card',
+                        details:{
+                            card_number:ccno.value,
+                            exp_month: exp[0],
+                            exp_year: exp[1],
+                            cvc: cvc.value
+                        },
+                        billing:{
+                            address:{
+                                name:'JP',
+                                email:'jp.lataquin@gmail.com',
+                                phone:'09088189764',
+                                metadata:{
+                                    hello:'world'
+                                }
+                            }
+                        }
+                    }
+                }
+            }).then((response)=>{
+
+                console.log('payment method',response);
+
+                return wtf(paymentMethodId,clientKey,key);
+            });
         });
     }
 
+
+    function paymentMethod(key,data){
+
+        const options = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                Authorization: 'Basic '+key
+            },
+            body: JSON.stringify(data)
+        };
+
+        return fetch('https://api.paymongo.com/v1/payment_methods', options)
+        .then(response => { return response.json(); });
+    }
 
     function wtf(paymentMethodId,clientKey,key){
 
         // Get the payment intent id from the client key
         let paymentIntentId = clientKey.split('_client')[0];
 
-        axios.post('https://api.paymongo.com/v1/payment_intents/' + paymentIntentId + '/attach',
+        return axios.post('https://api.paymongo.com/v1/payment_intents/' + paymentIntentId + '/attach',
         {
             data: {
                 attributes: {
@@ -95,7 +142,7 @@
             
             console.log(paymentIntentStatus);
             console.log(paymentIntentStatus);
-            
+
             if (paymentIntentStatus === 'awaiting_next_action') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
             } else if (paymentIntentStatus === 'succeeded') {
@@ -105,10 +152,12 @@
             }  else if (paymentIntentStatus === 'processing'){
                 // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
             }
-        })
+        });
 
-        
-        window.addEventListener('message', ev => {
+    }
+
+
+    window.addEventListener('message', ev => {
             
             if (ev.data === '3DS-authentication-complete') {
                 // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
@@ -122,6 +171,7 @@
                     let paymentIntent = response.data.data;
                     let paymentIntentStatus = paymentIntent.attributes.status;
 
+                    console.log('oh shet',response);
                     if (paymentIntentStatus === 'succeeded') {
                     // You already received your customer's payment. You can show a success message from this condition.
                     } else if(paymentIntentStatus === 'awaiting_payment_method') {
@@ -133,6 +183,5 @@
             }
 
         },false);
-    }
 </script>
 @endsection

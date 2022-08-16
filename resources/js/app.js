@@ -43,7 +43,7 @@ window.util.$post = async (url,formData) => {
             "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
             "Accept": "application/json"
         },
-        body: formData,
+        body: formData  ?? {},
         method: "POST"
     }).then((response) => {
        
