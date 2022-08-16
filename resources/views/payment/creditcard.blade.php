@@ -151,9 +151,9 @@
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
             
+            console.log(paymentIntent);
             console.log(paymentIntentStatus);
-            console.log(paymentIntentStatus);
-
+            console.log(paymentIntent.attributes.next_action);
             if (paymentIntentStatus === 'awaiting_next_action') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
             } else if (paymentIntentStatus === 'succeeded') {
