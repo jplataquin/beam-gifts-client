@@ -50,7 +50,8 @@ class PaymongoController extends Controller
             
             'data'=> [
                 'paymentMethodId' => $response['data']['id'],
-                'clientKey' => $response['data']['attributes']['client_key']
+                'clientKey'       => $response['data']['attributes']['client_key'],
+                'key'             => base64_encode( config('paymongo')['public_key'].':' )
             ]
         ]);
         /**require_once('vendor/autoload.php');
