@@ -7,7 +7,7 @@
     <div class="row mb-3">
         <div class="col">
             <div class="form-group">
-                <label>Name</label>
+                <label>Name of Holder</label>
                 <input type="text" id="name" class="form-control"/>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="row mb-3">
         <div class="col">
             <div class="form-group">
-                <label>Credit Card No</label>
+                <label>Card No</label>
                 <input type="text" id="ccno" class="form-control"/>
             </div>
         </div>
@@ -65,6 +65,22 @@
     <div class="row mb-3">
         <div class="col">
             <div class="form-group">
+                <label>State / Province</label>
+                <input type="text" id="state_province" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <label>Postal / Zip Code</label>
+                <input type="text" id="postal_zip_code" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
                 <label>Country</label>
                 <select class="form-control" id="country">
                     @foreach(config('selectoptions')['countries'] as $key => $text)
@@ -86,6 +102,26 @@
     const expiry    = document.querySelector('#expiry');
     const cvc       = document.querySelector('#cvc');
     const payBtn    = document.querySelector('#payBtn');
+
+    expiry.onkeyup = (e)=>{
+        
+        let val = expiry.value;
+
+        val = val.str_replace('/','');
+
+        if(val.length >= 5){
+            return false;
+        }
+
+        let charCode = (e.which) ? e.which : event.keyCode;
+        
+        if (charCode > 31 && (charCode < 48 || charCode > 57)){
+            return false;
+        }
+        
+        return true;
+      
+    }
 
     payBtn.onclick = (e)=>{
         e.preventDefault();
