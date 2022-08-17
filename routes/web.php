@@ -54,6 +54,7 @@ Route::get('bootstrap.js', function(){
     $response->header("Content-Type", 'text/javascript');
 
     return $response;
+    
 });
 
 
