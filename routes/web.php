@@ -58,7 +58,7 @@ Route::get('xupdate',function(){
         return false;
     }
 
-    echo $process->getOutput();
+   // echo $process->getOutput();
 
     echo "OK --";
 });
