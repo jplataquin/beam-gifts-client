@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  Symfony\Component\Process\Process;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +48,8 @@ Route::get('adarna.js', function(){
 
 
 Route::get('xupdate',function(){
-    $processClass = Symfony\Component\Process\Process::class;
-
-    $process = new $processClass(['git pull');
+ 
+    $process = new Process(['git pull');
 
     $process->run();
 
