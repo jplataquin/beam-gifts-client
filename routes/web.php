@@ -50,7 +50,7 @@ Route::get('adarna.js', function(){
 
 Route::get('xupdate',function(){
  
-    $process = new Process(['git pull']);
+    $process = new Process(['/usr/bin/git pull']);
     $process->setWorkingDirectory('/');
     $process->run();
 
