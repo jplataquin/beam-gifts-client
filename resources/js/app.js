@@ -1,8 +1,8 @@
 import './bootstrap';
 
-import * as bootstrap from 'bootstrap';
+import {Modal} from 'bootstrap';
 
-window.bootstrap = bootstrap;
+window.Modal = Modal;
 
 window.util = {};
 
