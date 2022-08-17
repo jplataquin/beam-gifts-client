@@ -106,8 +106,8 @@
     expiry.onkeydown = (e)=>{
         
         let charCode = (e.which) ? e.which : event.keyCode;
-        console.log(charCode);
-        if (!(charCode >= 48 && charCode <= 57)){
+        
+        if ( !(charCode >= 48 && charCode <= 57) && !(charCode >= 37 && charCode <= 40) && charCode != 8){
             return false;
         }
         
