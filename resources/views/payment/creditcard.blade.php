@@ -325,6 +325,7 @@
             
             if (ev.data === '3DS-authentication-complete') {
                 // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
+                console.log(paymentMethodId,clientKey,key);
                 monitor(paymentMethodId,clientKey,key);
             }
 
