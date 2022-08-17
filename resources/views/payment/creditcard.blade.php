@@ -59,7 +59,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Address Line 1</label>
-                    <input type="text" id="address_line_1" class="form-control"/>
+                    <input type="text" id="line_address_1" class="form-control"/>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Address Line 2</label>
-                    <input type="text" id="address_line_2" class="form-control"/>
+                    <input type="text" id="line_address_2" class="form-control"/>
                 </div>
             </div>
         </div>
