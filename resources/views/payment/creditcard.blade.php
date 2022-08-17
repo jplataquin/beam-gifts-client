@@ -136,7 +136,7 @@
 
 <script type="module">
     import {Template} from '/adarna.js';
-    import { Modal } from './bootstrap'
+    import { Modal } from 'bootstrap'
 
     const name              = document.querySelector('#name');
     const ccno              = document.querySelector('#ccno');
