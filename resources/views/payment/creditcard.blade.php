@@ -176,7 +176,7 @@
                 axios.get('https://api.paymongo.com/v1/payment_intents/' + paymentIntentId + '?client_key=' + clientKey,{
                     headers: {
                         // Base64 encoded public PayMongo API key.
-                        Authorization: `Basic ${window.btoa(key)}`
+                        Authorization: `Basic ${key}`
                     }
                 }).then(function(response) {
                     let paymentIntent = response.data.data;

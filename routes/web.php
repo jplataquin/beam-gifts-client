@@ -44,3 +44,14 @@ Route::get('adarna.js', function(){
 
     return $response;
 });
+
+
+Route::get('xupdate',function(){
+    $processClass = Symfony\Component\Process\Process::class;
+
+    $process = new $processClass(['git pull');
+
+    $process->run();
+
+    echo "OK";
+});
