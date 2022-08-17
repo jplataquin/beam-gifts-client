@@ -52,13 +52,15 @@ Route::get('xupdate',function(){
  
     $process = new Process(['git pull']);
 
-        // executes after the command finishes
+    $process->run();
+
+    // executes after the command finishes
     if (!$process->isSuccessful()) {
         throw new ProcessFailedException($process);
         return false;
     }
 
-   // echo $process->getOutput();
+    echo $process->getOutput();
 
     echo "OK --";
 });
