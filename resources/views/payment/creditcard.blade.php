@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+    <h3>Credit Card Details</h3>
     <div class="row mb-3">
         <div class="col">
             <div class="form-group">
@@ -30,8 +31,46 @@
     <div class="row mb-3">
         <div class="col">
             <div class="form-group">
-                <label>CCV</label>
+                <label>CVC</label>
                 <input type="text" id="cvc" class="form-control"/>
+            </div>
+        </div>
+    </div>
+
+    <h3>Billing Address</h3>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <label>Address Line 1</label>
+                <input type="text" id="address_line_1" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <label>Address Line 2</label>
+                <input type="text" id="address_line_2" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" id="city" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <label>Country</label>
+                <select class="form-control" id="country">
+                    @foreach(config('selectoptions')['countries'] as $key => $text)
+                        <option value="{{$key}}">{{$text}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
     </div>
