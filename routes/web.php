@@ -49,7 +49,7 @@ Route::get('adarna.js', function(){
 
 Route::get('xupdate',function(){
  
-    $process = new Process(['git pull');
+    $process = new Process(['git pull']);
 
     $process->run();
 
