@@ -103,10 +103,8 @@
     const cvc       = document.querySelector('#cvc');
     const payBtn    = document.querySelector('#payBtn');
 
-    expiry.onkeyup = (e)=>{
+    expiry.onkeydown = (e)=>{
         
-        
-
         let charCode = (e.which) ? e.which : event.keyCode;
         
         if (charCode > 31 && (charCode < 48 || charCode > 57)){
@@ -121,7 +119,7 @@
         if(val.length >= 5){
             return false;
         }
-        
+
         return true;
       
     }
