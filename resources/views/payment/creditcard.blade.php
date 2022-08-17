@@ -155,7 +155,7 @@
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
 
-    const myModal = new bootstrap.Modal(modalEl, {
+    const myModal = new window.bootstrap.Modal(modalEl, {
         backdrop: true,
     });
 
