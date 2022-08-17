@@ -223,7 +223,7 @@
 
                 paymentMethodId = response.data.id;
                 
-                return monitor(paymentMethodId,clientKey,key);
+                return attach(paymentMethodId,clientKey,key);
             });
         });
     }
@@ -265,7 +265,7 @@
         .then(response => { return response.json(); });
     }
 
-    function monitor(paymentMethodId,clientKey,key){
+    function attach(paymentMethodId,clientKey,key){
 
         // Get the payment intent id from the client key
         paymentIntentId = clientKey.split('_client')[0];
@@ -288,9 +288,9 @@
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
             
-            console.log(paymentIntent);
-            console.log(paymentIntentStatus);
-            console.log(paymentIntent.attributes.next_action);
+            console.log('intent',paymentIntent);
+            console.log('status',paymentIntentStatus);
+            console.log('action',paymentIntent.attributes.next_action);
 
             if (paymentIntentStatus === 'awaiting_next_action' && paymentIntent.attributes.next_action.type == 'redirect') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
@@ -308,7 +308,7 @@
             } else if (paymentIntentStatus === 'processing'){
                 // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
-                    monitor(paymentMethodId,clientKey,key);
+                    attach(paymentMethodId,clientKey,key);
                 },2000);
             }else{
                 console.log('Unknown status');
@@ -321,14 +321,47 @@
     }
 
 
+    function monitor(paymentMethodId,clientKey,key){
+
+        axios.get('https://api.paymongo.com/v1/payment_intents/' + paymentIntentId + '?client_key=' + clientKey,
+        {
+            headers: {
+                // Base64 encoded public PayMongo API key.
+                Authorization: `Basic ${key}`
+            }
+        }).then(function(response) {
+            let paymentIntent       = response.data.data;
+            let paymentIntentStatus = paymentIntent.attributes.status;
+
+            if (paymentIntentStatus === 'succeeded') {
+            // You already received your customer's payment. You can show a success message from this condition.
+                success();
+            } else if(paymentIntentStatus === 'awaiting_payment_method') {
+            // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
+                failed();
+            } else if (paymentIntentStatus === 'processing'){
+            // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
+                setTimeout(()=>{
+                    monitor(paymentMethodId,clientKey,key);
+                },2000);
+            }else{
+                console.log('Unknown status');
+            }
+        }).catch(err=>{
+            console.log('HTTP ERROR',err);
+        });
+    }
+
+
     window.addEventListener('message', ev => {
             
-            if (ev.data === '3DS-authentication-complete') {
-                // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
-                console.log(paymentMethodId,clientKey,key);
-                monitor(paymentMethodId,clientKey,key);
-            }
+        if (ev.data === '3DS-authentication-complete') {
+            // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
+            
+            monitor(paymentMethodId,clientKey,key);
 
-        },false);
+        }
+
+    },false);
 </script>
 @endsection
