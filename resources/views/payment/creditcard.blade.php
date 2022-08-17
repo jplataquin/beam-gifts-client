@@ -119,6 +119,8 @@
             expiry.value = val.substr(0,3);
         }
 
+        console.log(expiry.value.length);
+        
         if(expiry.value.length == 4){
             expiry.value = expiry.value.substr(0,1) + '/' + expiry.value.substr(2,3); 
         }
