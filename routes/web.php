@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use  Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,7 @@ Route::get('xupdate',function(){
 
         // executes after the command finishes
     if (!$process->isSuccessful()) {
-        echo 'FAILED';
+        throw new ProcessFailedException($process);
         return false;
     }
 
