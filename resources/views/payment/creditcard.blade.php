@@ -24,7 +24,7 @@
         <div class="col">
             <div class="form-group">
                 <label>Expiry Date</label>
-                <input type="text" id="expiry" class="form-control"/>
+                <input type="text" id="expiry" placeholder="MM/YY" class="form-control"/>
             </div>
         </div>
     </div>
