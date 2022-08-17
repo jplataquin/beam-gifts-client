@@ -111,7 +111,6 @@
             return false;
         }
         
-
         let val = expiry.value;
 
         val = val.replace('/','');
