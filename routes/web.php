@@ -50,11 +50,12 @@ Route::get('adarna.js', function(){
 
 Route::get('bootstrap.js', function(){
 
+    
     $response = Response::make(File::get(base_path('node_modules/bootstrap/dist/js/bootstrap.bundle.js')), 200);
     $response->header("Content-Type", 'text/javascript');
 
     return $response;
-    
+
 });
 
 
