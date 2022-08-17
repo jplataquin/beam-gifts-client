@@ -120,8 +120,8 @@
         }
 
         console.log(expiry.value.length);
-        
-        if(expiry.value.length == 4){
+
+        if(expiry.value.length == 3){
             expiry.value = expiry.value.substr(0,1) + '/' + expiry.value.substr(2,3); 
         }
 
