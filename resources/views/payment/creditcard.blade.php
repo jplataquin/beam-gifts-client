@@ -125,8 +125,16 @@
             expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
         }
 
-        return true;
       
+    }
+
+    expiry.onchange = (e)=>{
+
+        let val = expiry.value;
+
+        if(isNaN( val.replace('/','') )){
+            expiry.value = '';
+        }
     }
 
     payBtn.onclick = (e)=>{
