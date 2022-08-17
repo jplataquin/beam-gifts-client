@@ -136,9 +136,10 @@
     const t         = new Template();
     const iframe    = t.iframe({
         style:{
-            width:'100%',
-            minHeight:'100%',
-            border:'none'
+            display:'block', 
+            border:'none',
+            height:'100vh',        /* Viewport-relative units */
+            width:'100vw'
         }
     });
 
