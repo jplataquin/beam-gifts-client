@@ -161,9 +161,9 @@
             expiry.value = val.substr(0,3);
         }
 
-        console.log(expiry.value.length);
-
-        if(expiry.value.length == 3){
+        if(expiry.value.length == 1){
+            expiry.value = expiry.value.substr(0,2) + '/';
+        }else if(expiry.value.length == 3){
             expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
         }
 
@@ -355,7 +355,7 @@
 
     window.addEventListener('message', ev => {
             
-        
+
         if (ev.data === '3DS-authentication-complete') {
             // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
             
