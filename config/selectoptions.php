@@ -223,7 +223,7 @@ return [
         'TG' => 'Togo',
         'TK' => 'Tokelau',
         'TO' => 'Tonga',
-        'TT' => 'Trinidad and Tobago'
+        'TT' => 'Trinidad and Tobago',
         'TN' => 'Tunisia',
         'TR' => 'Turkey',
         'TM' => 'Turkmenistan',
