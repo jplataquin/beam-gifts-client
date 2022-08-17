@@ -136,6 +136,7 @@
 
 <script type="module">
     import {Template} from '/adarna.js';
+    import { Modal } from 'bootstrap'
 
     const name              = document.querySelector('#name');
     const ccno              = document.querySelector('#ccno');
@@ -154,7 +155,7 @@
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
 
-    const myModal = new bootstrap.Modal(modalEl, {
+    const myModal = new Modal(modalEl, {
         backdrop: true,
     });
 
