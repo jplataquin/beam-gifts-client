@@ -116,9 +116,13 @@
         val = val.replace('/','');
 
         if(val.length <= 4){
-            expiry.value = expiry.value.substr(0,3);
+            expiry.value = val.value.substr(0,3);
         }
 
+        if(expiry.value.length == 4){
+            expiry.value = expiry.value.substr(0,1) + '/' + expiry.value.substr(2,3); 
+        }
+        
         return true;
       
     }
