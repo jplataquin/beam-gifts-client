@@ -122,7 +122,7 @@
         console.log(expiry.value.length);
 
         if(expiry.value.length == 3){
-            expiry.value = expiry.value.substr(0,1) + '/' + expiry.value.substr(2,3); 
+            expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
         }
 
         return true;
