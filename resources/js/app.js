@@ -99,3 +99,5 @@ window.util.updateCart = (data) =>{
 window.util.clearCart = (data) =>{
 
 }
+
+
