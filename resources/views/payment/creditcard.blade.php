@@ -115,8 +115,8 @@
 
         val = val.replace('/','');
 
-        if(val.length >= 5){
-            return false;
+        if(val.length <= 4){
+            expiry.value = expiry.value.substr(0,3);
         }
 
         return true;
