@@ -2,6 +2,8 @@ import './bootstrap';
 
 import * as bootstrap from 'bootstrap';
 
+window.bootstrap = bootstrap;
+
 window.util = {};
 
 window.util.spaceToDash = (text) =>{
