@@ -107,7 +107,7 @@
         
         let charCode = (e.which) ? e.which : event.keyCode;
         console.log(charCode);
-        if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 8){
+        if (!(charCode >= 48 && charCode <= 57)){
             return false;
         }
         
