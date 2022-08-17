@@ -51,7 +51,7 @@ Route::get('adarna.js', function(){
 Route::get('xupdate',function(){
  
     $process = new Process(['git pull']);
-
+    $process->setWorkingDirectory('../');
     $process->run();
 
     // executes after the command finishes
