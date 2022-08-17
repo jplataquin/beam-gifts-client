@@ -48,6 +48,15 @@ Route::get('adarna.js', function(){
 });
 
 
+Route::get('bootstrap.js', function(){
+
+    $response = Response::make(File::get(base_path('node_modules/bootstrap/dist/js/bootstrap.esm.min.js')), 200);
+    $response->header("Content-Type", 'text/javascript');
+
+    return $response;
+});
+
+
 Route::get('xupdate',function(){
  
     $process = new Process(['/usr/bin/git pull']);
