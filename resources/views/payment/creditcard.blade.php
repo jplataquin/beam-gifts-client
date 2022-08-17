@@ -105,17 +105,20 @@
 
     expiry.onkeyup = (e)=>{
         
-        let val = expiry.value;
-
-        val = val.str_replace('/','');
-
-        if(val.length >= 5){
-            return false;
-        }
+        
 
         let charCode = (e.which) ? e.which : event.keyCode;
         
         if (charCode > 31 && (charCode < 48 || charCode > 57)){
+            return false;
+        }
+        
+
+        let val = expiry.value;
+
+        val = val.replace('/','');
+
+        if(val.length >= 5){
             return false;
         }
         
