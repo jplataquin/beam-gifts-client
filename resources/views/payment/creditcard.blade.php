@@ -280,11 +280,15 @@
                 }
             }).then((response)=>{
 
+                console.log(response);
                 //TODO Validation of response
+
 
                 paymentMethodId = response.data.id;
                 
                 return attach(paymentMethodId,clientKey,key);
+            }).catch(err=>{
+                console.log('HERE ERROR');
             });
         });
     }
@@ -349,10 +353,6 @@
                 Authorization: `Basic ${key}`
             }
         }).then(function(response) {
-
-            //TODO Validation of response;
-
-            console.log(response);
 
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
