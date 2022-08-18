@@ -212,9 +212,7 @@
             expiry.value = val.substr(0,3);
         }
 
-        if(expiry.value.length == 2){
-            expiry.value = expiry.value.substr(0,2) + '/';
-        }else if(expiry.value.length == 3){
+        if(expiry.value.length <= 2){
             expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
         }
 
@@ -352,14 +350,12 @@
 
             if (paymentIntentStatus === 'awaiting_next_action' && paymentIntent.attributes.next_action.type == 'redirect') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
-                statusEl.innerText = 'Required user validation';
+                statusEl.innerText = 'User Validation';
                 loadingEl.style.display = 'none';
-                infoEl.innerHTML = "<h3>Redirecting..</h3>"
+                infoEl.innerHTML = "<h3>Redirecting...</h3>"
                 
-                setTimeout(()=>{
-                    showIframe(paymentIntent.attributes.next_action.redirect.url);
-                },2000);
-              
+                \showIframe(paymentIntent.attributes.next_action.redirect.url);
+                              
                 
             } else if (paymentIntentStatus === 'succeeded') {
                 // You already received your customer's payment. You can show a success message from this condition.
