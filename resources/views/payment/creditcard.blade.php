@@ -331,10 +331,22 @@
         }else if(type == 2){
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">Server Unreachable</p>
+                <p class="text-danger">Payment Provider Unreachable</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
             `;
+        }else if(type == 3){
+            loadingEl.style.display = 'none';
+            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
+                <p class="text-danger">Something Went Wrong</p>
+                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
+                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
+
+        }else if(type == 4){
+            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
+                <p class="text-danger">Unkown status reply from Payment Provider (${data})</p>
+                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
+                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
         }
 
     }
