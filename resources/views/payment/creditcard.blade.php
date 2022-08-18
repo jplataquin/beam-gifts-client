@@ -448,8 +448,6 @@
                 failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
             
-        }).catch(err=>{
-            console.log('HTTP ERROR', err);
         });
 
     }
