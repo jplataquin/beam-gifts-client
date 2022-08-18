@@ -9,7 +9,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" id="name" class="form-control"/>
+                    <input type="text" id="name" class="form-control" value="John Patrick Lataquin"/>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Card No</label>
-                    <input type="text" id="ccno" class="form-control"/>
+                    <input type="text" id="ccno" class="form-control" value="4200000000000018"/>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Expiry Date</label>
-                    <input type="text" id="expiry" placeholder="MM/YY" class="form-control"/>
+                    <input type="text" id="expiry" placeholder="MM/YY" class="form-control" value="02/89"/>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>CVC</label>
-                    <input type="text" id="cvc" class="form-control"/>
+                    <input type="text" id="cvc" class="form-control" value="123"/>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" id="email" class="form-control"/>
+                    <input type="text" id="email" class="form-control" value="jp.lataquin@gmail.com"/>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Phone/Mobile No:</label>
-                    <input type="text" id="phone" class="form-control"/>
+                    <input type="text" id="phone" class="form-control" value="09088189764"/>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Address Line 1</label>
-                    <input type="text" id="line_address_1" class="form-control"/>
+                    <input type="text" id="line_address_1" class="form-control" value="line1"/>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Address Line 2</label>
-                    <input type="text" id="line_address_2" class="form-control"/>
+                    <input type="text" id="line_address_2" class="form-control" value="line2"/>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>City</label>
-                    <input type="text" id="city" class="form-control"/>
+                    <input type="text" id="city" class="form-control" value="city"/>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>State / Province</label>
-                    <input type="text" id="state_province" class="form-control"/>
+                    <input type="text" id="state_province" class="form-control" value="state"/>
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Postal / Zip Code</label>
-                    <input type="text" id="postal_zip_code" class="form-control"/>
+                    <input type="text" id="postal_zip_code" class="form-control" value="5000"/>
                 </div>
             </div>
         </div>
