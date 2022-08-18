@@ -321,10 +321,11 @@
         if(type == 1){
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">You have entered an invalid data</p>
+                <p class="text-danger">Invalid data</p>
+                <a href="." class="btn btn-primary" role="button">Retry?</a>
             `;
         }
-        
+
         console.log('Failed');
     }
 
