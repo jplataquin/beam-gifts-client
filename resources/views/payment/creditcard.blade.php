@@ -354,7 +354,7 @@
                 loadingEl.style.display = 'none';
                 infoEl.innerHTML = "<h3>Redirecting...</h3>"
                 
-                \showIframe(paymentIntent.attributes.next_action.redirect.url);
+                showIframe(paymentIntent.attributes.next_action.redirect.url);
                               
                 
             } else if (paymentIntentStatus === 'succeeded') {
