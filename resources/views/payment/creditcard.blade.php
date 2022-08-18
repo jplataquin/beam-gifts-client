@@ -25,7 +25,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>Expiry Date</label>
-                    <input type="text" id="expiry" placeholder="MM/YY" class="form-control" value="02/89"/>
+                    <input type="text" id="expiry" placeholder="MM/YY" class="form-control" value="02/30"/>
                 </div>
             </div>
         </div>
@@ -351,8 +351,7 @@
 
             infoEl.innerHTML = '';
 
-            infoEl.append(       
-                t.div(()=>{
+            let el = t.div(()=>{
                     
                     t.p({class:'text-danger'},'*** You have not been charged ***');
                     
@@ -372,8 +371,11 @@
                         role:'button'
                     },'Retry');
                     
-                })
-            );//End append
+                });
+
+                console.log(el);
+
+            infoEl.append(el);//End append
         }
 
     }
