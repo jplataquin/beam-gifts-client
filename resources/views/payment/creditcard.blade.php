@@ -321,32 +321,58 @@
         mTitle.innerText        = 'Failed';
         statusEl.innerText      = '';
         
-        if(type == 1){
+        if(type == 1){ //Validation Error
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
                 <p class="text-danger">Invalid data</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
             `;
-        }else if(type == 2){
+        }else if(type == 2){ //Connection Error
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
                 <p class="text-danger">Payment Provider Unreachable</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
             `;
-        }else if(type == 3){
+        }else if(type == 3){ //Transaction Error
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
                 <p class="text-danger">Something Went Wrong</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
 
-        }else if(type == 4){
+        }else if(type == 4){ //Unkown Reply
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
                 <p class="text-danger">Unkown status reply from Payment Provider (${data})</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
+        }else if(type ==5){ //Subcode error
+
+            infoEl.innerHTML = '';
+
+            infoEl.append(       
+                t.div(()=>{
+                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    
+                    data.map(item=>{
+                        t.p({class:'text-danger'},item.detail);
+                    });
+
+                    t.a({
+                        class:'btn btn-warning mr-3',
+                        href:'/cart',
+                        role:'button'
+                    },'Cancel');
+
+                    t.a({
+                        class:'btn btn-primary',
+                        href:'javascript:window.location.href=window.location.href',
+                        role:'button'
+                    },'Retry');
+                    
+                });
+            )
         }
 
     }
@@ -409,21 +435,12 @@
                 // Base64 encoded public PayMongo API key.
                 Authorization: `Basic ${key}`
             }
-        }).then(response => {
-
-            console.log('hook',response);
-            
-            return response;
-
         }).then(function(response) {
 
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
             
-            console.log('intent',paymentIntent);
-            console.log('status',paymentIntentStatus);
-            console.log('action',paymentIntent.attributes.next_action);
-
+      
             if (paymentIntentStatus === 'awaiting_next_action' && paymentIntent.attributes.next_action.type == 'redirect') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
                 statusEl.innerText = 'User Validation';
@@ -455,6 +472,16 @@
             }
             
         }).catch(err=>{
+
+            if(typeof err['response'] != 'undefined'){
+
+                if(err.response == 400){
+                    failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
+                }else{
+                    failed(6,err.response,paymentMethodId,paymentIntentId);
+                }
+            }
+
             console.log('HTTP ERROR', err);
         });
 
