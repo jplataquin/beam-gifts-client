@@ -409,6 +409,12 @@
                 // Base64 encoded public PayMongo API key.
                 Authorization: `Basic ${key}`
             }
+        }).then(response => {
+
+            console.log('hook',response);
+            
+            return response;
+
         }).then(function(response) {
 
             let paymentIntent       = response.data.data;
@@ -448,6 +454,8 @@
                 failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
             
+        }).catch(err=>{
+            console.log('HTTP ERROR', err);
         });
 
     }
