@@ -347,8 +347,8 @@
                 <p class="text-danger">Unkown status reply from Payment Provider (${data})</p>
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
-        }else if(type ==5){ //Subcode error
-
+        }else if(type == 5){ //Subcode error
+            console.log('whats up');
             infoEl.innerHTML = '';
 
             let el = t.div(()=>{
@@ -479,6 +479,7 @@
             if(typeof err['response'] != 'undefined'){
 
                 if(err.response == 400){
+                    console.log('here 400',err.response.data.errors);
                     failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
                 }else{
                     failed(6,err.response,paymentMethodId,paymentIntentId);
