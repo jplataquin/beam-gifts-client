@@ -289,8 +289,8 @@
     }
 
     function success( paymentIntent,paymentMethodId,paymentIntentId){
-        console.log(paymentIntent);
-        iframe.display.none;
+        console.log(paymentIntent,paymentMethodId,paymentIntentId);
+        iframe.style.display.none;
         statusEl.innerText = 'Success';
         console.log('Success');
     }
