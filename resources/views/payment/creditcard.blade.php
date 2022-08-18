@@ -155,9 +155,9 @@
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
 
-    console.log(bootstrap);
     const myModal = new bootstrap.Modal(modalEl, {
-        backdrop: true,
+        backdrop: 'static',
+        keyboard: false 
     });
 
     const t         = new Template();
@@ -212,6 +212,8 @@
         payBtn.disabled = true;
         myModal.show();
         //TODO VALIDATE DETAILS
+
+        return false;
 
         let exp = expiry.value.split('/');
 
