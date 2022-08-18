@@ -281,6 +281,11 @@
             }).then((response)=>{
 
                 console.log(response);
+                return response;
+
+            }).then((response)=>{
+
+                console.log(response);
                 //TODO Validation of response
 
 
@@ -331,7 +336,9 @@
         };
 
         return fetch('https://api.paymongo.com/v1/payment_methods', options)
-        .then(response => { return response.json(); });
+        .then(response => { 
+            return response.json(); 
+        });
     }
 
     function attach(paymentMethodId,clientKey,key){
