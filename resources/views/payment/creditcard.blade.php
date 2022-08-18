@@ -217,7 +217,7 @@
         if(expiry.value.length >= 1 && charCode != 8){
             if(expiry.value.length == 1){
                 console.log(expiry.value,'a');
-                expiry.value = expiry.value.substr(0,1) + '/'; 
+                expiry.value = expiry.value.substr(0,2) + '/'; 
             }else{
                 console.log('b');
                 expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
