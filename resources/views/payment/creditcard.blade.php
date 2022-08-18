@@ -316,6 +316,7 @@
 
     function failed(type,data,paymentMethodId,paymentIntentId){
         
+        type = 2;
         console.log(data);
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
@@ -354,7 +355,6 @@
         return fetch('https://api.paymongo.com/v1/payment_methods', options)
         .then(response=>{
             
-            response.status = 34;
             if(response.status == 400){
 
                 response.json().then(data => {
@@ -371,6 +371,7 @@
                 response.json().then(data => {
                     failed(2,data,paymentMethodId,paymentIntentId);
                 });
+                
                 throw new Error('Server Error');
             }
 
