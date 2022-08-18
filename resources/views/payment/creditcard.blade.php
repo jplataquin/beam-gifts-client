@@ -189,6 +189,11 @@
         }
     });
 
+    iframe.onload = ()=>{
+        console.log('here');
+        myModal.hide();
+    };
+
     let paymentMethodId,clientKey,key,paymentIntentId;
 
     expiry.onkeydown = (e)=>{
@@ -290,7 +295,7 @@
 
     function success( paymentIntent,paymentMethodId,paymentIntentId){
         console.log(paymentIntent,paymentMethodId,paymentIntentId);
-        iframe.style.display.none;
+        iframe.style.display = 'none';
         statusEl.innerText = 'Success';
         console.log('Success');
     }
@@ -350,8 +355,8 @@
                 statusEl.innerText = 'Required user validation';
                 loadingEl.style.display = 'none';
                 infoEl.innerHTML = "<h3>Redirecting..</h3>"
+                
                 setTimeout(()=>{
-                    myModal.hide();
                     showIframe(paymentIntent.attributes.next_action.redirect.url);
                 },2000);
               
