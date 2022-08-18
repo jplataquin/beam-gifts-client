@@ -122,19 +122,24 @@
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
       </div>
-      <div class="modal-body">
-        <div class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <div class="spinner-grow text-success" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+      <div class="modal-body text-center">
+            <div>
+                    <h3>Processing Payment</h3>
+            </div>
+            <div>
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
       </div>
-      <div class="modal-footer">
-        
+      <div class="modal-footer text-center">
+            <h5 id="status"></h5>
       </div>
     </div>
   </div>
@@ -160,6 +165,7 @@
     const formContainer     = document.querySelector('#formContainer');
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
+    const statusEl          = document.querySelector('#status');
 
     const myModal = new bootstrap.Modal(modalEl, {
         backdrop: 'static',
@@ -219,6 +225,7 @@
         myModal.show();
         //TODO VALIDATE DETAILS
 
+        statusEl.innerText = 'Sending data';
         return false;
 
         let exp = expiry.value.split('/');
@@ -275,10 +282,12 @@
     }
 
     function success(){
+        statusEl.innerText = 'Success';
         console.log('Success');
     }
 
     function failed(){
+        statusEl.innerText = 'Payment Failed';
         console.log('Failed');
     }
 
@@ -329,8 +338,13 @@
 
             if (paymentIntentStatus === 'awaiting_next_action' && paymentIntent.attributes.next_action.type == 'redirect') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
-                
-                showIframe(paymentIntent.attributes.next_action.redirect.url);
+                statusEl.innerText = 'Required user validation';
+
+                setTimeout(()=>{
+                    myModal.hide();
+                    showIframe(paymentIntent.attributes.next_action.redirect.url);
+                },1000);
+              
                 
             } else if (paymentIntentStatus === 'succeeded') {
                 // You already received your customer's payment. You can show a success message from this condition.
@@ -341,6 +355,7 @@
                 failed(paymentIntent.attributes.last_payment_error);
                 
             } else if (paymentIntentStatus === 'processing'){
+                statusEl.innerText = 'Pending';
                 // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
                     attach(paymentMethodId,clientKey,key);
