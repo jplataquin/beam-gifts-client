@@ -8,7 +8,7 @@
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group">
-                    <label>Name of Holder</label>
+                    <label>Name</label>
                     <input type="text" id="name" class="form-control"/>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <h3>Billing Address</h3>
+        <h3>Billing Info</h3>
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group">
@@ -280,6 +280,8 @@
                 }
             }).then((response)=>{
 
+                //TODO Validation of response
+
                 paymentMethodId = response.data.id;
                 
                 return attach(paymentMethodId,clientKey,key);
@@ -298,22 +300,22 @@
         mainContainer.append(iframe);
     }
 
-    function success( paymentIntent,paymentMethodId,paymentIntentId){
-        console.log(paymentIntent,paymentMethodId,paymentIntentId);
+    function success(paymentIntent,paymentMethodId,paymentIntentId){
+        
         iframe.style.display = 'none';
         statusEl.innerText = 'Success';
         console.log('Success');
+
+        console.log(paymentIntent,paymentMethodId,paymentIntentId);
     }
 
-    function failed(){
+    function failed(paymentIntent,paymentMethodId,paymentIntentId){
         statusEl.innerText = 'Payment Failed';
         console.log('Failed');
     }
 
     function paymentMethod(key,data){
         
-        console.log(data);
-
         const options = {
             method: 'POST',
             headers: {
@@ -347,7 +349,11 @@
                 Authorization: `Basic ${key}`
             }
         }).then(function(response) {
-            
+
+            //TODO Validation of response;
+
+            console.log(response);
+
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
             
