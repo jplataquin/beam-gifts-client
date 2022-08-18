@@ -208,9 +208,10 @@
 
         val = val.replace('/','');
 
+        /** 
         if(val.length <= 4){
             expiry.value = val.substr(0,3);
-        }
+        }**/
 
         if(expiry.value.length >= 2){
             expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
