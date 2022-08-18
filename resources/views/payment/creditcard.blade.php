@@ -284,12 +284,16 @@
 
                 //TODO Validation of response
 
-
                 paymentMethodId = response.data.id;
                 
                 return attach(paymentMethodId,clientKey,key);
+            
             }).catch(err=>{
-                console.log('HERE ERROR');
+
+                console.log('HERE ERROR',err);
+
+                failed(2,data,paymentMethodId,paymentIntentId);
+                
             });
         });
     }
@@ -316,38 +320,124 @@
 
     function failed(type,data,paymentMethodId,paymentIntentId){
         
-        console.log(data);
+        console.log('FAILED',type,data);
+
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
         statusEl.innerText      = '';
         loading.style.display   = 'none';
         
         if(type == 1){ //Validation Error
-            loadingEl.style.display = 'none';
-            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">Invalid data</p>
-                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
-                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
-            `;
-        }else if(type == 2){ //Connection Error
-            loadingEl.style.display = 'none';
-            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">Payment Provider Unreachable</p>
-                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
-                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
-            `;
-        }else if(type == 3){ //Transaction Error
-            loadingEl.style.display = 'none';
-            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">Something Went Wrong</p>
-                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
-                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
+            
+            infoEl.innerHTML = '';
 
-        }else if(type == 4){ //Unkown Reply
-            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
-                <p class="text-danger">Unkown status reply from Payment Provider (${data})</p>
-                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
-                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
+            infoEl.append(
+                t.div(()=>{
+                    
+                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    
+                    t.p({class:'text-danger'},'Invalid data input');
+                    
+                    t.div({class:'mb-3'},()=>{
+                        t.a({
+                            class:'btn btn-warning me-3',
+                            href:'/cart',
+                            role:'button'
+                        },'Cancel');
+
+                        t.a({
+                            class:'btn btn-primary',
+                            href:'javascript:window.location.href=window.location.href',
+                            role:'button'
+                        },'Retry');
+                    })
+                   
+                })
+            );//End append
+
+        }else if(type == 2){ //Connection Error
+            infoEl.innerHTML = '';
+
+            infoEl.append(
+                t.div(()=>{
+                    
+                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    
+                    t.p({class:'text-danger'},'Connection Error');
+                    
+                    t.div({class:'mb-3'},()=>{
+                        t.a({
+                            class:'btn btn-warning me-3',
+                            href:'/cart',
+                            role:'button'
+                        },'Cancel');
+
+                        t.a({
+                            class:'btn btn-primary',
+                            href:'javascript:window.location.href=window.location.href',
+                            role:'button'
+                        },'Retry');
+                    })
+                   
+                })
+            );//End append
+
+        }else if(type == 3){ //Transaction Error
+            
+            infoEl.innerHTML = '';
+
+            infoEl.append(
+                t.div(()=>{
+                    
+                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    
+                    t.p({class:'text-danger'},'Transaction Error: '+data);
+                    
+                    t.div({class:'mb-3'},()=>{
+                        t.a({
+                            class:'btn btn-warning me-3',
+                            href:'/cart',
+                            role:'button'
+                        },'Cancel');
+
+                        t.a({
+                            class:'btn btn-primary',
+                            href:'javascript:window.location.href=window.location.href',
+                            role:'button'
+                        },'Retry');
+                    })
+                
+                })
+            );//End append
+
+        }else if(type == 4){ //Unkown Reply Ststus
+
+            infoEl.innerHTML = '';
+
+            infoEl.append(
+                t.div(()=>{
+                    
+                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    
+                    t.p({class:'text-danger'},`Unkown reply status from Payment Provider (${data})`);
+                    
+                    t.div({class:'mb-3'},()=>{
+                        t.a({
+                            class:'btn btn-warning me-3',
+                            href:'/cart',
+                            role:'button'
+                        },'Cancel');
+
+                        t.a({
+                            class:'btn btn-primary',
+                            href:'javascript:window.location.href=window.location.href',
+                            role:'button'
+                        },'Retry');
+                    })
+                   
+                })
+            );//End append
+        
         }else if(type == 5){ //Subcode error
         
             infoEl.innerHTML = '';
@@ -376,10 +466,10 @@
                     })
                    
                 })
-            );//End append
+            );//append()
         }
 
-    }
+    }//failed()
 
     function paymentMethod(key,data){
         
@@ -393,27 +483,23 @@
             body: JSON.stringify(data)
         };
 
-        return fetch('https://api.paymongo.com/v1/payment_methods', options)
-        .then(response=>{
+        return fetch('https://api.paymongo.com/v1/payment_methods', options).then(response=>{
             
-            if(response.status == 400){
+            if(response.ok){
+               
+                return response;
+            
+            }else if(response.status == 400){
 
                 response.json().then(data => {
                     failed(1,data,paymentMethodId,paymentIntentId);
                 });
                 
-                throw new Error('Something went wrong');
-            }else if(response.status == 200){
-             
-                return response;
-            
+                throw new Error(response);
+
             }else{
 
-                response.json().then(data => {
-                    failed(2,data,paymentMethodId,paymentIntentId);
-                });
-
-                throw new Error('Server Error');
+                throw new Error(response);
             }
 
         }).then(response => { 
@@ -460,6 +546,7 @@
 
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
                 // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
+                //Transaction Error
                 failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
                 
             } else if (paymentIntentStatus === 'processing'){
@@ -472,21 +559,23 @@
                 },2000);
 
             }else{
+                //Unkown reply status Error
                 failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
             
         }).catch(err=>{
 
-            if(typeof err['response'] != 'undefined'){
+            if(err.response.status == 400){
+            
+                //Subcode error
+                failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
+            
+            }else{ 
 
-                if(err.response.status == 400){
-                    failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
-                }else{
-                    failed(6,err.response,paymentMethodId,paymentIntentId);
-                }
+                //Connection Error
+                failed(2,err.response,paymentMethodId,paymentIntentId);
             }
 
-            console.log('HTTP ERROR', err);
         });
 
     }
