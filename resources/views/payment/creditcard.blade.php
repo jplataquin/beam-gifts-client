@@ -124,7 +124,7 @@
       </div>
       <div class="modal-body text-center">
             <div>
-                    <h3>Processing Payment</h3>
+                    <h3 id="mTitle">Processing Payment</h3>
             </div>
             <div id="info" class="text-center">
             </div>
@@ -173,6 +173,7 @@
     const statusEl          = document.querySelector('#status');
     const infoEl            = document.querySelector('#info');
     const loadingEl         = document.querySelector('#loading');
+    const mTitle            = document.querySelector('#mTitle');
 
     const myModal = new bootstrap.Modal(modalEl, {
         backdrop: 'static',
@@ -313,8 +314,17 @@
         console.log(paymentIntent,paymentMethodId,paymentIntentId);
     }
 
-    function failed(paymentIntent,paymentMethodId,paymentIntentId){
-        statusEl.innerText = 'Payment Failed';
+    function failed(type,data,paymentMethodId,paymentIntentId){
+        mTitle.innerText = 'Failed'
+        statusEl.innerText = '';
+        console.log(data);
+        if(type == 1){
+            loadingEl.style.display = 'none';
+            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
+                <p class="text-danger">You have entered an invalid data</p>
+            `;
+        }
+        
         console.log('Failed');
     }
 
@@ -332,7 +342,16 @@
 
         return fetch('https://api.paymongo.com/v1/payment_methods', options)
         .then(response=>{
-            console.log(response);
+            
+            if(response.status == 400){
+
+                let data = response.json();
+                failed(1,data,) 
+                throw new Error('Something went wrong');
+            }
+
+            return response;
+
         }).then(response => { 
             return response.json(); 
         });
