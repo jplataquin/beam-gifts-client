@@ -120,7 +120,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Please wait</h5>
+        <h5 class="modal-title" id="modalTitle">Please wait</h5>
       </div>
       <div class="modal-body text-center">
             <div>
@@ -174,6 +174,7 @@
     const infoEl            = document.querySelector('#info');
     const loadingEl         = document.querySelector('#loading');
     const mTitle            = document.querySelector('#mTitle');
+    const modalTitle        = document.querySelector('#modalTitle');
 
     const myModal = new bootstrap.Modal(modalEl, {
         backdrop: 'static',
@@ -315,14 +316,16 @@
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
-        mTitle.innerText = 'Failed'
-        statusEl.innerText = '';
+        mTitle.innerText    = 'Failed'
+        statusEl.innerText  = '';
+        modalTitle          = 'Uh-oh';
         console.log(data);
         if(type == 1){
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
                 <p class="text-danger">Invalid data</p>
-                <a href="." class="btn btn-primary" role="button">Retry?</a>
+                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
+                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
             `;
         }
 
