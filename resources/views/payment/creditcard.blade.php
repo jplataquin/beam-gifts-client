@@ -361,18 +361,20 @@
                         t.p({class:'text-danger'},item.detail);
                     });
 
-                    t.a({
-                        class:'btn btn-warning mr-3',
-                        href:'/cart',
-                        role:'button'
-                    },'Cancel');
+                    t.div({class:'mb-3'},()=>{
+                        t.a({
+                            class:'btn btn-warning me-3',
+                            href:'/cart',
+                            role:'button'
+                        },'Cancel');
 
-                    t.a({
-                        class:'btn btn-primary',
-                        href:'javascript:window.location.href=window.location.href',
-                        role:'button'
-                    },'Retry');
-                    
+                        t.a({
+                            class:'btn btn-primary',
+                            href:'javascript:window.location.href=window.location.href',
+                            role:'button'
+                        },'Retry');
+                    })
+                   
                 })
             );//End append
         }
