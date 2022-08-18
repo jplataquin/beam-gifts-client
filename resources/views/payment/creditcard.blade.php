@@ -316,9 +316,10 @@
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
-        mTitle.innerText    = 'Failed';
-        statusEl.innerText  = '';
-        modalTitle          = 'Uh-oh';
+        modalTitle.innerText    = 'Uh-oh';
+        mTitle.innerText        = 'Failed';
+        statusEl.innerText      = '';
+        
         console.log(data);
 
         if(type == 1){
