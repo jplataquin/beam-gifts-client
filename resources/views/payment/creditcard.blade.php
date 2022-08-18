@@ -316,7 +316,6 @@
 
     function failed(type,data,paymentMethodId,paymentIntentId){
         
-        type = 2;
         console.log(data);
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
@@ -371,7 +370,7 @@
                 response.json().then(data => {
                     failed(2,data,paymentMethodId,paymentIntentId);
                 });
-                
+
                 throw new Error('Server Error');
             }
 
@@ -422,16 +421,19 @@
 
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
                 // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
-                failed(paymentIntent.attributes.last_payment_error);
+                failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
                 
             } else if (paymentIntentStatus === 'processing'){
+                
                 statusEl.innerText = 'Pending';
+                
                 // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
                     attach(paymentMethodId,clientKey,key);
                 },2000);
+
             }else{
-                console.log('Unknown status');
+                failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
             
         }).catch(err=>{
@@ -458,14 +460,14 @@
                 success(paymentIntent,paymentMethodId,paymentIntentId);
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
             // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
-                failed(paymentIntent,paymentMethodId,paymentIntentId);
+                failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
                     monitor(paymentMethodId,clientKey,key);
                 },2000);
             }else{
-                console.log('Unknown status');
+                failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
         }).catch(err=>{
             console.log('HTTP ERROR',err);
