@@ -212,21 +212,18 @@
         if(val.length <= 4){
             expiry.value = val.substr(0,3);
         }
-        
-        console.log(expiry.value.length);
-        if(expiry.value.length >= 1 && charCode != 8){
-            if(expiry.value.length == 2){
-                console.log(expiry.value,'a');
-                expiry.value = expiry.value.substr(0,2) + '/'; 
-            }else if(expiry.value.length > 2){
-                console.log('b');
-                expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
-            }
-            
-        }
-        
-
       
+    }
+
+    expiry.onkeyup = (e) => {
+        let val = expiry.value;
+        val = val.replace('/','');
+        
+        if(val.length == 2){
+            expiry.value = val + '/';
+        }else if(val.length > 2){
+            expiry.value = val.substr(0,2) + '/' + val.substr(2,2);
+        }
     }
 
     expiry.onchange = (e)=>{
