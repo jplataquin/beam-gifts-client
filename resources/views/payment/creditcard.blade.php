@@ -120,7 +120,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title">Please wait</h5>
       </div>
       <div class="modal-body text-center">
             <div>
@@ -137,9 +137,12 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
+            <div>
+                <p>We don't keep record of your Credit Card details</p>
+            </div>
       </div>
-      <div class="modal-footer text-center">
-            <h5 id="status"></h5>
+      <div class="modal-footer justify-content">
+            <h5 id="status" class="text-center"></h5>
       </div>
     </div>
   </div>
@@ -226,7 +229,7 @@
         //TODO VALIDATE DETAILS
 
         statusEl.innerText = 'Sending data';
-        return false;
+    
 
         let exp = expiry.value.split('/');
 
