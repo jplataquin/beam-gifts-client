@@ -282,7 +282,6 @@
                 }
             }).then((response)=>{
 
-                console.log(response);
                 //TODO Validation of response
 
 
@@ -316,12 +315,12 @@
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
+        
+        console.log(data);
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
         statusEl.innerText      = '';
         
-        console.log(data);
-
         if(type == 1){
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
@@ -329,9 +328,15 @@
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
             `;
+        }else if(type == 2){
+            loadingEl.style.display = 'none';
+            infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
+                <p class="text-danger">Server Unreachable</p>
+                <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
+                <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>
+            `;
         }
 
-        console.log('Failed');
     }
 
     function paymentMethod(key,data){
@@ -349,14 +354,25 @@
         return fetch('https://api.paymongo.com/v1/payment_methods', options)
         .then(response=>{
             
+            response.status = 34;
             if(response.status == 400){
 
-                let data = response.json();
-                failed(1,data,) 
+                response.json().then(data => {
+                    failed(1,data,paymentMethodId,paymentIntentId);
+                });
+                
                 throw new Error('Something went wrong');
-            }
+            }else if(response.status == 200){
+             
+                return response;
+            
+            }else{
 
-            return response;
+                response.json().then(data => {
+                    failed(2,data,paymentMethodId,paymentIntentId);
+                });
+                throw new Error('Server Error');
+            }
 
         }).then(response => { 
             return response.json(); 
