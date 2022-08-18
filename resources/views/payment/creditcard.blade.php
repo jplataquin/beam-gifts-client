@@ -479,7 +479,7 @@
             console.log('x',err.response);
             if(typeof err['response'] != 'undefined'){
 
-                if(err.response == 400){
+                if(err.response.status == 400){
                     console.log('here 400',err.response.data.errors);
                     failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
                 }else{
