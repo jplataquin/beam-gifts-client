@@ -126,15 +126,17 @@
             <div>
                     <h3>Processing Payment</h3>
             </div>
-            <div>
+            <div id="info" class="text-center">
+            </div>
+            <div id="loading">
                 <div class="spinner-grow text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden"></span>
                 </div>
                 <div class="spinner-grow text-secondary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden"></span>
                 </div>
                 <div class="spinner-grow text-success" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden"></span>
                 </div>
             </div>
             <div>
@@ -169,6 +171,8 @@
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
     const statusEl          = document.querySelector('#status');
+    const infoEl            = document.querySelector('#info');
+    const loadingEl         = document.querySelector('#loading');
 
     const myModal = new bootstrap.Modal(modalEl, {
         backdrop: 'static',
@@ -342,11 +346,12 @@
             if (paymentIntentStatus === 'awaiting_next_action' && paymentIntent.attributes.next_action.type == 'redirect') {
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
                 statusEl.innerText = 'Required user validation';
-
+                loadingEl.style.display = 'none';
+                infoEl.innerText = "You will be redirected to your bank's authentication page"
                 setTimeout(()=>{
                     myModal.hide();
                     showIframe(paymentIntent.attributes.next_action.redirect.url);
-                },1000);
+                },2000);
               
                 
             } else if (paymentIntentStatus === 'succeeded') {
