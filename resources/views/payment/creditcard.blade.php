@@ -316,10 +316,11 @@
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
-        mTitle.innerText    = 'Failed'
+        mTitle.innerText    = 'Failed';
         statusEl.innerText  = '';
         modalTitle          = 'Uh-oh';
         console.log(data);
+
         if(type == 1){
             loadingEl.style.display = 'none';
             infoEl.innerHTML = `<p class="text-danger">*** You have not been charged ***</p>
