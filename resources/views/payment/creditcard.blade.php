@@ -320,6 +320,7 @@
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
         statusEl.innerText      = '';
+        loading.style.display   = 'none';
         
         if(type == 1){ //Validation Error
             loadingEl.style.display = 'none';
@@ -348,10 +349,11 @@
                 <a href="/cart" class="btn btn-warning mr-3" role="button">Cancel</a>
                 <a href="javascript:window.location.href=window.location.href" class="btn btn-primary" role="button">Retry?</a>`;
         }else if(type == 5){ //Subcode error
-            console.log('whats up');
+        
             infoEl.innerHTML = '';
 
-            let el = t.div(()=>{
+            infoEl.append(
+                t.div(()=>{
                     
                     t.p({class:'text-danger'},'*** You have not been charged ***');
                     
@@ -371,11 +373,8 @@
                         role:'button'
                     },'Retry');
                     
-                });
-
-                console.log(el);
-
-            infoEl.append(el);//End append
+                })
+            );//End append
         }
 
     }
@@ -475,12 +474,10 @@
             }
             
         }).catch(err=>{
-            console.log(err);
-            console.log('x',err.response);
+
             if(typeof err['response'] != 'undefined'){
 
                 if(err.response.status == 400){
-                    console.log('here 400',err.response.data.errors);
                     failed(5,err.response.data.errors,paymentMethodId,paymentIntentId);
                 }else{
                     failed(6,err.response,paymentMethodId,paymentIntentId);
