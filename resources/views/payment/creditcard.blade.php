@@ -218,7 +218,7 @@
             if(expiry.value.length == 2){
                 console.log(expiry.value,'a');
                 expiry.value = expiry.value.substr(0,2) + '/'; 
-            }else{
+            }else if(expiry.value.length > 2){
                 console.log('b');
                 expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
             }
