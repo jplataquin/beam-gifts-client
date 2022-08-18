@@ -353,6 +353,7 @@
 
             infoEl.append(       
                 t.div(()=>{
+                    
                     t.p({class:'text-danger'},'*** You have not been charged ***');
                     
                     data.map(item=>{
@@ -371,8 +372,8 @@
                         role:'button'
                     },'Retry');
                     
-                });
-            )
+                })
+            );//End append
         }
 
     }
