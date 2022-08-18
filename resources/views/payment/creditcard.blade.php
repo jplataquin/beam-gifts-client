@@ -475,7 +475,8 @@
             }
             
         }).catch(err=>{
-
+            console.log(err);
+            console.log('x',err.response);
             if(typeof err['response'] != 'undefined'){
 
                 if(err.response == 400){
