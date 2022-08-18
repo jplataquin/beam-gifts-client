@@ -207,7 +207,7 @@
             expiry.value = val.substr(0,3);
         }
 
-        if(expiry.value.length == 1){
+        if(expiry.value.length == 2){
             expiry.value = expiry.value.substr(0,2) + '/';
         }else if(expiry.value.length == 3){
             expiry.value = expiry.value.substr(0,2) + '/' + expiry.value.substr(2,2); 
@@ -247,7 +247,7 @@
                     'attributes':{
                         type:'card',
                         details:{
-                            card_number :ccno.value,
+                            card_number : ccno.value,
                             exp_month   : parseInt(exp[0]),
                             exp_year    : parseInt(exp[1]),
                             cvc         : cvc.value
@@ -288,7 +288,9 @@
         mainContainer.append(iframe);
     }
 
-    function success(){
+    function success( paymentIntent,paymentMethodId,paymentIntentId){
+        console.log(paymentIntent);
+        iframe.display.none;
         statusEl.innerText = 'Success';
         console.log('Success');
     }
@@ -347,7 +349,7 @@
                 // Render your modal for 3D Secure Authentication since next_action has a value. You can access the next action via paymentIntent.attributes.next_action.
                 statusEl.innerText = 'Required user validation';
                 loadingEl.style.display = 'none';
-                infoEl.innerText = "You will be redirected to your bank's authentication page"
+                infoEl.innerHTML = "<h3>Redirecting..</h3>"
                 setTimeout(()=>{
                     myModal.hide();
                     showIframe(paymentIntent.attributes.next_action.redirect.url);
@@ -356,7 +358,7 @@
                 
             } else if (paymentIntentStatus === 'succeeded') {
                 // You already received your customer's payment. You can show a success message from this condition.
-                success(paymentMethodId,paymentIntentId);
+                success(paymentIntent,paymentMethodId,paymentIntentId);
 
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
                 // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
@@ -393,10 +395,10 @@
 
             if (paymentIntentStatus === 'succeeded') {
             // You already received your customer's payment. You can show a success message from this condition.
-                success();
+                success(paymentIntent,paymentMethodId,paymentIntentId);
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
             // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
-                failed();
+                failed(paymentIntent,paymentMethodId,paymentIntentId);
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
