@@ -29,8 +29,8 @@
         <div class="col">
             <div class="form-group">
                 <label>Payment Method</label>
-                <input type="radio" class="form-control" selected="selected" name="paymentMethod" value="cc"/> Credit Card
-                <input type="radio" class="form-control" name="paymentMethod" value="gc"/> Gcash
+                <input type="radio" class="" selected="selected" name="paymentMethod" value="cc"/> Credit Card
+                <input type="radio" class="" name="paymentMethod" value="gc"/> Gcash
             </div>
         </div>
         <div class="col text-end">
