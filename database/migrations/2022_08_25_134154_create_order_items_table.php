@@ -26,8 +26,8 @@ return new class extends Migration
             $table->integer('expiry');
             $table->longText('description');
             $table->boolean('extended')->default(false);
-            $table->dateTime('expires_at')->default('0000-00-00 00:00:00');
-            $table->dateTime('claimed_at')->default('0000-00-00 00:00:00');
+            $table->dateTime('expires_at')->nullable();
+            $table->dateTime('claimed_at')->nullable();
             $table->timestamps();
         });
     }
