@@ -57,7 +57,27 @@
             axios.post('/checkout', {
                 'paymentMethod': paymentMethod
             }).then(reply=>{
-                console.log(reply);
+                
+                if(!reply.status){
+                    alert(reply.message);
+                    return false;
+                }
+
+                let uid     = reply.data.uid;
+                let method  = reply.data.method;
+
+                switch(method){
+                    case 'cc':
+
+                        document.location.href = '/payment/creditcard/'+uid;
+                        break;
+                    case 'gc':
+
+                        break;
+
+                    default:
+                        alert('Unkown payment method');
+                }
             });
         }
 

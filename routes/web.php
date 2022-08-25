@@ -37,7 +37,7 @@ Route::post('clear-cart', [App\Http\Controllers\CartController::class, 'clearAll
 Route::post('checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout');
 
 
-Route::get('payment/creditcard', [App\Http\Controllers\PaymongoController::class, 'creditcard']);
+Route::get('payment/creditcard/{uid}', [App\Http\Controllers\PaymongoController::class, 'creditcard']);
 Route::post('payment/creditcard', [App\Http\Controllers\PaymongoController::class, '_creditcard']);
 
 

@@ -103,10 +103,11 @@ class CartController extends Controller
         $items = \Cart::session($user_id)->getContent();
 
         
-        $created_at = date('Y-m-d H:i:s');
-        $uid        =  hash('sha256', Str::random(6) .' - '.$created_at );
-        $total      = 0;
-        $bulk       = [];
+        $at             = date('Y-m-d H:i:s');
+        $uid            = hash('sha256', Str::random(6) .' - '.$at );
+        $total          = 0;
+        $bulk           = [];
+        $paymentMethod  = $request->paymentMethod;
 
         //TODO validate payment method
         //TODO Validate items
@@ -129,7 +130,8 @@ class CartController extends Controller
                 'price'         => $itemModel->price,
                 'expiry'        => $itemModel->expiry,
                 'description'   => $itemModel->description,
-                'created_at'    => $created_at
+                'created_at'    => $at,
+                'updated_at'    => $at
             ];
         }
 
@@ -143,7 +145,7 @@ class CartController extends Controller
         $order->user_id         = $user_id;
         $order->amount          = $total;
         $order->status          = 'PEND';
-        $order->payment_method  = $request->paymentMethod;
+        $order->payment_method  = $paymentMethod;
 
         $orderItem = new OrderItem();
 
@@ -164,13 +166,17 @@ class CartController extends Controller
             ]);
         }
 
+        //Clear cart
+        \Cart::clear();
 
         return response()->json([
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'uid'=>$uid
+                'uid'       => $uid,
+                'method'    => $paymentMethod
             ]
         ]);
+
     }
 }
