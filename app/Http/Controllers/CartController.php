@@ -120,7 +120,7 @@ class CartController extends Controller
                 'uid'           => $uid,
                 'brand_id'      => $itemModel->brand_id,
                 'item_id'       => $itemModel->id,
-                'brand_name'    => $itemModel->brand()->name,
+                'brand_name'    => $itemModel->brand->name,
                 'name'          => $itemModel->name,
                 'type'          => $itemModel->type,
                 'category'      => $itemModel->category,
