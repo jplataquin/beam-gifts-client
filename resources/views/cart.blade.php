@@ -65,6 +65,8 @@
 
                 let uid     = reply.data.uid;
                 let method  = reply.data.method;
+                
+                console.log(reply);
 
                 switch(method){
                     case 'cc':
