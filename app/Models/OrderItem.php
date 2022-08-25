@@ -13,6 +13,6 @@ class OrderItem extends Model
 
     public function order()
     {
-        return $this->belongsTo(Order::class,'uid','uid');
+        return $this->belongsTo('App\Models\Order','uid','uid');
     }
 }

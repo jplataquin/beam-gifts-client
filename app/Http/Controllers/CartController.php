@@ -126,7 +126,8 @@ class CartController extends Controller
                 'category'      => $itemModel->category,
                 'price'         => $itemModel->price,
                 'expiry'        => $itemModel->expiry,
-                'description'   => $itemModel->description
+                'description'   => $itemModel->description,
+                'created_at'    => date('Y-m-d H:i:s');
             ];
         }
 
