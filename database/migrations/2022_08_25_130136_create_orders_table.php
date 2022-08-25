@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->char('uid',64);
             $table->char('status',4);
-            $table->bigIntenger('user_id');
+            $table->bigInteger('user_id');
             $table->decimal('amount',10,2);
             $table->timestamps();
         });
