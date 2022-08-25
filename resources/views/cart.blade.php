@@ -21,6 +21,7 @@
                 </div>
                 <div class="col-3">
                     <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
+                    <button onclick="removeItem( {{$item->id}} )" class="btn btn-danger">Remove</button>
                 </div>
             </div>
         @endforeach
