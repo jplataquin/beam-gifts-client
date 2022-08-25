@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Brand;
 use App\Models\Item;
 use Illuminate\Support\Facades\Http;
+use App\Models\Order;
+use App\Models\OrderItem;
 
 class PaymongoController extends Controller
 {
@@ -16,9 +18,20 @@ class PaymongoController extends Controller
        // 
     }
 
-    public function creditcard(Request $request){
+    public function creditcard(Request $request,$uid){
 
-        return view('payment/creditcard');
+        //TODO validate $uid;
+
+        $order = new Order();
+
+        $result = $order::where('uid',$uid)->where('status','PEND')->first();
+
+
+        return view('payment/creditcard',[
+            'uid' => $uid,
+            'order' => $result,
+            'items' => $result->items
+        ]);
     }
 
     public function _creditcard(Request $request){
