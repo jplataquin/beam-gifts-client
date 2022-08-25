@@ -25,9 +25,18 @@
                 </div>
             </div>
         @endforeach
-
-        <div class="text-end">
-            <h2>{{$total}}</h2>
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label>Payment Method</label>
+                <input type="radio" class="form-control" selected="selected" name="paymentMethod" value="cc"/> Credit Card
+                <input type="radio" class="form-control" name="paymentMethod" value="gc"/> Gcash
+            </div>
+        </div>
+        <div class="col text-end">
+            <h2>PHP {{number_format($total,2)}}</h2>
+            <button class="btn btn-primary">Check Out</button>
+        </div>
         </div>
     </div>
 
