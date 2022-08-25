@@ -6,13 +6,14 @@
 <div id="mainContainer" class="container">
     <div id="formContainer">
 
-        <div class="row">
+        <div class="row border border-primary">
             <div class="col text-end">
-                <h2>Total Amount Due: {{number_format($order->amount,2)}}</h2>
+                <h2>Total Amount Due: PHP {{number_format($order->amount,2)}}</h2>
+
                 
             </div>
         </div>
-
+        
 
         <h3>Credit Card Details</h3>
         <div class="row mb-3">
