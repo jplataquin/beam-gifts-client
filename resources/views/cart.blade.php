@@ -15,7 +15,7 @@
                     Qty: {{$item->quantity}}
                 </div>
                 <div class="col-3">
-                    <h3>{{$item->price}}</h3>
+                    <h3>PHP {{number_format($item->item * $item->price,2)}}</h3>
                 </div>
             </div>
         @endforeach
