@@ -76,7 +76,7 @@
                         break;
 
                     default:
-                        alert('Unkown payment method');
+                        alert('Unkown payment method '+method);
                 }
             });
         }
