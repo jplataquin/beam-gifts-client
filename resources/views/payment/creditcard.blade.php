@@ -2,8 +2,17 @@
 
 @section('content')
 
+
 <div id="mainContainer" class="container">
     <div id="formContainer">
+
+        <div class="row">
+            <div class="col">
+                <h2>Total Due: {{number_format($order->amount,2)}}</h2>
+            </div>
+        </div>
+
+
         <h3>Credit Card Details</h3>
         <div class="row mb-3">
             <div class="col">
