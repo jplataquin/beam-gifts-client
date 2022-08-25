@@ -57,6 +57,16 @@
             axios.post('/checkout', {
                 'paymentMethod': paymentMethod
             }).then(reply=>{
+
+                if(reply.status != 200){
+                    alert('Checkout failed');
+                    document.location.reload();
+                    return false;
+                }
+
+                return reply.data;
+                
+            }).then(reply=>{
                 
                 if(!reply.status){
                     alert(reply.message);
