@@ -21,7 +21,6 @@ class CartController extends Controller
         \Cart::session(Auth::user()->id);
         $cartItems = \Cart::getContent();
 
-        print_r($cartItems);
         return view('cart',$cartItems);
     }
 
@@ -60,7 +59,10 @@ class CartController extends Controller
             'name'      => $item->name,
             'price'     => $item->price,
             'quantity'  => $qty,
-            'image'     => $item->photo['150px']
+            'attributes' => [
+                'image'     => $item->photo['150px']
+            ],
+            'associatedModel' => 'Item'
         ]);
 
 
