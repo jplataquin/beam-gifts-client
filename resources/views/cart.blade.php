@@ -5,7 +5,7 @@
     <div class="container">
 
         @foreach($items as $item)
-            <div class="row mb-3">
+            <div class="row border border-primary mb-3">
                 <div class="col-2">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
@@ -26,6 +26,9 @@
             </div>
         @endforeach
 
+        <div class="text-end">
+            <h2>{{$total}}</h2>
+        </div>
     </div>
 
 @endsection

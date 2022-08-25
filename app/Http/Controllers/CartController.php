@@ -19,10 +19,10 @@ class CartController extends Controller
 
     public function cartList(Request $request){
         \Cart::session(Auth::user()->id);
-        $cartItems = \Cart::getContent();
-
+       
         return view('cart',[
-            'items' => $cartItems
+            'items' => \Cart::getContent(),
+            'total' => \Cart::getTotal()
         ]);
     }
 
