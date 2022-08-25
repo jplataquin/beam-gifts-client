@@ -13,6 +13,7 @@
                     <h3>{{$item->name}}</h3>
                     <h5>{{$item->brand}}</h5>
                     Qty: {{$item->quantity}}
+                    Price: {{number_format($item->price,2)}}
                 </div>
                 <div class="col-3">
                     <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
