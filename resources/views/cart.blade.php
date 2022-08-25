@@ -15,7 +15,7 @@
                     Qty: {{$item->quantity}}
                 </div>
                 <div class="col-3">
-                    <h3>{{$item->item * $item->price}}</h3>
+                    <h3>{{$item->price}}</h3>
                 </div>
             </div>
         @endforeach
