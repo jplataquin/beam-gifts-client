@@ -12,7 +12,7 @@ class Brand extends Model
     use HasFactory;
 
     public function items(){
-        return $this->hasMany('Items','brand_id','id');
+        return $this->hasMany('App\Models\Items','brand_id','id');
     }
     
 }

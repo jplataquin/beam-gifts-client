@@ -15,6 +15,6 @@ class Item extends Model
 
     public function brand()
     {
-        return $this->belongsTo('Brand','brand_id','brand_id');
+        return $this->belongsTo('App\Models\Brand','brand_id','brand_id');
     }
 }
