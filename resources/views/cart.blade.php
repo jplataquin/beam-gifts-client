@@ -41,9 +41,21 @@
         </div>
         <div class="col text-end">
             <h2>PHP {{number_format($total,2)}}</h2>
-            <button class="btn btn-primary">Check Out</button>
+            <button id="checkout" class="btn btn-primary">Check Out</button>
         </div>
         </div>
     </div>
 
+    <script type="module">
+
+        const checkoutBtn = document.querySelector('#checkout');
+
+
+        checkoutBtn.onclick = (e) => {
+            let paymentMethod = document.querySelector('input[name=paymentMethod]:checked').value;
+
+            alert(paymentMethod);
+        }
+    </script>
 @endsection
+
