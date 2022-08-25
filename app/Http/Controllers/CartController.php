@@ -102,9 +102,11 @@ class CartController extends Controller
         $user_id = Auth::user()->id;
         $items = \Cart::session($user_id)->getContent();
 
-        $uid    =  hash('sha256', Str::random(6) .' - '.date('Y-m-d H:i:s') );
-        $total  = 0;
-        $bulk   = [];
+        
+        $created_at = date('Y-m-d H:i:s');
+        $uid        =  hash('sha256', Str::random(6) .' - '.$created_at );
+        $total      = 0;
+        $bulk       = [];
 
         //TODO validate payment method
         //TODO Validate items
@@ -127,7 +129,7 @@ class CartController extends Controller
                 'price'         => $itemModel->price,
                 'expiry'        => $itemModel->expiry,
                 'description'   => $itemModel->description,
-                'created_at'    => date('Y-m-d H:i:s');
+                'created_at'    => $created_at
             ];
         }
 
