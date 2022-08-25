@@ -21,7 +21,9 @@ class CartController extends Controller
         \Cart::session(Auth::user()->id);
         $cartItems = \Cart::getContent();
 
-        return view('cart',$cartItems);
+        return view('cart',[
+            'items' => $cartItems
+        ]);
     }
 
     public function addToCart(Request $request){

@@ -6,7 +6,7 @@
 
         @foreach($items as $item)
             <div>
-                
+                <h3>{{$item->name}}</h3>
             </div>
         @endforeach
 
