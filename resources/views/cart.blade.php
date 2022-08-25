@@ -54,7 +54,15 @@
         checkoutBtn.onclick = (e) => {
             let paymentMethod = document.querySelector('input[name=paymentMethod]:checked').value;
 
-            alert(paymentMethod);
+            axios.post('/checkout', {
+                'paymentMethod': paymentMethod
+            }).then(reply=>{
+                console.log(reply);
+            });
+        }
+
+        function removeItem(id){
+
         }
     </script>
 @endsection

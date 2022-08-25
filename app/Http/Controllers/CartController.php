@@ -92,4 +92,12 @@ class CartController extends Controller
     public function clearAllCart(){
         \Cart::clear();
     }
+
+    public function checkout(Request $request){
+        
+        $items = \Cart::session(Auth::user()->id)->getContent();
+
+        echo $request->paymentMethod;
+        print_r($items)
+    }
 }

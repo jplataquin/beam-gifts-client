@@ -28,11 +28,13 @@ Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand
 Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 
 
+//TODO place in auth middleware
 Route::get('cart', [App\Http\Controllers\CartController::class, 'cartList'])->name('cart.list');
 Route::post('add-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::post('remove-cart', [App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear-cart', [App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::post('checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout');
 
 
 Route::get('payment/creditcard', [App\Http\Controllers\PaymongoController::class, 'creditcard']);
