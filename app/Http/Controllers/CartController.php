@@ -98,6 +98,6 @@ class CartController extends Controller
         $items = \Cart::session(Auth::user()->id)->getContent();
 
         echo $request->paymentMethod;
-        print_r($items)
+        print_r($items);
     }
 }
