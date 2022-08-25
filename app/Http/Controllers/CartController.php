@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Brand;
 use App\Models\Item;
+use App\Models\Order;
+use App\Models\OrderItem;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 
 class CartController extends Controller
@@ -95,9 +99,75 @@ class CartController extends Controller
 
     public function checkout(Request $request){
         
-        $items = \Cart::session(Auth::user()->id)->getContent();
+        $user_id = Auth::user()->id;
+        $items = \Cart::session($user_id)->getContent();
 
-        echo $request->paymentMethod;
-        print_r($items);
+        $uid    =  hash('sha256',Str::random(6) .' - '.date('Y-m-d H:i:s');
+        $total  = 0;
+        $bulk   = [];
+
+        //TODO validate payment method
+        //TODO Validate items
+
+        foreach($items as $item){
+
+            $itemModel = $item->model;
+
+            //Get price from database;
+            $total = $total + $itemModel->price;
+
+            $bulk[] = [
+                'uid'           => $uid,
+                'brand_id'      => $itemModel->brand_id,
+                'item_id'       => $itemModel->id,
+                'brand_name'    => $itemModel->brand()->name,
+                'name'          => $itemModel->name,
+                'type'          => $itemModel->type,
+                'category'      => $itemModel->category,
+                'price'         => $itemModel->price,
+                'expiry'        => $itemModel->expiry,
+                'description'   => $itemModel->description
+            ];
+        }
+
+      //  echo $request->paymentMethod;
+       // print_r($items);
+
+        $order = new Order();
+
+
+        $order->uid             = $uid;
+        $order->user_id         = $user_id;
+        $order->amount          = $total;
+        $order->status          = 'PEND';
+        $order->payment_method  = $request->paymentMethod;
+
+        $orderItem = new OrderItem();
+
+        try{
+            DB::transaction(function () use($order,$bulk){
+
+                $order->save();
+
+                OrderItem::insert($bulk);
+
+            });
+        }catch(\Exception $e){
+
+            return response()->json([
+                'status' => 0,
+                'message'=> $e,
+                'data'=> []
+            ]);
+        }
+
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> [
+                'uid'=>$uid
+            ]
+        ]);
     }
 }

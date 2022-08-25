@@ -19,6 +19,7 @@ return new class extends Migration
             $table->char('status',4);
             $table->bigInteger('user_id');
             $table->decimal('amount',10,2);
+            $table->char('payment_method',2);
             $table->timestamps();
         });
     }
