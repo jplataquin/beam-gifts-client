@@ -68,7 +68,7 @@ class CartController extends Controller
             'attributes' => [
                 'image'     => $item->photo['150px']
             ],
-            'associatedModel' => ' App\Models\Item'
+            'associatedModel' => ' Item'
         ]);
 
 
