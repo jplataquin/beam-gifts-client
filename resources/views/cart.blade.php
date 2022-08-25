@@ -30,7 +30,7 @@
             <div class="form-group">
                 <label>Payment Method</label>
                 <div>
-                    <input type="radio" class="" selected="true" name="paymentMethod" value="cc"/> Credit Card
+                    <input type="radio" class="" name="paymentMethod" value="cc" checked/> Credit Card
                     <input type="radio" class="" name="paymentMethod" value="gc"/> Gcash
                 </div>
             </div>
