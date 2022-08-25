@@ -7,8 +7,9 @@
     <div id="formContainer">
 
         <div class="row">
-            <div class="col">
-                <h2>Total Due: {{number_format($order->amount,2)}}</h2>
+            <div class="col text-end">
+                <h2>Total Amount Due: {{number_format($order->amount,2)}}</h2>
+                
             </div>
         </div>
 
