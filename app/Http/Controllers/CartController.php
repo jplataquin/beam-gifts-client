@@ -102,7 +102,7 @@ class CartController extends Controller
         $user_id = Auth::user()->id;
         $items = \Cart::session($user_id)->getContent();
 
-        $uid    =  hash('sha256',Str::random(6) .' - '.date('Y-m-d H:i:s');
+        $uid    =  hash('sha256', Str::random(6) .' - '.date('Y-m-d H:i:s') );
         $total  = 0;
         $bulk   = [];
 
