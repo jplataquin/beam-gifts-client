@@ -9,9 +9,13 @@
                 <div class="col-2">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
-                <div class="col-10">
+                <div class="col-7">
                     <h3>{{$item->name}}</h3>
+                    <h5>{{$item->brand}}</h5>
                     Qty: {{$item->quantity}}
+                </div>
+                <div class="col-3">
+                    <h3>{{$item->item * $item->price}}</h3>
                 </div>
             </div>
         @endforeach
