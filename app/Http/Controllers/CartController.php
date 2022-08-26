@@ -117,14 +117,15 @@ class CartController extends Controller
             $itemModel = $item->model;
 
             //Get price from database;
-            $total = $total + $itemModel->price;
+            $total = $total + ($itemModel->price * $item->quantity);
 
             $bulk[] = [
                 'uid'           => $uid,
                 'brand_id'      => $itemModel->brand_id,
                 'item_id'       => $itemModel->id,
+                'quantity'      => $item->quantity,
                 'brand_name'    => $itemModel->brand->name,
-                'name'          => $itemModel->name,
+                'item_name'     => $itemModel->name,
                 'type'          => $itemModel->type,
                 'category'      => $itemModel->category,
                 'price'         => $itemModel->price,
@@ -135,8 +136,6 @@ class CartController extends Controller
             ];
         }
 
-      //  echo $request->paymentMethod;
-       // print_r($items);
 
         $order = new Order();
 
@@ -150,6 +149,7 @@ class CartController extends Controller
         $orderItem = new OrderItem();
 
         try{
+ 
             DB::transaction(function () use($order,$bulk){
 
                 $order->save();
@@ -157,6 +157,7 @@ class CartController extends Controller
                 OrderItem::insert($bulk);
 
             });
+            
         }catch(\Exception $e){
 
             return response()->json([
