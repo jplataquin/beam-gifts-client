@@ -260,7 +260,11 @@
 
         let exp = expiry.value.split('/');
 
-        window.util.$post('/payment/creditcard').then(reply=>{
+        const fromData = new FormData();
+
+        formData.append('uid','{{$uid}}');
+
+        window.util.$post('/payment/creditcard',formData).then(reply=>{
 
             clientKey       = reply.data.clientKey;
             key             = reply.data.key;

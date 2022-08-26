@@ -18,8 +18,9 @@ return new class extends Migration
             $table->char('uid',64);
             $table->bigInteger('brand_id');
             $table->bigInteger('item_id');
+            $table->integer('quantity');
             $table->string('brand_name');
-            $table->string('name');
+            $table->string('item_name');
             $table->char('type',4);
             $table->char('category',4);
             $table->decimal('price',10,2);
