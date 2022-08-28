@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('orders', function($table) {
-            $table->string('paymongo_payment_intent_id')->after('payment_method');
-            $table->string('paymongo_client_key')->after('payment_method');
+            $table->string('paymongo_payment_intent_id')->nullable()->after('payment_method');
+            $table->string('paymongo_client_key')->nullable()->after('payment_method');
         });
     }
 
