@@ -25,6 +25,9 @@ class PaymongoController extends Controller
         //100
         //100.01
         //100.0000
+        
+                
+        $amount = $amount.'';
 
         $amountArr = explode('.',$amount);
 
@@ -32,19 +35,19 @@ class PaymongoController extends Controller
 
         if(count($amountArr) >= 2){
             
-            $translated += $amountArr[0];
+            $translated .= $amountArr[0];
             $len        = strlen($amountArr[1]);
             
             if($len == 1){
-                $translated += $amountArr[1]+'0';
+                $translated .= $amountArr[1]+'0';
             }else if($len == 2){
-                $translated += $amountArr[1];
+                $translated .= $amountArr[1];
             }else{
-                $translated += substr($amountArr[1],0,2);
+                $translated .= substr($amountArr[1],0,2);
             }
 
         }else{
-            $translated += $amountArr[0]+'00';
+            $translated .= $amountArr[0]+'00';
         }
 
         return (int) $translated;
