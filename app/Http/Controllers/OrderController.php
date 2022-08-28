@@ -28,7 +28,7 @@ class OrderController extends Controller
         }
 
         $status         = '';
-        $date_created   = date('M d, Y H:i:s',strtotime($order->date_created));
+        $date_created   = date('M d, Y H:i:s',strtotime($order->created_at));
         $date_paid      = '';
         $payment_intent = [];
 
