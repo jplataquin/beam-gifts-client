@@ -14,7 +14,7 @@ class OrderController extends Controller
 
         $order = new Order();
 
-        $order = $oder::where('uid',$uid)->first();
+        $order = $order::where('uid',$uid)->first();
 
         if(!$order){
             abort(404);
