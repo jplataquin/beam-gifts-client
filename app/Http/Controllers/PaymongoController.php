@@ -25,9 +25,6 @@ class PaymongoController extends Controller
         //100
         //100.01
         //100.0000
-        
-
-        $amount = $amount+'';
 
         $amountArr = explode('.',$amount);
 
