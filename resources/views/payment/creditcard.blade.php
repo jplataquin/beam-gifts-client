@@ -260,7 +260,7 @@
 
         let exp = expiry.value.split('/');
 
-        const fromData = new FormData();
+        const formData = new FormData();
 
         formData.append('uid','{{$uid}}');
 
