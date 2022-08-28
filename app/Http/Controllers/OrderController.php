@@ -28,19 +28,27 @@ class OrderController extends Controller
 
     private function validatePaymongoPayment($order){
 
-        $response = Http::withHeaders([
-            'Accept'        => 'application/json',
-            'Content-Type'  => 'application/json',
-            'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
-        ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])->json();
+        if($order->paymongo_payment_intent_id){
+            
+            try{
+                $response = Http::withHeaders([
+                    'Accept'        => 'application/json',
+                    'Content-Type'  => 'application/json',
+                    'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
+                ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])->throw()->json();
+                
+                $status = $response['data']['attributes']['status'];
 
-        $status = $response['data']['attributes']['status'];
+                if($status == 'succeeded'){
+                    $order->status = 'PAID';
+                    $order->paymongo_payment_intent_data = json_encode($response);
+                }
 
-        if($status == 'succeeded'){
-            $order->status = 'PAID';
-            $order->paymongo_payment_intent_data = json_encode($response);
+                $order->save();
+
+            }catch(\Exception $e){
+                //TODO
+            }
         }
-
-        $order->save();
     }
 }
