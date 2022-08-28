@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
+        Schema::table('orders', function($table) {
             $table->dropColumn('paymongo_payment_intent_id');
             $table->dropColumn('paymongo_client_key');
         });
