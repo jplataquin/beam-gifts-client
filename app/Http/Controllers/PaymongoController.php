@@ -91,7 +91,6 @@ class PaymongoController extends Controller
             ]);
         }
 
-        echo $this->translateAmount($result->amount);
 
         $response = Http::withHeaders([
             'Accept'        => 'application/json',
