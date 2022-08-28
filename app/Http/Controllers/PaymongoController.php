@@ -99,7 +99,7 @@ class PaymongoController extends Controller
         ])->post('https://api.paymongo.com/v1/payment_intents', [
             "data"=>[
                 "attributes"=>[
-                    "amount"=>$this->translateAmount($order->amount),
+                    "amount"=> $this->translateAmount($result->amount),
                     "payment_method_allowed"=>["card"],
                     "payment_method_options"=>[
                         "card"=>[
