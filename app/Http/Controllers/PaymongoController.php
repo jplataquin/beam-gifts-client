@@ -91,8 +91,8 @@ class PaymongoController extends Controller
             ]);
         }
 
-        print_r($result);
-        
+        echo $result->amount;
+
         $response = Http::withHeaders([
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
