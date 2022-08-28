@@ -29,7 +29,7 @@ class OrderController extends Controller
 
         $status         = '';
         $date_created   = date('M d, Y H:i:s',strtotime($order->created_at));
-        $date_paid      = '';
+        $date_paid      = 'N/A';
         $payment_intent = [];
         $payment_method = '';
 

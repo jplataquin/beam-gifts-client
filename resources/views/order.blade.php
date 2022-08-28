@@ -23,7 +23,7 @@
                 <h5>Payment Method: {{$payment_method}}</h5>
             </div>
             <div class="col-6">
-                <h5></h5>
+                <h5>Date Created: {{$date_created}}</h5>
             </div>
         </div>
         <div class="row">
@@ -31,7 +31,7 @@
                 <h5>Date Paid: {{$date_paid}}</h5>
             </div>
             <div class="col-6">
-                <h5>Date Created: {{$date_created}}</h5>
+               
             </div>
         </div>
     </div>
