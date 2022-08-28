@@ -12,7 +12,13 @@ class OrderController extends Controller
     
     public function index(Request $request,$uid){
 
-        $order = new Order::findOrFail($uid);
+        $order = new Order();
+
+        $order = $oder::where('uid',$uid)->first();
+
+        if(!$order){
+            abort(404);
+        }
 
         if($order->status == "PEND"){
             $this->validatePaymongoPayment($order);
