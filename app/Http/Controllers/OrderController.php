@@ -31,6 +31,7 @@ class OrderController extends Controller
         $date_created   = date('M d, Y H:i:s',strtotime($order->created_at));
         $date_paid      = '';
         $payment_intent = [];
+        $payment_method = '';
 
         if($order->status == 'PEND'){
             $status = 'Not Paid';
@@ -46,13 +47,21 @@ class OrderController extends Controller
         }
 
 
+        $payment_method_opt = [
+            'cc' => 'Credit Card',
+            'gc' => 'Gcash'
+        ];
+
+        $payment_method = $payment_method_opt[$order->payment_method];
+
         return view('order',[
             'status'            => $status,
             'order'             => $order,
             'items'             => $order->items,
             'payment_intent'    => $payment_intent,
             'date_created'      => $date_created,
-            'date_paid'         => $date_paid
+            'date_paid'         => $date_paid,
+            'payment_method'    => $payment_method
         ]);
     }
 
