@@ -91,7 +91,7 @@ class PaymongoController extends Controller
             ]);
         }
 
-
+        //pi_uyFGGxiTXWnqUrF4HBaNeWLt_client_C4uYzJd82LvLYaG3DXpBaWVC
         $response = Http::withHeaders([
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
@@ -112,13 +112,23 @@ class PaymongoController extends Controller
             ]
         ])->json();
 
+        //TODO VALIDATE $response['data']['attributes']['client_key']        
+        //pi_uyFGGxiTXWnqUrF4HBaNeWLt_client_C4uYzJd82LvLYaG3DXpBaWVC
+        $clientKey          = $response['data']['attributes']['client_key'];
+        $payment_intent_id  = $clientKey.explode('_client')[0];
+
+        $result->paymongo_payment_intent_id = $payment_intent_id;
+        $result->paymongo_client_key        = $clientKey;
+
+        $result->save();
+
         //print_r( $response);
         return response()->json([
             'status' => 1,
             'message'=>'',
             
             'data'=> [
-                'clientKey'       => $response['data']['attributes']['client_key'],
+                'clientKey'       => $clientKey,
                 'key'             => base64_encode( config('paymongo')['public_key'].':' )
             ]
         ]);
