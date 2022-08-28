@@ -38,6 +38,9 @@ class OrderController extends Controller
             
             $status         = 'Paid';
             $payment_intent = json_decode($order->payment_intent_data,true);
+
+            print_r($payment_intent);
+            
             $payment_time   = (int) $payment_intent['data']['attributes']['payments']['attributes']['paid_at'];
             $date_paid      = date('M d, Y H:i:s',$payment_time);
         }
