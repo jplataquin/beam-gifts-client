@@ -15,7 +15,15 @@
                 <h5>Status: {{$status}}</h5>
             </div>
             <div class="col-6">
-                <h5>Total: {{number_format($order->amount)}}</h5>
+                <h5>Total: PHP {{number_format($order->amount)}}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h5>Date Paid: {{$date_paid}}</h5>
+            </div>
+            <div class="col-6">
+                <h5>Date Created: {{$date_created}}</h5>
             </div>
         </div>
     </div>

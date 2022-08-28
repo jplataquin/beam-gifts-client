@@ -27,19 +27,29 @@ class OrderController extends Controller
             $this->validatePaymongoPayment($order);
         }
 
-        $status = '';
+        $status         = '';
+        $date_created   = date('M d, Y H:i:s',strtotime($order->date_created));
+        $date_paid      = '';
+        $payment_intent = [];
 
         if($order->status == 'PEND'){
             $status = 'Not Paid';
         }else if($order->status == 'PAID'){
-            $status = 'Paid';
+            
+            $status         = 'Paid';
+            $payment_intent = json_decode($order->payment_intent_data,true);
+            $payment_time   = (int) $payment_intent['data']['attributes']['payments']['attributes']['paid_at'];
+            $date_paid      = date('M d, Y H:i:s',$payment_time);
         }
 
+
         return view('order',[
-            'status'    => $status,
-            'order'     => $order,
-            'items'     => $order->items,
-            'payment_intent' => json_decode($order->payment_intent_data,true)
+            'status'            => $status,
+            'order'             => $order,
+            'items'             => $order->items,
+            'payment_intent'    => $payment_intent,
+            'date_created'      => $date_created,
+            'date_paid'         => $date_paid
         ]);
     }
 
