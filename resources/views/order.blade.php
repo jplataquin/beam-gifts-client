@@ -15,7 +15,7 @@
                 <h5>Status: {{$status}}</h5>
             </div>
             <div class="col-6">
-                <h5>Total: PHP {{number_format($order->amount)}}</h5>
+                <h5>Total: PHP {{number_format($order->amount,2)}}</h5>
             </div>
         </div>
         <div class="row">
