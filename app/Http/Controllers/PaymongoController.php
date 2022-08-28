@@ -115,7 +115,7 @@ class PaymongoController extends Controller
         //TODO VALIDATE $response['data']['attributes']['client_key']        
         //pi_uyFGGxiTXWnqUrF4HBaNeWLt_client_C4uYzJd82LvLYaG3DXpBaWVC
         $clientKey          = $response['data']['attributes']['client_key'];
-        $payment_intent_id  = $clientKey.explode('_client',$clientKey)[0];
+        $payment_intent_id  = explode('_client',$clientKey)[0];
 
         $result->paymongo_payment_intent_id = $payment_intent_id;
         $result->paymongo_client_key        = $clientKey;
