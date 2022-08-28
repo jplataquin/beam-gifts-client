@@ -34,6 +34,6 @@ class OrderController extends Controller
             'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
         ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])->json();
 
-        echo $response->data->attributes->status;
+        echo $response['data']['attributes']['status'];
     }
 }
