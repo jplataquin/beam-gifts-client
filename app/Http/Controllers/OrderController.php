@@ -17,19 +17,7 @@ class OrderController extends Controller
         if($order->status == "PEND"){
             $this->validatePaymongoPayment($order);
         }
-        
-        $response = $client->request('GET', 'https://api.paymongo.com/v1/payment_intents/id', [
-
-        'headers' => [
-
-            'Accept' => 'application/json',
-
-        ],
-
-        ]);
-
-
-        echo $response->getBody();
+       
     }
 
     private function validatePaymongoPayment($order){
@@ -38,21 +26,8 @@ class OrderController extends Controller
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
             'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
-        ])->get('https://api.paymongo.com/v1/payment_intents/id', [
-            "data"=>[
-                "attributes"=>[
-                    "amount"=> $this->translateAmount($result->amount),
-                    "payment_method_allowed"=>["card"],
-                    "payment_method_options"=>[
-                        "card"=>[
-                            "request_three_d_secure"=>"any"
-                        ]
-                    ],
-                    "currency"=>"PHP",
-                    "capture_type"=>"automatic"
-                ]
-            ]
-        ])->json();
+        ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])->json();
 
+        echo $response->data->attributes->status;
     }
 }

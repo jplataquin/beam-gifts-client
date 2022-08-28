@@ -331,6 +331,8 @@
         console.log('Success');
 
         console.log(paymentIntent,paymentMethodId,paymentIntentId);
+
+        document.location.href = '/myorders/{{$uid}}';
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
