@@ -4,10 +4,18 @@
   
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
 
-                <h3>Order Ref: {{$order->uid}}</h3>
-                <h3>Status: {{$status}}</h3>
+                <h5>Order Ref: {{$order->uid}}</h5>
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h5>Status: {{$status}}</h5>
+            </div>
+            <div class="col-6">
+                <h5>Total: {{number_format($order->amount)}}</h5>
             </div>
         </div>
     </div>
