@@ -129,7 +129,9 @@ class PaymongoController extends Controller
             
             'data'=> [
                 'clientKey'       => $clientKey,
-                'key'             => base64_encode( config('paymongo')['public_key'].':' )
+                'pi'              => $payment_intent_id,
+                'key'             => base64_encode( config('paymongo')['public_key'].':' ),
+                'j' =>$response
             ]
         ]);
     }

@@ -40,6 +40,8 @@ Route::post('checkout', [App\Http\Controllers\CartController::class, 'checkout']
 Route::get('payment/creditcard/{uid}', [App\Http\Controllers\PaymongoController::class, 'creditcard']);
 Route::post('payment/creditcard', [App\Http\Controllers\PaymongoController::class, '_creditcard']);
 
+Route::post('myorders/{uid}', [App\Http\Controllers\OrderController::class, 'index']);
+
 
 Route::get('adarna.js', function(){
 
