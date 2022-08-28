@@ -12,9 +12,11 @@ class OrderController extends Controller
     
     public function index(Request $request,$uid){
 
+        $user_id = Auth::user()->id;
+
         $order = new Order();
 
-        $order = $order::where('uid',$uid)->first();
+        $order = $order::where('uid',$uid)->where('user_id',$user_id)->first();
 
         if(!$order){
             abort(404);
@@ -23,7 +25,21 @@ class OrderController extends Controller
         if($order->status == "PEND"){
             $this->validatePaymongoPayment($order);
         }
-       
+
+        $status = '';
+
+        if($order->status == 'PEND'){
+            $status = 'Not Paid';
+        }else if($order->status == 'PAID'){
+            $status = 'Paid';
+        }
+
+        return view('order',[
+            'status'    => $status,
+            'order'     => $order,
+            'items'     => $order->items,
+            'payment_intent' => json_decode($order->payment_intent_data,true)
+        ]);
     }
 
     private function validatePaymongoPayment($order){
@@ -47,7 +63,7 @@ class OrderController extends Controller
                 $order->save();
 
             }catch(\Exception $e){
-                //TODO
+                //TODO throw error here
             }
         }
     }
