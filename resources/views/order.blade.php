@@ -34,14 +34,16 @@
                
             </div>
         </div>
+
+        <h1>Items</h1>
+        <div>
+            @foreach($items as $item)
+                <div>
+                    {{$item->item_name}}
+                </div>
+            @endforeach
+        </div>
     </div>
 
-    <h1>Items</h1>
-    <div>
-        @foreach($order->items as $item)
-            <div>
-                {{$item->name}}
-            </div>
-        @endforeach
-    </div>
+
 @endsection
