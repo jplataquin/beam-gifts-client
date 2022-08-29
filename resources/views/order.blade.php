@@ -36,7 +36,7 @@
         </div>
     </div>
 
-
+    <h1>Items</h1>
     <div>
         @foreach($order->items as $item)
             <div>
