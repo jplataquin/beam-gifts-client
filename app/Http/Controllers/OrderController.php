@@ -87,6 +87,7 @@ class OrderController extends Controller
                 if($status == 'succeeded'){
                     $order->status = 'PAID';
                     $order->paymongo_payment_intent_data = json_encode($response);
+                    echo 'POP';
                 }
 
                 DB::transaction(function () use ($order,$date_paid,$payment_time){
