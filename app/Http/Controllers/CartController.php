@@ -132,6 +132,7 @@ class CartController extends Controller
                 'price'         => $itemModel->price,
                 'expiry'        => $itemModel->expiry,
                 'description'   => $itemModel->description,
+                'logs'          => json_encode([]),
                 'created_at'    => $at,
                 'updated_at'    => $at
             ];
