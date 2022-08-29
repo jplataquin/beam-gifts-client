@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('status',4)->nullaable()->after('uid');
             $table->bigInteger('user_id')->nullable()->after('description');
             $table->integer('consumed')->default(0)->after('quantity');
-            $table->json('logs')->default('{}')->after('claimed_at');
+            $table->json('logs')->after('claimed_at');
         });
     }
 
