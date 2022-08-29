@@ -35,4 +35,13 @@
             </div>
         </div>
     </div>
+
+
+    <div>
+        @foreach($order->items as $item)
+            <div>
+                {{$item->name}}
+            </div>
+        @endforeach
+    </div>
 @endsection

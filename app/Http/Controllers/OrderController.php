@@ -97,9 +97,7 @@ class OrderController extends Controller
                             'user_id'       => $order->user_id,
                             'paid_at'       => $date_paid,
                             'updated_at'    => date('Y-m-d H:i:s'),
-                            'logs'          => json_encode([
-                                'payment_time' => $payment_time
-                            ])
+                            'logs'          => json_encode([])
                         ]);
                        
     
