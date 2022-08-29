@@ -92,16 +92,18 @@ class OrderController extends Controller
 
                         $order->save();
                         
-                        DB::table('order_items')->where('uid',$order->uid)->update([
-                            'status'        => 'PAID',
-                            'user_id'       => $order->user_id,
-                            'paid_at'       => $date_paid,
-                            'updated_at'    => date('Y-m-d H:i:s'),
-                            'logs'          => json_encode([
-                                'payment_time' => $payment_intent
-                            ])
-                        ]);
-    
+                        
+                        /**
+                            DB::table('order_items')->where('uid',$order->uid)->update([
+                                'status'        => 'PAID',
+                                'user_id'       => $order->user_id,
+                                'paid_at'       => $date_paid,
+                                'updated_at'    => date('Y-m-d H:i:s'),
+                                'logs'          => json_encode([
+                                    'payment_time' => $payment_intent
+                                ])
+                            ]);
+                        **/
     
                     });
                 }
