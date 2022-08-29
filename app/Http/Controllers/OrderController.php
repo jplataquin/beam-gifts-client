@@ -89,14 +89,15 @@ class OrderController extends Controller
                     $order->paymongo_payment_intent_data = json_encode($response);
                 }
 
-                DB::transaction(function () use ($order){
+                DB::transaction(function () use ($order,$date_paid){
 
                     $order->save();
                     
                     DB::table('order_items')->where('uid',$order->uid)->update([
                         'status'        => 'PAID',
                         'user_id'       => $order->user_id,
-                        'paid_at'       => $date_paid
+                        'paid_at'       => $date_paid,
+                        'updated_at'    => date('Y-m-d H:i:s')
                     ]);
 
 
