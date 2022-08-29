@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::table('order_items', function (Blueprint $table) {
-            $table->dropColumn('claimed_at');
             $table->dropColumn('expires_at');
             $table->dateTime('paid_at')->nullable()->after('extended');
         });
@@ -28,7 +27,6 @@ return new class extends Migration
     public function down()
     {
         Schema::table('order_items', function (Blueprint $table) {
-            $table->dateTime('claimed_at')->nullable()->after('extended');
             $table->dateTime('expires_at')->nullable()->after('extended');
         });
     }
