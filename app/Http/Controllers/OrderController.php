@@ -84,10 +84,12 @@ class OrderController extends Controller
                 $payment_time   = (int) $response['data']['attributes']['payments'][0]['attributes']['paid_at'];
                 $date_paid      = date('Y-m-d H:i:s',$payment_time);
 
+                echo '<h1>'.$status.'</h1>';
+                
                 if($status == 'succeeded'){
                     $order->status = 'PAID';
                     $order->paymongo_payment_intent_data = json_encode($response);
-                    echo 'POP';
+                  
                 }
 
                 DB::transaction(function () use ($order,$date_paid,$payment_time){
