@@ -89,7 +89,7 @@ class OrderController extends Controller
                     $order->paymongo_payment_intent_data = json_encode($response);
                 }
 
-                DB::transaction(function () use ($order,$date_paid){
+                DB::transaction(function () use ($order,$date_paid,$payment_time){
 
                     $order->save();
                     
@@ -97,7 +97,10 @@ class OrderController extends Controller
                         'status'        => 'PAID',
                         'user_id'       => $order->user_id,
                         'paid_at'       => $date_paid,
-                        'updated_at'    => date('Y-m-d H:i:s')
+                        'updated_at'    => date('Y-m-d H:i:s'),
+                        'logs' => json_encode([
+                            'payment_time' => $payment_intent
+                        ])
                     ]);
 
 
