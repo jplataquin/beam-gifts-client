@@ -92,7 +92,7 @@ class OrderController extends Controller
                 DB::transaction(function () use ($order,$date_paid,$payment_time){
 
                     $order->save();
-                    
+                    /*
                     DB::table('order_items')->where('uid',$order->uid)->update([
                         'status'        => 'PAID',
                         'user_id'       => $order->user_id,
@@ -101,7 +101,7 @@ class OrderController extends Controller
                         'logs'          => json_encode([
                             'payment_time' => $payment_intent
                         ])
-                    ]);
+                    ]);*/
 
 
                 });
