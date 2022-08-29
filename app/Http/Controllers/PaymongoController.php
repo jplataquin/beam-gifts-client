@@ -63,7 +63,7 @@ class PaymongoController extends Controller
         //TODO validate $uid;
 
         return view('payment/creditcard',[
-            'uid' => $uid,
+            'uid'   => $uid,
             'order' => $result,
             'items' => $result->items
         ]);

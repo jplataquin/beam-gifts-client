@@ -121,6 +121,7 @@ class CartController extends Controller
 
             $bulk[] = [
                 'uid'           => $uid,
+                'status'        => 'PEND',
                 'brand_id'      => $itemModel->brand_id,
                 'item_id'       => $itemModel->id,
                 'quantity'      => $item->quantity,
