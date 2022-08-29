@@ -39,6 +39,7 @@
         <div>
             @foreach($items as $item)
                 <div>
+                    {{$item->model->photo}}
                     <div>
                         {{$item->item_name}}
                     </div>

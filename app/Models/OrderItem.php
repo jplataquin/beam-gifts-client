@@ -15,4 +15,8 @@ class OrderItem extends Model
     {
         return $this->belongsTo('App\Models\Order','uid','uid');
     }
+
+    public function model(){
+        return $this->belongsTo('App\Model\Item','id','item_id');
+    }
 }
