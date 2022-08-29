@@ -39,7 +39,10 @@
         <div>
             @foreach($items as $item)
                 <div>
-                    {{$item->item_name}}
+                    <div>
+                        {{$item->item_name}}
+                    </div>
+                    {{$item->consumed}} / {{$item->quantity}}
                 </div>
             @endforeach
         </div>
