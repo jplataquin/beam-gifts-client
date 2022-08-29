@@ -42,8 +42,6 @@ class OrderController extends Controller
             $status         = 'Paid';
             $payment_intent = json_decode($order->paymongo_payment_intent_data,true);
 
-            //print_r($payment_intent);
-            //exit;
             $payment_time   = (int) $payment_intent['data']['attributes']['payments'][0]['attributes']['paid_at'];
             $date_paid      = date('M d, Y H:i:s',$payment_time);
         }
@@ -77,23 +75,30 @@ class OrderController extends Controller
                     'Accept'        => 'application/json',
                     'Content-Type'  => 'application/json',
                     'Authorization' => 'Basic '.base64_encode( config('paymongo')['secret_key'].':' )
-                ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])->throw()->json();
+                ])->get('https://api.paymongo.com/v1/payment_intents/'.$order->paymongo_payment_intent_id, [])
+                ->throw()
+                ->json();
                 
                 $status = $response['data']['attributes']['status'];
+                
+                $payment_time   = (int) $response['data']['attributes']['payments'][0]['attributes']['paid_at'];
+                $date_paid      = date('Y-m-d H:i:s',$payment_time);
 
                 if($status == 'succeeded'){
                     $order->status = 'PAID';
                     $order->paymongo_payment_intent_data = json_encode($response);
                 }
 
-                DB::transaction(function () use($order){
+                DB::transaction(function () use ($order){
 
                     $order->save();
                     
                     DB::table('order_items')->where('uid',$order->uid)->update([
-                        'status'    => 'PAID',
-                        'user_id'   => $order->user_id,
+                        'status'        => 'PAID',
+                        'user_id'       => $order->user_id,
+                        'paid_at'       => $date_paid
                     ]);
+
 
                 });
                
