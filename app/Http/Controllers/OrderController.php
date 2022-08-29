@@ -85,7 +85,7 @@ class OrderController extends Controller
                 $date_paid      = date('Y-m-d H:i:s',$payment_time);
 
                 echo '<h1>'.$status.'</h1>';
-                
+                exit;
                 if($status == 'succeeded'){
                     $order->status = 'PAID';
                     $order->paymongo_payment_intent_data = json_encode($response);
