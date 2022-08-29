@@ -93,6 +93,7 @@ class OrderController extends Controller
                         $order->save();
                         
                         DB::table('order_items')->where('uid',$order->uid)->update([
+                            'item_uid'      => 'SHA2(CONCAT(order_items.id,'.$order->uid.'), 256)',
                             'status'        => 'PAID',
                             'user_id'       => $order->user_id,
                             'paid_at'       => $date_paid,
