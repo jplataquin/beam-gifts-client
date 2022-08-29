@@ -25,7 +25,7 @@ class OrderController extends Controller
             abort(404);
         }
 
-        if($order->status == 'PEND'){
+        if($order->status == 'PEND' || $order->status == ''){
             $order = $this->validatePaymongoPayment($order);
         }
 
@@ -92,18 +92,16 @@ class OrderController extends Controller
 
                         $order->save();
                         
-                        
-                        /**
-                            DB::table('order_items')->where('uid',$order->uid)->update([
-                                'status'        => 'PAID',
-                                'user_id'       => $order->user_id,
-                                'paid_at'       => $date_paid,
-                                'updated_at'    => date('Y-m-d H:i:s'),
-                                'logs'          => json_encode([
-                                    'payment_time' => $payment_intent
-                                ])
-                            ]);
-                        **/
+                        DB::table('order_items')->where('uid',$order->uid)->update([
+                            'status'        => 'PAID',
+                            'user_id'       => $order->user_id,
+                            'paid_at'       => $date_paid,
+                            'updated_at'    => date('Y-m-d H:i:s'),
+                            'logs'          => json_encode([
+                                'payment_time' => $payment_intent
+                            ])
+                        ]);
+                       
     
                     });
                 }
@@ -111,6 +109,7 @@ class OrderController extends Controller
                 
             }catch(\Exception $e){
                 //TODO throw error here
+                throw $e;
             }
         }
 
