@@ -50,11 +50,10 @@
                     });
                 </script>
 
-                <h3>Scan at {{$item->brand_name}} to claim</h3>
             </div>
 
-            <div>
-
+            <div class="border border-primary mb-3"> 
+                <h2 class="mt-3 mb-3">{{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
     </div>
 
