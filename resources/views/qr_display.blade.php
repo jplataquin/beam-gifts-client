@@ -12,7 +12,8 @@
 
         <div id="qr_logo"></div>
         <script type="module">
-
+            import * from '/easyqrcode.js';
+            
             new QRCode(document.getElementById('qr_logo'), {			
 				text: JSON.stringify({test:'test'}),
 				

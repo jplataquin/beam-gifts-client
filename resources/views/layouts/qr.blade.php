@@ -16,7 +16,6 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     
-    <script type="text/javacript" src="/easyqrcode.js"></script>
 
 </head>
 <body>
