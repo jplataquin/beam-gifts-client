@@ -11,7 +11,7 @@
 
             <div>
 
-                <div class="text-center" id="qr_logo"></div>
+                <div class="text-center" width="100%" id="qr_logo"></div>
                 <script type="module">
                     import '/easyqrcode.js';
 
