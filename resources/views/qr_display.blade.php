@@ -8,6 +8,35 @@
         <h2>{{$item->item_name}}</h2>
     </div>
 
+    <div>
+
+        <div id="qr_logo"></div>
+        <script type="module">
+
+            new QRCode(document.getElementById('qr_logo'), {			
+				text: JSON.stringify({test:'test'}),
+				
+				width: 120,
+				height: 120,
+				colorDark: "#000000",
+		
+				PI: '#00008F',
+		
+				correctLevel: QRCode.CorrectLevel.H, // L, M, Q, H
+		
+				//logo: 'logo.png',
+				logoWidth: 43, // fixed logo width. default is `width/3.5`
+				logoHeight: 43,
+				autoColor: true,
+			
+				dotScale: 0.7,
+				drawer: 'canvas',
+				onRenderingEnd: function(qrCodeOptions) {
+					
+				},
+			});
+        </script>
+    </div>
 </div>
 
 @endsection
