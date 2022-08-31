@@ -46,6 +46,9 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
+
+Route::get('/item/{item_uid}',[App\Http\Controllers\ItemController::class, 'index']);
+
 Route::get('adarna.js', function(){
 
     $response = Response::make(File::get(base_path('node_modules/adarna/dist/adarna.js')), 200);
