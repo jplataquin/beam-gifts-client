@@ -16,7 +16,7 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-sm-2">
-                        <img src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$photo['150px']}}" class="img-fluid rounded-start" alt="...">
+                        <img width="50px" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$photo['150px']}}" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-sm-10">
                         <div class="card-body">
