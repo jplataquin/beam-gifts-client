@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col pt-3">
-            <div>
+            <div class="border border-primary">
                 <h3>A gift from</h3>
                 <h3>{{$user->name}}</h3>
             </div>
@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="mt-3">
 
                 <div class="text-center" width="100%" id="qr_logo"></div>
                 <script type="module">
