@@ -10,15 +10,15 @@
 
     <div>
 
-        <div id="qr_logo"></div>
+        <div class="text-center" id="qr_logo"></div>
         <script type="module">
             import '/easyqrcode.js';
 
             new QRCode(document.getElementById('qr_logo'), {			
 				text: JSON.stringify({test:'test'}),
 				
-				width: 120,
-				height: 120,
+				width: 400,
+				height: 400,
 				colorDark: "#000000",
 		
 				PI: '#00008F',
