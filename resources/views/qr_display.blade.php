@@ -4,7 +4,7 @@
 
 <div>
     <div class="text-center">
-        <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['400px']}}"/>
+        <img class="img mb-3" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['400px']}}"/>
         <h2>{{$item->item_name}}</h2>
     </div>
 
