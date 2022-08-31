@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div>
+<div class="p-3">
     <div class="text-center">
         <img class="img mb-3" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['400px']}}"/>
         <h2>{{$item->item_name}}</h2>
@@ -15,7 +15,9 @@
             import '/easyqrcode.js';
 
             new QRCode(document.getElementById('qr_logo'), {			
-				text: JSON.stringify({test:'test'}),
+				text: JSON.stringify({
+                    item_uid: '{{$item->item_uid}}'
+                }),
 				
 				width: 400,
 				height: 400,
