@@ -6,7 +6,7 @@
     <div class="col pt-3">
             <div class="border border-primary mb-3 p-3">
 
-                <h3>A gift from</h3>
+                <h3>A E-gift from</h3>
                 <h3>{{$user->name}}</h3>
             </div>
 
@@ -20,7 +20,7 @@
 
             <div class="mt-3">
 
-                <div class="text-center" width="100%" id="qr_logo"></div>
+                <div class="text-center mb-3" width="100%" id="qr_logo"></div>
                 <script type="module">
                     import '/easyqrcode.js';
 
