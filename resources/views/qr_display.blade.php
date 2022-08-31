@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col">
             <div>
-                <h3>A gift from {{$user->firstname}}</h3>
+                <h3>A gift from {{$user->name}}</h3>
             </div>
 
             <div class="text-center">
