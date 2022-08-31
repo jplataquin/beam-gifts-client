@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $this->char('type',4)->default('CLNT')->after('id');
+            $table->char('type',4)->default('CLNT')->after('id');
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $this->dropColumn('type');
+            $table->dropColumn('type');
         });
     }
 };
