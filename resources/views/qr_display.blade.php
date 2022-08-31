@@ -12,7 +12,7 @@
             <div class="text-center">
                 <img class="img mb-3" width="100%" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['400px']}}"/>
                 
-                <div class="border border-primary"> 
+                <div class="border border-primary mb-3"> 
                     <h2 class="mt-3 mb-3">{{$item->item_name}}</h2>
                 </div>
             </div>
