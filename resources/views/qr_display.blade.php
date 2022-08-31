@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col pt-3">
             <div class="border border-primary mb-3 p-3">
-                
+
                 <h3>A gift from</h3>
                 <h3>{{$user->name}}</h3>
             </div>
@@ -49,6 +49,12 @@
                         },
                     });
                 </script>
+
+                <h3>Scan at {{$item->brand_name}} to claim</h3>
+            </div>
+
+            <div>
+
             </div>
     </div>
 
