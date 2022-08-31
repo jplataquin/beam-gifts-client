@@ -20,8 +20,8 @@
                             item_uid: '{{$item->item_uid}}'
                         }),
                         
-                        width: 400,
-                        height: 400,
+                        width: 300,
+                        height: 300,
                         colorDark: "#000000",
                 
                         PI: '#00008F',
