@@ -10,7 +10,10 @@
 
             <div class="text-center">
                 <img class="img mb-3" width="100%" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['400px']}}"/>
-                <h2>{{$item->item_name}}</h2>
+                <h2 class="mt-3 mb-3">{{$item->item_name}}</h2>
+                <div class="border border-primary">
+                    <img class="img" width="100px" src="{{config('app')['api_base_url']}}storage/photos/item/400px/{{$photo['150px']}}"/>
+                </div>
             </div>
 
             <div>
