@@ -59,7 +59,7 @@ Route::get('adarna.js', function(){
 
 Route::get('easyqrcode.js', function(){
 
-    $response = Response::make(File::get(base_path('node_modules/easyqrcodejs/easy.qrcode.min.js')), 200);
+    $response = Response::make(File::get(base_path('node_modules/easyqrcodejs/dist/easy.qrcode.min.js')), 200);
     $response->header("Content-Type", 'text/javascript');
 
     return $response;
