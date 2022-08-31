@@ -52,7 +52,7 @@
 
             </div>
 
-            <div class="border border-primary mb-3"> 
+            <div class="text-center border border-primary mb-3"> 
                 <h2 class="mt-3 mb-3">{{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
     </div>
