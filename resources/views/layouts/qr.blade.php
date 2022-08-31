@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="app">
-        <main class="py-4">
+        <main class="container">
             @yield('content')
         </main>
     </div>
