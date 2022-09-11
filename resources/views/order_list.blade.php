@@ -28,6 +28,10 @@
                     alert(reply.message);
                 }
                 
+                if(!reply.data.orders.length){
+                    showMoreBtn.style.display = 'none';
+                }
+
                 reply.data.orders.map(item=>{
 
                     let el = t.div({class:'border border-parimary mb-3'},()=>{
@@ -35,12 +39,16 @@
                         t.div(()=>{
                             t.label('Order ref: '+item.uid);
                         });
+
+                        t.a({class'btn btn-primary', href:'/myorders/'+item.uid},'View');
                     });
 
                     listEl.appendChild(el);
                 });
                 
                 page++;
+
+
             }).catch(e=>{
                 alert('Something went wrong');
             });
