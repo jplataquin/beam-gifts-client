@@ -73,13 +73,26 @@ class OrderController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $orders = Order::where('user_id',$user_id)->get();
+        $limit = $request->input('limit') ?? 10;
+        $page = $request->input('page') ?? 1;
+
+        $order = new Order;
+
+        $order = $oder->where('user_id',$user_id);
+
+        if($limit > 0){
+            $page   = $page * $limit;
+            $result = $brand->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
+        }else{
+            $result = $brand->orderBy('created_at', 'desc')->get();
+        }
+
 
         return response()->json([
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'orders' => $orders
+                'orders' => $result
             ]
         ]);
     }
