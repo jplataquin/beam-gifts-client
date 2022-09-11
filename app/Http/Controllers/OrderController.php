@@ -93,9 +93,7 @@ class OrderController extends Controller
             'message'=>'',
             'data'=> [
                 'orders' => $result
-            ],
-            'limit' => $limit,
-            'page' => $page
+            
         ]);
     }
 

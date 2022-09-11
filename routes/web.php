@@ -45,10 +45,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('myorders/', [App\Http\Controllers\OrderController::class, 'index']);
     Route::get('myorders/{uid}', [App\Http\Controllers\OrderController::class, 'display']);
 
+    Route::get('mygifts/', [App\Http\Controllers\OrderController::class, 'index']);
+
 });
 
 
-Route::get('/item/{item_uid}',[App\Http\Controllers\ItemController::class, 'index']);
+Route::get('/gift/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
 
 Route::get('adarna.js', function(){
 
