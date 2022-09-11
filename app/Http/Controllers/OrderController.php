@@ -73,8 +73,8 @@ class OrderController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $limit = parseInt($request->input('limit')) ?? 10;
-        $page = parseInt($request->input('page')) ?? 1;
+        $limit = (int) $request->input('limit') ?? 10;
+        $page = (int) $request->input('page') ?? 1;
 
         $order = new Order;
 
