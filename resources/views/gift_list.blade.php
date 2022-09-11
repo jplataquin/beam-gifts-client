@@ -5,8 +5,7 @@
     <div class="container">
         <h1>My Gifts</h1>
 
-        <div id="list">
-        </div>
+        <div id="list" class="d-flex justify-content-around"></div>
         <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
     </div>
 
@@ -36,7 +35,7 @@
                 reply.data.items.map(item=>{
 
                     let el = t.div({
-                        class:'card',
+                        class:'card mb-3',
                         style:{width: '18rem'}
                     },()=>{
                         t.img({
