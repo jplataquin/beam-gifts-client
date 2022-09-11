@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('myorders/', [App\Http\Controllers\OrderController::class, 'index']);
     Route::get('myorders/{uid}', [App\Http\Controllers\OrderController::class, 'display']);
 
-    Route::get('mygifts/', [App\Http\Controllers\OrderController::class, 'index']);
+    Route::get('mygifts/', [App\Http\Controllers\GiftController::class, 'index']);
 
 });
 
