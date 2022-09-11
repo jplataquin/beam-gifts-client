@@ -40,7 +40,7 @@
                             t.label('Order ref: '+item.uid);
                         });
 
-                        t.a({class'btn btn-primary', href:'/myorders/'+item.uid},'View');
+                        t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
                     });
 
                     listEl.appendChild(el);
