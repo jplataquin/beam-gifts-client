@@ -12,8 +12,12 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    
-    public function index(Request $request,$uid){
+
+    public function index(){
+        return view('order_list');
+    }
+
+    public function display(Request $request,$uid){
 
         $user_id = Auth::user()->id;
 
@@ -62,6 +66,21 @@ class OrderController extends Controller
             'date_created'      => $date_created,
             'date_paid'         => $date_paid,
             'payment_method'    => $payment_method
+        ]);
+    }
+
+    public function list(Request $request){
+
+        $user_id = Auth::user()->id;
+
+        $orders = new Order::where('uid',$uid)->where('user_id',$user_id)->result();
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> [
+                'orders' => $orders
+            ]
         ]);
     }
 

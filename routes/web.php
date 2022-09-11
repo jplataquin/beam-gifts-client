@@ -42,7 +42,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('payment/creditcard/{uid}', [App\Http\Controllers\PaymongoController::class, 'creditcard']);
     Route::post('payment/creditcard', [App\Http\Controllers\PaymongoController::class, '_creditcard']);
 
-    Route::get('myorders/{uid}', [App\Http\Controllers\OrderController::class, 'index']);
+    Route::get('myorders/', [App\Http\Controllers\OrderController::class, 'index']);
+    Route::get('myorders/{uid}', [App\Http\Controllers\OrderController::class, 'display']);
 
 });
 
