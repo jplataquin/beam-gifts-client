@@ -73,7 +73,7 @@ class OrderController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $orders = Order::where('user_id',$user_id)->results();
+        $orders = Order::where('user_id',$user_id)->get();
 
         return response()->json([
             'status' => 1,
