@@ -59,7 +59,7 @@ class GiftController extends Controller
             'message'=>'',
             'data'=> [
                 'items' => $result
-            
+            ]
         ]);
     }
 }
