@@ -78,7 +78,7 @@ class OrderController extends Controller
 
         $order = new Order;
 
-        $order = $oder->where('user_id',$user_id);
+        $order = $order->where('user_id',$user_id);
 
         if($limit > 0){
             $page   = $page * $limit;
