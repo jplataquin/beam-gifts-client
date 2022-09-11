@@ -21,7 +21,7 @@
         function list(){
             window.util.$get('/api/myorders',{
                 page: page,
-                limit: 10
+                limit: 5
             }).then(reply=>{
 
                 if(!reply.status){
