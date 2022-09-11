@@ -18,6 +18,11 @@
             page: 1,
             limit: 10
         }).then(reply=>{
+
+            if(!reply.status){
+                alert(reply.message);
+            }
+            
             console.log(reply);
         }).catch(e=>{
             alert('Something went wrong');
