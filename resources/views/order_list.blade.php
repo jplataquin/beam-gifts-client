@@ -19,6 +19,8 @@
             limit: 10
         }).then(reply=>{
             console.log(reply);
+        }).catch(e=>{
+            alert('Something went wrong');
         });
     </script>
 @endsection
