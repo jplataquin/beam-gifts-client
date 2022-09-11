@@ -28,7 +28,7 @@
                     alert(reply.message);
                 }
                 
-                if(!reply.data.orders.length){
+                if(!reply.data.items.length){
                     showMoreBtn.style.display = 'none';
                 }
 
