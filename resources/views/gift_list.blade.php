@@ -32,22 +32,29 @@
                     showMoreBtn.style.display = 'none';
                 }
 
-                console.log(reply);
-
-                /*
+               
                 reply.data.orders.map(item=>{
 
-                    let el = t.div({class:'border border-parimary mb-3'},()=>{
-                        t.label(item.created_at);
-                        t.div(()=>{
-                            t.label('Order ref: '+item.uid);
+                    let el = t.div({
+                        class:'card',
+                        style:{width: '18rem'}
+                    },()=>{
+                        t.img({
+                            class:'card-img-top', 
+                            src:'https://via.placeholder.com/300.jpg?text=TEST'
                         });
 
-                        t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
+                        t.div({
+                            class:'card-body'
+                        },()=>{
+                            t.h5({class:'card-title'},item.item_name);
+                            t.p({class:'card-text'},item.description);
+                            t.a({href:'#',class:'btn btn-primary'},'View');
+                        });
                     });
 
                     listEl.appendChild(el);
-                });*/
+                });
                 
                 page++;
 
