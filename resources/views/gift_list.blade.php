@@ -33,6 +33,7 @@
                 }
 
                 console.log(reply);
+
                 /*
                 reply.data.orders.map(item=>{
 
@@ -52,6 +53,7 @@
 
 
             }).catch(e=>{
+                console.log(e);
                 alert('Something went wrong');
             });
         }
