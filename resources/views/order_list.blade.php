@@ -23,7 +23,6 @@
                 alert(reply.message);
             }
             
-            console.log(reply);
         }).catch(e=>{
             alert('Something went wrong');
         });
