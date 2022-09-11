@@ -13,7 +13,7 @@
     <script type="module">
         import {Template} from '/adarna.js';
 
-        let page            = 1;
+        let page            = 0;
         const listEl        = document.querySelector('#list');
         const showMoreBtn   = document.querySelector('#showMoreBtn');   
         const t             = new Template();
