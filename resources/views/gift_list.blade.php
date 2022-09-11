@@ -5,7 +5,7 @@
     <div class="container">
         <h1>My Gifts</h1>
 
-        <div id="list" class="d-flex justify-content-around"></div>
+        <div id="list" class="d-flex justify-content-around flex-wrap"></div>
         <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
     </div>
 

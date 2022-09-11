@@ -44,6 +44,9 @@ class GiftController extends Controller
         $limit  = (int) $request->input('limit') ?? 0;
         $page   = (int) $request->input('page') ?? 0;
 
+        if($limit > 0){
+            $page   = $page * $limit;
+        }
         
         $result = DB::table('order_items')
             ->join('orders', function ($join) use($user_id) {
@@ -51,6 +54,7 @@ class GiftController extends Controller
                     ->where('orders.user_id', '=', $user_id)
                     ->where('orders.status', '=', 'PAID');
             })
+            ->skip($page)->take($limit)
             ->select('order_items.*', 'orders.uid')
             ->get();
 
