@@ -28,7 +28,7 @@
                     alert(reply.message);
                 }
                 
-                reply.data.map(item=>{
+                reply.data.orders.map(item=>{
 
                     let el = t.div({class:'border border-parimary mb-3'},()=>{
                         t.label(item.created_at);
