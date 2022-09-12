@@ -130,7 +130,7 @@ class OrderController extends Controller
                             'user_id'       => $order->user_id,
                             'paid_at'       => $date_paid,
                             'updated_at'    => date('Y-m-d H:i:s'),
-                            'expire_at'    => DB::raw('DATE_ADD("'.date('Y-m-d').'",INTERVAL order_items.expiry DAY)'),
+                            'expires_at'    => DB::raw('DATE_ADD("'.date('Y-m-d H:i:s').'",INTERVAL order_items.expiry DAY)'),
                             'logs'          => json_encode([])
                         ]);
                        
