@@ -126,10 +126,11 @@ class OrderController extends Controller
                         
                         DB::table('order_items')->where('uid',$order->uid)->update([
                             'item_uid'      => DB::raw('SHA2(CONCAT( order_items.id, "'.$order->uid.'", order_items.item_name ), 256)'),
-                            'status'        => 'PAID',
+                            'status'        => 'AVLB',
                             'user_id'       => $order->user_id,
                             'paid_at'       => $date_paid,
                             'updated_at'    => date('Y-m-d H:i:s'),
+                            'expires_at'    => DB::raw('CONCAT( DATE_ADD("'.date('Y-m-d').'", CONCAT("INTERVAL ",order_items.expiry," DAY") )," 00:00:00")'),
                             'logs'          => json_encode([])
                         ]);
                        
