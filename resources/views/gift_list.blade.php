@@ -48,9 +48,9 @@
                         },()=>{
                             t.h5({class:'card-title'},item.item_name);
                             t.p({class:'card-text'},()=>{
-                                t.txt('Status: '+item.expiry);
+                                t.txt('Status: '+item.status);
                                 t.br();
-                                t.txt('Expiry: '+item.expiry);
+                                t.txt('Expiry: '+item.expires_at);
                             });
                             t.a({href:'#',class:'btn btn-primary'},'View');
                         });
