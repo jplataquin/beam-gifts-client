@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('order_items', function (Blueprint $table) {
-            $table->dateTime('expires_at')->nullaable()->after('paid_at');
+            $table->dateTime('expires_at')->nullable()->after('paid_at');
         });
     }
 
