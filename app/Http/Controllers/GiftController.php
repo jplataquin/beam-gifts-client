@@ -43,6 +43,8 @@ class GiftController extends Controller
 
         $limit  = (int) $request->input('limit') ?? 0;
         $page   = (int) $request->input('page') ?? 0;
+        $brand  = $request->input('brand');
+        $status = $request->input('status');
 
         if($limit > 0){
             $page   = $page * $limit;
@@ -56,7 +58,12 @@ class GiftController extends Controller
             })
             ->skip($page)->take($limit)
             ->select('order_items.*', 'orders.uid')
-            ->get();
+            
+        if($status){
+            $result->where('status',$status);
+        }
+            
+        $result = $result->get();
 
         return response()->json([
             'status' => 1,
