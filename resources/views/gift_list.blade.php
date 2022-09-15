@@ -94,8 +94,8 @@
         status.onchange = (e)=>{
             e.preventDefault();
             listEl.innerHTML = '';
-            //page = 0;
-            //list();
+            page = 0;
+            list();
         }
 
         brand.onkeyup = (e)=>{
