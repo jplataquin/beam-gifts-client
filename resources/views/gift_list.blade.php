@@ -71,7 +71,7 @@
                             t.p({class:'card-text'},()=>{
                                 t.txt('Status: '+item.status);
                                 t.br();
-                                t.txt('Brand: '+item.brand_name);
+                                t.txt(item.brand_name);
                                 t.br();
                                 t.txt('Expiry: '+item.expires_at);
                             });
