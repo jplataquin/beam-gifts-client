@@ -93,7 +93,7 @@
 
         status.onchange = (e)=>{
             e.preventDefault();
-            list.innerHTML = '';
+            listEl.innerHTML = '';
             page = 0;
             list();
         }
@@ -101,13 +101,13 @@
         brand.onkeyup = (e)=>{
             
             if(brand.value.length >= 3){
-                list.innerHTML = '';
+                listEl.innerHTML = '';
                 page = 0;
                 list();
             }
             
         }
-        
+
         showMoreBtn.onclick = (e)=>{
             e.preventDefault();
           
