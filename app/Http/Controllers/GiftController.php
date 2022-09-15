@@ -60,7 +60,7 @@ class GiftController extends Controller
             ->select('order_items.*', 'orders.uid');
             
         if($status){
-            $result->where('status',$status);
+            $result->where('order_items.status',$status);
         }
             
         $result = $result->get();
