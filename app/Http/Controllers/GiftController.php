@@ -57,7 +57,7 @@ class GiftController extends Controller
                     ->where('orders.status', '=', 'PAID');
             })
             ->skip($page)->take($limit)
-            ->select('order_items.*', 'orders.uid')
+            ->select('order_items.*', 'orders.uid');
             
         if($status){
             $result->where('status',$status);
