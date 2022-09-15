@@ -5,6 +5,22 @@
     <div class="container">
         <h1>My Gifts</h1>
 
+        <div class="row">
+            <div class="col form-group">
+                <label>Status</label>
+                <select id="status" class="form-control">
+                    <option value=""> - </option>
+                    <option value="AVLB">Available</option>
+                    <option value="CLMD">Claimed</option>
+                    <option value="EXPR">Expired</option>
+                </select>
+            </div>
+            <div class="col form-group">
+                <label>Brand</label>
+                <input type="text" id="brand" class="form-control"/>
+            </div>
+        </div>
+
         <div id="list" class="d-flex justify-content-around flex-wrap"></div>
         <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
     </div>
@@ -15,12 +31,17 @@
         let page            = 0;
         const listEl        = document.querySelector('#list');
         const showMoreBtn   = document.querySelector('#showMoreBtn');   
+        const status        = document.querySelector('#status');
+        const brand         = document.querySelector('#brand');
+        
         const t             = new Template();
 
         function list(){
             window.util.$get('/api/mygifts',{
                 page: page,
-                limit: 5
+                limit: 5,
+                status: status.value,
+                brand: brand.value
             }).then(reply=>{
 
                 if(!reply.status){
@@ -70,8 +91,26 @@
 
         list();
 
+        status.onchange = (e)=>{
+            e.preventDefault();
+            list.innerHTML = '';
+            page = 0;
+            list();
+        }
+
+        brand.onkeyup = (e)=>{
+            
+            if(brand.value.length >= 3){
+                list.innerHTML = '';
+                page = 0;
+                list();
+            }
+            
+        }
+        
         showMoreBtn.onclick = (e)=>{
             e.preventDefault();
+          
             list();
         }
 
