@@ -668,21 +668,36 @@
                     myModal.show();
                 }else if(winner == 'player_1'){
 
-                    lose.play();
-                    
-                    modalTitle.innerHTML = 'YOU LOST!';
-                    modalBody.innerHTML = '😭😭😭';
+                    win.play();
+
+                    modalTitle.innerHTML = 'YOU WON!';
+
+                    modalBody.innerHTML = '';
+
+                    if(state.player_1_bet){
+                        let img = document.createElement('img');
+
+                        img.src = state.player_1_bet;
+                        img.classList.add('img-fluid');
+                        download.href = state.player_1_bet;
+                        download.style.display = 'inline';
+                        modalBody.appendChild(img);
+
+                    }else{
+                        modalBody.innerHTML = 'Congratulations! 🥳 🥳 🥳 ';
+                        download.style.display = 'none';
+                    }
+
 
                     jsConfetti.addConfetti({
-                        emojis: ['😭'],
+                        emojis: ['🌈', '❤️', '🎉', '✨', '💫', '🌸'],
                     });
 
                     interval = setInterval(()=>{
                         jsConfetti.addConfetti({
-                            emojis: ['😭'],
+                            emojis: ['🌈', '❤️', '🎉', '✨', '💫', '🌸'],
                         });
                     },2000);
-                    download.style.display = 'none';
                     myModal.show();
                 }else{
 
