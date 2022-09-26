@@ -77,4 +77,8 @@ class GiftController extends Controller
             ]
         ]);
     }
+
+    public function tictactoe(Request $request){
+        return view('tictactoe');
+    }
 }
