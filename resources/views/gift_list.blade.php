@@ -69,7 +69,7 @@
                         },()=>{
                             t.h5({class:'card-title'},item.item_name);
                             t.p({class:'card-text'},()=>{
-                                t.txt('Status: '+item.status);
+                                t.txt(item.status);
                                 t.br();
                                 t.txt(item.brand_name);
                                 t.br();
