@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/gift/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
 
 
-Route::get('/tictactoe',[App\Http\Controllers\GiftController::class, 'tictactoe']);
+Route::get('/tic',[App\Http\Controllers\GiftController::class, 'tictactoe']);
 
 Route::get('adarna.js', function(){
 
