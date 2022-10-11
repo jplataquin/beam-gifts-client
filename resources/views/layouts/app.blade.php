@@ -46,7 +46,7 @@
                 <div class="row">
                     <!-- Button trigger modal -->
                     <button type="button" class="lang-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                       To: South Korea <img class="langImg" src="{{ asset('public/images/kr.png') }}" alt="">
+                       To: South Korea <img class="langImg" src="{{ asset('images/kr.png') }}" alt="">
                     </button>
                     
                     <!-- Modal -->
@@ -62,13 +62,13 @@
                                     </h5>
                                     <ul class="langList">
                                         <li class="lang">
-                                            <a href="#"><img class="langImg" src="includes/images/kr.png" alt=""> South Korea</a>
+                                            <a href="#"><img class="langImg" src="{{ asset('images/kr.png') }}" alt=""> South Korea</a>
                                         </li>
                                         <li class="lang">
-                                            <a href="#"><img class="langImg" src="includes/images/us.png" alt=""> United States</a>
+                                            <a href="#"><img class="langImg" src="{{ asset('images/us.png') }}" alt=""> United States</a>
                                         </li>
                                         <li class="lang">
-                                            <a href="#"><img class="langImg" src="includes/images/ca.png" alt=""> Canada</a>
+                                            <a href="#"><img class="langImg" src="{{ asset('images/ca.png') }}" alt=""> Canada</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,7 +83,7 @@
             <div class="header-row m-auto">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="lnav-col">
-                        <img class="logo" src="includes/images/logo.png" alt="">
+                        <img class="logo" src="{{ asseet('images/logo.png') }}" alt="">
                         <ul class="dnavs">
                             <li><a href="#">Brands</a></li>
                             <li><a href="#">Categories</a></li>
@@ -91,7 +91,7 @@
                     </div>
                     
                     <div>
-                        <a href="#" class="src-btn"><img class="search-icon" src="includes/images/search.png" alt=""> Search gifts or brands</a>
+                        <a href="#" class="src-btn"><img class="search-icon" src="{{ asset('images/search.png') }}" alt=""> Search gifts or brands</a>
                     </div>
                     
                     <div class="rnav-col">
@@ -102,7 +102,7 @@
                             <li><a href="#" class="button singup-btn">Sign Up</a></li>
                             <li> 
                                 <div class="shopping-cart">
-                                    <img class="cart-icon" src="includes/images/cart.png" alt="">
+                                    <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
                                     <p class="cart-quantity">0</p>
                                 </div>
                             </li>
@@ -124,8 +124,8 @@
                     <a href="#"><img src="includes/images/user.png" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
-                    <a href="#" onclick="openNav()" id="mobilenavHAM"><img src="includes/images/ham.png" alt="" width="30px" height="30px"></a>
-                    <a href="#" onclick="closeNav()" id="mobilenavClose"><img src="includes/images/close.png" alt="" width="30px"></a>
+                    <a href="#" onclick="openNav()" id="mobilenavHAM"><img src="{{ asset('images/ham.png') }}" alt="" width="30px" height="30px"></a>
+                    <a href="#" onclick="closeNav()" id="mobilenavClose"><img src="{{ asset('images/close.png') }}" alt="" width="30px"></a>
                 </div>
             </div>
         </div>        
@@ -181,9 +181,9 @@
                 <div class="col-md-3 col-sm-6 col-12 my-3">
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Send gifts to</h4></li>
-                        <li><a class="footer-item" href="#"><img class="langImg" src="includes/images/kr.png" alt=""> South Korea</a></li>
-                        <li><a class="footer-item" href="#"><img class="langImg" src="includes/images/us.png" alt=""> United States</a></li>
-                        <li><a class="footer-item" href="#"><img class="langImg" src="includes/images/ca.png" alt=""> Canada</a></li>
+                        <li><a class="footer-item" href="#"><img class="langImg" src="{{ asset('images/kr.png') }}" alt=""> South Korea</a></li>
+                        <li><a class="footer-item" href="#"><img class="langImg" src="{{ asset('images/us.png') }}" alt=""> United States</a></li>
+                        <li><a class="footer-item" href="#"><img class="langImg" src="{{ asset('images/ca.png') }}" alt=""> Canada</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 my-3">
@@ -197,9 +197,9 @@
                 <div class="col-md-3 col-sm-6 col-12 my-3">
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Follow us</h4></li>
-                        <li><a class="footer-item" href="#"><img class="socialImg" src="includes/images/facebook.png" alt=""> Facebook</a></li>
-                        <li><a class="footer-item" href="#"><img class="socialImg" src="includes/images/instagram.png" alt=""> Instagram</a></li>
-                        <li><a class="footer-item" href="#"><img class="socialImg" src="includes/images/youtube.png" alt=""> Youtube</a></li>
+                        <li><a class="footer-item" href="#"><img class="socialImg" src="{{ asset('images/facebook.png') }}" alt=""> Facebook</a></li>
+                        <li><a class="footer-item" href="#"><img class="socialImg" src="{{ asset('images/instagram.png') }}" alt=""> Instagram</a></li>
+                        <li><a class="footer-item" href="#"><img class="socialImg" src="{{ asset('images/youtube.png') }}" alt=""> Youtube</a></li>
                     </ul>
                 </div>
                 <div class="col-12">
