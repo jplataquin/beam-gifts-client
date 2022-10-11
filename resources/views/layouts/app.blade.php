@@ -83,7 +83,7 @@
             <div class="header-row m-auto">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="lnav-col">
-                        <img class="logo" src="{{ asseet('images/logo.png') }}" alt="">
+                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                         <ul class="dnavs">
                             <li><a href="#">Brands</a></li>
                             <li><a href="#">Categories</a></li>
