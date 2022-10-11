@@ -1,6 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+  <!-- Hero Section -->
+
+  <section class="hero">
+    <div class="custom-container">
+        <div class="row align-items-center">
+            <div class="col-md-6 py-5">
+                <h1 class="heroT">Find the perfect gift<br>to South Korea</h1>
+                <p class="heroD">Gift whenever and wherever.</p>
+                <button class="button gift-btn mt-2">Send Gift Now</button>
+            </div>
+            
+            <div class="col-md-6">
+                <img src="{{asset('images/new_main_kr.png')}}" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <div class="container">
     
     <div class="row mb-5">
