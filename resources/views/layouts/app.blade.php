@@ -40,13 +40,13 @@
 </head>
 <body>
 
-<section class="header">
+    <section class="header">
         <div class="topbar py-2">
             <div class="container">
                 <div class="row">
                     <!-- Button trigger modal -->
                     <button type="button" class="lang-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                       To: South Korea <img class="langImg" src="includes/images/kr.png" alt="">
+                       To: South Korea <img class="langImg" src="{{asset('public/images/kr.png)}}" alt="">
                     </button>
                     
                     <!-- Modal -->
