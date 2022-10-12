@@ -24,6 +24,53 @@
 
 <div class="container">
     
+
+
+ <!-- Ocassions -->
+    <section class="occasions py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/new.png') }}" alt="">
+                        New Gifts
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/birthday-cake.png') }}" alt="">
+                        Birthday Gift
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/delivery.png') }}" alt="">
+                        Delivery Gifts
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/engagement-ring.png') }}" alt="">
+                        Wedding Gifts
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/dollar.png') }}" alt="">
+                        Under $5
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="#">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/health.png') }}" alt="">
+                        Health Gifts
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
     <div class="row mb-5">
         <h1>Need A Gift For?</h1>
         <div class="col d-flex">
@@ -53,7 +100,7 @@
             </div>
         </div>
     </div>
-
+-->
     <div class="row">
         <h1>Our Featured Brands</h1>
         <div class="col d-flex" id="brandsContainer">
