@@ -83,7 +83,9 @@
             <div class="header-row m-auto">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="lnav-col">
-                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+                        <a href=" {{ config('app.name', 'Laravel') }} ">
+                            <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+                        </a>
                         <ul class="dnavs">
                             <li><a href="#">Brands</a></li>
                             <li><a href="#">Categories</a></li>
