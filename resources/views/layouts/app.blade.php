@@ -42,41 +42,7 @@
 
     <section class="header">
         <div class="topbar py-2">
-            <div class="container">
-                <div class="row">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="lang-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                       To: South Korea <img class="langImg" src="{{ asset('images/kr.png') }}" alt="">
-                    </button>
-                    
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header border border-0">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h5 class="modalTitle mb-3">
-                                       <strong>Where do you want to send your gift to?</strong>  
-                                    </h5>
-                                    <ul class="langList">
-                                        <li class="lang">
-                                            <a href="#"><img class="langImg" src="{{ asset('images/kr.png') }}" alt=""> South Korea</a>
-                                        </li>
-                                        <li class="lang">
-                                            <a href="#"><img class="langImg" src="{{ asset('images/us.png') }}" alt=""> United States</a>
-                                        </li>
-                                        <li class="lang">
-                                            <a href="#"><img class="langImg" src="{{ asset('images/ca.png') }}" alt=""> Canada</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="navigationbar py-3 d-lg-block d-none">
