@@ -83,7 +83,7 @@
             <div class="header-row m-auto">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="lnav-col">
-                        <a href=" {{ config('app.name', 'Laravel') }} ">
+                        <a href="{{ url('/') }}">
                             <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                         </a>
                         <ul class="dnavs">
@@ -100,8 +100,39 @@
                         <ul class="dnavs">
                             <li><a href="#">Help</a></li>
                             <li><a href="#">How to Use</a></li>
-                            <li><a href="#" class="login-btn">Login</a></li>
-                            <li><a href="#" class="button singup-btn">Sign Up</a></li>
+ 
+                        
+
+                            @guest
+                                @if (Route::has('login'))
+                                    <li><a href="{{ route('login') }}" class="login-btn">{{ __('Login') }}</a></li>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <li><a href="{{ route('register') }}" class="button singup-btn">Sign Up</a></li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+
+                            
+                            
                             <li> 
                                 <div class="shopping-cart">
                                     <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
