@@ -127,12 +127,15 @@
         </div>
     </section>
 
-    <div class="row">
-        <h1>Our Featured Brands</h1>
-        <div class="col d-flex" id="brandsContainer">
-        
-        </div>
-    </div>
+    <section class="topBrands py-5 py-5">
+        <h3>Featured Brands</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex" id="brandsContainer">
+                
+                </div>
+            </div>
+    </section>
     <script type="module">
         import {Template} from '/adarna.js';
 
