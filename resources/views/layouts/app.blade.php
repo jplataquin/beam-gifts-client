@@ -115,13 +115,13 @@
         <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
             <div id="mobile-navBot-items" class="row justify-content-center">
                 <div class="col-3 text-center">
-                    <a href="#"><img src="includes/images/home.png" alt="" width="30px" height="30px"></a>
+                    <a href="#"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
-                    <a href="#"><img src="includes/images/search.png" alt="" width="30px" height="30px"></a>
+                    <a href="#"><img src="{{ asset('images/search.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
-                    <a href="#"><img src="includes/images/user.png" alt="" width="30px" height="30px"></a>
+                    <a href="#"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
                     <a href="#" onclick="openNav()" id="mobilenavHAM"><img src="{{ asset('images/ham.png') }}" alt="" width="30px" height="30px"></a>
