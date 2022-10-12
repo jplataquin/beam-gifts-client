@@ -76,6 +76,7 @@
      <section class="categories py-5">
         <h3>Categories</h3>
         <div class="container">
+            <!--
             <div class="row">
                 <div class="col-12">
                     <div class="title-cont">
@@ -84,6 +85,7 @@
                     </div>
                 </div>
             </div>
+            -->
             <div class="row mt-3 category-row">
                 <div class="col-lg-2 col-md-4 col-6 text-center">
                     <a href="#">
