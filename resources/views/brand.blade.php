@@ -3,12 +3,13 @@
 @section('content')
 
 <div class="container">
-    <h1>{{ $brand->name }}</h1>
     <div class="row mb-3">
         <div class="col-md-6">
             <img class="img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}" class="product-img" width="100%"/>
         </div>
-        <div class="col">
+        <div class="col-md-6 mt-3 mt-md-0">
+            <h5 class="product-title">{{ $brand->name }}</h5>
+            <p class="product-shortDESC">{{ $brand->description }}</p>
             @foreach($brand->branches as $branch)
                 <div class="border border-primary p-1 mb-2">
                     <h5>{{$branch['name']}}</h5>
@@ -16,12 +17,6 @@
                     <h6>{{$branch['phone']}}</h6>
                 </div>
             @endforeach
-          
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-        <p>{{ $brand->description }}</p>
         </div>
     </div>
     <div class="row">
