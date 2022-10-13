@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
                     <h5 class="product-title">{{ $item->name }}</h5>
-                    <p class="product-shortDESC">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="product-shortDESC">{{ $item->description }}</p>
                     <p class="product-price">Php {{$item->price}}</p>
                     <ul class="additional-info">
                         <li>Expires in {{$item->expiry}} days after purchase</li>
