@@ -5,8 +5,8 @@
 <div class="container">
     <h1>{{ $brand->name }}</h1>
     <div class="row mb-3">
-        <div class="col">
-            <img class="img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}"/>
+        <div class="col-md-6">
+            <img class="img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}" class="product-img" width="100%"/>
         </div>
         <div class="col">
             @foreach($brand->branches as $branch)
