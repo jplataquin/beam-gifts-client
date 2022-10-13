@@ -97,8 +97,8 @@
 
                     <div class="login-btns mx-auto">
                         <a href="#" class="btns google my-2">
-                            <img src="includes/images/google.svg" alt=""> Continue with Google</a>
-                        <a href="#" class="btns facebook my-2"><img src="includes/images/facebook.svg" alt=""> Continue with facebook</a>
+                            <img src="{{asset('images/google.svg')}}" alt=""> Continue with Google</a>
+                        <a href="#" class="btns facebook my-2"><img src="{{asset('images/facebook.svg')}}" alt=""> Continue with facebook</a>
                     </div>
 
                 </div>
