@@ -35,7 +35,7 @@
                     <div class="separator"></div>
                     <div class="brand-row d-flex align-items-center">
                         <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
-                        <a href="#" class="brandname ms-2">{{$brand->name}}</a>
+                        <a href="/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">{{$brand->name}}</a>
                     </div>
                 </div>
             </div>
