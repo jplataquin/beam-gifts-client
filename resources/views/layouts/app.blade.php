@@ -103,7 +103,7 @@
                                 <a href="/cart">
                                     <div class="shopping-cart">
                                             <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
-                                            <p id="cart-quantity" class="cart-quantity">{{count(\Cart::getContents()->items)}}</p>
+                                            <p id="cart-quantity" class="cart-quantity">{{count(\Cart::getContent()->items)}}</p>
                                     </div>
                                 </a>
                             </li>
