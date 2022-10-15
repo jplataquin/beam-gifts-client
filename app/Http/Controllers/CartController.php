@@ -75,11 +75,14 @@ class CartController extends Controller
         return response()->json([
             'status' => 1,
             'message'=>'',
-            'data'=> []
+            'data'=> [
+                'items' => \Cart::getContent(),
+                'total' => \Cart::getTotal()
+            ]
         ]);
     }
 
-    public function updateCart(){
+    public function updateCart(Request $request){
 
         \Cart::update(
             $request->id,
@@ -91,10 +94,28 @@ class CartController extends Controller
 
     public function removeCart(Request $request){
         \Cart::remove($request->id);
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> [
+                'items' => \Cart::getContent(),
+                'total' => \Cart::getTotal()
+            ]
+        ]);
     }
 
     public function clearAllCart(){
         \Cart::clear();
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> [
+                'items' => \Cart::getContent(),
+                'total' => \Cart::getTotal()
+            ]
+        ]);
     }
 
     public function checkout(Request $request){

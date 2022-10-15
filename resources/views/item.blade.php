@@ -115,8 +115,8 @@
             qty: qty.value
         }).then(reply=>{
 
-            addToCartBtn.disabled = false;
-            buyNowBtn.disabled = false;
+            addToCartBtn.disabled   = false;
+            buyNowBtn.disabled      = false;
 
             if(reply.status <= 0){
                 alert(reply.message);
@@ -124,6 +124,8 @@
             }
 
             alert('Item in cart');
+
+            console.log(reply.data);
 
         });
     }
