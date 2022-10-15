@@ -100,12 +100,12 @@
                             
                             
                             <li> 
-                                <div class="shopping-cart">
-                                    <a href="/cart">
-                                        <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
-                                        <p id="cart-quantity" class="cart-quantity">0</p>
-                                    </a>
-                                </div>
+                                <a href="/cart">
+                                    <div class="shopping-cart">
+                                            <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
+                                            <p id="cart-quantity" class="cart-quantity">0</p>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
