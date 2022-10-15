@@ -125,7 +125,7 @@
 
             alert('Item in cart');
 
-            console.log(reply.data.items);
+            console.log( Object.keys(reply.data.items).length );
 
         });
     }
