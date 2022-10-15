@@ -125,7 +125,9 @@
 
             alert('Item in cart');
 
-            console.log( Object.keys(reply.data.items).length );
+            let qty =  Object.keys(reply.data.items).length ?? 0;
+
+            window.util.cartQuantity(qty);
 
         });
     }

@@ -99,6 +99,14 @@ window.util.$post = async (url,formData) => {
     });
 }
 
+
+window.util.cartQuantity = (qty)=>{
+
+    qty = isNaN(qty) ? 0 : qty;
+    
+    document.querySelector('#cart-quantity').innerText = qty;
+}
+
 window.util.addToCart = (data) =>{
 
     const formData = new FormData();
