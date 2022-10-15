@@ -101,8 +101,10 @@
                             
                             <li> 
                                 <div class="shopping-cart">
-                                    <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
-                                    <p id="cart-quantity" class="cart-quantity">0</p>
+                                    <a href="/cart">
+                                        <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
+                                        <p id="cart-quantity" class="cart-quantity">0</p>
+                                    </a>
                                 </div>
                             </li>
                         </ul>
