@@ -96,7 +96,7 @@
         Array.from(document.querySelectorAll('.removeBtn')).map(target=>{
 
             target.onclick = (e)=>{
-                console.log(target.data('id'));
+                console.log(target.getAttribute('data-id'));
             }
         });
     </script>
