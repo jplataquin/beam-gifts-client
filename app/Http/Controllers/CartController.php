@@ -61,7 +61,7 @@ class CartController extends Controller
         $item->photo = json_decode($item->photo,true);
 
         \Cart::add([
-            'id'        => mt_rand(100000, 999999);,
+            'id'        => mt_rand(100000, 999999),
             'name'      => $item->name,
             'price'     => $item->price,
             'quantity'  => $qty,
