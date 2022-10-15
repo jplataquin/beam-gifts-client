@@ -125,7 +125,7 @@
 
             alert('Item in cart');
 
-            console.log(reply.data.items.length);
+            console.log(reply.data.items);
 
         });
     }
