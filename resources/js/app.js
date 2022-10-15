@@ -99,6 +99,9 @@ window.util.$post = async (url,formData) => {
     });
 }
 
+window.util.getCart = ()=>{
+
+}
 
 window.util.cartQuantity = (qty)=>{
 
