@@ -61,12 +61,13 @@ class CartController extends Controller
         $item->photo = json_decode($item->photo,true);
 
         \Cart::add([
-            'id'        => $item->id,
+            'id'        => mt_rand(100000, 999999);,
             'name'      => $item->name,
             'price'     => $item->price,
             'quantity'  => $qty,
             'attributes' => [
-                'image'     => $item->photo['150px']
+                'image'     => $item->photo['150px'],
+                'item_id'   => $item->id
             ],
             'associatedModel' => Item::class
         ]);
