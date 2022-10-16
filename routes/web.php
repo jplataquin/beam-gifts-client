@@ -16,10 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::middleware(['auth'])->group(function(){
 
-    
-});
 
 Route::get('/', function () {
 
@@ -37,6 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand']);
+
 Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 
 

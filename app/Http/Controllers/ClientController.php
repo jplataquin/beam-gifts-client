@@ -11,12 +11,14 @@ class ClientController extends Controller
 {
     public function __construct(){
 
-   
+    
     }
 
     public function brand($name)
     {   
 
+        print_r(Auth::user());
+        
         $name = str_replace('-',' ',$name);
         $brand = new Brand();
 
