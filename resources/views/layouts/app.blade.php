@@ -123,8 +123,8 @@
                 </div>
                 <div class="col-3 text-center">
                     <div class="shopping-cart">
-                            <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
-                            <p class="cart-quantity">{{count(\Cart::getContent())}}</p>
+                            <img src="{{ asset('images/cart.png') }}" alt="" width="30px" height="30px">
+                            <p style="right:17px" class="cart-quantity">{{count(\Cart::getContent())}}</p>
                     </div>
                 </div>
                 <div class="col-3 text-center">
