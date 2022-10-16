@@ -17,8 +17,8 @@ class ClientController extends Controller
     public function brand($name)
     {   
 
-        print_r(Auth::user());
-        
+        echo Auth::check();
+
         $name = str_replace('-',' ',$name);
         $brand = new Brand();
 
