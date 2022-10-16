@@ -104,7 +104,7 @@
                                     <div class="shopping-cart">
                                             <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
                                             <p id="cart-quantity" class="cart-quantity">{{ count( \Cart::getContent()) }}</p>
-                                            {{ print_r(\Cart::getContent()) }}
+                                            {{ print_r(\Cart::getContent()['items']) }}
                                     </div>
                                 </a>
                             </li>
