@@ -375,6 +375,7 @@
     const brandListEl = document.querySelector('#brand_list');
     const showMoreBtn = document.querySelector('#showMore');
     
+    const imgBaseUrl = '{{config("app")["api_base_url"]}}';
     const t = new Template();
 
     let page = 1;
@@ -396,7 +397,7 @@
                 brandListEl.appendChild(
                     t.div({class:"col-lg-4 col-md-6 col-12 my-2"},()=>{
                         t.div({class:"popBrandsbox"},()=>{
-                            t.img({src:"{{asset('images/placeholder.png')}}",alt:"",class:"popBrandbigImg"});
+                            t.img({src: imgBaseUrl+'storage/photos/brand/200px/'+item.photo['200px'],alt:"",class:"popBrandbigImg"});
                             t.div({class:"popbrandinfo"},()=>{
                                 t.img({src:"{{asset('images/placeholder.png')}}",alt:"",class:"popbrandimg"});
                                 t.h3({class:"popbrandT"},item.name);
