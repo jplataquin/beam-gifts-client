@@ -17,7 +17,8 @@ class ClientController extends Controller
     public function brand($name)
     {   
 
-        echo Auth::check().'HERE ';
+        echo 'HERE';
+        exit;
 
         $name = str_replace('-',' ',$name);
         $brand = new Brand();
