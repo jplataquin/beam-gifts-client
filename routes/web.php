@@ -19,10 +19,12 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', function () {
-    //    \Cart::session(Auth::user()->id);
-
-    echo Auth::check();
     
+
+    if(Auth::check()){
+        \Cart::session(Auth::user()->id);
+    }
+
     return view('welcome');
 });
 
