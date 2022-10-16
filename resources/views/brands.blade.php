@@ -274,7 +274,7 @@
                 });
 
                 col.onclick = ()=>{
-                    document.location.href = '/brand/'++window.util.spaceToDash(item.name);
+                    document.location.href = '/brand/'+window.util.spaceToDash(item.name);
                 }
 
                 brandListEl.appendChild(col);
