@@ -16,20 +16,20 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::middleware([])->group(function(){
+Route::middleware(['auth'])->group(function(){
+
+    
+});
+
+Route::get('/', function () {
+
 
     if(Auth::check()){
         \Cart::session(Auth::user()->id);
     }
 
-    Route::get('/', function () {
-
-        return view('welcome');
-    });
-
+    return view('welcome');
 });
-
-
 
 Auth::routes();
 
