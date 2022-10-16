@@ -12,7 +12,7 @@ class BrandController extends Controller
 
 
     public function index(Request $request){
-
+        return view('brands');
     }
 
     public function list(Request $request){
