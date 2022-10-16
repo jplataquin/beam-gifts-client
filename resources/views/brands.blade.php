@@ -42,139 +42,8 @@
                             <div class="row" id="brand_list">
                                 <div class="col-12">
                                     <h2 class="brandtype">All</h2>
-                                    <p class="totals">Total 15</p>
+                                    <!-- <p class="totals">Total 15</p> -->
                                 </div>
-
-                                
-                                <!--
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 2</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 3</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 4</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 5</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 6</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 7</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 8</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 9</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 10</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 11</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 12</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 13</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 14</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12 my-2">
-                                    <div class="popBrandsbox">
-                                        <img src="includes/images/placeholder.png" alt="" class="popBrandbigImg">
-                                        <div class="popbrandinfo">
-                                            <img src="includes/images/placeholder.png" alt="" class="popbrandimg">
-                                            <h3 class="popbrandT">Brand 15</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                -->
                             </div>
 
                         </div>
@@ -394,17 +263,21 @@
 
             reply.data.map(item=>{
 
-                brandListEl.appendChild(
-                    t.div({class:"col-lg-4 col-md-6 col-12 my-2"},()=>{
-                        t.div({class:"popBrandsbox"},()=>{
-                            t.img({src: imgBaseUrl+'storage/photos/brand/banner/'+item.photo['banner'],alt:"",class:"popBrandbigImg"});
-                            t.div({class:"popbrandinfo"},()=>{
-                                t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.photo['150px'],alt:"",class:"popbrandimg"});
-                                t.h3({class:"popbrandT"},item.name);
-                            });
+                let col = t.div({class:"col-lg-4 col-md-6 col-12 my-2"},()=>{
+                    t.div({class:"popBrandsbox"},()=>{
+                        t.img({src: imgBaseUrl+'storage/photos/brand/banner/'+item.photo['banner'],alt:"",class:"popBrandbigImg"});
+                        t.div({class:"popbrandinfo"},()=>{
+                            t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.photo['150px'],alt:"",class:"popbrandimg"});
+                            t.h3({class:"popbrandT"},item.name);
                         });
-                    })
-                );
+                    });
+                });
+
+                col.onclick = ()=>{
+                    document.location.href = '/brand/'++window.util.spaceToDash(item.name);
+                }
+
+                brandListEl.appendChild(col);
 
             });
 
