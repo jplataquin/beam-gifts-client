@@ -9,6 +9,13 @@ use App\Models\Item;
 
 class ClientController extends Controller
 {
+    public function __construct()
+
+        if(Auth::check()){
+            \Cart::session(Auth::user()->id);
+        }
+    }
+
     public function brand($name)
     {   
 
