@@ -53,8 +53,7 @@
                             <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                         </a>
                         <ul class="dnavs">
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">Categories</a></li>
+                            <li><a href="/brands">Brands</a></li>
                         </ul>
                     </div>
                     
@@ -145,10 +144,7 @@
         <div id="mobile-side" class="mobile-navSidebar border-start d-lg-none">
             <ul class="mobile-nav m-0 p-3 text-end">
                 <li class="my-2">
-                    <a href="#">Brands</a>
-                </li>
-                <li class="my-2">
-                    <a href="#">Categories</a>
+                    <a href="/brands">Brands</a>
                 </li>
                 <li class="my-2">
                     <a href="#">How to use</a>
