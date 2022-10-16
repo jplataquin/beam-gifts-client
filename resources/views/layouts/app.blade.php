@@ -115,9 +115,15 @@
 
         <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
             <div id="mobile-navBot-items" class="row justify-content-center">
-                <div class="col-3 text-center">
-                    <a href="#"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
-                </div>
+                @guest
+                    <div class="col-3 text-center">
+                        <a href="#"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
+                    </div>
+                @else
+                    <div class="col-3 text-center">
+                        <a href="#"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
+                    </div>
+                @endguest
                 <div class="col-3 text-center">
                     <a href="#"><img src="{{ asset('images/search.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
@@ -145,17 +151,36 @@
                     <a href="#">Categories</a>
                 </li>
                 <li class="my-2">
-                    <a href="#">Help</a>
-                </li>
-                <li class="my-2">
                     <a href="#">How to use</a>
                 </li>
-                <li class="my-2">
-                    <a href="#">login</a>
-                </li>
-                <li class="my-2">
-                    <a href="#"><button class="button">sign up</button></a>
-                </li>
+
+                @guest
+                    @if (Route::has('login'))
+                        <li class="my-2">
+                            <a href="{{ route('login') }}">Login</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="my-2">
+                            <a href="{{ route('register') }}">Sign Up</a>
+                        </li>
+                    @endif
+                @else
+
+                    <li class="my-2">
+                        <a href="">{{ Auth::user()->name }}</a>
+                    </li>
+                    <li class="my-2">
+                       <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </li>
+                @endguest
+             
+                
             </ul>
         </div>
     </section>
