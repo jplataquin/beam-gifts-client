@@ -11,12 +11,7 @@ class ClientController extends Controller
 {
     public function __construct(){
 
-        $this->middleware('auth');
-
-        if(Auth::check()){
-            echo "TAE";
-            \Cart::session(Auth::user()->id);
-        }
+   
     }
 
     public function brand($name)
