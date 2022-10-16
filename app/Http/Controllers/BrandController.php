@@ -22,7 +22,7 @@ class BrandController extends Controller
         
         $brands = new Brand();
 
-        $brands = $brands->where('status','=','ACTV');
+        //$brands = $brands->where('status','=','ACTV');
 
         
         if($limit > 0){
