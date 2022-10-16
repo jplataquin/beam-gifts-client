@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\CartSetup;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +35,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand']);
+Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand'])->middleware(CartSetup::class);
 
 Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 

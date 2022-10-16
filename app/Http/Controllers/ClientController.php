@@ -9,16 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
-    public function __construct(){
-
-        echo Auth::check().'HERE';
-    }
 
     public function brand($name)
     {   
-
-        echo Auth::check().'HERE';
-        exit;
 
         $name = str_replace('-',' ',$name);
         $brand = new Brand();
