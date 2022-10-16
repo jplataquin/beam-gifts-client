@@ -21,7 +21,7 @@ if ( Auth::check() ) {
     echo "KWAK";
 }else{
     echo "HERE";
-    print_r(Auth::user());
+    echo Auth::user()->id;
 }
 
 Route::get('/', function () {
