@@ -400,7 +400,7 @@
                             t.img({src:"{{asset('images/placeholder.png')}}",alt:"",class:"popBrandbigImg"});
                             t.div({class:"popbrandinfo"},()=>{
                                 t.img({src:"{{asset('images/placeholder.png')}}",alt:"",class:"popbrandimg"});
-                                t.h3({class:"popbrandT"},item.namde);
+                                t.h3({class:"popbrandT"},item.name);
                             });
                         });
                     })
