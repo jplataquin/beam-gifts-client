@@ -16,16 +16,13 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-if ( Auth::check() ) {
-    \Cart::session(Auth::user()->id);
-    echo "KWAK";
-}else{
-    echo "HERE";
-    echo Auth::user()->id;
-}
+
 
 Route::get('/', function () {
- 
+    //    \Cart::session(Auth::user()->id);
+
+    echo Auth::check();
+    
     return view('welcome');
 });
 
