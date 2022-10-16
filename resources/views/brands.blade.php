@@ -18,6 +18,8 @@
         }).then(reply => {
             console.log(reply);
             page++;
+        }).catch(err=>{
+            alert('Opps something went wrong');
         });
     }
 

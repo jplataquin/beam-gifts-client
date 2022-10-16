@@ -27,9 +27,9 @@ class BrandController extends Controller
         
         if($limit > 0){
             $page   = $page * $limit;
-            $result = $brand->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
+            $result = $brands->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
         }else{
-            $result = $brand->orderBy('created_at', 'desc')->get();
+            $result = $brands->orderBy('created_at', 'desc')->get();
         }
         
 
