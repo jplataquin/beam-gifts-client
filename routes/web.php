@@ -18,26 +18,24 @@ use App\Http\Middleware\CartSetup;
 */
 
 
+Route::middleware([EnsureTokenIsValid::class])->group(function () {
 
+    Route::get('/', function () {
 
-Route::get('/', function () {
-
-
-    if(Auth::check()){
-        \Cart::session(Auth::user()->id);
-    }
-
-    return view('welcome');
+        return view('welcome');
+    });
+    
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand']);
+    Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 });
+
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand'])->middleware(CartSetup::class);
-
-Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 
 
 Route::middleware(['auth'])->group(function () {
