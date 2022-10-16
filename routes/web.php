@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 
 if (Auth::check()) {
     \Cart::session(Auth::user()->id);
+    echo "KWAK";
 }
 
 Route::get('/', function () {
