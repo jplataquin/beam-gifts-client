@@ -210,12 +210,20 @@
         </div>
     </section>
 
-    <script type="module">
-        //Retrieve Cart
-        (async () => {
+    <script>
+        function openNav() {
+            document.getElementById("mobile-side").style.width = "200px";
+            document.body.style.marginRight = "200px";
+            document.getElementById("mobilenavHAM").style.display = "none";
+            document.getElementById("mobilenavClose").style.display = "block";
+        }
+        function closeNav() {
+            document.getElementById("mobile-side").style.width = "0px";
+            document.body.style.marginRight = "0px";
+            document.getElementById("mobilenavHAM").style.display = "block";
+            document.getElementById("mobilenavClose").style.display = "none";
+        }
 
-
-        });
     </script>
 </body>
 </html>
