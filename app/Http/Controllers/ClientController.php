@@ -12,6 +12,7 @@ class ClientController extends Controller
     public function __construct(){
 
         if(Auth::check()){
+            echo "TAE";
             \Cart::session(Auth::user()->id);
         }
     }
