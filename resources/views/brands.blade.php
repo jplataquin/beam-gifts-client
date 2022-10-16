@@ -397,9 +397,9 @@
                 brandListEl.appendChild(
                     t.div({class:"col-lg-4 col-md-6 col-12 my-2"},()=>{
                         t.div({class:"popBrandsbox"},()=>{
-                            t.img({src: imgBaseUrl+'storage/photos/brand/200px/'+item.photo['200px'],alt:"",class:"popBrandbigImg"});
+                            t.img({src: imgBaseUrl+'storage/photos/brand/banner/'+item.photo['banner'],alt:"",class:"popBrandbigImg"});
                             t.div({class:"popbrandinfo"},()=>{
-                                t.img({src:"{{asset('images/placeholder.png')}}",alt:"",class:"popbrandimg"});
+                                t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.photo['150px'],alt:"",class:"popbrandimg"});
                                 t.h3({class:"popbrandT"},item.name);
                             });
                         });
