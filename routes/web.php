@@ -18,13 +18,13 @@ use App\Http\Middleware\CartSetup;
 */
 
 
-Route::middleware([EnsureTokenIsValid::class])->group(function () {
+Route::middleware([CartSetup::class])->group(function () {
 
     Route::get('/', function () {
 
         return view('welcome');
     });
-    
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand']);
     Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
