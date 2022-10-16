@@ -11,7 +11,7 @@ class ClientController extends Controller
 {
     public function __construct(){
 
-    
+        echo Auth::check().'HERE';
     }
 
     public function brand($name)
