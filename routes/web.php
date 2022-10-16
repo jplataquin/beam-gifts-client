@@ -20,6 +20,7 @@ if ( Auth::check() ) {
     \Cart::session(Auth::user()->id);
     echo "KWAK";
 }else{
+    echo "HERE";
     print_r(Auth::user());
 }
 
