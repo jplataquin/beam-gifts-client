@@ -23,8 +23,8 @@ class BrandController extends Controller
         $brands = new Brand();
 
         //$brands = $brands->where('status','=','ACTV');
-
-        
+        $result = $brands->where('status','=','ACTV')->get();
+        /*
         if($limit > 0){
             $page   = $page * $limit;
             $result = $brands->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
@@ -36,7 +36,7 @@ class BrandController extends Controller
         for($i = 0; $i <= count($result) - 1; $i++){
             $result[$i]->photo = json_decode($result[$i]->photo);
             //$result[$i]->branches = json_decode($result[$i]->branches);
-        }
+        }**/
         
         return response()->json([
             'status' => 1,
