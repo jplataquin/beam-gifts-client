@@ -39,14 +39,13 @@
                 <div class="col-lg-10 col-md-9">
                     <div class="tab-content" id="filter-tabContent">
                         <div class="tab-pane fade show active" id="filter-all" role="tabpanel" aria-labelledby="filter-all-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row" id="brand_list">
                                 <div class="col-12">
                                     <h2 class="brandtype">All</h2>
                                     <p class="totals">Total 15</p>
                                 </div>
 
-                                <section id="brand_list">
-                                </section>
+                                
                                 <!--
                                 <div class="col-lg-4 col-md-6 col-12 my-2">
                                     <div class="popBrandsbox">
