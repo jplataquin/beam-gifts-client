@@ -122,7 +122,10 @@
                     <a href="#"><img src="{{ asset('images/search.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
-                    <a href="#"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
+                    <div class="shopping-cart">
+                            <img class="cart-icon" src="{{ asset('images/cart.png') }}" alt="">
+                            <p class="cart-quantity">{{count(\Cart::getContent())}}</p>
+                    </div>
                 </div>
                 <div class="col-3 text-center">
                     <a href="#" onclick="openNav()" id="mobilenavHAM"><img src="{{ asset('images/ham.png') }}" alt="" width="30px" height="30px"></a>
