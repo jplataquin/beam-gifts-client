@@ -390,6 +390,8 @@
                 return false;
             }
 
+            console.log(reply.data);
+
             reply.data.map(item=>{
 
                 brandListEl.appendChild(
