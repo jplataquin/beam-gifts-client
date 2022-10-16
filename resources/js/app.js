@@ -107,7 +107,10 @@ window.util.cartQuantity = (qty)=>{
 
     qty = isNaN(qty) ? 0 : qty;
     
-    document.querySelector('#cart-quantity').innerText = qty;
+    Array.from(document.querySelector('.cart-quantity')).map( item => {
+
+        item.innerText = qty;
+    });
 }
 
 window.util.addToCart = (data) =>{
