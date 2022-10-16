@@ -25,6 +25,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::get('/mygifts',[App\Http\Controllers\GiftController::class, 'list']);
 
-
-    
 });
+
+
+Route::get('/brand_list',[App\Http\Controllers\BrandController::class, 'list']);
+

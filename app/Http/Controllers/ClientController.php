@@ -10,6 +10,17 @@ use Illuminate\Support\Facades\Auth;
 class ClientController extends Controller
 {
 
+    public function brands(Request $request){
+        $brand = new Brand();
+        $brands = $brand::where('status','=','ACTV')->get();
+
+        $brand_list = [];
+
+        foreach($brands as $item){
+            $result->photo = json_decode($result->photo,true);
+        }
+    }
+
     public function brand($name)
     {   
 

@@ -25,7 +25,11 @@ Route::middleware([CartSetup::class])->group(function () {
         return view('welcome');
     });
 
+    Route::get('/brands',[App\Http\Controllers\BrandController::class, 'index']);
+
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
     Route::get('/brand/{name}',[App\Http\Controllers\ClientController::class, 'brand']);
     Route::get('/item/{brandname}/{itemname}',[App\Http\Controllers\ClientController::class, 'item']);
 });
