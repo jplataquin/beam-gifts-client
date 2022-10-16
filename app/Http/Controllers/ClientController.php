@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Item;
-
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
-    public function __construct()
+    public function __construct(){
 
         if(Auth::check()){
             \Cart::session(Auth::user()->id);
