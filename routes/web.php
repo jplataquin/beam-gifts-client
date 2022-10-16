@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
-use \Cart;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +15,13 @@ use \Cart;
 |
 */
 
-Route::get('/', function () {
 
+if (Auth::check()) {
+    \Cart::session(Auth::user()->id);
+}
+
+Route::get('/', function () {
+ 
     return view('welcome');
 });
 
