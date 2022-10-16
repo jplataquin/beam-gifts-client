@@ -401,7 +401,7 @@
                                 t.h3({class:"popbrandT"},item.namde);
                             });
                         });
-                    });
+                    })
                 );
 
             });
