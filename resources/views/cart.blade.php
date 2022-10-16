@@ -96,7 +96,17 @@
         Array.from(document.querySelectorAll('.removeBtn')).map(target=>{
 
             target.onclick = (e)=>{
-                console.log(target.data.id);
+                let id = target.getAttribute('data-id');
+
+                window.util.removeFromCart(id).then(reply=>{
+
+                    if(!reply.status){
+                        alert(reply.message);
+                        return false;
+                    }
+
+                    
+                });
             }
         });
     </script>

@@ -68,8 +68,7 @@ class CartController extends Controller
             'attributes' => [
                 'image'     => $item->photo['150px'],
                 'item_id'   => $item->id
-            ],
-            'associatedModel' => Item::class
+            ]
         ]);
 
 
@@ -136,8 +135,8 @@ class CartController extends Controller
 
         foreach($items as $item){
 
-            $itemModel = $item->model;
-
+            $itemModel = Item::findOrFail($item->attributes->item_id);
+            
             //Get price from database;
             $total = $total + ($itemModel->price * $item->quantity);
 
