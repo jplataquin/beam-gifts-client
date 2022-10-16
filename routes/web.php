@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-if (Auth::check()) {
+if ( Auth::check() ) {
     \Cart::session(Auth::user()->id);
     echo "KWAK";
 }else{
-    echo "POP";
+    print_r(Auth::user());
 }
 
 Route::get('/', function () {
