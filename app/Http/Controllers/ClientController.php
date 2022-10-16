@@ -11,17 +11,17 @@ class ClientController extends Controller
 {
     public function __construct(){
 
-     
-    }
-
-    public function brand($name)
-    {   
+        $this->middleware('auth');
 
         if(Auth::check()){
             echo "TAE";
             \Cart::session(Auth::user()->id);
         }
-        
+    }
+
+    public function brand($name)
+    {   
+
         $name = str_replace('-',' ',$name);
         $brand = new Brand();
 
