@@ -167,10 +167,6 @@
                         </li>
                     @endif
                 @else
-
-                    <li class="my-2">
-                        <a href="">{{ Auth::user()->name }}</a>
-                    </li>
                     <li class="my-2">
                        <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
