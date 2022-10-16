@@ -26,6 +26,8 @@
 
         getList();
     }
+
+    getList();
 </script>
 
 @endsection
