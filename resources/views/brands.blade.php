@@ -37,6 +37,11 @@
                                     <!-- <p class="totals">Total 15</p> -->
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12 d-grid">
+                                    <button class="btn btn-primary" id="showMore">Show More</button>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -44,9 +49,7 @@
             </div>
         </div>
 
-        <div class="d-grid">
-            <button class="btn btn-primary" id="showMore">Show More</button>
-        </div>
+      
     </section>
 
 
