@@ -80,7 +80,7 @@
     function getList(){
         window.util.$get('/api/brand_list',{
             'page'      : page,
-            'category:' : category 
+            'category' : category 
         }).then(reply => {
             
             if(!reply.status){
