@@ -87,11 +87,16 @@
     }
 
     function getList(){
+
+        showMoreBtn.disabled = true;
+
         window.util.$get('/api/brand_list',{
             'page'      : page,
             'category' : category 
         }).then(reply => {
             
+            showMoreBtn.disabled = false;
+        
             if(!reply.status){
                 alert(reply.message);
                 return false;
@@ -125,6 +130,8 @@
             page++;
         }).catch(err=>{
             alert('Opps something went wrong');
+            showMoreBtn.disabled = false;
+        
         });
     }
 
