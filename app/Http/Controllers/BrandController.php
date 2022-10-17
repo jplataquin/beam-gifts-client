@@ -19,7 +19,7 @@ class BrandController extends Controller
 
         $page       = $request->input('page') ?? 1;
         $category   = $request->input('category') ?? '';
-        $limit      = 1;
+        $limit      = 9;
         
         $brands = new Brand();
 
