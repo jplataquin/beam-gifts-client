@@ -33,7 +33,7 @@
                         <div class="tab-pane fade show active" id="filter-all" role="tabpanel" aria-labelledby="filter-all-tab" tabindex="0">
                             <div class="row" id="brand_list">
                                 <div class="col-12">
-                                    <h2 class="brandtype">All</h2>
+                                    <h2 id="brandtype" class="brandtype">All</h2>
                                     <!-- <p class="totals">Total 15</p> -->
                                 </div>
                             </div>
@@ -51,7 +51,8 @@
 
     const brandListEl = document.querySelector('#brand_list');
     const showMoreBtn = document.querySelector('#showMore');
-    
+    const brandType   = document.querySelector('#brandtype');
+
     const imgBaseUrl = '{{config("app")["api_base_url"]}}';
     const t = new Template();
 
@@ -59,11 +60,12 @@
     let category    = '';
 
 
-    Array.from(document.querySelectorAll('.fltItm')).map(filter => {
+    Array.from(document.querySelectorAll('.fltItem')).map(filter => {
 
         filter.onclick = (e)=>{
             page = 1;
             category = filter.getAttribute('data-value');
+            brandType.innerText = filter.innerText;
             getList();
         }
     });
