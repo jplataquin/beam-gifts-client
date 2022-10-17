@@ -17,8 +17,9 @@ class BrandController extends Controller
 
     public function list(Request $request){
 
-        $page   = $request->input('page') ?? 1;
-        $limit  = 10;
+        $page       = $request->input('page') ?? 1;
+        $category   = $request->input('category') ?? '';
+        $limit      = 10;
         
         $brands = new Brand();
 
@@ -26,6 +27,10 @@ class BrandController extends Controller
 
         $result = [];
         
+        if($category){
+            $brands = $brands->where('category','=',$category);
+        }
+
         if($limit > 0){
             $page   = ($page-1) * $limit;
             $result = $brands->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
