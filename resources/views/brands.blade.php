@@ -21,7 +21,7 @@
                         </li>
 
 
-                        @foreach(config('categories')['options'] as $val=>$txt)
+                        @foreach(config('brand_categories')['options'] as $val=>$txt)
                             <li class="nav-item" role="presentation">
                                 <button class="fltItem" data-bs-toggle="pill" data-value="{{$val}}" type="button" role="tab" aria-controls="filter-{{$val}}" aria-selected="true">{{$txt}}</button>
                             </li>
