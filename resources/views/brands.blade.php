@@ -66,9 +66,16 @@
             page = 1;
             category = filter.getAttribute('data-value');
             brandType.innerText = filter.innerText;
+            clearList();
             getList();
         }
     });
+
+    function clearList(){
+        Array.from(document.querySelectorAll('.brand-item')).map(item => {
+            item.remove();
+        });
+    }
 
     function getList(){
         window.util.$get('/api/brand_list',{
@@ -81,11 +88,10 @@
                 return false;
             }
 
-            console.log(reply.data);
 
             reply.data.map(item=>{
 
-                let col = t.div({class:"col-lg-4 col-md-6 col-12 my-2"},()=>{
+                let col = t.div({class:"brand-item col-lg-4 col-md-6 col-12 my-2"},()=>{
                     t.div({class:"popBrandsbox"},()=>{
                         t.img({src: imgBaseUrl+'storage/photos/brand/banner/'+item.photo['banner'],alt:"",class:"popBrandbigImg"});
                         t.div({class:"popbrandinfo"},()=>{
