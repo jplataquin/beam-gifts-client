@@ -44,7 +44,9 @@
             </div>
         </div>
 
-        <button class="btn btn-primary btn-block" id="showMore">Show More</button>
+        <div class="d-grid">
+            <button class="btn btn-primary" id="showMore">Show More</button>
+        </div>
     </section>
 
 
@@ -96,7 +98,7 @@
                 showMoreBtn.style.display = 'none';
                 return false;
             }
-            
+
             reply.data.map(item=>{
 
                 let col = t.div({class:"brand-item col-lg-4 col-md-6 col-12 my-2"},()=>{
