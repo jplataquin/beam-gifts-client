@@ -43,9 +43,12 @@
                 </div>
             </div>
         </div>
+
+        <button class="btn btn-primary btn-block" id="showMore">Show More</button>
     </section>
 
-<button class="btn btn-primary" id="showMore">Show More</button>
+
+
 <script type="module">
     import {Template} from '/adarna.js';
 
@@ -66,6 +69,7 @@
             page = 1;
             category = filter.getAttribute('data-value');
             brandType.innerText = filter.innerText;
+            showMoreBtn.style.display = 'block';
             clearList();
             getList();
         }
@@ -88,7 +92,11 @@
                 return false;
             }
 
-
+            if(!reply.data.length){
+                showMoreBtn.style.display = 'none';
+                return false;
+            }
+            
             reply.data.map(item=>{
 
                 let col = t.div({class:"brand-item col-lg-4 col-md-6 col-12 my-2"},()=>{
