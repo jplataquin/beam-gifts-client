@@ -883,6 +883,10 @@ h1, h2, h3, h4, h5, h6, p{
     display: none;
 }
 
+.heroBanner{
+    display:inline;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -898,6 +902,10 @@ h1, h2, h3, h4, h5, h6, p{
     .heroLogo{
         margin-top: 50px;
         display: inline;
+    }
+
+    .heroBanner{
+        display:none;
     }
 }
 
