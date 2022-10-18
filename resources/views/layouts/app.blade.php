@@ -42,7 +42,7 @@
 
     <section class="header">
         <div class="topbar py-2">
-            
+            &nbsp;
         </div>
 
         <div class="navigationbar py-3 d-lg-block d-none">
