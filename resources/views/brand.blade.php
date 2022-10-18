@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row mb-3">
         <div class="col-md-6">
-            <img class="img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}" class="product-img" width="100%"/>
+            <img class="product-img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}"  width="100%"/>
         </div>
         <div class="col-md-6 mt-3 mt-md-0">
             <h5 class="product-title">{{ $brand->name }}</h5>
