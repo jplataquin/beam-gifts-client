@@ -25,7 +25,10 @@
         </div>
     </div>
 
+    <hr/>
     <h3>Gifts</h3>
+    <hr/>
+    
     <div class="d-flex flex-wrap justify-content-around mt-3 mb-3">
         @foreach($items as $item)
            
