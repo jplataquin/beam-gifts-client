@@ -19,6 +19,20 @@
                         <h6>{{$branch['phone']}}</h6>
                     </div>
                 @endforeach
+                @foreach($brand->branches as $branch)
+                    <div class="border border-primary p-1 mb-2">
+                        <h5>{{$branch['name']}}</h5>
+                        <label>{{$branch['address']}}</label>
+                        <h6>{{$branch['phone']}}</h6>
+                    </div>
+                @endforeach
+                @foreach($brand->branches as $branch)
+                    <div class="border border-primary p-1 mb-2">
+                        <h5>{{$branch['name']}}</h5>
+                        <label>{{$branch['address']}}</label>
+                        <h6>{{$branch['phone']}}</h6>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
