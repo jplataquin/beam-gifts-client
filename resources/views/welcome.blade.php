@@ -186,6 +186,17 @@
                 brandsContainer.append(card);
             });
              
+            
+            brandsContainer.append(t.a({href:'/brands'},()=>{
+                t.img({
+                    src: '/images/placeholder.png',
+                    class:'occasionImg mb-2'
+                });
+                
+                t.h3({class:'categoryN'},brand.name);
+                
+            }));
+            
         }).catch((e)=>{
             console.log('here',e);
         });
