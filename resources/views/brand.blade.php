@@ -30,44 +30,77 @@
         @foreach($items as $item)
            
           
-                <div class="card" style="width:300px">
+                <div class="card mb-3" style="width:300px">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
                     </div>
                 </div>
             
-                <div class="card" style="width:300px">
+                <div class="card mb-3" style="width:300px">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card" style="width:300px">
+                <div class="card mb-3" style="width:300px">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-
-                <div class="card" style="width:300px">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="card" style="width:300px">
+                <div class="card mb-3" style="width:300px">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$item->name}}</h5>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$item->name}}</h5>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$item->name}}</h5>
+                        <div class="text-end">
+                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                        </div>
                     </div>
                 </div>
         @endforeach
