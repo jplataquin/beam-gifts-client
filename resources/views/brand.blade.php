@@ -38,7 +38,7 @@
                         <div class="col">
                             Php {{$item->price}}
                         </div>
-                        <div class="col">
+                        <div class="col text-end">
                             <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                         </div>
                     </div>
