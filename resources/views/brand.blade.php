@@ -26,7 +26,7 @@
     </div>
 
     <h3>Gifts</h3>
-    <div class="row mt-3 mb-3">
+    <div class="d-flex justify-content-around mt-3 mb-3">
         @foreach($items as $item)
             <div class="col-md-3">
           
