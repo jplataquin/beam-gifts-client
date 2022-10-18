@@ -32,9 +32,12 @@
                     <div class="tab-content" id="filter-tabContent">
                         <div class="tab-pane fade show active" id="filter-all" role="tabpanel" aria-labelledby="filter-all-tab" tabindex="0">
                             <div class="row" id="brand_list">
-                                <div class="col-12">
+                                <div class="col-6">
                                     <h2 id="brandtype" class="brandtype">All</h2>
                                     <!-- <p class="totals">Total 15</p> -->
+                                </div>
+                                <div class="col-6">
+                                    <input id="query" type="text" placeholder="Search Brand"/>
                                 </div>
                             </div>
                             <div class="row mt-5">
