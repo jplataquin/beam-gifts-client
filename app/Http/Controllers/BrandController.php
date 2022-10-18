@@ -41,7 +41,6 @@ class BrandController extends Controller
         }
 
         if($query){
-            echo "ASDAD";exit;
             $brands = $brands->where('name','LIKE','%'.$query.'%');
         }
 
