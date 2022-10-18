@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <div class="row mb-3">
+    <div class="row mb-3 mt-3">
         <div class="col-md-6">
             <img class="product-img" src="{{config('app')['api_base_url']}}storage/photos/brand/400px/{{$brand->photo['400px']}}"  width="100%"/>
         </div>
