@@ -9,7 +9,33 @@
         </div>
         <div class="col-md-6 mt-3 mt-md-0">
             <h5 class="product-title">{{ $brand->name }}</h5>
-            <p class="product-shortDESC">{{ $brand->description }}</p>
+            <p class="product-shortDESC brandDescription">{{ $brand->description }}
+                asdasdasdasdsadasdajsdijasodjaoidjoiasjdad
+                iaijdsoiasjdoijasodijasd
+                oaiojsdoajoidasjdjas
+                oiajodsijaidojasiodjasoidjasoijdaoisdjoaijdasd
+                oijiadiojaidjaidjisoadjiasojdsiajdajsdaojsdoajdiasojdioasjdas
+                aoijsdoiajdoiasjdioajsidojaiodjiasodjiajdasoidjaiodjioadjiasdj
+                oiaijidojasiojaiodjiajdiajdiasjdiasjidjsaidjioadjosijdioasjaoijsd
+                oiajsdoiajsoidjasiodjasiodjaoidjaoidjasiojdasiodjoiajdaisdjadioasjiodjasd
+                oiajsdoiajdoiajidjasiodjasiodjaoisdjisajdioasdjasiodjasdjads
+                
+                oijiadiojaidjaidjisoadjiasojdsiajdajsdaojsdoajdiasojdioasjdas
+                aoijsdoiajdoiasjdioajsidojaiodjiasodjiajdasoidjaiodjioadjiasdj
+                oiaijidojasiojaiodjiajdiajdiasjdiasjidjsaidjioadjosijdioasjaoijsd
+                oiajsdoiajsoidjasiodjasiodjaoidjaoidjasiojdasiodjoiajdaisdjadioasjiodjasd
+                oiajsdoiajdoiajidjasiodjasiodjaoisdjisajdioasdjasiodjasdjads
+                oijiadiojaidjaidjisoadjiasojdsiajdajsdaojsdoajdiasojdioasjdas
+                aoijsdoiajdoiasjdioajsidojaiodjiasodjiajdasoidjaiodjioadjiasdj
+                oiaijidojasiojaiodjiajdiajdiasjdiasjidjsaidjioadjosijdioasjaoijsd
+                oiajsdoiajsoidjasiodjasiodjaoidjaoidjasiojdasiodjoiajdaisdjadioasjiodjasd
+                oiajsdoiajdoiajidjasiodjasiodjaoisdjisajdioasdjasiodjasdjads
+                oijiadiojaidjaidjisoadjiasojdsiajdajsdaojsdoajdiasojdioasjdas
+                aoijsdoiajdoiasjdioajsidojaiodjiasodjiajdasoidjaiodjioadjiasdj
+                oiaijidojasiojaiodjiajdiajdiasjdiasjidjsaidjioadjosijdioasjaoijsd
+                oiajsdoiajsoidjasiodjasiodjaoidjaoidjasiojdasiodjoiajdaisdjadioasjiodjasd
+                oiajsdoiajdoiajidjasiodjasiodjaoisdjisajdioasdjasiodjasdjads
+            </p>
             
             <div class="branchList">
                 @foreach($brand->branches as $branch)
