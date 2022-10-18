@@ -35,7 +35,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$item->name}}</h5>
                     <div class="row">
-                        <div class="">
+                        <div class="col">
                             Php {{$item->price}}
                         </div>
                         <div class="col">
