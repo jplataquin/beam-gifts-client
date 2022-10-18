@@ -12,7 +12,7 @@
 
             <div class="col-md-6">
                 <!--<img src="{{asset('images/new_main_kr.png')}}" alt="" width="100%">-->
-                <img src="{{ asset('images/logo.png') }}" alt="" width="100%">
+                <img class="heroLogo" src="{{ asset('images/logo.png') }}" alt="" width="100%">
             </div>
             <div class="col-md-6 py-5">
 
