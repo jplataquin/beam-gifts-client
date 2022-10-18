@@ -151,9 +151,10 @@
 
         const brandsContainer = document.querySelector('#brandsContainer');
 
-        fetch(apiBaseUrl+'brands?'+ new URLSearchParams({
+        fetch('/api/brands_list?'+ new URLSearchParams({
             status:'ACTV',
-            random: true
+            random: true,
+            limit:5
         })).then(response => { return response.json()}).then((reply)=>{
             
             if(!reply.status){
