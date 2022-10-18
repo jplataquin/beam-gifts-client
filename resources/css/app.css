@@ -889,7 +889,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .branchList{
     max-height: 300px;
-    overflow-x: auto;
+    overflow-y: auto;
 }
 
 .brandDescription{
@@ -897,8 +897,8 @@ h1, h2, h3, h4, h5, h6, p{
     font-weight: 600;
     color: #9d9d9d;
     max-height: 150px;
-    overflow-x: auto;
-    overflow-y:hidden;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
 
 /* Responsive */
@@ -924,7 +924,7 @@ h1, h2, h3, h4, h5, h6, p{
 
     .branchList{
         max-height: 200px;
-        overflow-x: auto;
+        overflow-y: auto;
     }
 
     .brandDescription{
@@ -932,8 +932,8 @@ h1, h2, h3, h4, h5, h6, p{
         font-weight: 600;
         color: #9d9d9d;
         max-height: 150px;
-        overflow-x: auto;
-        overflow-y:hidden;
+        overflow-y: auto;
+        overflow-x:hidden;
     }
 }
 
