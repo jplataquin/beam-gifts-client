@@ -21,7 +21,7 @@ class BrandController extends Controller
         $page       = $request->input('page') ?? 1;
         $category   = $request->input('category') ?? '';
         $query      = $request->input('query');
-        $limit      = (int) $request->input('limit') ?? 9;
+        $limit      = $request->input('limit') ?? 9;
         $random     = $request->input('random') ?? false;
         $order_by   = $request->input('orderBy') ?? '';
 
