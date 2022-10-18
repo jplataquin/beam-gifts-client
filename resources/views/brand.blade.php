@@ -28,53 +28,48 @@
     <h3>Gifts</h3>
     <div class="d-flex flex-wrap justify-content-around mt-3 mb-3">
         @foreach($items as $item)
-            <div class="col-md-3">
+           
           
-                <div class="card" style="width:100%">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
+                <div class="card" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
                         <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
             
-            </div>
+                <div class="card" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$item->name}}</h5>
+                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                    </div>
+                </div>
 
-            <div class="col-md-3">
-          
-                <div class="card" style="width:100%">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
+                <div class="card" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
                         <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
-            
-            </div>
 
-            <div class="col-md-3">
-          
-                <div class="card" style="width:100%">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
+                <div class="card" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
                         <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
-            
-            </div>
 
-            <div class="col-md-3">
-          
-                <div class="card" style="width:100%">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
+
+                <div class="card" style="width:300px">
+                    <img src="{{config('app')['api_base_url'].'storage/photos/item/300px/'.$item->photo['300px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
                         <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
-            
-            </div>
         @endforeach
     </div>
 </div>
