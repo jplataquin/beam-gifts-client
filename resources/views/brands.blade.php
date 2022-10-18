@@ -32,11 +32,13 @@
                     <div class="tab-content" id="filter-tabContent">
                         <div class="tab-pane fade show active" id="filter-all" role="tabpanel" aria-labelledby="filter-all-tab" tabindex="0">
                             <div class="row" id="brand_list">
+                                <!--
                                 <div class="col-3 text-center">
                                     <h2 id="brandtype" class="brandtype">All</h2>
-                                    <!-- <p class="totals">Total 15</p> -->
+                                 <p class="totals">Total 15</p> 
                                 </div>
-                                <div class="col-9 text-start">
+                                -->
+                                <div class="col-12 text-start">
                                     <input id="query" type="text" class="form-control" placeholder="Search Brand"/>
                                 </div>
                             </div>
@@ -76,7 +78,7 @@
         filter.onclick = (e)=>{
             page = 1;
             category = filter.getAttribute('data-value');
-            brandType.innerText = filter.innerText;
+            //brandType.innerText = filter.innerText;
             showMoreBtn.style.display = 'block';
             clearList();
             getList();
