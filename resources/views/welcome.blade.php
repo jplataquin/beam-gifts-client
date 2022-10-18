@@ -8,16 +8,19 @@
   <section class="hero">
     <div class="custom-container">
         <div class="row align-items-center">
+
+
+            <div class="col-md-6">
+                <!--<img src="{{asset('images/new_main_kr.png')}}" alt="" width="100%">-->
+                <img src="{{ asset('images/logo.png') }}" alt="" width="100%">
+            </div>
             <div class="col-md-6 py-5">
                 <h1 class="heroT">Beam a gift<br>to Iloilo / Bacolod</h1>
                 <p class="heroD">Let your love ones feel the beam</p>
                 <button class="button gift-btn mt-2">Send Gift Now</button>
             </div>
             
-            <div class="col-md-6">
-                <!--<img src="{{asset('images/new_main_kr.png')}}" alt="" width="100%">-->
-                <img src="{{ asset('images/logo.png') }}" alt="" width="100%">
-            </div>
+            
         </div>
     </div>
 </section>
