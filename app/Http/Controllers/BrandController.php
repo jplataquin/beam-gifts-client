@@ -30,6 +30,8 @@ class BrandController extends Controller
             $order_by = 'created_at';
         }
 
+        $limit = (int) $limit;
+        
         $brands = new Brand();
 
         $brands = $brands->where('status','=','ACTV');
