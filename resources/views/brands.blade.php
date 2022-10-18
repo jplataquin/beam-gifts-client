@@ -74,9 +74,12 @@
     let query       = '';
 
     queryEl.onkeyup = (e)=>{
-        console.log(e.keyCode );
+    
         if(e.keyCode == 13){
+            page  = 1;
             query = queryEl.value;
+            category = '';
+            showMoreBtn.style.display = 'block';
             clearList();
             getList();
         }
