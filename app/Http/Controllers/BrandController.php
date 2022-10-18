@@ -49,7 +49,7 @@ class BrandController extends Controller
             if(!$random){
                 $result = $brands->skip($page)->take($limit)->orderBy($order_by, 'desc')->get();
             }else{
-                $result = $brands->skip($page)->take($limit)->order_by(DB::raw('RAND()'))->get();
+                $result = $brands->skip($page)->take($limit)->orderBy(DB::raw('RAND()'))->get();
             }
 
         }else{
@@ -57,7 +57,7 @@ class BrandController extends Controller
             if(!$random){
                 $result = $brands->orderBy($order_by, 'desc')->get();
             }else{
-                $result = $brands->order_by(DB::raw('RAND()'))->get();
+                $result = $brands->orderBy(DB::raw('RAND()'))->get();
             }
         }
         
