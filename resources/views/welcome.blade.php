@@ -166,7 +166,7 @@
 
                 let card = t.div( {class:'col-lg-2 col-md-4 col-6 text-center'},()=>{
                    
-                    t.div({ class:'card me-3 pointer-cursor', style:{width:'200px'} },()=>{
+                   /**  t.div({ class:'card me-3 pointer-cursor', style:{width:'200px'} },()=>{
                         t.img({
                             src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
                             class:'card-img-top'
@@ -175,13 +175,23 @@
                         t.div({class:'card-body text-center'},()=>{
                             t.h5({class:'card-title'},brand.name);
                         });
+                    });**/
+                    t.a({href:'/brand/'+window.util.spaceToDash(brand.name)},()=>{
+                        t.img({
+                            src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
+                            class:'categoryImg mb-2'
+                        });
+                        
+                        t.h3({class:'categoryN'},brand.name);
+                        
                     });
-                
+             
+
                 });
-                
-                card.onclick = (e)=>{
+
+                /*card.onclick = (e)=>{
                     document.location.href = '/brand/'+window.util.spaceToDash(brand.name);
-                }
+                }*/
 
                 brandsContainer.append(card);
             });
