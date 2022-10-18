@@ -49,11 +49,11 @@
             <div class="header-row m-auto">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="lnav-col">
-                       <!--
-                        <a href="{{ url('/') }}">
+                       
+                        <a class="topLogo" href="{{ url('/') }}">
                             <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                         </a>
-                        -->
+                        
                         <ul class="dnavs">
                             <li><a href="/brands">Brands</a></li>
                         </ul>
