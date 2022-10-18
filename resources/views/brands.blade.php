@@ -64,21 +64,28 @@
 
     const brandListEl = document.querySelector('#brand_list');
     const showMoreBtn = document.querySelector('#showMore');
-    const brandType   = document.querySelector('#brandtype');
+    const queryEl     = document.querySelector('#query');
 
     const imgBaseUrl = '{{config("app")["api_base_url"]}}';
     const t = new Template();
 
     let page        = 1;
     let category    = '';
+    let query       = '';
 
+    queryEl.onkeyup = (e)=>{
+        if(e.keyCode == 13){
+            query = queryEl.value;
+        }
+    }
 
     Array.from(document.querySelectorAll('.fltItem')).map(filter => {
 
         filter.onclick = (e)=>{
-            page = 1;
-            category = filter.getAttribute('data-value');
-            //brandType.innerText = filter.innerText;
+            page            = 1;
+            category        = filter.getAttribute('data-value');
+            queryEl.value   = '';
+            query           = '';
             showMoreBtn.style.display = 'block';
             clearList();
             getList();
@@ -96,8 +103,9 @@
         showMoreBtn.disabled = true;
 
         window.util.$get('/api/brand_list',{
-            'page'      : page,
-            'category' : category 
+            page      : page,
+            category : category,
+            query: query
         }).then(reply => {
             
             showMoreBtn.disabled = false;
