@@ -23,7 +23,7 @@ class BrandController extends Controller
         $query      = $request->input('query');
         $limit      = $request->input('limit') ?? 9;
         $random     = $request->input('random') ?? false;
-        $order_by   = $request->input('orderBy');
+        $order_by   = $request->input('orderBy') ?? '';
 
         if(!in_array($order_by,['name','created_at'])){
             $oder_by = 'created_at';
