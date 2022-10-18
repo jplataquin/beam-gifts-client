@@ -24,11 +24,13 @@
             </div>
         </div>
     </div>
+
+    <h3>Gifts</h3>
     <div class="row mt-3 mb-3">
         @foreach($items as $item)
             <div class="col">
           
-                <div class="card" style="width: 200px;">
+                <div class="card" style="width:100%">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
@@ -40,7 +42,7 @@
 
             <div class="col">
           
-           <div class="card" style="width: 200px;">
+                <div class="card" style="width:100%">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
@@ -50,8 +52,9 @@
             
             </div>
 
-
-            <div class="card" style="width: 200px;">
+            <div class="col">
+          
+                <div class="card" style="width:100%">
                     <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
@@ -60,31 +63,6 @@
                 </div>
             
             </div>
-
-
-
-            <div class="card" style="width: 200px;">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-            
-            </div>
-
-
-
-            <div class="card" style="width: 200px;">
-                    <img src="{{config('app')['api_base_url'].'storage/photos/item/200px/'.$item->photo['200px']}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$item->name}}</h5>
-                        <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-            
-            </div>
-
         @endforeach
     </div>
 </div>
