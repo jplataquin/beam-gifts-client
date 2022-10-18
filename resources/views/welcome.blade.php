@@ -151,7 +151,7 @@
 
         const brandsContainer = document.querySelector('#brandsContainer');
 
-        fetch('/api/brands_list?'+ new URLSearchParams({
+        fetch('/api/brand_list?'+ new URLSearchParams({
             status:'ACTV',
             random: true,
             limit:5
