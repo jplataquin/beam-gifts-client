@@ -19,7 +19,7 @@
                 <h1 class="heroT">Beam a gift<br>to Iloilo / Bacolod</h1>
                 <p class="heroD">Let your love ones feel the beam</p>
                 <div class="text-end">
-                    <button class="button gift-btn mt-2">Send Gift Now</button>
+                    <button class="button gift-btn mt-2">Beam One Now</button>
                 </div>
             </div>
             
