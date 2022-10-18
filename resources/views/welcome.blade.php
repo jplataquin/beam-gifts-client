@@ -162,9 +162,10 @@
 
             const t = new Template();
 
-            reply.data.map(brand=>{
+            reply.data.map(brand =>{
 
-                let card = t.div({class:'col-lg-2 col-md-4 col-6 text-center'}, () => {
+                let card = t.div( {class:'col-lg-2 col-md-4 col-6 text-center'},()=>{
+                   
                     t.div({ class:'card me-3 pointer-cursor', style:{width:'200px'} },()=>{
                         t.img({
                             src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
@@ -175,14 +176,16 @@
                             t.h5({class:'card-title'},brand.name);
                         });
                     });
-
-                    card.onclick = (e)=>{
-                        document.location.href = '/brand/'+window.util.spaceToDash(brand.name);
-                    }
-
-                    brandsContainer.append(card);
+                
                 });
-             });
+                
+                card.onclick = (e)=>{
+                    document.location.href = '/brand/'+window.util.spaceToDash(brand.name);
+                }
+
+                brandsContainer.append(card);
+            });
+             
         }).catch((e)=>{
             console.log('here',e);
         });
