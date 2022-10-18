@@ -191,10 +191,8 @@
                 t.div( {class:'col-lg-2 col-md-4 col-6 text-center'},()=>{
                     t.a({href:'/brands'},()=>{
                         t.img({
-                            src: '/images/placeholder.png',
-                            class:'occasionImg mb-2',
-                            width:'200px',
-                            height:'200px'
+                            src: 'https://via.placeholder.com/200',
+                            class:'occasionImg mb-2'
                         });
                         
                         t.h3({class:'categoryN'},'See All');
