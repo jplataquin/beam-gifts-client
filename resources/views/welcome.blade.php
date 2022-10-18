@@ -35,7 +35,7 @@
 
  <!-- Ocassions -->
     <section class="occasions py-5">
-        <h3>Occassions</h3>
+        <h3>Events</h3>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-6 text-center">
@@ -76,6 +76,14 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="topBrands py-5 py-5">
+        <h3>Featured Brands</h3>
+        <div class="container">
+            <div class="row" id="brandsContainer">
+                
+            </div>
     </section>
 
      <!-- Categories -->
@@ -134,15 +142,7 @@
         </div>
     </section>
 
-    <section class="topBrands py-5 py-5">
-        <h3>Featured Brands</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col d-flex" id="brandsContainer">
-                
-                </div>
-            </div>
-    </section>
+
     <script type="module">
         import {Template} from '/adarna.js';
 
@@ -164,23 +164,25 @@
 
             reply.data.map(brand=>{
 
-                let card = t.div({ class:'card me-3 pointer-cursor', style:{width:'200px'} },()=>{
-                    t.img({
-                        src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
-                        class:'card-img-top'
+                let card = t.div({class:'col-lg-2 col-md-4 col-6 text-center'}, () => {
+                    t.div({ class:'card me-3 pointer-cursor', style:{width:'200px'} },()=>{
+                        t.img({
+                            src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
+                            class:'card-img-top'
+                        });
+                        
+                        t.div({class:'card-body text-center'},()=>{
+                            t.h5({class:'card-title'},brand.name);
+                        });
                     });
-                    
-                    t.div({class:'card-body text-center'},()=>{
-                        t.h5({class:'card-title'},brand.name);
-                    });
+
+                    card.onclick = (e)=>{
+                        document.location.href = '/brand/'+window.util.spaceToDash(brand.name);
+                    }
+
+                    brandsContainer.append(card);
                 });
-
-                card.onclick = (e)=>{
-                    document.location.href = '/brand/'+window.util.spaceToDash(brand.name);
-                }
-
-                brandsContainer.append(card);
-            });
+             });
         }).catch((e)=>{
             console.log('here',e);
         });
