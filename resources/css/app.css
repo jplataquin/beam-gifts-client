@@ -887,6 +887,11 @@ h1, h2, h3, h4, h5, h6, p{
     display:inline;
 }
 
+.branchList{
+    max-height: 400px;
+    overflow-x: auto;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -906,6 +911,11 @@ h1, h2, h3, h4, h5, h6, p{
 
     .heroBanner{
         display:none;
+    }
+
+    .branchList{
+        max-height: 300px;
+        overflow-x: auto;
     }
 }
 
