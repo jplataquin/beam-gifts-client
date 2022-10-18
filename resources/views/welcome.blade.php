@@ -193,10 +193,10 @@
                     class:'occasionImg mb-2'
                 });
                 
-                t.h3({class:'categoryN'},brand.name);
+                t.h3({class:'categoryN'},'See All');
                 
             }));
-            
+
         }).catch((e)=>{
             console.log('here',e);
         });
