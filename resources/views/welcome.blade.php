@@ -9,8 +9,8 @@
     <div class="custom-container">
         <div class="row align-items-center">
             <div class="col-md-6 py-5">
-                <h1 class="heroT">Find the perfect gift<br>to South Korea</h1>
-                <p class="heroD">Gift whenever and wherever.</p>
+                <h1 class="heroT">Beam a gift<br>to Iloilo / Bacolod</h1>
+                <p class="heroD"><img class="logo" src="{{ asset('images/logo.png') }}" alt=""> </p>
                 <button class="button gift-btn mt-2">Send Gift Now</button>
             </div>
             
