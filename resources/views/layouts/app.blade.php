@@ -118,7 +118,7 @@
             <div id="mobile-navBot-items" class="row justify-content-center">
                 @guest
                     <div class="col-3 text-center">
-                        <a href="#"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
+                        <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
                     </div>
                 @else
                     <div class="col-3 text-center">
