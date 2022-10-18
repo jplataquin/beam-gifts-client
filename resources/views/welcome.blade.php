@@ -15,7 +15,8 @@
                 <img src="{{ asset('images/logo.png') }}" alt="" width="100%">
             </div>
             <div class="col-md-6 py-5">
-                <h1 class="heroT">Beam a gift<br>to Iloilo / Bacolod</h1>
+
+                <h1 class="heroT mt-5">Beam a gift<br>to Iloilo / Bacolod</h1>
                 <p class="heroD">Let your love ones feel the beam</p>
                 <div class="text-end">
                     <button class="button gift-btn mt-2">Send Gift Now</button>
