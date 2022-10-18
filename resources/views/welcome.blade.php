@@ -187,16 +187,20 @@
             });
              
             
-            brandsContainer.append(t.a({href:'/brands'},()=>{
-                t.img({
-                    src: '/images/placeholder.png',
-                    class:'occasionImg mb-2',
-                    width:'200px'
-                });
-                
-                t.h3({class:'categoryN'},'See All');
-                
-            }));
+            brandsContainer.append(
+                t.div( {class:'col-lg-2 col-md-4 col-6 text-center'},()=>{
+                    t.a({href:'/brands'},()=>{
+                        t.img({
+                            src: '/images/placeholder.png',
+                            class:'occasionImg mb-2',
+                            width:'200px'
+                        });
+                        
+                        t.h3({class:'categoryN'},'See All');
+                    
+                    })
+                })
+            );
 
         }).catch((e)=>{
             console.log('here',e);
