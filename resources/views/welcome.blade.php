@@ -195,7 +195,7 @@
                             class:'occasionImg mb-2'
                         });
                         
-                        t.h3({class:'categoryN'},'See All');
+                        t.h3({class:'categoryN'},'Show More');
                     
                     })
                 })
