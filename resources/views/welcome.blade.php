@@ -190,7 +190,8 @@
             brandsContainer.append(t.a({href:'/brands'},()=>{
                 t.img({
                     src: '/images/placeholder.png',
-                    class:'occasionImg mb-2'
+                    class:'occasionImg mb-2',
+                    width:'200px'
                 });
                 
                 t.h3({class:'categoryN'},'See All');
