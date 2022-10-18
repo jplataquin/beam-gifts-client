@@ -25,10 +25,9 @@ class BrandController extends Controller
         $random     = $request->input('random') ?? false;
         $order_by   = $request->input('orderBy') ?? '';
 
-        echo 'asdasd'.in_array($order_by,['name','created_at']). ' ' .($order_by == ''); exit;
-        if(!in_array($order_by,['name','created_at']) || $order_by == ''){
+        if(!in_array($order_by,['name','created_at'])){
             
-            $oder_by = 'created_at';
+            $order_by = 'created_at';
         }
 
         $brands = new Brand();
