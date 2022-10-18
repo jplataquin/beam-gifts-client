@@ -897,6 +897,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-weight: 600;
     color: #9d9d9d;
     max-height: 300px;
+    overflow-x: auto;
 }
 
 /* Responsive */
@@ -930,6 +931,7 @@ h1, h2, h3, h4, h5, h6, p{
         font-weight: 600;
         color: #9d9d9d;
         max-height: 200px;
+        overflow-x: auto;
     }
 }
 
