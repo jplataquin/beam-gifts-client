@@ -193,7 +193,8 @@
                         t.img({
                             src: '/images/placeholder.png',
                             class:'occasionImg mb-2',
-                            width:'200px'
+                            width:'200px',
+                            height:'200px'
                         });
                         
                         t.h3({class:'categoryN'},'See All');
