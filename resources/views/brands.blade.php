@@ -37,7 +37,7 @@
                                     <!-- <p class="totals">Total 15</p> -->
                                 </div>
                                 <div class="col-9 text-start">
-                                    <input id="query" type="text" placeholder="Search Brand"/>
+                                    <input id="query" type="text" class="form-control" placeholder="Search Brand"/>
                                 </div>
                             </div>
                             <div class="row mt-5">
