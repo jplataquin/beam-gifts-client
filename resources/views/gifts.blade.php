@@ -129,7 +129,7 @@
             reply.data.map(item=>{
 
                 console.log(item);
-                
+
                 let col = t.div({class:"gift-item col-lg-4 col-md-6 col-12 my-2"},()=>{
                     t.div({class:"popBrandsbox"},()=>{
                         t.img({src: imgBaseUrl+'storage/photos/item/200px/'+item.photo['200px'],alt:"",class:"popItembigImg"});
@@ -141,7 +141,7 @@
                 });
 
                 col.onclick = ()=>{
-                    document.location.href = '/gift/'+window.util.spaceToDash(item.name);
+                    document.location.href = '/gift/'++window.util.spaceToDash(item.brand.name)+'/'+window.util.spaceToDash(item.name);
                 }
 
                 brandListEl.appendChild(col);
