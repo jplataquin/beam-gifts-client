@@ -13,7 +13,7 @@ class ItemController extends Controller
 
 
     public function index(Request $request){
-        return view('items');
+        return view('gifts');
     }
 
     public function list(Request $request){
@@ -40,7 +40,7 @@ class ItemController extends Controller
         if($order == 'RAND'){
             $random = true;
         }
-        
+
         $limit = (int) $limit;
         
         $items = new Item();
