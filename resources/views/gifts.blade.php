@@ -128,6 +128,7 @@
 
             reply.data.map(item=>{
 
+
                 let col = t.div({class:"gift-item col-lg-4 col-md-6 col-12 my-2"},()=>{
                     t.div({class:"popBrandsbox"},()=>{
                         t.img({src: imgBaseUrl+'storage/photos/item/200px/'+item.photo['200px'],alt:"",class:"popItembigImg"});
@@ -148,6 +149,7 @@
 
             page++;
         }).catch(err=>{
+            console.log(err);
             alert('Opps something went wrong');
             showMoreBtn.disabled = false;
         
