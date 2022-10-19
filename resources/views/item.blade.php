@@ -33,8 +33,10 @@
                         </div>
                     </div>
                     <div class="separator"></div>
+                    <h3>By: </h3>
                     <div class="brand-row d-flex align-items-center">
                         <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
+                        <br>
                         <a href="/brand/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">{{$brand->name}}</a>
                     </div>
                 </div>
@@ -103,7 +105,7 @@
     const addToCartBtn  = document.querySelector('#addToCartBtn');
     const buyNowBtn     = document.querySelector('#buyNowBtn');
     const qty           = document.querySelector('#qty');
-    
+
     addToCartBtn.onclick = (e)=>{
         e.preventDefault();
 
