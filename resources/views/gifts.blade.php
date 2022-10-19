@@ -99,7 +99,7 @@
     });
 
     function clearList(){
-        Array.from(document.querySelectorAll('.brand-item')).map(item => {
+        Array.from(document.querySelectorAll('.gift-item')).map(item => {
             item.remove();
         });
     }
