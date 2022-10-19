@@ -84,11 +84,12 @@ class ItemController extends Controller
         $data = [];
 
         foreach($result as $res){
-            
+
             $brandModel = $res->brand;
             $brandModel->photo = json_decode($brandModel->photo); 
-            $data[] = $res->brand = $brandModel;
+            $res->brand = $brandModel;
             
+            $data[] = $res;
         }
 
         return response()->json([
