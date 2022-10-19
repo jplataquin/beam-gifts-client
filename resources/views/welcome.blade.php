@@ -153,7 +153,7 @@
 
         fetch('/api/brand_list?'+ new URLSearchParams({
             status:'ACTV',
-            random: true,
+            order: 'RAND',
             limit:5
         })).then(response => { return response.json()}).then((reply)=>{
             

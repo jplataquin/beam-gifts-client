@@ -30,3 +30,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
 Route::get('/brand_list',[App\Http\Controllers\BrandController::class, 'list']);
 
+Route::get('/item_list',[App\Http\Controllers\BrandController::class, 'list']);

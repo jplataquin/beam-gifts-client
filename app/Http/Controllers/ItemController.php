@@ -8,17 +8,16 @@ use Illuminate\Support\Facades\DB;
 //use App\Models\Item;
 //use Illuminate\Support\Facades\Auth;
 
-class BrandController extends Controller
+class ItemController extends Controller
 {
 
 
     public function index(Request $request){
-        return view('brands');
+        return view('items');
     }
 
     public function list(Request $request){
 
-      
         $page       = $request->input('page') ?? 1;
         $category   = $request->input('category') ?? '';
         $query      = $request->input('query');
@@ -27,7 +26,7 @@ class BrandController extends Controller
         $order_by   = $request->input('sortBy') ?? '';
         $order      = $request->input('order');
 
-        if(!in_array($order_by,['name','created_at'])){
+        if(!in_array($order_by,['name','created_at','price'])){
             
             $order_by = 'created_at';
         }
@@ -37,50 +36,48 @@ class BrandController extends Controller
         if(!in_array($order,['DESC','ASC','RAND'])){
             $order = 'DESC';
         }
-        
 
         if($order == 'RAND'){
             $random = true;
         }
-
+        
         $limit = (int) $limit;
         
-        $brands = new Brand();
+        $items = new Item();
 
-        $brands = $brands->where('status','=','ACTV');
+        $items = $items->where('status','=','ACTV');
 
         $result = [];
         
         if($category){
-            $brands = $brands->where('category','=',$category);
+            $items = $items->where('category','=',$category);
         }
 
         if($query){
-            $brands = $brands->where('name','LIKE','%'.$query.'%');
+            $items = $items->where('name','LIKE','%'.$query.'%');
         }
 
         if($limit > 0){
             $page   = ($page-1) * $limit;
 
             if(!$random){
-                $result = $brands->skip($page)->take($limit)->orderBy($order_by, $order)->get();
+                $result = $items->skip($page)->take($limit)->orderBy($order_by, $order)->get();
             }else{
-                $result = $brands->skip($page)->take($limit)->orderBy(DB::raw('RAND()'))->get();
+                $result = $items->skip($page)->take($limit)->orderBy(DB::raw('RAND()'))->get();
             }
 
         }else{
 
             if(!$random){
-                $result = $brands->orderBy($order_by, $order)->get();
+                $result = $items->orderBy($order_by, $order)->get();
             }else{
-                $result = $brands->orderBy(DB::raw('RAND()'))->get();
+                $result = $items->orderBy(DB::raw('RAND()'))->get();
             }
         }
         
 
         for($i = 0; $i <= count($result) - 1; $i++){
             $result[$i]->photo      = json_decode($result[$i]->photo);
-            $result[$i]->branches   = json_decode($result[$i]->branches);
         }
         
         return response()->json([
