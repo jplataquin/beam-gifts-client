@@ -37,8 +37,6 @@
                     <div class="brand-row d-flex align-items-center">
                         <a href="/brand/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">
                             <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
-                            
-                            {{$brand->name}}
                         </a>
                     </div>
                 </div>
