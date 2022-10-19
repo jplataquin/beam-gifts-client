@@ -80,10 +80,21 @@ class ItemController extends Controller
             $result[$i]->photo      = json_decode($result[$i]->photo);
         }
         
+
+        $data = [];
+
+        foreach($result as $res){
+            
+            $brandModel = $res->brand;
+            $brandModel->photo = json_decode($brandModel->photo); 
+            $data[] = $res->brand = $brandModel;
+            
+        }
+
         return response()->json([
             'status' => 1,
             'message'=>'',
-            'data'=> $result
+            'data'=> $data
         ]);
 
     }

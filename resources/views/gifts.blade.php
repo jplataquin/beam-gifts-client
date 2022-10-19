@@ -132,7 +132,7 @@
                     t.div({class:"popBrandsbox"},()=>{
                         t.img({src: imgBaseUrl+'storage/photos/item/200px/'+item.photo['200px'],alt:"",class:"popItembigImg"});
                         t.div({class:"popbrandinfo"},()=>{
-                            t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.photo['150px'],alt:"",class:"popbrandimg"});
+                            t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.brand.photo['150px'],alt:"",class:"popbrandimg"});
                             t.h3({class:"popbrandT"},item.name);
                         });
                     });
