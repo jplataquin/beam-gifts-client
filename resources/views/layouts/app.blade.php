@@ -56,6 +56,7 @@
                         
                         <ul class="dnavs">
                             <li><a href="/brands">Brands</a></li>
+                            <li><a href="/gifts">Gifts</a></li>
                         </ul>
                     </div>
                     
@@ -147,6 +148,9 @@
             <ul class="mobile-nav m-0 p-3 text-end">
                 <li class="my-2">
                     <a href="/brands">Brands</a>
+                </li>
+                <li class="my-2">
+                    <a href="/gifts">Gifts</a>
                 </li>
                 <li class="my-2">
                     <a href="#">How to use</a>
