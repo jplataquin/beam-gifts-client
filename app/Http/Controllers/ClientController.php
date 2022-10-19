@@ -41,38 +41,5 @@ class ClientController extends Controller
         ]);
     }
 
-    public function item($brandname,$itemname){
-
-        $itemname   = str_replace('-',' ',$itemname);
-        $brandname  = str_replace('-',' ',$brandname);
-        
-        $brand = new Brand();
-
-        $brandResult = $brand::where('name','=',$brandname)->where('status','=','ACTV')->first();
-        
-        if(!$brandResult){
-            return abort(404);
-        }
-
-        $brandResult->photo      = json_decode($brandResult->photo,true);
-        $brandResult->branches   = json_decode($brandResult->branches,true);
-
-        $item = new Item();
-
-        $itemResult = $item::where('name','=',$itemname)
-            ->where('status','=','ACTV')
-            ->where('brand_id','=',$brandResult->id)
-            ->first();
-        
-        if(!$itemResult){
-            return abort(404);
-        }
-
-        $itemResult->photo = json_decode($itemResult->photo,true);
-        
-        return view('item',[
-            'brand' => $brandResult,
-            'item' => $itemResult
-        ]);
-    }
+    
 }
