@@ -118,11 +118,6 @@
         <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
           
             <div id="mobile-navBot-items" class="row justify-content-center">
-                <div class="col-3 text-center">
-                    <a class="topLogo" href="{{ url('/') }}">
-                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
-                    </a>
-                </div>
                 @guest
                     <div class="col-3 text-center">
                         <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
@@ -152,6 +147,11 @@
 
         <div id="mobile-side" class="mobile-navSidebar border-start d-lg-none">
             <ul class="mobile-nav m-0 p-3 text-end">
+                <li class="my-2">
+                    <a class="topLogo" href="{{ url('/') }}">
+                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+                    </a>
+                </li>
                 <li class="my-2">
                     <a href="/brands">Brands</a>
                 </li>
