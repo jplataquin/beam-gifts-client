@@ -116,6 +116,10 @@
         </div>
 
         <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
+            <a class="topLogo" href="{{ url('/') }}">
+                <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+            </a>
+            <hr>
             <div id="mobile-navBot-items" class="row justify-content-center">
                 @guest
                     <div class="col-3 text-center">
