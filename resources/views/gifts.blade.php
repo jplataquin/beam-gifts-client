@@ -136,7 +136,16 @@
                         t.div({class:"popbrandinfo"},()=>{
                             t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.brand.photo['150px'],alt:"",class:"popbrandimg"});
                             t.h3({class:"popbrandT"},item.name);
-                            t.h3({class:"popbrandT"},'Php'+item.price);
+                            t.div({class:'row'},()=>{
+                                t.div({class:'col-6'},()=>{
+                                    t.h5({class:"popbrandT"},'Php '+item.price);
+                                });
+                                t.div({class:'col-6 text-end'},()=>{
+                                    t.button({class:'btn btn-primary'},'View');
+                                }); 
+                            });
+                            
+                            
                         });
                     });
                 });
