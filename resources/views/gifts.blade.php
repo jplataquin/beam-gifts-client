@@ -141,7 +141,7 @@
                 });
 
                 col.onclick = ()=>{
-                    document.location.href = '/gift/'++window.util.spaceToDash(item.brand.name)+'/'+window.util.spaceToDash(item.name);
+                    document.location.href = '/gift/'+window.util.spaceToDash(item.brand.name)+'/'+window.util.spaceToDash(item.name);
                 }
 
                 brandListEl.appendChild(col);
