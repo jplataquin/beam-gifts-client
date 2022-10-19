@@ -136,6 +136,7 @@
                         t.div({class:"popbrandinfo"},()=>{
                             t.img({src: imgBaseUrl+'storage/photos/brand/150px/'+item.brand.photo['150px'],alt:"",class:"popbrandimg"});
                             t.h3({class:"popbrandT"},item.name);
+                            t.h3({class:"popbrandT"},'Php'+item.price);
                         });
                     });
                 });
