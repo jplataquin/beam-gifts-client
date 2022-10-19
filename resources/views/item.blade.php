@@ -103,7 +103,7 @@
     const addToCartBtn  = document.querySelector('#addToCartBtn');
     const buyNowBtn     = document.querySelector('#buyNowBtn');
     const qty           = document.querySelector('#qty');
-
+    
     addToCartBtn.onclick = (e)=>{
         e.preventDefault();
 
