@@ -138,7 +138,7 @@
                             t.h3({class:"popbrandT"},item.name);
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-6'},()=>{
-                                    t.h5({class:"popbrandT"},'Php '+item.price);
+                                    t.txt('Php '+item.price);
                                 });
                                 t.div({class:'col-6 text-end'},()=>{
                                     t.button({class:'btn btn-primary'},'View');
