@@ -430,8 +430,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .popbrandimg{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 12px;
 }
