@@ -42,7 +42,7 @@
                             Php {{$item->price}}
                         </div>
                         <div class="col text-end">
-                            <a href="/item/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
+                            <a href="/gift/{{str_replace(' ','-',$brand->name)}}/{{str_replace(' ','-',$item->name)}}" class="btn btn-primary">View</a>
                         </div>
                     </div>
                 </div>
