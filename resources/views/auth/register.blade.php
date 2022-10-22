@@ -62,11 +62,15 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">&nbsp</label>
+
                             @if(config('services.recaptcha.key'))
                                 <div class="g-recaptcha"
                                     data-sitekey="{{config('services.recaptcha.key')}}">
                                 </div>
                             @endif
+
+                            {{config('services.recaptcha.key')}}
                         </div>
 
                         <div class="row mb-0">
