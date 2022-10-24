@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="text-center">
-        <h3>To contiue with all our site's features and services please validate ownership of your email</h3>
+        <h3>To contiue with all our features and services please validate ownership of your email</h3>
         <h5>We sent validation link in your E-mail</h5>
     </div>
 
@@ -15,8 +15,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col form-group">
+        <div class="col form-group text-end">
             <label>Did not receive any email?</label>
+            <br>
             <button id="resend" class="btn btn-primary">Resend</button>
         </div>
     </div>
