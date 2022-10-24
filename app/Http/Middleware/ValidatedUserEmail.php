@@ -20,7 +20,7 @@ class ValidatedUserEmail
          
         if(!Auth::check()){
 
-            if (Request::wantsJson()) {
+            if ($request->wantsJson()) {
                 
                 return response()->json([
                     'status' => -2,
@@ -38,7 +38,7 @@ class ValidatedUserEmail
 
         if(!$user->email_confirmed){
 
-            if (Request::wantsJson()) {
+            if ($request->wantsJson()) {
                 
                 return response()->json([
                     'status' => -2,
