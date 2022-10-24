@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col form-group">
             <label>&nbsp;</label>
-            <input type="email" class="form-control" value="{{$email}}"/>
+            <input type="email" class="form-control text-center" value="{{$email}}"/>
         </div>
     </div>
     <div class="row">

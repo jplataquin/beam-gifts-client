@@ -23,7 +23,7 @@ class ValidatedUserEmail
             if (Request::wantsJson()) {
                 
                 return response()->json([
-                    'status' => 0,
+                    'status' => -2,
                     'message'=>'You must be logged in to access this feature',
                     'data'=> []
                 ]);
@@ -41,7 +41,7 @@ class ValidatedUserEmail
             if (Request::wantsJson()) {
                 
                 return response()->json([
-                    'status' => 0,
+                    'status' => -2,
                     'message'=>'Please validate your email before using this feature',
                     'data'=> []
                 ]);
