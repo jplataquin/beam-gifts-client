@@ -19,11 +19,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['auth:sanctum',\App\Http\Middleware\ValidateUserEmail::class])->group(function () {
 
     Route::get('/myorders',[App\Http\Controllers\OrderController::class, 'list']);
 
     Route::get('/mygifts',[App\Http\Controllers\GiftController::class, 'list']);
+
+
+    Route::post('add-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
+    Route::post('update-cart', [App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
+    Route::post('remove-cart', [App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
+    Route::post('clear-cart', [App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+    Route::post('checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout');
+
 
 });
 
