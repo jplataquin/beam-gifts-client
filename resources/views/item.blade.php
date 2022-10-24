@@ -120,7 +120,7 @@
             addToCartBtn.disabled   = false;
             buyNowBtn.disabled      = false;
 
-            if(reply.status <= 0){
+            if(!reply.status){
                 alert(reply.message);
                 return;
             }
@@ -131,6 +131,8 @@
 
             window.util.cartQuantity(qty);
 
+        }).catch(err=>{
+            alert(err.message);
         });
     }
 </script>
