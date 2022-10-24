@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pb-5">
     <div class="text-center">
         <h3>To contiue with all our features and services please validate ownership of your email</h3>
-        <h5>We sent validation link in your E-mail</h5>
+        <h5>We sent validation link to your E-mail</h5>
     </div>
 
     <div class="row">
