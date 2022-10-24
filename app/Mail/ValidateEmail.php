@@ -28,7 +28,7 @@ class ValidateEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail/validate.email.blade.php');
+        return $this->view('validate.email.blade.php');
     }
 
 }
