@@ -41,7 +41,7 @@ Auth::routes();
 
 
 
-
+Route::get('/testemail',[App\Http\Controllers\ClientController::class,'sendValidateEmail']);
 
 Route::middleware(['auth'])->group(function () {
 

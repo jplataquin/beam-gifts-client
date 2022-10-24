@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('email_confirmed')->default(0)->after('tos_agree');
-            $table->string('email_token')->nullable()->after('tos_agree');
+            $table->char('email_token',64)->nullable()->after('tos_agree');
         });
     }
 
