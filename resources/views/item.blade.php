@@ -120,6 +120,11 @@
             addToCartBtn.disabled   = false;
             buyNowBtn.disabled      = false;
 
+            if(reply.status == -2){
+                document.location.href = '/validate/email';
+                return false;
+            }
+
             if(!reply.status){
                 alert(reply.message);
                 return;
