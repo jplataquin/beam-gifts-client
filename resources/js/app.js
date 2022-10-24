@@ -120,7 +120,7 @@ window.util.addToCart = (data) =>{
     formData.append('id',data.id);
     formData.append('qty',data.qty);
 
-    return window.util.$post('/add-cart',formData);
+    return window.util.$post('/api/add-cart',formData);
 }
 
 
