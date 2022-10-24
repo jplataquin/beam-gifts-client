@@ -35,7 +35,7 @@ class ValidateEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'validate',
+            view: 'emails.validate',
         );
     }
 }
