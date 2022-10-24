@@ -65,17 +65,10 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">&nbsp</label>
 
                             <div class="col-md-6">
-
-                            {!! RecaptchaV3::field('register') !!}
-
-                                @if ($errors->has('g-recaptcha-response'))
-
-                                    <span class="help-block">
-
-                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-
-                                    </span>
-
+                                @if(config('services.recaptcha.key'))
+                                    <div class="g-recaptcha"
+                                        data-sitekey="{{config('services.recaptcha.key')}}">
+                                    </div>
                                 @endif
                             </div>
                         </div>
