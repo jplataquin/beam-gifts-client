@@ -20,21 +20,37 @@ class ValidatedUserEmail
          
         if(!Auth::check()){
 
-            return response()->json([
-                'status' => 0,
-                'message'=>'You must be logged in to access this feature',
-                'data'=> []
-            ]);
+            if (Request::wantsJson()) {
+                
+                return response()->json([
+                    'status' => 0,
+                    'message'=>'You must be logged in to access this feature',
+                    'data'=> []
+                ]);
+
+            } else {
+                return redirect('validate/email');
+            }
+            
         }
 
         $user = Auth::user();
 
         if(!$user->email_confirmed){
-            return response()->json([
-                'status' => 0,
-                'message'=>'Please validate your email before using this feature',
-                'data'=> []
-            ]);
+
+            if (Request::wantsJson()) {
+                
+                return response()->json([
+                    'status' => 0,
+                    'message'=>'Please validate your email before using this feature',
+                    'data'=> []
+                ]);
+
+            } else {
+                return redirect('validate/email');
+            }
+
+          
         }
 
         return $next($request);

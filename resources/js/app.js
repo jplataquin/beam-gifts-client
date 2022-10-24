@@ -14,7 +14,8 @@ window.util.$get = async (url,data) => {
     return fetch(url+'?'+ new URLSearchParams(data),
     {
         headers: {
-            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
+            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+            "Accept": "application/json"
         },
         method: "GET"
     }).then((response) => {

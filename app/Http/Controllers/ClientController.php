@@ -12,7 +12,11 @@ class ClientController extends Controller
 
   
 
-    
+    public function validateEmail(Request $request){
+        return view('validate_email',[
+            'email' => Auth::user()->email
+        ]);
+    }
 
     
 }
