@@ -19,7 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::middleware(['auth:sanctum',\App\Http\Middleware\ValidateUserEmail::class])->group(function () {
+Route::middleware([
+    'auth:sanctum',
+    \App\Http\Middleware\ValidatedUserEmail::class
+])->group(function () {
 
     Route::get('/myorders',[App\Http\Controllers\OrderController::class, 'list']);
 
