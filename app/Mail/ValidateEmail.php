@@ -39,7 +39,7 @@ class ValidateEmail extends Mailable
         return new Content(
             view: 'emails.validate_email',
             with: [
-                'email' => $this->data['name'],
+                'email' => $this->data['email'],
                 'token' => $this->data['token'],
             ],
         );
