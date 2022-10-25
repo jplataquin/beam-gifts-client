@@ -8,12 +8,12 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 
-protected $data;
 
 class ValidateEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $data;
     /**
      * Create a new message instance.
      *
