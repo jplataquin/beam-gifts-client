@@ -8,6 +8,9 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ValidateEmail;
 
 class RegisterController extends Controller
 {
@@ -53,7 +56,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'g-recaptcha-response' => 'required|recaptcha'
+            'g-recaptcha-response' => 'required|recaptcha',
+            'tos_agree' => ['required']
         ]);
     }
 
@@ -64,12 +68,24 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+    {   
+        $email_token = Str::random(64);
+
+        $user = User::create([
+            'name'              => $data['name'],
+            'email'             => $data['email'],
+            'password'          => Hash::make($data['password']),
+            'tos_agree'         => 'v001',
+            'email_confirmed'   => false,
+            'email_token'       => $email_token
         ]);
+
+        Mail::to($data['email'])->send(new ValidateEmail([
+            'email' => $data['email'],
+            'token' => $email_token
+        ]));
+
+        return $user;
     }
 
     public function messages()

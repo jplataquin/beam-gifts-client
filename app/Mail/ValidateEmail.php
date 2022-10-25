@@ -8,6 +8,8 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 
+protected $data;
+
 class ValidateEmail extends Mailable
 {
     use Queueable, SerializesModels;
@@ -17,9 +19,9 @@ class ValidateEmail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -35,7 +37,11 @@ class ValidateEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.validate',
+            view: 'emails.validate_email',
+            with: [
+                'email' => $this->data['name'],
+                'token' => $this->data['token'],
+            ],
         );
     }
 }

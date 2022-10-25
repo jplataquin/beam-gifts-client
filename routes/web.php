@@ -57,9 +57,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('mygifts/', [App\Http\Controllers\GiftController::class, 'index']);
 
     
-    Route::get('/validate/email',[App\Http\Controllers\ClientController::class, 'validateEmail']);
+    Route::get('/email',[App\Http\Controllers\ClientController::class, 'email']);
 });
 
+Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
 
 Route::get('/gift/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
 
