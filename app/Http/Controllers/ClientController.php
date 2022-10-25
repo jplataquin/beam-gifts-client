@@ -31,7 +31,7 @@ class ClientController extends Controller
         }
 
         $user->email_confirmed      = true;
-        $user->email_verified_at    = date('YYYY-MM-DD h:i:s'); 
+        $user->email_verified_at    = date('Y-m-d H:i:s');
         $user->save();
 
         return view('successful_email_validation',$user);
