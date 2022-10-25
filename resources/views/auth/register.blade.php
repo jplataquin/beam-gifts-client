@@ -65,7 +65,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Terms & Services</label>
 
                             <div class="col-md-6">
-                                Agree: <input id="" type="checkbox" class="form-control" name="tos_agree" value="1" required/>
+                                Agree: <input id="" type="checkbox" class="" name="tos_agree" value="1" required/>
                             </div>
                         </div>
 
