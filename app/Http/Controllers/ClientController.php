@@ -24,8 +24,12 @@ class ClientController extends Controller
         
         $user = new User();
         
-        $user = $user::where('email_token','=',$token)->where('email_confirmed','=',false)->findOrFail();
+        $user = $user::where('email_token','=',$token)->where('email_confirmed','=',false)->first();
         
+        if(!$user){
+            return abort(404);
+        }
+
         $user->email_confirmed      = true;
         $user->email_verified_at    = date('YYYY-MM-DD h:i:s'); 
         $user->save();
