@@ -50,11 +50,13 @@ class User extends Authenticatable
 
     public function getNickname(){
 
+        echo $this->firstname;
+        
         $fnameArr = explode(' ',$this->firstname);
         
         $nickname = '';
 
-        for($i = 0; $i<=1; $i++){
+        for($i = 0; $i<=2; $i++){
 
             if(isset($fnameArr[$i])){
                 $nickname .= strtoupper(substr($fnameArr[$i],0,1));
