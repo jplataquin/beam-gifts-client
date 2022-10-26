@@ -48,7 +48,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function nickname(){
+    public function getNickname(){
 
         $fnameArr = explode(' ',$this->firstname);
         
