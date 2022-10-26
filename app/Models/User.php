@@ -50,8 +50,8 @@ class User extends Authenticatable
 
     public function getNickname(){
 
-        echo $this->firstname;
-        
+        echo $this->firstname.'here';
+
         $fnameArr = explode(' ',$this->firstname);
         
         $nickname = '';
