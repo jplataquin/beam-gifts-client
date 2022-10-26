@@ -47,4 +47,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function nickname(){
+
+        $fnameArr = explode(' ',$this->firstname)
+        
+        $nickname = '';
+
+        for($i = 0; $i<=1; $i++){
+
+            if(isset($fnameArr[$i])){
+                $nickname .= strtoupper(substr($fnameArr[$i],0,1));
+            }
+        }
+
+        $nickname .= ' ';
+        $nickname .= strtoupper(substr($this->lastname,0,1));
+        
+        return $nickname; 
+    }
 }
