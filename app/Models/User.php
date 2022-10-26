@@ -48,12 +48,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getNickname(){
+    public function nickname(){
 
-        print_r($this);
         $fnameArr = explode(' ',$this->firstname);
         
-        $nickname = 'PO PO PO';
+        $nickname = '';
 
         for($i = 0; $i<=2; $i++){
 
@@ -65,6 +64,6 @@ class User extends Authenticatable
         $nickname .= ' ';
         $nickname .= strtoupper(substr($this->lastname,0,1));
         
-        $this->attributes['nickname'] = $nickname; 
+        return $nickname;
     }
 }
