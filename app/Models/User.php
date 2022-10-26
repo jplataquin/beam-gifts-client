@@ -53,7 +53,7 @@ class User extends Authenticatable
 
         $fnameArr = explode(' ',$this->firstname);
         
-        $nickname = '';
+        $nickname = 'PO PO PO';
 
         for($i = 0; $i<=2; $i++){
 
