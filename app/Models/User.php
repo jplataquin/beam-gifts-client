@@ -62,7 +62,7 @@ class User extends Authenticatable
         }
 
         $nickname .= ' ';
-        $nickname .= strtoupper(substr($this->lastname,0,1));
+        $nickname .= strtoupper(substr($this->lastname,0,1)).'.';
         
         return $nickname;
     }
