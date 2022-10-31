@@ -16,18 +16,18 @@
 
                             <div class="col-md-6">
                                 <select id="month" name="month">
-                                    <option value="01">Jan</option>
-                                    <option value="02">Feb</option>
-                                    <option value="03">Mar</option>
-                                    <option value="04">Apr</option>
-                                    <option value="05">May</option>
-                                    <option value="06">Jun</option>
-                                    <option value="07">Jul</option>
-                                    <option value="08">Aug</option>
-                                    <option value="09">Sep</option>
-                                    <option value="10">Oct</option>
-                                    <option value="11">Nov</option>
-                                    <option value="12">Dec</option>
+                                    <option value="01" @if( old('month') == '01' ) selected @endif >Jan</option>
+                                    <option value="02" @if( old('month') == '02' ) selected @endif >Feb</option>
+                                    <option value="03" @if( old('month') == '03' ) selected @endif >Mar</option>
+                                    <option value="04" @if( old('month') == '04' ) selected @endif >Apr</option>
+                                    <option value="05" @if( old('month') == '05' ) selected @endif >May</option>
+                                    <option value="06" @if( old('month') == '06' ) selected @endif >Jun</option>
+                                    <option value="07" @if( old('month') == '07' ) selected @endif >Jul</option>
+                                    <option value="08" @if( old('month') == '08' ) selected @endif >Aug</option>
+                                    <option value="09" @if( old('month') == '09' ) selected @endif >Sep</option>
+                                    <option value="10" @if( old('month') == '10' ) selected @endif >Oct</option>
+                                    <option value="11" @if( old('month') == '11' ) selected @endif >Nov</option>
+                                    <option value="12" @if( old('month') == '12' ) selected @endif >Dec</option>
                                 </select>
                                 -
                                 <select id="date" name="date">
