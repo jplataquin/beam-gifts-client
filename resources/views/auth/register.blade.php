@@ -163,7 +163,7 @@
 
     function setDate(){
         console.log(year.value+'-'+month.value+'-'+date.value);
-        
+
         birthday.value = year.value+'-'+month.value+'-'+date.value;
     }
 
@@ -173,12 +173,12 @@
     }
 
     date.onchange = (e)=>{
-        e.prevetDefault();
+        e.preventDefault();
         setDate();
     }
 
     year.onchange = (e)=>{
-        e.prevetDefault();
+        e.preventDefault();
         setDate();
     }
 </script>
