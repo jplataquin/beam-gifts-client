@@ -38,11 +38,8 @@
                                 -
                                <input id="year" placeholder="year" type="text" maxlength="4"/>
 
-                               <input type="text" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
+                               <input type="text" class=" @error('birthday') is-invalid @enderror" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
                                 
-                               @if($errors->any())
-                                    {{ implode('', $errors->all('<div>:message</div>')) }}
-                                @endif
                                 @error('birthday')
                                     asdasdasdasdasd
                                     <span class="invalid-feedback" role="alert">
@@ -51,11 +48,6 @@
                                 @enderror
 
 
-                                @if($errors->has('birthday'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{  $errors->first('birthday')  }}</strong>
-                                    </span>
-                                @endif
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
