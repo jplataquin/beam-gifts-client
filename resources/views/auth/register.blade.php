@@ -15,7 +15,7 @@
                             <label for="birthday" class="col-md-4 col-form-label text-md-end">{{ __('Birthday') }}</label>
 
                             <div class="col-md-6">
-                                <select id="month">
+                                <select id="month" name="month">
                                     <option value="01">Jan</option>
                                     <option value="02">Feb</option>
                                     <option value="03">Mar</option>
@@ -30,9 +30,9 @@
                                     <option value="12">Dec</option>
                                 </select>
                                 -
-                                <select id="date">
+                                <select id="date" name="date">
                                     @for($i=1;$i<=31;$i++)
-                                    <option value="{{sprintf('%02d',$i)}}">{{sprintf("%02d",$i)}}</option>
+                                    <option value="{{sprintf('%02d',$i)}}" @if( old('date') == sprintf('%02d',$i) ) selected @endif>{{sprintf("%02d",$i)}}</option>
                                     @endfor
                                 </select>
                                 -
