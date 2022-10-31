@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="form-group">
+            <div class="form-group mb-5">
                 <label>Firstname</label>
                 <input type="text" class="form-control" readonly="true" value="{{$firstname}}"/>
             </div>
