@@ -37,8 +37,9 @@ class ClientController extends Controller
         return view('successful_email_validation',$user);
     }
 
-    public function sendValidateEmail(Request $request){
 
-        Mail::to('jp.lataquin@gmail.com')->send(new ValidateEmail());
+    public function profile(Request $request){
+
+        return view('profile',Auth::user());
     }
 }

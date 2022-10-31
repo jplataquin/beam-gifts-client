@@ -58,6 +58,9 @@ Route::middleware(['auth'])->group(function () {
 
     
     Route::get('/email',[App\Http\Controllers\ClientController::class, 'email']);
+    Route::get('profile', [App\Http\Controllers\ClientController::class, 'profile']);
+
+    
 });
 
 Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
