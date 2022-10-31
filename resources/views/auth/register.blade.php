@@ -39,6 +39,10 @@
                                <input id="year" placeholder="year" type="text" maxlength="4"/>
 
                                <input type="hidden" id="birthday" name="birthday"/>
+
+                               @if($errors->any())
+                                    {{ implode('', $errors->all('<div>:message</div>')) }}
+                                @endif
                                 @error('birthday')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
