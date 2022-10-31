@@ -162,6 +162,8 @@
     let birthday    = document.querySelector('#birthday');
 
     function setDate(){
+        console.log(year.value+'-'+month.value+'-'+date.value);
+        
         birthday.value = year.value+'-'+month.value+'-'+date.value;
     }
 
