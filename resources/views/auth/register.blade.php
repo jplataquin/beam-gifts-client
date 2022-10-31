@@ -15,7 +15,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Birthday') }}</label>
 
                             <div class="col-md-6">
-                                <select>
+                                <select id="month">
                                     <option value="01">Jan</option>
                                     <option value="02">Feb</option>
                                     <option value="03">Mar</option>
@@ -30,13 +30,13 @@
                                     <option value="12">Dec</option>
                                 </select>
                                 -
-                                <select>
+                                <select id="date">
                                     @for($i=1;$i<=31;$i++)
                                     <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                 </select>
                                 -
-                               <input type="number"/>
+                               <input id="year" type="number" maxlength="4"/>
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
