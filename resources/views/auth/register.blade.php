@@ -36,7 +36,7 @@
                                     @endfor
                                 </select>
                                 -
-                               <input id="year" placeholder="year" type="number" maxlength="4"/>
+                               <input id="year" placeholder="year" type="text" maxlength="4"/>
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
