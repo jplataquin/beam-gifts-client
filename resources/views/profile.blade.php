@@ -3,10 +3,14 @@
 @section('content')
 
 <div class="container">
-    <h1>Profile</h1>
-
+   
     <div class="row justify-content-center">
-    <div class="col-8 mb-3">
+        <div class="col-8 mb-3">
+            <h1>Profile</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8 mb-3">
             <div class="form-group">
                 <label>Birthday</label>
                 <input type="text" class="form-control" readonly="true" value="{{$birthday}}"/>
