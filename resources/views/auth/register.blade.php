@@ -32,11 +32,11 @@
                                 -
                                 <select id="date">
                                     @for($i=1;$i<=31;$i++)
-                                    <option value="{{$i}}">{{$i}}</option>
+                                    <option value="{{sprintf('%02d',$i)}}">{{sprintf("%02d",$i)}}</option>
                                     @endfor
                                 </select>
                                 -
-                               <input id="year" type="number" maxlength="4"/>
+                               <input id="year" placeholder="year" type="number" maxlength="4"/>
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
