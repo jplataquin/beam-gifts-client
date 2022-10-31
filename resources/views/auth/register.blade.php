@@ -37,6 +37,13 @@
                                 </select>
                                 -
                                <input id="year" placeholder="year" type="text" maxlength="4"/>
+
+                               <input type="hidden" id="birthday" name="birthday"/>
+                                @error('birthday')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
@@ -147,4 +154,30 @@
     </div>
 </div>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="module">
+
+    let month       = document.querySelector('#month');
+    let date        = document.querySelector('#date');
+    let year        = document.querySelector('#year');
+    let birthday    = document.querySelector('#birthday');
+
+    function setDate(){
+        birthday.value = year.value+'-'+month.value+'-'+date.value;
+    }
+
+    month.onchange = (e)=>{
+        e.preventDefault();
+        setDate();
+    }
+
+    date.onchange = (e)=>{
+        e.prevetDefault();
+        setDate();
+    }
+
+    year.onchange = (e)=>{
+        e.prevetDefault();
+        setDate();
+    }
+</script>
 @endsection
