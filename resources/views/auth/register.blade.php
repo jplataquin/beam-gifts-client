@@ -49,6 +49,13 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
+
+                                @if($errors->has('birthday'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{  $errors->first('birthday')  }}</strong>
+                                    </span>
+                                @endif
                                 <!--
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('birthday') }}" required autocomplete="birthday" autofocus>
 
