@@ -39,11 +39,12 @@
                                <input id="year" placeholder="year" type="text" maxlength="4"/>
 
                                <input type="text" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
-
+                                
                                @if($errors->any())
                                     {{ implode('', $errors->all('<div>:message</div>')) }}
                                 @endif
                                 @error('birthday')
+                                    asdasdasdasdasd
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
