@@ -32,7 +32,7 @@
                                 -
                                 <select>
                                     @for($i=1;$i<=31;$i++)
-                                    <option value="{{$i}}">$i</option>
+                                    <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                 </select>
                                 -
