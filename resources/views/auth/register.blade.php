@@ -36,12 +36,11 @@
                                     @endfor
                                 </select>
                                 -
-                               <input id="year" placeholder="year" type="text" maxlength="4"/>
+                               <input id="year" placeholder="year" type="text" name="year" value="{{ old('year') }}" maxlength="4"/>
 
-                               <input type="text" class=" @error('birthday') is-invalid @enderror" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
+                               <input type="hidden" class="@error('birthday') is-invalid @enderror" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
                                 
                                 @error('birthday')
-                                    asdasdasdasdasd
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
