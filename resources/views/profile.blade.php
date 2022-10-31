@@ -9,19 +9,19 @@
         <div class="col-12">
             <div class="form-group">
                 <label>Firstname</label>
-                <input type="text" readonly="true" value="{{$firstname}}"/>
+                <input type="text" class="form-control" readonly="true" value="{{$firstname}}"/>
             </div>
         </div>
         <div class="col-12">
             <div class="form-group">
                 <label>Lastname</label>
-                <input type="text" readonly="true" value="{{$lastname}}"/>
+                <input type="text" class="form-control" readonly="true" value="{{$lastname}}"/>
             </div>
         </div>
         <div class="col-12">
             <div class="form-group">
                 <label>Email</label>
-                <input type="text" readonly="true" value="{{$email}}"/>
+                <input type="text" class="form-control" readonly="true" value="{{$email}}"/>
             </div>
         </div>
     </div>
