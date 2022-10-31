@@ -177,7 +177,7 @@
         setDate();
     }
 
-    year.onchange = (e)=>{
+    year.onkeyup = (e)=>{
         e.preventDefault();
         setDate();
     }
