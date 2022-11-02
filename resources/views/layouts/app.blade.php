@@ -148,7 +148,7 @@
             </div>
         </div>        
 
-        <div id="mobile-side" style="margin-top:200% !important" class="mobile-navSidebar border-start d-lg-none">
+        <div id="mobile-side" style="margin-top:100% !important" class="mobile-navSidebar border-start d-lg-none">
 
             <a class="topLogo" href="{{ url('/') }}">
                 <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
