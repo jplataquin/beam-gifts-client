@@ -2,10 +2,15 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center mt-3 mb-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="{{ asset('images/gift-1.png') }}" class="w-200" />
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header bg-darkmagenta fontcolor-white text-center">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
