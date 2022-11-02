@@ -127,7 +127,7 @@
                     </div>
                 @else
                     <div class="col-3 text-center">
-                        <a href="#"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
+                        <a href="/profile"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
                     </div>
                 @endguest
                 <div class="col-3 text-center">
