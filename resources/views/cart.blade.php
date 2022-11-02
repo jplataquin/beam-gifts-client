@@ -9,19 +9,23 @@
                 <div class="col-md-2">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
-                <div class="col-md-7">
-                    <h3>{{$item->name}}</h3>
-                    <h5>{{$item->brand}}</h5>
-                    <div>
-                        Qty: {{$item->quantity}}
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3>{{$item->name}}</h3>
+                            <h5>{{$item->brand}}</h5>
+                            <div>
+                                Qty: {{$item->quantity}}
+                            </div>
+                            <div>
+                                Price: {{number_format($item->price,2)}}
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
+                            <button data-id="{{$item->id}}" class="removeBtn btn btn-danger">Remove</button>
+                        </div>
                     </div>
-                    <div>
-                        Price: {{number_format($item->price,2)}}
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
-                    <button data-id="{{$item->id}}" class="removeBtn btn btn-danger">Remove</button>
                 </div>
             </div>
         @endforeach
