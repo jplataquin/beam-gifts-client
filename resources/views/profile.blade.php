@@ -12,7 +12,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header bg-darkmagenta fontcolor-white text-center">
-                    <h3>{{ __('Profile') }}</h3>
+                    <h3 class="fontcolor-white" >{{ __('Profile') }}</h3>
                 </div>
 
                 <div class="card-body">
