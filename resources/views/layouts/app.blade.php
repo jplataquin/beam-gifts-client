@@ -176,7 +176,7 @@
 
                 @else
 
-                    <li class="my-2 mb-5">
+                    <li class="my-2">
                         <a href="/myorders">My Orders</a>
                     </li>
 
