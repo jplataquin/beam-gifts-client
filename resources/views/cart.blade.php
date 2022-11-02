@@ -5,7 +5,7 @@
     <div class="container">
 
         @foreach($items as $item)
-            <div class="row border border-primary mb-3">
+            <div class="row border border-primary mb-3 p-2">
                 <div class="col-md-2">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
