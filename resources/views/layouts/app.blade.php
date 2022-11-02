@@ -189,7 +189,7 @@
             </ul>
 
             @auth          
-               <div class="text-center mt-5 pt-5">
+               <div class="text-center d-grid gap-2">
                     <a class="btn btn-warning" role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
