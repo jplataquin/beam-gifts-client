@@ -59,14 +59,15 @@
                         </ul>
                     </div>
                     
+                    <!--
                     <div>
                         <a href="#" class="src-btn"><img class="search-icon" src="{{ asset('images/search.png') }}" alt=""> Search gifts or brands</a>
                     </div>
+                    -->
                     
                     <div class="rnav-col">
                         <ul class="dnavs">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">How to Use</a></li>
+                            <li><a href="#">FAQ</a></li>
  
                         
 
