@@ -21,11 +21,9 @@ use App\Http\Middleware\CartSetup;
 Route::middleware([CartSetup::class])->group(function () {
 
     Route::get('/', function () {
-
         return view('welcome');
     })->name('home');
 
-    //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
     Route::get('/brands',[App\Http\Controllers\BrandController::class, 'index']);
     Route::get('/brand/{name}',[App\Http\Controllers\BrandController::class, 'display']);
