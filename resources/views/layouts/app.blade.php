@@ -152,7 +152,16 @@
                         <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                     </a>
                 </li>
-
+                @guest 
+                @else
+                <li class="my-2">
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                </li>
+                @endguest
                 <li class="my-2">
                     <a href="/brands">Brands</a>
                 </li>
@@ -180,13 +189,7 @@
                         <a href="/myorders">My Orders</a>
                     </li>
 
-                    <li class="my-2 pt-5">
-                       <a class="mt-5" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </li>
+                
                 @endguest
              
                 
