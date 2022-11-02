@@ -3,7 +3,11 @@
 @section('content')
 
 <div class="container">
-   
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="{{ asset('images/gift-2.png') }}" class="w-200" />
+        </div>
+    </div>
     <div class="row justify-content-center mb-5 mt-3">
         <div class="col-md-8">
             <div class="card">
