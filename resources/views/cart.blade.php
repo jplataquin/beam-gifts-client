@@ -6,10 +6,10 @@
 
         @foreach($items as $item)
             <div class="row border border-primary mb-3 p-2">
-                <div class="col-md-2">
+                <div class="col-lg-2">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
-                <div class="col-md-10">
+                <div class="col-lg-10">
                     <div class="row">
                         <div class="col-md-6">
                             <h3>{{$item->name}}</h3>
