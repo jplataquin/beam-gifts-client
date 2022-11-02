@@ -2,8 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <img src="{{ asset('images/gift-1.png') }}" class="img" />
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <img src="{{ asset('images/gift-1.png') }}" class="img" />
+        </div>
     </div>
     <div class="row justify-content-center mt-5 mb-5">
         <div class="col-md-8">
