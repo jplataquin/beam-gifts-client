@@ -163,22 +163,21 @@
                 <li class="my-2">
                     <a href="/gifts">Gifts</a>
                 </li>
-                <li class="my-2">
-                    <a href="#">How to use</a>
-                </li>
 
                 @guest
+                
+                    @if (Route::has('register'))
+                        <li class="my-2">
+                            <a href="{{ route('register') }}">Sign Up</a>
+                        </li>
+                    @endif
+                    
                     @if (Route::has('login'))
                         <li class="my-2">
                             <a href="{{ route('login') }}">Login</a>
                         </li>
                     @endif
 
-                    @if (Route::has('register'))
-                        <li class="my-2">
-                            <a href="{{ route('register') }}">Sign Up</a>
-                        </li>
-                    @endif
                 @else
                     <li class="my-2">
                        <a href="{{ route('logout') }}"
