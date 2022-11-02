@@ -152,15 +152,7 @@
                         <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                     </a>
                 </li>
-                @auth          
-                    <li class="my-2">
-                        <a class="btn btn-outline-primary" role="button" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </li>
-                @endauth
+       
                 <li class="my-2">
                     <a href="/brands">Brands</a>
                 </li>
@@ -192,6 +184,16 @@
                 @endguest
              
                 
+
+                @auth          
+                    <li class="my-2">
+                        <a class="btn btn-warning" style="position:relative !important; bottom:0px" role="button" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </section>
