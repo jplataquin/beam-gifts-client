@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <img src="{{ asset('images/gift-1.png') }}" class="img" />
+            <img src="{{ asset('images/gift-1.png') }}" class="w-300" />
         </div>
     </div>
     <div class="row justify-content-center mt-5 mb-5">
