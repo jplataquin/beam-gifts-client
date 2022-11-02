@@ -35,10 +35,10 @@
                     <div class="separator"></div>
                     
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-1">
                             <h3>By: </h3>
                         </div>
-                        <div class="col-6">
+                        <div class="col-11">
                             <div class="brand-row d-flex align-items-start">
                                 <a href="/brand/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">
                                     <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
