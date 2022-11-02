@@ -22,8 +22,8 @@
                     <div class="row mt-5">
                         <div class="col form-group text-center">
                             <label>Did not receive any email?</label>
-                            
-                            <button id="resend" class="ml-3 btn btn-primary">Try Resending it</button>
+                            &nbsp;
+                            <button id="resend" class="btn btn-primary">Try Resending it</button>
                         </div>
                     </div>
                 </div>
