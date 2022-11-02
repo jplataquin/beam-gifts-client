@@ -8,7 +8,7 @@
                 <div class="mb-3">
                     <div class="row bg-darkmagenta mb-2">
                         <div class="col-12 pt-2">
-                            <h3 class="fontcolor-white">{{$item->name}}</h3>
+                            <h5 class="fontcolor-white">{{$item->name}}</h5>
                         </div>
                     </div>
                     <div class="row">
