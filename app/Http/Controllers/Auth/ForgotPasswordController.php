@@ -19,4 +19,13 @@ class ForgotPasswordController extends Controller
     */
 
     use SendsPasswordResetEmails;
+
+
+    protected function validateEmail(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'g-recaptcha-response' => 'required|recaptcha',
+        ]);
+    }
 }
