@@ -11,7 +11,7 @@
     <div class="row justify-content-center mb-5 mt-3">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-darkmagenta fontcolor-white text-center">
                     <h3>{{ __('Profile') }}</h3>
                 </div>
 
