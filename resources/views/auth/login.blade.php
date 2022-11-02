@@ -82,7 +82,7 @@
                                 </span>
                             @enderror
                             
-                            <a href="#" class="frgPass">Forgot Password?</a>
+                            <a href="/password/reset" class="frgPass">Forgot Password?</a>
 
                             <button type="submit" value="Login" class="mt-3 submitBTN">
                                 {{ __('Login') }}
