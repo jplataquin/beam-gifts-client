@@ -122,17 +122,12 @@
         <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
           
             <div id="mobile-navBot-items" class="row justify-content-center">
-                @guest
-                    <div class="col-3 text-center">
-                        <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
-                    </div>
-                @else
-                    <div class="col-3 text-center">
-                        <a href="/profile"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
-                    </div>
-                @endguest
+                
                 <div class="col-3 text-center">
-                    <a href="#"><img src="{{ asset('images/search.png') }}" alt="" width="30px" height="30px"></a>
+                    <a href="/profile"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
+                </div>
+                <div class="col-3 text-center">
+                    <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
                 <div class="col-3 text-center">
                     <a href="/cart">
