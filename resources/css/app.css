@@ -954,3 +954,15 @@ h1, h2, h3, h4, h5, h6, p{
 .w-300{
     width:300px !important;
 }
+
+.w-200{
+    width:200px !important;
+}
+
+.bg-darkmagenta{
+    background-color: #8B008B !important;
+}
+
+.fontcolor-white{
+    color:#FFFFFF !important;
+}
