@@ -148,14 +148,14 @@
             </div>
         </div>        
 
-        <div id="mobile-side" style="margin-top:100% !important" class="mobile-navSidebar border-start d-lg-none">
-
-            <a class="topLogo" href="{{ url('/') }}">
-                <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
-            </a>
-
+        <div id="mobile-side" class="mobile-navSidebar border-start d-lg-none">
             <ul class="mobile-nav m-0 p-3 text-end">
          
+                <li class="my-2">
+                    <a class="topLogo" href="{{ url('/') }}">
+                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+                    </a>
+                </li>
 
                 <li class="my-2">
                     <a href="/brands">Brands</a>
