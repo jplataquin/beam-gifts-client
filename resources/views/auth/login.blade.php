@@ -64,7 +64,7 @@
                     <div class="text-center">
                         <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
                     </div>
-                    <div class="login-form pt-5 m-auto">
+                    <div class="login-form pt-3 m-auto">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
