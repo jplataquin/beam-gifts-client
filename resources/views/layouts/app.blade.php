@@ -185,16 +185,18 @@
              
                 
 
-                @auth          
-                    <li class="my-2">
-                        <a class="btn btn-warning" style="position:relative !important; bottom:0px" role="button" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </li>
-                @endauth
+                
             </ul>
+
+            @auth          
+               
+                <a class="btn btn-warning" style="position:relative !important; bottom:0px" role="button" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+            
+            @endauth
         </div>
     </section>
 
