@@ -64,7 +64,7 @@ class ClientController extends Controller
         $user->save();
 
         Mail::to($user->email)->send(new ValidateEmail([
-            'email' => $data['email'],
+            'email' => $user->email,
             'token' => $email_token
         ]));
 
