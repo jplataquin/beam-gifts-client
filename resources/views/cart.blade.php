@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-        <div class="mt-5">
+        <div class="mt-5 pl-3 pr-3">
         @foreach($items as $item)
             <div class="mb-3">
                 <div class="row bg-darkmagenta mb-2">
