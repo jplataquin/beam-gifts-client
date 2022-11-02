@@ -181,7 +181,7 @@
                     </li>
 
                     <li class="my-2">
-                       <a href="{{ route('logout') }}"
+                       <a class="mt-5" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
