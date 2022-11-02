@@ -10,7 +10,7 @@
     <div class="row justify-content-center mb-5">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-darkmagenta fontcolor-white">{{ __('Register') }}</div>
+                <div class="card-header bg-darkmagenta fontcolor-white">{{ __('Welcome to Beam Gifts - Please Register Here') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
