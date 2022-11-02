@@ -61,6 +61,9 @@
                     <div class="loghead">
                         <a href="/register" class="button">Signup</a>
                     </div>
+                    <div class="text-center">
+                        <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+                    </div>
                     <div class="login-form pt-5 m-auto">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
