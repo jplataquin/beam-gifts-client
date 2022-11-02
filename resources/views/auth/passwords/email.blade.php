@@ -47,7 +47,7 @@
                                     @endif
 
                                     @error('g-recaptcha-response')
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" style="display:inline !important;" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
