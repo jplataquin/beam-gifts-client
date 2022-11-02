@@ -33,12 +33,21 @@
                         </div>
                     </div>
                     <div class="separator"></div>
-                    <h3>By: </h3>
-                    <div class="brand-row d-flex align-items-center">
-                        <a href="/brand/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">
-                            <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
-                        </a>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>By: </h3>
+                        </div>
+                        <div class="col-6">
+                            <div class="brand-row d-flex align-items-center">
+                                <a href="/brand/{{str_replace(' ','-',$brand->name)}}" class="brandname ms-2">
+                                    <img src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{$brand->photo['200px']}}" alt="{{$brand->name}}">
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    
+                  
                 </div>
             </div>
         </div>
