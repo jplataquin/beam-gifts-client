@@ -45,6 +45,12 @@
                                             data-sitekey="{{config('services.recaptcha.key')}}">
                                         </div>
                                     @endif
+
+                                    @error('g-recaptcha-response')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                         </div>
 
