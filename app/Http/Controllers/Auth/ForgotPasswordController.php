@@ -29,4 +29,12 @@ class ForgotPasswordController extends Controller
             'g-recaptcha-response' => 'required|recaptcha',
         ]);
     }
+
+    public function messages()
+    {
+        return [
+            'g-recaptcha-response.recaptcha' => 'Captcha verification failed',
+            'g-recaptcha-response.required' => 'Please complete the captcha'
+        ];
+    }
 }
