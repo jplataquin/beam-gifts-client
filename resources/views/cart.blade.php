@@ -3,10 +3,10 @@
 @section('content')
 
     <div class="container">
-
+        <div class="mt-5">
         @foreach($items as $item)
-            <div class="container mb-3">
-                <div class="row bg-darkmagenta">
+            <div class="mb-3">
+                <div class="row bg-darkmagenta mb-2">
                     <div class="col-12 pt-2">
                         <h3 class="fontcolor-white">{{$item->name}}</h3>
                     </div>
@@ -35,6 +35,8 @@
                 </div>
             </div>
         @endforeach
+        </div>
+        
         <div class="row">
         <div class="col">
             <div class="form-group">
