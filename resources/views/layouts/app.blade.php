@@ -176,11 +176,11 @@
 
                 @else
 
-                    <li class="my-2">
+                    <li class="my-2 mb-5">
                         <a href="/myorders">My Orders</a>
                     </li>
 
-                    <li class="my-2" style="margin-top:100px !important">
+                    <li class="my-2">
                        <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
