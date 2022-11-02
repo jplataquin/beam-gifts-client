@@ -36,6 +36,14 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            @if(config('services.recaptcha.key'))
+                                <div class="g-recaptcha"
+                                    data-sitekey="{{config('services.recaptcha.key')}}">
+                                </div>
+                            @endif
+                        </div>
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4 text-end">
                                 <button type="submit" class="btn btn-primary">
@@ -49,4 +57,5 @@
         </div>
     </div>
 </div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection
