@@ -6,12 +6,12 @@
 
         @foreach($items as $item)
             <div class="row border border-primary mb-3 p-2">
-                <div class="col-lg-2">
+                <div class="col-lg-2 mb-3">
                     <img class="img" src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{$item->attributes['image']}}"/>
                 </div>
                 <div class="col-lg-10">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-7">
                             <h3>{{$item->name}}</h3>
                             <h5>{{$item->brand}}</h5>
                             <div>
@@ -21,7 +21,7 @@
                                 Price: {{number_format($item->price,2)}}
                             </div>
                         </div>
-                        <div class="col-sm-6 text-end">
+                        <div class="col-5 text-end">
                             <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
                             <button data-id="{{$item->id}}" class="removeBtn btn btn-danger">Remove</button>
                         </div>
