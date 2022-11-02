@@ -40,7 +40,7 @@
                                 
                                 @if(!$email_confirmed)
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Please validate your email to contiue using all our services and features</strong>
+                                        <strong>Please validate your email to continue using all our services and features</strong>
                                         <a href="/email">Click Here</a>
                                     </span>
                                 @endif

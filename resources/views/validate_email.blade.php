@@ -1,24 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Hello There!</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">     
+                        <h5>We sent a validation link to your E-mail</h5>
+                    </div>
 
-<div class="container pb-5">
-    <div class="text-center">
-        <h3>To contiue with all our features and services please validate ownership of your email</h3>
-        <h5>We sent a validation link to your E-mail</h5>
-    </div>
-
-    <div class="row">
-        <div class="col form-group">
-            <label>&nbsp;</label>
-            <input type="email" class="form-control text-center" value="{{$email}}"/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col form-group text-center">
-            <label>Did not receive any email?</label>
-            <br>
-            <button id="resend" class="btn btn-primary">Resend</button>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>&nbsp;</label>
+                            <input type="email" class="form-control text-center" value="{{$email}}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group text-center">
+                            <label>Did not receive any email?</label>
+                            <br>
+                            <button id="resend" class="btn btn-primary">Try Resending it</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
