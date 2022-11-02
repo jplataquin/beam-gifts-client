@@ -175,6 +175,11 @@
                     @endif
 
                 @else
+
+                    <li class="my-2">
+                        <a href="/myorders">My Orders</a>
+                    </li>
+
                     <li class="my-2">
                        <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
