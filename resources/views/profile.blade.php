@@ -36,8 +36,13 @@
                         <div class="col-12 mb-3">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" class="form-control" readonly="true" value="{{$email}}"/>
-                                {{$email_confirmed}}
+                                <input type="text" class="form-control @if(!$email_confirmed) is-invalid @endif" readonly="true" value="{{$email}}"/>
+                                
+                                @if(!$email_confirmed)
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please validate your email to contiue using all our services and features</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                     </div>
