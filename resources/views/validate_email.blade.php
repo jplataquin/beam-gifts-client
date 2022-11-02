@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-3 mb-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col form-group text-center">
                             <label>Did not receive any email?</label>
-                            <br>
+                            
                             <button id="resend" class="btn btn-primary">Try Resending it</button>
                         </div>
                     </div>
