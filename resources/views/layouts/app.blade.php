@@ -64,10 +64,10 @@
                         <a href="#" class="src-btn"><img class="search-icon" src="{{ asset('images/search.png') }}" alt=""> Search gifts or brands</a>
                     </div>
                     -->
-                    
+
                     <div class="rnav-col">
                         <ul class="dnavs">
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="/faq">FAQ</a></li>
  
                         
 

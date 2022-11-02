@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-6 col-12 p-3">
                     <div class="loghead">
-                        <p>New to Brand Name?</p> <a href="#" class="button">Signup</a>
+                        <a href="/register" class="button">Signup</a>
                     </div>
                     <div class="login-form pt-5 m-auto">
                         <form method="POST" action="{{ route('login') }}">
