@@ -180,7 +180,7 @@
                         <a href="/myorders">My Orders</a>
                     </li>
 
-                    <li class="my-2" style="margin-top:20px">
+                    <li class="my-2" style="margin-top:100px !important">
                        <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
