@@ -36,14 +36,7 @@ Route::middleware([CartSetup::class])->group(function () {
 });
 
 
-
-Auth::routes();
-
-
-
-Route::get('/testemail',[App\Http\Controllers\ClientController::class,'sendValidateEmail']);
-
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth',CartSetup::class])->group(function () {
 
     //TODO place in auth middleware
     Route::get('cart', [App\Http\Controllers\CartController::class, 'cartList'])->name('cart.list');
@@ -62,6 +55,9 @@ Route::middleware(['auth'])->group(function () {
 
     
 });
+
+Auth::routes();
+
 
 Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
 
