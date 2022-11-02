@@ -41,7 +41,7 @@
                                     @endfor
                                 </select>
                                 -
-                               <input id="year" placeholder="year" type="text" name="year" value="{{ old('year') }}" maxlength="4"/>
+                               <input id="year" placeholder="year" type="number" name="year" value="{{ old('year') }}" length="4" maxlength="4"/>
 
                                <input type="hidden" class="@error('birthday') is-invalid @enderror" id="birthday" value="{{ old('birthday') }}" name="birthday"/>
                                 
