@@ -190,7 +190,7 @@
 
             @auth          
                <div class="">
-                    <a class="btn btn-warning" style="position: fixed; bottom: 80px; width: 199px;" role="button" href="{{ route('logout') }}"
+                    <a class="btn btn-warning" style="position: fixed; bottom: 70px; width: 199px;" role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
