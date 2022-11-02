@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-10">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-6">
                             <h3>{{$item->name}}</h3>
                             <h5>{{$item->brand}}</h5>
                             <div>
@@ -21,7 +21,7 @@
                                 Price: {{number_format($item->price,2)}}
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6 text-end">
                             <h3>PHP {{number_format($item->quantity * $item->price,2)}}</h3>
                             <button data-id="{{$item->id}}" class="removeBtn btn btn-danger">Remove</button>
                         </div>
