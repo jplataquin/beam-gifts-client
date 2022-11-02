@@ -154,7 +154,7 @@
                 </li>
                 @auth          
                     <li class="my-2">
-                        <a class="btn btn-primary" href="{{ route('logout') }}"
+                        <a class="btn btn-outline-primary" role="button" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
