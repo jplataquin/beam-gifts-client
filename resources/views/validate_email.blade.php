@@ -31,4 +31,24 @@
         </div>
     </div>
 </div>
+
+<script type="module">
+    let resendBtn = document.querySelector('#resend');
+
+    resendBtn.onclick = ()=>{
+
+        window.util.$post('/resend/email/validation').then(reply=>{
+
+            if(!reply.status){
+                alert(reply.message);
+                return false;
+            }
+
+            alert('Email validation sent!');
+            
+        }).catch(err=>{
+            alert('Something went wrong');
+        });
+    }
+</script>
 @endsection

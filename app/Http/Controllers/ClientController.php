@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ValidateEmail;
+use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
@@ -41,5 +42,36 @@ class ClientController extends Controller
     public function profile(Request $request){
 
         return view('profile',Auth::user());
+    }
+
+
+    public function resendEmailValidation(Request $request){
+        
+        $user           = Auth::user();
+        $email_token    = Str::random(64);
+        
+        if($user->email_confirmed){
+
+            return response()->json([
+                'status'    => 0,
+                'message'   =>'Ops! It seems your email has already been verified',
+                'data'      => []
+            ]);
+        }
+
+        $user->email_token = $email_token;
+
+        $user->save();
+
+        Mail::to($user->email)->send(new ValidateEmail([
+            'email' => $data['email'],
+            'token' => $email_token
+        ]));
+
+        return response()->json([
+            'status' => 1,
+            'message'=>'',
+            'data'=> []
+        ]);
     }
 }
