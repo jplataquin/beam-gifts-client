@@ -19,7 +19,7 @@
                             <input type="email" class="form-control text-center" value="{{$email}}"/>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col form-group text-center">
                             <label>Did not receive any email?</label>
                             
