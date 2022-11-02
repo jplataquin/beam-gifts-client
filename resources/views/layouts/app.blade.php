@@ -189,13 +189,13 @@
             </ul>
 
             @auth          
-               
-                <a class="btn btn-warning" style="position:relative !important; bottom:0px" role="button" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-            
+               <div class="text-center mt-5 pt-5">
+                    <a class="btn btn-warning" role="button" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                </div>
             @endauth
         </div>
     </section>
