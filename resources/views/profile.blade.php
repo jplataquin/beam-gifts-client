@@ -37,6 +37,7 @@
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" class="form-control" readonly="true" value="{{$email}}"/>
+                                {{$email_confirmed}}
                             </div>
                         </div>
                     </div>
