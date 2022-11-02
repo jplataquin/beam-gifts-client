@@ -5,9 +5,9 @@
     <div class="container">
 
         @foreach($items as $item)
-            <div class="border border-primary mb-3 p-2">
+            <div class="container mb-3">
                 <div class="row bg-darkmagenta">
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                         <h3 class="fontcolor-white">{{$item->name}}</h3>
                     </div>
                 </div>
