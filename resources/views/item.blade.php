@@ -14,13 +14,13 @@
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
                     <h5 class="product-title">{{ $item->name }}</h5>
-                    <p class="product-shortDESC">{{ $item->description }}</p>
+                    <!-- <p class="product-shortDESC"></p> -->
                     <p class="product-price">Php {{$item->price}}</p>
                     <ul class="additional-info">
                         <li>Expires in {{$item->expiry}} days after purchase</li>
                         <li>Can be sent via link</li>
                     </ul>
-                    <p class="product-notice"><strong>You can gift up to 5.</strong></p>
+                    <p class="product-notice"><strong>Quantity</strong></p>
                     <select class="form-control" id="qty">
                         @for ($i = 1; $i<=5; $i++)
                         <option value="{{$i}}">{{$i}}</option>
@@ -60,31 +60,7 @@
                     <div class="tab-content mt-4" id="myTabContent">
                         <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab" tabindex="0">
                             <p class="product-desc">
-                                - Must be used before the expiration and will not be valid for use once expired.
-
-                                - The gift card can be redeemed for a gift certificate at the kiosk located in the department store (However it cannot be redeemed at kiosks located in EMART)
-
-                                
-
-                                [How to use kiosks]
-
-                                1) Check the MMS barcode on mobile
-
-                                2) Scan the barcode at kiosk and redeem it for actual certificate.
-
-                                - The redeemed gift certificates can be used in affiliated stores.
-
-                                
-
-                                [Not Redeemable]
-
-                                천안아산점
-
-                                
-
-                                ☎Galaxia Moneytree CX center : 1566-0123
-
-                                (Mon~Fri, 9AM~6PM)
+                            {{ $item->description }}
                             </p>
                         </div>
                         <div class="tab-pane fade" id="rp-tab-pane" role="tabpanel" aria-labelledby="rp-tab" tabindex="0">
