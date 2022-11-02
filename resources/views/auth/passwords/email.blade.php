@@ -37,11 +37,13 @@
                         </div>
 
                         <div class="row mb-3">
-                            @if(config('services.recaptcha.key'))
-                                <div class="g-recaptcha"
-                                    data-sitekey="{{config('services.recaptcha.key')}}">
-                                </div>
-                            @endif
+                            <div class="col-md-6">
+                                @if(config('services.recaptcha.key'))
+                                    <div class="g-recaptcha"
+                                        data-sitekey="{{config('services.recaptcha.key')}}">
+                                    </div>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="row mb-0">
