@@ -70,14 +70,14 @@
                                 <div class="col-md-3" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-9 text-end">Payment Processor</div>
-                                <div class="col-3">
+                                <div class="col-md-9 col-sm-6 text-end">Payment Processor</div>
+                                <div class="col-md-3 col-sm-6">
                                     PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-9 text-end">Grand Total</div>
-                                <div class="col-3">
+                                <div class="col-md-9 col-sm-6 text-end">Grand Total</div>
+                                <div class="col-md-3 col-sm-6">
                                     PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
                             </div>
