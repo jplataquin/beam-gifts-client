@@ -216,5 +216,6 @@ return [
 
     'api_base_url' => env('API_BASE_URL'),
 
-    'service_fee' => 100
+    'service_fee' => 100,
+    'payment_processor_fee' => 0.05,
 ];

@@ -77,16 +77,16 @@
                                 <div class="col-md-9 col-sm-6 text-end font-weight-bold">
                                     <strong>Payment Processor</strong>
                                 </div>
-                                <div class="col-md-3 col-sm-6">
-                                    PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
+                                <div class="col-md-3 col-sm-6" id="payment_processor">
+                                    PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.05, 2) }}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-sm-6 text-end font-weight-bold">
                                     <strong>Grand Total</strong>
                                 </div>
-                                <div class="col-md-3 col-sm-6">
-                                    PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
+                                <div class="col-md-3 col-sm-6" id="grand_total">
+                                    PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.05 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
                             </div>
                             
@@ -107,6 +107,9 @@
         const totalEl           = document.querySelector('#total');
         const emptyPrompt       = document.querySelector('#emptyPrompt');
         const paymentMethodBox  = document.querySelector('#paymentMethodBox');
+        const serviceFee        = document.querySelector('#service_fee');
+        const paymentProcessor  = document.querySelector('#payment_processor');
+        const grandTotal        = document.querySelector('#grand_total');
 
         checkoutBtn.onclick = (e) => {
             let paymentMethod = document.querySelector('#paymentMethod').value;
