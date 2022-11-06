@@ -94,6 +94,7 @@ class CartController extends Controller
             'status' => 1,
             'message'=>'',
             'data'=> [
+                'id'    => $request->id,
                 'items' => \Cart::getContent(),
                 'total' => \Cart::getTotal()
             ]
