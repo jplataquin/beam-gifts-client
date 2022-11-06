@@ -72,7 +72,7 @@
                                 <tr>
                                     <th>Transaction Fee</th>
                                     <td>
-                                       PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) ) }}
+                                       PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
                                     </td>
                                 </tr>
                                 <tr>
