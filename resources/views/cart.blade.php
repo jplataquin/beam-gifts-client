@@ -38,13 +38,13 @@
             @endforeach
 
             
-                <div id="emptyPrompt" class="text-center @if(count($items) == 0) d-block @else d-none @endif">
+                <div id="emptyPrompt" class="text-center m-5 @if(count($items) == 0) d-block @else d-none @endif">
                     <h3>Your shopping cart is empty, would you like to return to <a href="/">Home</a> screen?</h3>
                 </div>
             
         </div>
         
-        <div class="card mt-5 mb-5">
+        <div class="card mt-5 mb-5 @if(count($items) == 0) d-block @else d-none @endif">
             <div class="card-header">
                 Payment Method
             </div>
@@ -52,15 +52,10 @@
                 <div class="row">
                     <div class="col">
                     <div class="form-group">
-                            
-                            <div>
-                                <label class="me-3">
-                                    <input type="radio" class="" name="paymentMethod" value="cc" checked/> Credit Card
-                                </label>
-                                </label class="me-3">
-                                    <input type="radio" class="" name="paymentMethod" value="gc"/> Gcash
-                                </label>
-                            </div>
+                            <select class="form-control" id="paymentMethod" name="paymentMethod">
+                                <option value="cc">Credit Card</option>
+                                <option value="gc">Gcash</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col text-end">
@@ -81,7 +76,7 @@
         const emptyPrompt   = document.querySelector('#emptyPrompt');
 
         checkoutBtn.onclick = (e) => {
-            let paymentMethod = document.querySelector('input[name=paymentMethod]:checked').value;
+            let paymentMethod = document.querySelector('#paymentMethod').value;
 
             axios.post('/checkout', {
                 'paymentMethod': paymentMethod
