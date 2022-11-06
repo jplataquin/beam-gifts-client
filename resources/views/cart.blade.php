@@ -105,6 +105,7 @@
             });
         }
 
+        /** Remove Item */
         Array.from(document.querySelectorAll('.removeBtn')).map(target=>{
 
             target.onclick = (e)=>{
