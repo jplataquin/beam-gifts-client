@@ -36,6 +36,12 @@
                     </div>
                 </div>
             @endforeach
+
+            
+                <div id="emptyPrompt" class="@if(length($items) == 0) d-none @else d-block @endif">
+                    <h3>Your shopping cart is empty, would you like to return to <a href="/">Home</a> screen?</h3>
+                </div>
+            
         </div>
         
         <div class="row">
@@ -61,8 +67,9 @@
 
     <script type="module">
 
-        const checkoutBtn = document.querySelector('#checkout');
-        const totalEl     = document.querySelector('#total');
+        const checkoutBtn   = document.querySelector('#checkout');
+        const totalEl       = document.querySelector('#total');
+        const emptyPrompt   = document.querySelector('#emptyPrompt');
 
         checkoutBtn.onclick = (e) => {
             let paymentMethod = document.querySelector('input[name=paymentMethod]:checked').value;
@@ -125,7 +132,16 @@
 
                     document.querySelector('#item-'+id).remove();
 
-                    totalEl.innerText = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'PHP' }).format(reply.data.total);
+                    totalEl.innerText = window.util.moneyFormat('PHP',reply.data.total);
+
+                    let qty =  Object.keys(reply.data.items).length ?? 0;
+
+                    window.util.cartQuantity(qty);
+
+                    if(qty == 0){
+                        emptyPrompt.classList.remove('d-block');
+                        emptyPrompt.classList.add('d-none');
+                    }
                 });
             }
         });

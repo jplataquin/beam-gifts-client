@@ -87,8 +87,15 @@ class CartController extends Controller
     }
 
     public function removeCart(Request $request){
-        //Todo validate request;
         
+        if(!$request->id){
+            return response()->json([
+                'status' => 0,
+                'message'=> 'item ID is required for this operation',
+                'data'=> []
+            ]);
+        }
+
         $cart = \Cart::session(Auth::user()->id);
         
         $cart->remove($request->id);
