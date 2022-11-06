@@ -62,21 +62,21 @@
                         <div>
                             
                             <div class="row">
-                                <div class="col-md-9 col-sm-6 text-end">Total</div>
+                                <div class="col-md-9 col-sm-6 text-end font-weight-bold">Total</div>
                                 <div class="col-md-3 col-sm-6" id="total">PHP {{ number_format($total,2) }}</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-9 text-end">Service Fee</div>
+                                <div class="col-md-9 text-end font-weight-bold">Service Fee</div>
                                 <div class="col-md-3" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-9 col-sm-6 text-end">Payment Processor</div>
+                                <div class="col-md-9 col-sm-6 text-end font-weight-bold">Payment Processor</div>
                                 <div class="col-md-3 col-sm-6">
                                     PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-9 col-sm-6 text-end">Grand Total</div>
+                                <div class="col-md-9 col-sm-6 text-end font-weight-bold">Grand Total</div>
                                 <div class="col-md-3 col-sm-6">
                                     PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
