@@ -87,8 +87,7 @@ class CartController extends Controller
     }
 
     public function removeCart(Request $request){
-        
-        \Cart::remove($request->id);
+        \Cart::session(Auth::user()->id)->remove($request->id);
 
         return response()->json([
             'status' => 1,
