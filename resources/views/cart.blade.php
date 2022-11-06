@@ -63,7 +63,7 @@
                             <tbody>
                                 <tr>
                                     <th>Total</th>
-                                    <td id="total">PHP {{ $total }}</td>
+                                    <td id="total">PHP {{ number_format($total,2) }}</td>
                                 </tr>
                                 <tr>
                                     <th>Service Fee</th>
@@ -83,9 +83,7 @@
                                 </tr>
                             </tobdy>
                         </table>
-                        <h3 id="total">Total PHP </h3>
-                        <h3 id="convenience_fee">Convenience Fee PHP 100</h3>
-                        <h3 id="grand_total">Grand Total PHP {{number_format($total+100,2)}}</h3>
+                        
                         <button id="checkout" class="btn btn-primary">Check Out</button>
                     </div>
                     </div>
