@@ -3,6 +3,90 @@
 @section('content')
 
 
+<section class="checkout-form py-5" id="mainContainer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 my-2">
+                    <div class="left-col border rounded p-0">
+                        <div class="checkout-formCont p-3">
+                            <h4 class="mb-3">Enter your card details.</h4>
+                            <p class="grand-total">
+                                <strong>Grand Total</strong><span class="fs-4 ms-1">PHP {{number_format($order->amount,2)}}</span>
+                            </p>
+                            <form action="">
+                                <div class="form-field">
+                                    <label for="name" class="checkout-label fs-6">Name on card:</label><br>
+                                    <input type="text" name="name" id="name" class="input-field my-1 col-12 fs-6" placeholder="Enter Name">
+                                </div>
+                                <div class="form-field mt-2">
+                                    <label for="number" class="checkout-label fs-6">Card No:</label><br>
+                                    <input type="number" name="number" id="ccno" class="input-field my-1 col-12 fs-6" placeholder="1111 **** **** ****">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="date" class="checkout-label fs-6">Expiry date:</label><br>
+                                            <input type="text" name="date" id="expiry" class="input-field my-1 col-12 fs-6" placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="CVC" class="checkout-label fs-6">CVC:</label><br>
+                                            <input type="text" name="CVC" id="cvc" class="input-field my-1 col-12 fs-6" placeholder="***">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field mt-2">
+                                    <label for="payemail" class="checkout-label fs-6">Email address:</label><br>
+                                    <input type="email" name="payemail" id="email" class="input-field my-1 col-12 fs-6" placeholder="Enter email address">
+                                </div>
+                                <div class="form-field mt-2">
+                                    <label for="number" class="checkout-label fs-6">Phone/Mobile No:</label><br>
+                                    <input type="text" name="number" id="phone" class="input-field my-1 col-12 fs-6" placeholder="Enter Phone Number">
+                                </div>
+                                <div class="form-field mt-2">
+                                    <label for="Address1" class="checkout-label fs-6">Address Line 1:</label><br>
+                                    <input type="text" name="Address1" id="line_address_1" class="input-field my-1 col-12 fs-6" placeholder="">
+                                </div>
+                                <div class="form-field mt-2">
+                                    <label for="Address2" class="checkout-label fs-6">Address Line 2:</label><br>
+                                    <input type="text" name="Address2" id="line_address_2" class="input-field my-1 col-12 fs-6" placeholder="">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="number" class="checkout-label fs-6">Choose country</label><br>
+                                            <select class="form-select input-field my-1 col-12 fs-6" id="country">
+                                                @foreach(config('selectoptions')['countries'] as $key => $text)
+                                                    <option value="{{$key}}">{{$text}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="city" class="checkout-label fs-6">Choose city/state</label><br>
+                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter email City/State">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="CVC" class="checkout-label fs-6">Postal code:</label><br>
+                                            <input type="text" name="postal_zip_code" id="postal_zip_code" class="input-field my-1 col-12 fs-6" placeholder="Put your postal code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-3 col12 submitBTN" id="payBtn" >Pay now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--
 <div id="mainContainer" class="container">
     <div id="formContainer">
 
@@ -125,7 +209,7 @@
         </div>
     </div>
 </div>
-
+-->
 
 <div id="modal" class="modal" tabindex="-1">
   <div class="modal-dialog">
