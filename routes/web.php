@@ -52,6 +52,8 @@ Route::middleware(['auth',CartSetup::class])->group(function () {
     Route::get('profile', [App\Http\Controllers\ClientController::class, 'profile']);
 
     Route::post('/resend/email/validation',[App\Http\Controllers\ClientController::class,'resendEmailValidation']);
+
+    Route::post('checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout');
     
 });
 

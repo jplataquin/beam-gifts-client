@@ -115,7 +115,7 @@
                         alert('Unkown payment method '+method);
                 }
             }).catch(err=>{
-                alert('Something went wrong');
+                alert('Something went wrong, unable to proceed');
             });
         }
 
