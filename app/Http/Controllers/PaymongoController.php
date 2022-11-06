@@ -62,6 +62,10 @@ class PaymongoController extends Controller
 
         //TODO validate $uid;
 
+        if(!$result){
+            return abort(404);
+        }
+
         return view('payment/creditcard',[
             'uid'   => $uid,
             'order' => $result,
