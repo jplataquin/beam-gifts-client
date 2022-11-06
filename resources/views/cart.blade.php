@@ -81,7 +81,10 @@
                                     PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
                             </div>
-                            
+                            <p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-weight-light">Light weight text.</p>
+<p class="font-italic">Italic text.</p>
                         </div>
 
                         <button id="checkout" class="btn btn-primary">Check Out</button>
