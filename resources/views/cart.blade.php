@@ -59,30 +59,30 @@
                         </div>
                     </div>
                     <div class="col text-end">
-                        <table class="d-block">
-                            <tbody>
-                                <tr>
-                                    <th>Total</th>
-                                    <td id="total">PHP {{ number_format($total,2) }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Service Fee</th>
-                                    <td id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Transaction Fee</th>
-                                    <td>
-                                       PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Grand Total</th>
-                                    <td>
-                                        PHP {{ ( (config('app')['service_fee'] + $total) * 0.5 ) + config('app')['service_fee'] + $total }}
-                                    </td>
-                                </tr>
-                            </tobdy>
-                        </table>
+                        <div>
+                            
+                            <div class="row">
+                                <div class="col-6">Total</div>
+                                <div class="col-6" id="total">PHP {{ number_format($total,2) }}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Service Fee</div>
+                                <div class="col-6" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Transaction Fee</div>
+                                <div class="col-6">
+                                    PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Grand Total</div>
+                                <div class="col-6">
+                                    PHP {{ ( (config('app')['service_fee'] + $total) * 0.5 ) + config('app')['service_fee'] + $total }}
+                                </div>
+                            </div>
+                            
+                        </div>
 
                         <button id="checkout" class="btn btn-primary">Check Out</button>
                     </div>
