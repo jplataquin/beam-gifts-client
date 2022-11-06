@@ -63,7 +63,7 @@
                             <tbody>
                                 <tr>
                                     <th>Total</th>
-                                    <td id="total">PHP {{ number_format($total,2) }}</td>
+                                    <td id="total">PHP {{ $total }}</td>
                                 </tr>
                                 <tr>
                                     <th>Service Fee</th>
