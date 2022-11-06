@@ -62,7 +62,7 @@
     <script type="module">
 
         const checkoutBtn = document.querySelector('#checkout');
-
+        const totalEl     = document.querySelector('#total');
 
         checkoutBtn.onclick = (e) => {
             let paymentMethod = document.querySelector('input[name=paymentMethod]:checked').value;
