@@ -44,7 +44,7 @@
             
         </div>
         
-        <div class="card mt-5 mb-5 @if(count($items) == 0) d-block @else d-none @endif">
+        <div class="card mt-5 mb-5 @if(count($items) == 0) d-none @else d-block @endif">
             <div class="card-header">
                 Payment Method
             </div>
