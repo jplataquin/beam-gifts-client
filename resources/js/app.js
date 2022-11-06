@@ -132,7 +132,7 @@ window.util.$post = async (url,formData) => {
     }).then((response) => {
        
         status = response.status;
-        
+        console.log('Status POST Reply',status);
         if(response.status == 401){
             return {
                     status:-1,

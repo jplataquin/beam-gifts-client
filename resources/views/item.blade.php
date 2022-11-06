@@ -97,11 +97,15 @@
         addToCartBtn.disabled = true;
         buyNowBtn.disabled = true;
 
+        window.FreezeUI();
+
         window.util.addToCart({
             id:'{{$item->id}}',
             qty: qty.value
         }).then(reply=>{
 
+            window.UnFreezeUI();
+            
             addToCartBtn.disabled   = false;
             buyNowBtn.disabled      = false;
 
