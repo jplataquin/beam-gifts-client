@@ -149,7 +149,7 @@
 
                     window.UnFreezeUI();
 
-                    if(!reply.status  <= 0){
+                    if(reply.status <= 0){
                         alert(reply.message);
                         return false;
                     }
