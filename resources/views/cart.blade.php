@@ -78,7 +78,7 @@
                             <div class="row">
                                 <div class="col-6 text-end">Grand Total</div>
                                 <div class="col-6">
-                                    PHP {{ number_fromat( ( (config('app')['service_fee'] + $total) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
+                                    PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
                             </div>
                             
