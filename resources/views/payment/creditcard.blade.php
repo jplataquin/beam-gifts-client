@@ -65,8 +65,14 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-field mt-2">
-                                            <label for="city" class="checkout-label fs-6">Choose city/state</label><br>
-                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter City/State">
+                                            <label for="city" class="checkout-label fs-6">State/Provice</label><br>
+                                            <input type="text" name="state_province" id="state_province" class="input-field my-1 col-12 fs-6" placeholder="Enter State/Provice">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-field mt-2">
+                                            <label for="city" class="checkout-label fs-6">City</label><br>
+                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter City">
                                         </div>
                                     </div>
                                     <div class="col-6">
