@@ -114,6 +114,8 @@
                     default:
                         alert('Unkown payment method '+method);
                 }
+            }).catch(err=>{
+                alert('Something went wrong');
             });
         }
 
