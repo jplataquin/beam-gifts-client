@@ -141,13 +141,17 @@
 
             target.onclick = (e)=>{
                 let id = target.getAttribute('data-id');
+                
+                window.FreezeUI();
 
                 window.util.removeFromCart(id).then(reply=>{
 
+                    window.UnFreezeUI();
                     if(!reply.status){
                         alert(reply.message);
                         return false;
                     }
+
 
                     
                 });
