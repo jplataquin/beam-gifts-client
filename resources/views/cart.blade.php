@@ -59,7 +59,31 @@
                         </div>
                     </div>
                     <div class="col text-end">
-                        <h3 id="total">Total PHP {{number_format($total,2)}}</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Total</th>
+                                    <td id="total">PHP {{number_format($total,2)}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Service Fee</th>
+                                    <td id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Transaction Fee</th>
+                                    <td>
+                                       PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) ) }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Grand Total</th>
+                                    <td>
+                                        PHP {{ ( (config('app')['service_fee'] + $total) * 0.5 ) + config('app')['service_fee'] + $total }}
+                                    </td>
+                                </tr>
+                            </tobdy>
+                        </table>
+                        <h3 id="total">Total PHP </h3>
                         <h3 id="convenience_fee">Convenience Fee PHP 100</h3>
                         <h3 id="grand_total">Grand Total PHP {{number_format($total+100,2)}}</h3>
                         <button id="checkout" class="btn btn-primary">Check Out</button>
