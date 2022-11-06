@@ -44,26 +44,35 @@
             
         </div>
         
-        <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <label>Payment Method</label>
-                <div>
-                    <label class="me-3">
-                        <input type="radio" class="" name="paymentMethod" value="cc" checked/> Credit Card
-                    </label>
-                    </label class="me-3">
-                        <input type="radio" class="" name="paymentMethod" value="gc"/> Gcash
-                    </label>
+        <div class="card">
+            <div class="card-header bg-darkmagenta">
+                Payment Method
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                    <div class="form-group">
+                            
+                            <div>
+                                <label class="me-3">
+                                    <input type="radio" class="" name="paymentMethod" value="cc" checked/> Credit Card
+                                </label>
+                                </label class="me-3">
+                                    <input type="radio" class="" name="paymentMethod" value="gc"/> Gcash
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-end">
+                        <h2 id="total">PHP {{number_format($total,2)}}</h2>
+                        <button id="checkout" class="btn btn-primary">Check Out</button>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col text-end">
-            <h2 id="total">PHP {{number_format($total,2)}}</h2>
-            <button id="checkout" class="btn btn-primary">Check Out</button>
-        </div>
-        </div>
-    </div>
+
+        
 
     <script type="module">
 
@@ -139,7 +148,7 @@
                     window.util.cartQuantity(qty);
 
                     if(qty <= 0){
-                        emptyPrompt.classList.remove('d-none');
+                        emptyPrompt.classList.remove('d-none'); 
                         emptyPrompt.classList.add('d-block');
                     }else{
                         emptyPrompt.classList.remove('d-block');

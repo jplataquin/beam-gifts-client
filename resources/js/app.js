@@ -212,5 +212,3 @@ window.util.moneyFormat = (currency,number) => {
 
     return currency.toUpperCase()+' '+number.toLocaleString('en-US', {maximumFractionDigits:2});
 } 
-
-
