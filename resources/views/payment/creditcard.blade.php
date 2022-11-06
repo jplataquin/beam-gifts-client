@@ -32,13 +32,13 @@
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="CVC" class="checkout-label fs-6">CVC:</label><br>
-                                            <input type="text" name="CVC" id="cvc" class="input-field my-1 col-12 fs-6" placeholder="***">
+                                            <input type="password" name="CVC" id="cvc" class="input-field my-1 col-12 fs-6" placeholder="***">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="payemail" class="checkout-label fs-6">Email address:</label><br>
-                                    <input type="email" name="payemail" id="email" class="input-field my-1 col-12 fs-6" placeholder="Enter email address">
+                                    <input type="email" name="payemail" id="email" class="input-field my-1 col-12 fs-6" placeholder="Enter Email address">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="number" class="checkout-label fs-6">Phone/Mobile No:</label><br>
@@ -46,11 +46,11 @@
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="Address1" class="checkout-label fs-6">Address Line 1:</label><br>
-                                    <input type="text" name="Address1" id="line_address_1" class="input-field my-1 col-12 fs-6" placeholder="">
+                                    <input type="text" name="Address1" id="line_address_1" class="input-field my-1 col-12 fs-6" placeholder="Enter Line Address 1">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="Address2" class="checkout-label fs-6">Address Line 2:</label><br>
-                                    <input type="text" name="Address2" id="line_address_2" class="input-field my-1 col-12 fs-6" placeholder="">
+                                    <input type="text" name="Address2" id="line_address_2" class="input-field my-1 col-12 fs-6" placeholder="Enter Line Address 2">
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
@@ -66,13 +66,13 @@
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="city" class="checkout-label fs-6">Choose city/state</label><br>
-                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter email City/State">
+                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter City/State">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="CVC" class="checkout-label fs-6">Postal code:</label><br>
-                                            <input type="text" name="postal_zip_code" id="postal_zip_code" class="input-field my-1 col-12 fs-6" placeholder="Put your postal code">
+                                            <input type="text" name="postal_zip_code" id="postal_zip_code" class="input-field my-1 col-12 fs-6" placeholder="Enter Postal Code">
                                         </div>
                                     </div>
                                 </div>
