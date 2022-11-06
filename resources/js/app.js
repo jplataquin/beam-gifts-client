@@ -134,7 +134,7 @@ window.util.$post = async (url,formData) => {
         status = response.status;
         
         if(status == 401){
-            console.log('TEST');
+          
             return {
                     status:-1,
                     message:'Please sign in',

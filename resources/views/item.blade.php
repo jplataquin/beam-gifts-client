@@ -106,6 +106,8 @@
 
             window.UnFreezeUI();
             
+            console.log(reply);
+
             addToCartBtn.disabled   = false;
             buyNowBtn.disabled      = false;
 
