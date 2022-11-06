@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col text-end">
-                        <table>
+                        <table class="d-block">
                             <tbody>
                                 <tr>
                                     <th>Total</th>
@@ -83,7 +83,7 @@
                                 </tr>
                             </tobdy>
                         </table>
-                        
+
                         <button id="checkout" class="btn btn-primary">Check Out</button>
                     </div>
                     </div>
