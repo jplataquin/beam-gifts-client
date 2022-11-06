@@ -44,8 +44,8 @@
             
         </div>
         
-        <div class="card">
-            <div class="card-header bg-darkmagenta">
+        <div class="card mt-5 mb-5">
+            <div class="card-header">
                 Payment Method
             </div>
             <div class="card-body">
