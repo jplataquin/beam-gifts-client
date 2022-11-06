@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="col text-end">
-            <h2>PHP {{number_format($total,2)}}</h2>
+            <h2 id="total">PHP {{number_format($total,2)}}</h2>
             <button id="checkout" class="btn btn-primary">Check Out</button>
         </div>
         </div>
@@ -124,6 +124,8 @@
 
 
                     document.querySelector('#item-'+id).remove();
+
+                    totalEl.innerText = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'PHP' }).format(reply.data.total);
                 });
             }
         });
