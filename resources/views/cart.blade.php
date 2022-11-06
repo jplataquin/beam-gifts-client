@@ -113,7 +113,7 @@
                 
                 window.FreezeUI();
 
-                window.util.removeFromCart(id).then(reply=>{
+                window.util.removeFromCart({id:id}).then(reply=>{
 
                     window.UnFreezeUI();
 
