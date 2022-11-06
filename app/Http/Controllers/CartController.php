@@ -87,6 +87,7 @@ class CartController extends Controller
     }
 
     public function removeCart(Request $request){
+        
         \Cart::remove($request->id);
 
         return response()->json([

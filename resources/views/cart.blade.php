@@ -5,7 +5,8 @@
     <div class="container">
         <div class="mt-5 ps-3 pe-3">
             @foreach($items as $item)
-                <div class="mb-3">
+                
+                <div class="mb-3" id="item-{{$item->id}}">
                     <div class="row bg-darkmagenta mb-2">
                         <div class="col-12 pt-2">
                             <h5 class="fontcolor-white">{{$item->name}}</h5>
@@ -147,13 +148,14 @@
                 window.util.removeFromCart(id).then(reply=>{
 
                     window.UnFreezeUI();
-                    if(!reply.status){
+
+                    if(!reply.status  <= 0){
                         alert(reply.message);
                         return false;
                     }
 
 
-                    
+                    document.querySelector('#item-'+id).remove();
                 });
             }
         });

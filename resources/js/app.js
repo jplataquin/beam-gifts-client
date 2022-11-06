@@ -191,7 +191,11 @@ window.util.addToCart = (data) =>{
 
 
 window.util.removeFromCart = (data) =>{
+    const formData = new FormData();
 
+    formData.append('id',data.id)
+
+    return window.util.$post('/api/remove-cart',formData);
 }
 
 window.util.updateCart = (data) =>{
