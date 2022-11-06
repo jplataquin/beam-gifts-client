@@ -62,22 +62,22 @@
                         <div>
                             
                             <div class="row">
-                                <div class="col-8 text-end">Total</div>
-                                <div class="col-4" id="total">PHP {{ number_format($total,2) }}</div>
+                                <div class="col-9 text-end">Total</div>
+                                <div class="col-3" id="total">PHP {{ number_format($total,2) }}</div>
                             </div>
                             <div class="row">
-                                <div class="col-8 text-end">Service Fee</div>
-                                <div class="col-4" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
+                                <div class="col-9 text-end">Service Fee</div>
+                                <div class="col-3" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-8 text-end">Payment Processor</div>
-                                <div class="col-4">
+                                <div class="col-9 text-end">Payment Processor</div>
+                                <div class="col-3">
                                     PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8 text-end">Grand Total</div>
-                                <div class="col-4">
+                                <div class="col-9 text-end">Grand Total</div>
+                                <div class="col-3">
                                     PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.5 ) + config('app')['service_fee'] + $total, 2) }}
                                 </div>
                             </div>
