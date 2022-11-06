@@ -38,7 +38,7 @@
             @endforeach
 
             
-                <div id="emptyPrompt" class="@if(count($items) == 0) d-block @else d-none @endif">
+                <div id="emptyPrompt" class="text-center @if(count($items) == 0) d-block @else d-none @endif">
                     <h3>Your shopping cart is empty, would you like to return to <a href="/">Home</a> screen?</h3>
                 </div>
             
