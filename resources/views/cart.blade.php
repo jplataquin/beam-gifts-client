@@ -62,7 +62,7 @@
                         <div>
                             
                             <div class="row">
-                                <div class="col-md-9 col-sm-6 text-end font-weight-bold">Total</div>
+                                <div class="col-md-9 col-sm-6 text-end"><span class="font-weight-bold">Total</span></div>
                                 <div class="col-md-3 col-sm-6" id="total">PHP {{ number_format($total,2) }}</div>
                             </div>
                             <div class="row">
