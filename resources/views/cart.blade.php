@@ -70,7 +70,7 @@
                                 <div class="col-4" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-8 text-end">Transaction Fee</div>
+                                <div class="col-8 text-end">Payment Processor</div>
                                 <div class="col-4">
                                     PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.5, 2) }}
                                 </div>
