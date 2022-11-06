@@ -76,7 +76,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="mt-3 col12 submitBTN" id="payBtn" >Pay now</button>
+                                <button class="mt-3 col-12 submitBTN" id="payBtn" >Pay now</button>
                             </form>
                         </div>
                     </div>
