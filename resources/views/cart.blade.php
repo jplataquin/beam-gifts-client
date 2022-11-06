@@ -44,7 +44,7 @@
             
         </div>
         
-        <div class="card mt-5 mb-5 @if(count($items) == 0) d-none @else d-block @endif">
+        <div id="paymentMethodBox" class="card mt-5 mb-5 @if(count($items) == 0) d-none @else d-block @endif">
             <div class="card-header">
                 Payment Method
             </div>
@@ -71,9 +71,10 @@
 
     <script type="module">
 
-        const checkoutBtn   = document.querySelector('#checkout');
-        const totalEl       = document.querySelector('#total');
-        const emptyPrompt   = document.querySelector('#emptyPrompt');
+        const checkoutBtn       = document.querySelector('#checkout');
+        const totalEl           = document.querySelector('#total');
+        const emptyPrompt       = document.querySelector('#emptyPrompt');
+        const paymentMethodBox  = document.querySelector('#paymentMethodBox');
 
         checkoutBtn.onclick = (e) => {
             let paymentMethod = document.querySelector('#paymentMethod').value;
@@ -145,9 +146,16 @@
                     if(qty <= 0){
                         emptyPrompt.classList.remove('d-none'); 
                         emptyPrompt.classList.add('d-block');
+
+                        paymentMethodBox.classList.remove('d-block');
+                        paymentMethodBox.classList.add('d-none');
                     }else{
                         emptyPrompt.classList.remove('d-block');
                         emptyPrompt.classList.add('d-none');
+
+                        
+                        paymentMethodBox.classList.remove('d-none');
+                        paymentMethodBox.classList.add('d-block');
                     }
                 });
             }
