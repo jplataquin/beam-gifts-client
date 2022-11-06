@@ -106,8 +106,6 @@
 
             window.UnFreezeUI();
             
-            console.log(reply);
-
             addToCartBtn.disabled   = false;
             buyNowBtn.disabled      = false;
 
@@ -116,7 +114,7 @@
                 return false;
             }
 
-            if(!reply.status){
+            if(reply.status <= 0){
                 alert(reply.message);
                 return;
             }
