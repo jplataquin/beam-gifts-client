@@ -95,6 +95,7 @@
 
         
         @json($paymentCalculation)
+        
     <script type="module">
 
         const checkoutBtn       = document.querySelector('#checkout');
