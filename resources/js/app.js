@@ -210,5 +210,5 @@ window.util.clearCart = (data) =>{
 
 window.util.moneyFormat = (currency,number) => {
 
-    return currency.toUpperCase()+' '+number.toLocaleString('en-US', {maximumFractionDigits:2}).toFixed(2);
+    return currency.toUpperCase()+' '+number.toFixed(2).toLocaleString('en-US', {maximumFractionDigits:2});
 } 
