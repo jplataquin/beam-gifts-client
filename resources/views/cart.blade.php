@@ -94,7 +94,7 @@
         </div>
 
         
-        {{$paymentCalculation}}
+        
 
     <script type="module">
 
@@ -107,7 +107,7 @@
         const grandTotal        = document.querySelector('#grandTotal');
         const paymentMethod     = document.querySelector('#paymentMethod');
 
-        $paymentCalculation = JSON.parse('@json($paymentCalculation)');
+        paymentCalculation = {{$paymentCalculation}};
 
         checkoutBtn.onclick = (e) => {
 
