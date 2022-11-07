@@ -107,7 +107,7 @@
         const grandTotal        = document.querySelector('#grandTotal');
         const paymentMethod     = document.querySelector('#paymentMethod');
 
-        paymentCalculation = {{ Illuminate\Support\Js::from($paymentCalculation) }}
+        let paymentCalculation = {{ Illuminate\Support\Js::from($paymentCalculation) }}
 
         checkoutBtn.onclick = (e) => {
 
