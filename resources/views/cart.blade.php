@@ -71,14 +71,14 @@
                                 <div class="col-md-9 text-end font-weight-bold">
                                     <strong>Service Fee</strong>
                                 </div>
-                                <div class="col-md-3" id="service_fee">PHP {{number_format(config('app')['service_fee'],2)}}</div>
+                                <div class="col-md-3" id="service_fee">PHP {{ number_fromat($service_fee,2) }}</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-sm-6 text-end font-weight-bold">
                                     <strong>Payment Processor</strong>
                                 </div>
                                 <div class="col-md-3 col-sm-6" id="payment_processor">
-                                    PHP {{  number_format( (config('app')['service_fee'] + $total) * 0.05, 2) }}
+                                    PHP {{ number_format($payment_processor_fee['cc'],2) }}
                                 </div>
                             </div>
                             <div class="row">
@@ -86,7 +86,7 @@
                                     <strong>Grand Total</strong>
                                 </div>
                                 <div class="col-md-3 col-sm-6" id="grand_total">
-                                    PHP {{ number_format( ( ( config('app')['service_fee'] + $total ) * 0.05 ) + config('app')['service_fee'] + $total, 2) }}
+                                    PHP {{ number_format($grand_total['cc'],2) }}
                                 </div>
                             </div>
                             

@@ -65,11 +65,11 @@ class PaymongoController extends Controller
         if(!$result){
             return abort(404);
         }
-
+ 
         return view('payment/creditcard',[
-            'uid'   => $uid,
-            'order' => $result,
-            'items' => $result->items
+            'uid'       => $uid,
+            'order'     => $result,
+            'items'     => $result->items
         ]);
     }
 

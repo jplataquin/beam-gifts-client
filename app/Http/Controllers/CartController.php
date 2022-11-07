@@ -17,10 +17,34 @@ class CartController extends Controller
 
     public function cartList(Request $request){
         \Cart::session(Auth::user()->id);
-       
+        
+
+        $payment = config('payment');
+
+        $total = \Cart::getTotal();
+
+        $service_fee  = $payment['service_fee'];
+
+        //CC
+        $payment_processor_fee_cc       = $payment['payment_processor_fee']['cc']($total + $service_fee);
+        $grand_total_cc                 = $total + $service_fee + $payment_processor_fee_cc;
+
+        //GC
+        $payment_processor_fee_gc       = $payment['payment_processor_fee']['gc']($total + $service_fee);
+        $grand_total_gc                 = $total + $service_fee + $payment_processor_fee_gc;
+
         return view('cart',[
-            'items' => \Cart::getContent(),
-            'total' => \Cart::getTotal()
+            'items'                 => \Cart::getContent(),
+            'total'                 => $total,
+            'service_fee'           => $service_fee,
+            'payment_processor_fee' => [
+                'cc' => $payment_processor_fee_cc,
+                'gc' => $payment_processor_fee_gc
+            ],
+            'grand_total'           => [
+                'cc' => $grand_total_cc,
+                'gc' => $grand_total_gc
+            ]
         ]);
     }
 
