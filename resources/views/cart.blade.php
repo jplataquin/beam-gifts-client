@@ -51,16 +51,15 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                    <div class="form-group">
-                            <select class="form-control" id="paymentMethod" name="paymentMethod">
-                                <option value="cc">Credit Card</option>
-                                <option value="gc">Gcash</option>
-                            </select>
-                        </div>
+                        <div class="form-group">
+                                <select class="form-control" id="paymentMethod" name="paymentMethod">
+                                    <option value="cc">Credit Card</option>
+                                    <option value="gc">Gcash</option>
+                                </select>
+                            </div>
                     </div>
                     <div class="col text-end">
-                        <div>
-                            
+                              
                             <div class="row">
                                 <div class="col-md-9 col-sm-6 text-end">
                                     <strong>Total</strong>
@@ -71,29 +70,24 @@
                                 <div class="col-md-9 text-end font-weight-bold">
                                     <strong>Service Fee</strong>
                                 </div>
-                                <div class="col-md-3" id="service_fee">PHP {{ number_format($service_fee,2) }}</div>
+                                <div class="col-md-3" id="serviceFee">PHP {{ number_format($service_fee,2) }}</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-sm-6 text-end font-weight-bold">
                                     <strong>Payment Processor</strong>
                                 </div>
-                                <div class="col-md-3 col-sm-6" id="payment_processor">
-                                    PHP {{ number_format($payment_processor_fee['cc'],2) }}
-                                </div>
+                                <div class="col-md-3 col-sm-6" id="paymentProcessor"></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-sm-6 text-end font-weight-bold">
                                     <strong>Grand Total</strong>
                                 </div>
-                                <div class="col-md-3 col-sm-6" id="grand_total">
-                                    PHP {{ number_format($grand_total['cc'],2) }}
-                                </div>
+                                <div class="col-md-3 col-sm-6" id="grandTotal"></div>
                             </div>
                             
-                        </div>
 
-                        <button id="checkout" class="btn btn-primary">Check Out</button>
-                    </div>
+                            <button id="checkout" class="btn btn-primary">Check Out</button>
+                    
                     </div>
                 </div>
             </div>
@@ -107,15 +101,18 @@
         const totalEl           = document.querySelector('#total');
         const emptyPrompt       = document.querySelector('#emptyPrompt');
         const paymentMethodBox  = document.querySelector('#paymentMethodBox');
-        const serviceFee        = document.querySelector('#service_fee');
-        const paymentProcessor  = document.querySelector('#payment_processor');
-        const grandTotal        = document.querySelector('#grand_total');
+        const serviceFee        = document.querySelector('#serviceFee');
+        const paymentProcessor  = document.querySelector('#paymentProcessor');
+        const grandTotal        = document.querySelector('#grandTotal');
+        const paymentMethod     = document.querySelector('#paymentMethod');
+
+        $paymentCalculation = JSON.parse("{{$paymentCalculation}}");
 
         checkoutBtn.onclick = (e) => {
-            let paymentMethod = document.querySelector('#paymentMethod').value;
+
 
             axios.post('/checkout', {
-                'paymentMethod': paymentMethod
+                'paymentMethod': paymentMethod.value
             }).then(reply=>{
 
                 if(reply.status != 200){
@@ -197,6 +194,25 @@
                 });
             }
         });
+
+        function updatePayment(){
+            switch(paymentMethod.value){
+                case 'cc':
+                    paymentProcessor.innerText = window.util.moneyFormat('PHP',paymentCalculation.cc.payment_processor_fee);
+                    grandTotal.innerText = window.util.moneyFormat('PHP',paymentCalculation.cc.grand_total);
+                    break;
+                case 'gc':
+                    paymentProcessor.innerText = window.util.moneyFormat('PHP',paymentCalculation.gc.payment_processor_fee);
+                    grandTotal.innerText = window.util.moneyFormat('PHP',paymentCalculation.gc.grand_total);
+                    break;
+            }
+        }
+
+        updatePayment();
+
+        paymentMethod.onchange = (e)=>{
+            updatePayment();
+        }
     </script>
 @endsection
 
