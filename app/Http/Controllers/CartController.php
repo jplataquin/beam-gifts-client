@@ -37,7 +37,7 @@ class CartController extends Controller
             'items'                 => \Cart::getContent(),
             'total'                 => $total,
             'service_fee'           => $service_fee,
-            'paymentCalculation'    => json_encode( [
+            'paymentCalculation'    => [
                 'cc' => [
                     'payment_processor_fee' => $payment_processor_fee_cc,
                     'grand_total'           => $grand_total_cc
@@ -46,7 +46,7 @@ class CartController extends Controller
                     'payment_processor_fee' => $payment_processor_fee_gc,
                     'grand_total'           => $grand_total_gc
                 ]
-            ] )
+            ] 
         ]);
     }
 
