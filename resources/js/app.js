@@ -209,6 +209,6 @@ window.util.clearCart = (data) =>{
 
 
 window.util.moneyFormat = (currency,number) => {
-    console.log(number);
-    return currency.toUpperCase()+' '+number.toFixed(2).toLocaleString('en-US');
+ 
+    return currency.toUpperCase()+' '+number.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 } 
