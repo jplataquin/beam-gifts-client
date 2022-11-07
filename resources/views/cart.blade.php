@@ -94,8 +94,8 @@
         </div>
 
         
-        @json($paymentCalculation)
-        
+        {{$paymentCalculation}}
+
     <script type="module">
 
         const checkoutBtn       = document.querySelector('#checkout');
