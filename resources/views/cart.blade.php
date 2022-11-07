@@ -106,7 +106,7 @@
         const grandTotal        = document.querySelector('#grandTotal');
         const paymentMethod     = document.querySelector('#paymentMethod');
 
-        $paymentCalculation = JSON.parse('{{$paymentCalculation}}');
+        $paymentCalculation = JSON.parse('@json($paymentCalculation)');
 
         checkoutBtn.onclick = (e) => {
 
