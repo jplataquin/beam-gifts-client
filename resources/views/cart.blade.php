@@ -178,6 +178,7 @@
 
                     window.util.cartQuantity(qty);
 
+                    
                     if(qty <= 0){
                         emptyPrompt.classList.remove('d-none'); 
                         emptyPrompt.classList.add('d-block');
