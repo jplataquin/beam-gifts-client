@@ -192,8 +192,11 @@
                         paymentMethodBox.classList.add('d-block');
                     }
 
+                    console.log(1,paymentCalculation);
+
                     //Update payment Calculation
                     paymentCalculation = reply.data.paymentCalculation;
+                    console.log(2,paymentCalculation);
                     updatePayment();
 
                 });
@@ -201,6 +204,7 @@
         });
 
         function updatePayment(){
+            console.log(3,paymentCalculation);
             switch(paymentMethod.value){
                 case 'cc':
                     paymentProcessor.innerText = window.util.moneyFormat('PHP',paymentCalculation.cc.payment_processor_fee);
