@@ -172,7 +172,7 @@
 
                     document.querySelector('#item-'+id).remove();
 
-                    totalEl.innerText = window.util.moneyFormat('PHP',reply.data.total);
+                 //   totalEl.innerText = window.util.moneyFormat('PHP',reply.data.total);
 
                     let qty =  Object.keys(reply.data.items).length ?? 0;
 
