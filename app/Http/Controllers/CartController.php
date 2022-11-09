@@ -146,6 +146,7 @@ class CartController extends Controller
             'data'=> [
                 'id'    => $request->id,
                 'items' => $cart->getContent(),
+                'total' => $total,
                 'paymentCalculation'    => [
                     'cc' => [
                         'payment_processor_fee' => $payment_processor_fee_cc,
