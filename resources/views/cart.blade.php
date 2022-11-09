@@ -188,10 +188,14 @@
                         emptyPrompt.classList.remove('d-block');
                         emptyPrompt.classList.add('d-none');
 
-                        
                         paymentMethodBox.classList.remove('d-none');
                         paymentMethodBox.classList.add('d-block');
                     }
+
+                    //Update payment Calculation
+                    paymentCalculation = reply.data.paymentCalculation;
+                    updatePayment();
+
                 });
             }
         });

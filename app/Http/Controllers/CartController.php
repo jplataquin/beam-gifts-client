@@ -122,9 +122,23 @@ class CartController extends Controller
             ]);
         }
 
+        $payment = config('payment');
+
         $cart = \Cart::session(Auth::user()->id);
         
         $cart->remove($request->id);
+
+        $total = $cart->getTotal();
+
+        $service_fee  = $payment['service_fee'];
+
+        //CC
+        $payment_processor_fee_cc       = $payment['payment_processor_fee']['cc']($total + $service_fee);
+        $grand_total_cc                 = $total + $service_fee + $payment_processor_fee_cc;
+
+        //GC
+        $payment_processor_fee_gc       = $payment['payment_processor_fee']['gc']($total + $service_fee);
+        $grand_total_gc                 = $total + $service_fee + $payment_processor_fee_gc;
 
         return response()->json([
             'status' => 1,
@@ -132,7 +146,16 @@ class CartController extends Controller
             'data'=> [
                 'id'    => $request->id,
                 'items' => $cart->getContent(),
-                'total' => $cart->getTotal()
+                'paymentCalculation'    => [
+                    'cc' => [
+                        'payment_processor_fee' => $payment_processor_fee_cc,
+                        'grand_total'           => $grand_total_cc
+                    ],
+                    'gc' => [
+                        'payment_processor_fee' => $payment_processor_fee_gc,
+                        'grand_total'           => $grand_total_gc
+                    ]
+                ]
             ]
         ]);
     }
