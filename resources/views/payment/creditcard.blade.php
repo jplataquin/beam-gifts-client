@@ -197,7 +197,7 @@
         el.setRangeText(newText, start, end);
     }
 
-    ccno.onkeypress = (e)=>{
+    ccno.onkeydown = (e)=>{
         e.preventDefault();
 
         let val = String.fromCharCode(e.keyCode);
