@@ -202,7 +202,11 @@
 
         let val = String.fromCharCode(e.keyCode);
         
-        ccno.value += val;
+        let oldVal = ccno.value;
+
+        let newVal =oldVal.match(/.{1,4}/g);
+
+        ccno.value = newVal.join();
     }
 
     expiry.onkeydown = (e)=>{
