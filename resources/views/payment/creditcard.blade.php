@@ -410,6 +410,10 @@
            
         });
 
+        if(!flag){
+            $q('.input-field-invalid').first().focus();
+        }
+
         return flag;
     }
 
