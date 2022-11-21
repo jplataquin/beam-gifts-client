@@ -569,11 +569,11 @@
                     failed(1,data,paymentMethodId,paymentIntentId);
                 });
                 
-                throw new Error(response);
+                throw response;
 
             }else{
 
-                throw new Error(response);
+                throw response;
             }
 
         }).then(response => { 
