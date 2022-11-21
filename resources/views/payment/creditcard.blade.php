@@ -201,8 +201,8 @@
         e.preventDefault();
 
         let val = String.fromCharCode(e.keyCode);
-        console.log(val);
-        insertAtCaret(val,ccno);
+        
+        ccno.value += val;
     }
 
     expiry.onkeydown = (e)=>{
