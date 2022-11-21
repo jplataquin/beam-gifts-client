@@ -58,7 +58,7 @@
                                             <label for="number" class="checkout-label fs-6">Choose country</label><br>
                                             <select class="form-select input-field my-1 col-12 fs-6 v-required" id="country">
                                                 @foreach(config('selectoptions')['countries'] as $key => $text)
-                                                    <option value="{{$key}}">{{$text}}</option>
+                                                    <option value="{{$key}}" @if($key == 'PH') selected="true" @endif >{{$text}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -295,10 +295,10 @@
                     'attributes':{
                         type:'card',
                         details:{
-                            card_number : ccno.value,
+                            card_number : parseInt(ccno.value.replaceAll(' ','')),
                             exp_month   : parseInt(exp[0]),
                             exp_year    : parseInt(exp[1]),
-                            cvc         : cvc.value
+                            cvc         : cvc.value.trim()
                         },
                         billing:{
                             address:{
@@ -420,7 +420,6 @@
     function showIframe(url){
         formContainer.style.display = 'none';
         iframe.src                  = url;
-
         mainContainer.append(iframe);
     }
 
@@ -428,17 +427,11 @@
         
         iframe.style.display = 'none';
         statusEl.innerText = 'Success';
-        console.log('Success');
-
-        console.log(paymentIntent,paymentMethodId,paymentIntentId);
-
         document.location.href = '/myorders/{{$uid}}';
     }
 
     function failed(type,data,paymentMethodId,paymentIntentId){
         
-        console.log('FAILED',type,data);
-
         modalTitle.innerText    = 'Uh-oh';
         mTitle.innerText        = 'Failed';
         statusEl.innerText      = '';
@@ -451,9 +444,9 @@
             infoEl.append(
                 t.div(()=>{
                     
-                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
                     
-                    t.p({class:'text-danger'},'Invalid data input');
+                    t.p({class:'text-danger'},'One or more of the data you entered is invalid');
                     
                     t.div({class:'mb-3'},()=>{
                         t.a({
@@ -478,7 +471,7 @@
             infoEl.append(
                 t.div(()=>{
                     
-                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
                     
                     t.p({class:'text-danger'},'Connection Error');
                     
@@ -506,7 +499,7 @@
             infoEl.append(
                 t.div(()=>{
                     
-                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
                     
                     t.p({class:'text-danger'},'Transaction Error: '+data);
                     
@@ -534,7 +527,7 @@
             infoEl.append(
                 t.div(()=>{
                     
-                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
                     
                     t.p({class:'text-danger'},`Unkown reply status from Payment Provider (${data})`);
                     
@@ -562,7 +555,7 @@
             infoEl.append(
                 t.div(()=>{
                     
-                    t.p({class:'text-danger'},'*** You have not been charged ***');
+                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
                     
                     data.map(item=>{
                         t.p({class:'text-danger'},item.detail);
