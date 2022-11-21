@@ -194,7 +194,7 @@
 
         console.log(start,end);
         
-        el.setRangeText(newText, start, end, 'select');
+        el.setRangeText(newText, start, end);
     }
 
     ccno.onkeydown = (e)=>{
