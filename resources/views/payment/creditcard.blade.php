@@ -194,6 +194,12 @@
 
     ccno.onkeyup = (e)=>{
 
+        let keyCode = e.which ? e.which : e.keyCode;
+
+        if(!((keyCode >= 48 && keyCode <= 57) || keyCode == 8)){
+            reutrn false;
+        }
+
         let oldVal = ccno.value.replaceAll(' ','');
 
         let newVal = oldVal.match(/.{1,4}/g);
