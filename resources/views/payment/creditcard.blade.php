@@ -194,7 +194,6 @@
 
     ccno.onkeyup = (e)=>{
 
-
         let oldVal = ccno.value.replaceAll(' ','');
 
         let newVal = oldVal.match(/.{1,4}/g);
@@ -203,6 +202,18 @@
             ccno.value = newVal.join(' ');
         }
         
+    }
+
+    ccno.onchange = (e)=>{
+        
+        let oldVal = ccno.value.replaceAll(' ','');
+
+        let newVal = oldVal.match(/.{1,4}/g);
+
+        if(newVal != null){
+            ccno.value = newVal.join(' ');
+        }
+
     }
 
     ccno.onpaste = (e)=>{
