@@ -295,7 +295,7 @@
                     'attributes':{
                         type:'card',
                         details:{
-                            card_number : parseInt(ccno.value.replaceAll(' ','')),
+                            card_number : ccno.value.replaceAll(' ',''),
                             exp_month   : parseInt(exp[0]),
                             exp_year    : parseInt(exp[1]),
                             cvc         : cvc.value.trim()
