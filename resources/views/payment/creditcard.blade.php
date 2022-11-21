@@ -222,7 +222,7 @@
         let pastedData      = clipboardData.getData('Text');
 
         setTimeout(()=>{
-            ccno.onchage();
+            ccno.onchange();
         },0);
 
         return /^\d+$/.test(pastedData);
