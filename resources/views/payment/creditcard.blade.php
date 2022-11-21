@@ -202,15 +202,14 @@
 
         let val = String.fromCharCode(e.keyCode);
         
+        
+        ccno.value += val;
+
         let oldVal = ccno.value;
 
         let newVal = oldVal.match(/.{1,4}/g);
-        console.log(newVal);
-        if(newVal){
-            ccno.value = newVal.join();
-        }else{
-            ccno.value += val;
-        }
+        ccno.value = newVal.join();
+    
         
     }
 
