@@ -552,7 +552,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .input-field-invalid:focus{
-    border: 1px solid #dc3545 !important;
+    outline: none !important;
+    border:1px solid #dc3545;
+    box-shadow: 0 0 10px #dc3545;
 
 }
 
