@@ -15,8 +15,8 @@
                             </p>
                             <form action="">
                                 <div class="form-field">
-                                    <label for="name" class="checkout-label fs-6">Name on card:</label><br>
-                                    <input type="text" name="name" id="name" class="input-field my-1 col-12 fs-6" placeholder="Enter Name">
+                                    <label for="name" class="checkout-label fs-6 ">Name on card:</label><br>
+                                    <input type="text" name="name" id="name" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter Name">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="number" class="checkout-label fs-6">Card No:</label><br>
@@ -26,27 +26,27 @@
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="date" class="checkout-label fs-6">Expiry date:</label><br>
-                                            <input type="text" name="date" id="expiry" class="input-field my-1 col-12 fs-6" placeholder="MM/YY">
+                                            <input type="text" name="date" id="expiry" class="input-field my-1 col-12 fs-6 v-required" placeholder="MM/YY">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="CVC" class="checkout-label fs-6">CVC:</label><br>
-                                            <input type="password" name="CVC" id="cvc" class="input-field my-1 col-12 fs-6" placeholder="***">
+                                            <input type="password" name="CVC" id="cvc" class="input-field my-1 col-12 fs-6 v-required" placeholder="***">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="payemail" class="checkout-label fs-6">Email address:</label><br>
-                                    <input type="email" name="payemail" id="email" class="input-field my-1 col-12 fs-6" placeholder="Enter Email address">
+                                    <input type="email" name="payemail" id="email" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter Email address">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="number" class="checkout-label fs-6">Phone/Mobile No:</label><br>
-                                    <input type="text" name="number" id="phone" class="input-field my-1 col-12 fs-6" placeholder="Enter Phone Number">
+                                    <input type="text" name="number" id="phone" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter Phone Number">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="Address1" class="checkout-label fs-6">Address Line 1:</label><br>
-                                    <input type="text" name="Address1" id="line_address_1" class="input-field my-1 col-12 fs-6" placeholder="Enter Line Address 1">
+                                    <input type="text" name="Address1" id="line_address_1" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter Line Address 1">
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="Address2" class="checkout-label fs-6">Address Line 2:</label><br>
@@ -56,7 +56,7 @@
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="number" class="checkout-label fs-6">Choose country</label><br>
-                                            <select class="form-select input-field my-1 col-12 fs-6" id="country">
+                                            <select class="form-select input-field my-1 col-12 fs-6 v-required" id="country">
                                                 @foreach(config('selectoptions')['countries'] as $key => $text)
                                                     <option value="{{$key}}">{{$text}}</option>
                                                 @endforeach
@@ -67,19 +67,19 @@
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="city" class="checkout-label fs-6">State/Provice</label><br>
-                                            <input type="text" name="state_province" id="state_province" class="input-field my-1 col-12 fs-6" placeholder="Enter State/Provice">
+                                            <input type="text" name="state_province" id="state_province" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter State/Provice">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="city" class="checkout-label fs-6">City</label><br>
-                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6" placeholder="Enter City">
+                                            <input type="text" name="city" id="city" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter City">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-field mt-2">
                                             <label for="CVC" class="checkout-label fs-6">Postal code:</label><br>
-                                            <input type="text" name="postal_zip_code" id="postal_zip_code" class="input-field my-1 col-12 fs-6" placeholder="Enter Postal Code">
+                                            <input type="text" name="postal_zip_code" id="postal_zip_code" class="input-field my-1 col-12 fs-6 v-required" placeholder="Enter Postal Code">
                                         </div>
                                     </div>
                                 </div>
@@ -383,6 +383,7 @@
 
     function validate(){
 
+        //Remove all invalid classes
         $q('.input-field-invalid').apply((el)=>{
 
             el.classList.remove('input-field-invalid');
@@ -392,11 +393,22 @@
 
         let flag = true;
         
+        //Validate creditcard
         if(!validateCardNumber(creditCardNo)){
 
             ccno.classList.add('input-field-invalid');
             flag = false;
         }
+
+
+        $q('.v-required').apply((el)=>{
+
+            if(el.value.trim() == ''){
+                flag = false;
+                el.classList.add('input-field-invalid');
+            }
+           
+        });
 
         return flag;
     }
