@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="form-field mt-2">
                                     <label for="number" class="checkout-label fs-6">Card No:</label><br>
-                                    <input type="number" name="number" id="ccno" class="input-field my-1 col-12 fs-6" placeholder="1111 **** **** ****">
+                                    <input type="text" name="number" id="ccno" class="input-field my-1 col-12 fs-6" placeholder="1111 **** **** ****">
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
@@ -186,18 +186,7 @@
 
     let paymentMethodId,clientKey,key,paymentIntentId;
 
-    function insertAtCaret(newText, el = document.activeElement) {
-        
-        console.log(el);
-
-        const [start, end] = [el.selectionStart, el.selectionEnd];
-
-        console.log(start,end);
-        
-        el.setRangeText(newText, start, end);
-    }
-
-    ccno.onkeyup = (e)=>{
+    ccno.onkeydown = (e)=>{
       //  e.preventDefault();
 
 
