@@ -178,14 +178,14 @@
     ccno.onkeydown = (e)=>{
         let keyCode = e.which ? e.which : e.keyCode;
         
-        return ((keyCode >= 48 && keyCode <= 57) || keyCode == 8);
+        return ((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode == 9);
     }
 
     ccno.onkeyup = (e)=>{
 
         let keyCode = e.which ? e.which : e.keyCode;
 
-        if(!((keyCode >= 48 && keyCode <= 57) || keyCode == 8)){
+        if(!( (keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode == 9)){
             return false;
         }
 
