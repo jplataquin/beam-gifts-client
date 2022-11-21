@@ -205,7 +205,7 @@
     }
 
     ccno.onchange = (e)=>{
-        
+
         let oldVal = ccno.value.replaceAll(' ','');
 
         let newVal = oldVal.match(/.{1,4}/g);
@@ -216,10 +216,6 @@
 
     }
 
-    ccno.onpaste = (e)=>{
-    
-        e.preventDefault();
-    }
 
     expiry.onkeydown = (e)=>{
         
