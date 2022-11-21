@@ -216,6 +216,14 @@
 
     }
 
+    ccno.onpaste = (e)=>{
+
+        let clipboardData   = e.clipboardData || window.clipboardData;
+        let pastedData      = clipboardData.getData('Text');
+
+        return /^\d+$/.test(pastedData);
+    }
+
 
     expiry.onkeydown = (e)=>{
         
