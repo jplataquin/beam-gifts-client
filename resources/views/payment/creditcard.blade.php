@@ -198,7 +198,7 @@
     }
 
     ccno.onkeydown = (e)=>{
-      //  e.preventDefault();
+        e.preventDefault();
 
         let val = String.fromCharCode(e.keyCode);
         console.log(val);
