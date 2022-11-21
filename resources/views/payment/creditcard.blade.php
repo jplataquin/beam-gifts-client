@@ -228,7 +228,8 @@
         
         let charCode = (e.which) ? e.which : event.keyCode;
         
-        if ( !(charCode >= 48 && charCode <= 57) && !(charCode >= 37 && charCode <= 40) && charCode != 8){
+        //if not numeric
+        if ( !(charCode >= 48 && charCode <= 57) && !(charCode >= 37 && charCode <= 40) && charCode != 8 && charCode != 9){
             return false;
         }
         
