@@ -186,14 +186,23 @@
 
     let paymentMethodId,clientKey,key,paymentIntentId;
 
-    let ccno_count = 1;
+    function insertAtCaret(newText, el = document.activeElement){
+        
+        console.log(el);
+
+        const [start, end] = [el.selectionStart, el.selectionEnd];
+
+        console.log(start,end);
+        
+        el.setRangeText(newText, start, end, 'select');
+    }
 
     ccno.onkeydown = (e)=>{
       //  e.preventDefault();
 
         let val = String.fromCharCode(e.keyCode);
-        
-        util.insertAtCaret(val);
+        console.log(val);
+        insertAtCaret(val);
     }
 
     expiry.onkeydown = (e)=>{
