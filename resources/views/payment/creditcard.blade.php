@@ -326,9 +326,8 @@
             
             }).catch(err=>{
 
+                console.log('stat',err.status);
                 console.log('HERE ERROR',err);
-
-                failed(2,err,paymentMethodId,paymentIntentId);
                 
             });
 
