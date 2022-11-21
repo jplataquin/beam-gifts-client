@@ -389,7 +389,7 @@
         
         if(!validateCardNumber(creditCardNo)){
 
-            consol.log('ERROR CCNO');
+            console.log('ERROR CCNO');
             flag = false;
         }
 
