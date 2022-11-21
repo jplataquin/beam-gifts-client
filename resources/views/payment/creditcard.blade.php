@@ -188,7 +188,7 @@
 
     ccno.onkeydown = (e)=>{
         let keyCode = e.which ? e.which : e.keyCode;
-        console.log(keyCode);
+
         return ((keyCode >= 48 && keyCode <= 57) || keyCode == 8);
     }
 
@@ -203,6 +203,17 @@
             ccno.value = newVal.join(' ');
         }
         
+    }
+
+    ccno.onpaste = (e)=>{
+    
+        let oldVal = ccno.value.replaceAll(' ','');
+
+        let newVal = oldVal.match(/.{1,4}/g);
+        
+        if(newVal != null){
+            ccno.value = newVal.join(' ');
+        }
     }
 
     expiry.onkeydown = (e)=>{
