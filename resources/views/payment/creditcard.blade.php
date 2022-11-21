@@ -186,15 +186,22 @@
 
     let paymentMethodId,clientKey,key,paymentIntentId;
 
-    function insertAtCaret(newText, el = document.activeElement){
+    function insertAtCaret(text, el = document.activeElement){
         
-        console.log(el);
-
-        const [start, end] = [el.selectionStart, el.selectionEnd];
-
-        console.log(start,end);
+        var val = el.value, endIndex, range, doc = el.ownerDocument;
         
-        el.setRangeText(newText, start, end, 'select');
+        if (typeof el.selectionStart == "number"
+                && typeof el.selectionEnd == "number") {
+            endIndex = el.selectionEnd;
+            el.value = val.slice(0, endIndex) + text + val.slice(endIndex);
+            el.selectionStart = el.selectionEnd = endIndex + text.length;
+        } else if (doc.selection != "undefined" && doc.selection.createRange) {
+            el.focus();
+            range = doc.selection.createRange();
+            range.collapse(false);
+            range.text = text;
+            range.select();
+        }
     }
 
     ccno.onkeydown = (e)=>{
