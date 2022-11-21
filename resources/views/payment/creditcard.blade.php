@@ -197,7 +197,7 @@
         let keyCode = e.which ? e.which : e.keyCode;
 
         if(!((keyCode >= 48 && keyCode <= 57) || keyCode == 8)){
-            reutrn false;
+            return false;
         }
 
         let oldVal = ccno.value.replaceAll(' ','');
