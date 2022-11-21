@@ -326,7 +326,6 @@
             
             }).catch(err=>{
 
-                console.log('stat',err.status);
 
                 if(err.status == 400){
                     err.json().then(data => {
