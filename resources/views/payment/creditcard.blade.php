@@ -205,7 +205,7 @@
         
         ccno.value += val;
 
-        let oldVal = ccno.value;
+        let oldVal = ccno.value.replaceAll(' ','');
 
         let newVal = oldVal.match(/.{1,4}/g);
         ccno.value = newVal.join(' ');
