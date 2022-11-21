@@ -169,26 +169,15 @@
         }
     });
 
-    const cardRegex = {
-        'mastercard' : /^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/,
-        'americanexpress' : /^3[47][0-9]{13}$/,
-        'visa': /^4[0-9]{12}(?:[0-9]{3})?$/,
-        'discovery': /^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/,
-        'maestro': /^(5018|5081|5044|5020|5038|603845|6304|6759|676[1-3]|6799|6220|504834|504817|504645)[0-9]{8,15}$/,
-        'jcb': /^(?:2131|1800|35[0-9]{3})[0-9]{11}$/,
-        'diners': /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/
-    }
+    let paymentMethodId,clientKey,key,paymentIntentId;
 
     iframe.onload = ()=>{
-        console.log('here');
         myModal.hide();
     };
 
-    let paymentMethodId,clientKey,key,paymentIntentId;
-
     ccno.onkeydown = (e)=>{
         let keyCode = e.which ? e.which : e.keyCode;
-        alert(keyCode);
+        
         return ((keyCode >= 48 && keyCode <= 57) || keyCode == 8);
     }
 
@@ -277,10 +266,16 @@
     payBtn.onclick = (e)=>{
        
         e.preventDefault();
+
+        //TODO VALIDATE DETAILS
+        if(!validate()){
+            return false;
+        }
+        
+        
         payBtn.disabled = true;
         myModal.show();
-        //TODO VALIDATE DETAILS
-
+        
         statusEl.innerText = 'Sending data';
     
 
@@ -342,8 +337,63 @@
         });
     }
 
+    function validateCardNumber(number){
+        
+        //Check if the number contains only numeric value  
+        //and is of between 13 to 19 digits
+        const regex = new RegExp("^[0-9]{13,19}$");
+        if (!regex.test(number)){
+            return false;
+        }
+
+        return luhnCheck(number);
+    }
+
+    function luhnCheck(val){
+        let checksum = 0; // running checksum total
+        let j = 1; // takes value of 1 or 2
+
+        // Process each digit one by one starting from the last
+        for (let i = val.length - 1; i >= 0; i--) {
+            let calc = 0;
+            // Extract the next digit and multiply by 1 or 2 on alternative digits.
+            calc = Number(val.charAt(i)) * j;
+
+            // If the result is in two digits add 1 to the checksum total
+            if (calc > 9) {
+                checksum = checksum + 1;
+                calc = calc - 10;
+            }
+
+            // Add the units element to the checksum total
+            checksum = checksum + calc;
+
+            // Switch the value of j
+            if (j == 1) {
+                j = 2;
+            } else {
+                j = 1;
+
+            }
+        }
+
+        //Check if it is divisible by 10 or not.
+        return (checksum % 10) == 0;
+    }
+
     function validate(){
-        console.log('validate');
+
+        let creditCardNo = ccno.value.replaceAll(' ','');
+
+        let flag = true;
+        
+        if(!validateCardNumber(creditCardNo)){
+
+            consol.log('ERROR CCNO');
+            flag = false;
+        }
+
+        return flag;
     }
 
     function showIframe(url){
