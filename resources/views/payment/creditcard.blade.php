@@ -327,7 +327,15 @@
             }).catch(err=>{
 
                 console.log('stat',err.status);
-                console.log('HERE ERROR',err);
+
+                if(err.status == 400){
+                    err.json().then(data => {
+                        failed(1,data,paymentMethodId,paymentIntentId);
+                    });
+                }else{
+                    failed(2,err,paymentMethodId,paymentIntentId);
+                }
+               
                 
             });
 
@@ -563,14 +571,6 @@
                
                 return response;
             
-            }else if(response.status == 400){
-
-                response.json().then(data => {
-                    failed(1,data,paymentMethodId,paymentIntentId);
-                });
-                
-                throw response;
-
             }else{
 
                 throw response;
