@@ -187,7 +187,11 @@
     let paymentMethodId,clientKey,key,paymentIntentId;
 
     ccno.onkeydown = (e)=>{
-      //  e.preventDefault();
+        let keyCode = e.which ? e.which : e.keyCode;
+        return ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+    }
+
+    ccno.onkeyup = (e)=>{
 
 
         let oldVal = ccno.value.replaceAll(' ','');
