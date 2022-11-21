@@ -202,7 +202,7 @@
 
         let val = String.fromCharCode(e.keyCode);
         
-        ccno.value = '1';
+        ccno.value = val;
     }
 
     expiry.onkeydown = (e)=>{
