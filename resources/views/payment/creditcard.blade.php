@@ -485,6 +485,8 @@
         infoEl.innerHTML = '';
 
         infoEl.append(prompt);
+        
+        console.log(type);
 
         if(type == 1){ //Validation Error
             
@@ -522,7 +524,14 @@
                             class:'btn btn-warning me-3',
                             href:'/cart',
                             role:'button'
-                        },'Cancel');
+                        },'Cancel').onclick = (e)=>{
+                            e.preventDefault();
+
+                            if(confirm('Are you sure you want to cancel this transation?')){
+                                document.location.href = '/cart';
+                            }
+
+                        };
 
                         t.a({
                             class:'btn btn-primary',
