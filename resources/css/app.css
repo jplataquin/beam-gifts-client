@@ -551,6 +551,12 @@ h1, h2, h3, h4, h5, h6, p{
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
+.input-field-invalid:focus{
+    border: 1px solid #dc3545 !important;
+
+}
+
+
 .frgPass{
     font-size: 14px;
     line-height: 24px;
