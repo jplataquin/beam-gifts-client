@@ -197,12 +197,12 @@
         el.setRangeText(newText, start, end);
     }
 
-    ccno.onkeydown = (e)=>{
+    ccno.onkeypress = (e)=>{
         e.preventDefault();
 
         let val = String.fromCharCode(e.keyCode);
         
-        ccno.value = ccno.value+'a';
+        //ccno.value = ccno.value+'a';
     }
 
     expiry.onkeydown = (e)=>{
