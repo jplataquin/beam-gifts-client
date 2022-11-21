@@ -221,6 +221,10 @@
         let clipboardData   = e.clipboardData || window.clipboardData;
         let pastedData      = clipboardData.getData('Text');
 
+        setTimeout(()=>{
+            ccno.onchage();
+        },0);
+
         return /^\d+$/.test(pastedData);
     }
 
