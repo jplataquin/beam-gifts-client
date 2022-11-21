@@ -188,7 +188,7 @@
 
     ccno.onkeydown = (e)=>{
         let keyCode = e.which ? e.which : e.keyCode;
-
+        alert(keyCode);
         return ((keyCode >= 48 && keyCode <= 57) || keyCode == 8);
     }
 
