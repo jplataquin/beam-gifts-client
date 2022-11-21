@@ -186,7 +186,7 @@
 
     let paymentMethodId,clientKey,key,paymentIntentId;
 
-    function insertAtCaret(newText, el = document.activeElement) => {
+    function insertAtCaret(newText, el = document.activeElement) {
         
         console.log(el);
 
