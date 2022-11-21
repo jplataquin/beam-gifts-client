@@ -197,13 +197,9 @@
         el.setRangeText(newText, start, end);
     }
 
-    ccno.onkeyup = (e)=>{
-        e.preventDefault();
+    ccno.onkeypress = (e)=>{
+      //  e.preventDefault();
 
-        let val = String.fromCharCode(e.keyCode);
-        
-        
-        ccno.value += val;
 
         let oldVal = ccno.value.replaceAll(' ','');
 
