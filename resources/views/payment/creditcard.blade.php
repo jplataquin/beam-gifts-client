@@ -197,7 +197,7 @@
         el.setRangeText(newText, start, end);
     }
 
-    ccno.onkeypress = (e)=>{
+    ccno.onkeyup = (e)=>{
       //  e.preventDefault();
 
 
@@ -205,7 +205,7 @@
 
         let newVal = oldVal.match(/.{1,4}/g);
         
-        if(newVal){
+        if(newVal != null){
             ccno.value = newVal.join(' ');
         }
         
