@@ -129,7 +129,7 @@
 </div>
 
 <script type="module">
-    import {Template, util} from '/adarna.js';
+    import {Template, util, $q} from '/adarna.js';
     import '/bootstrap.js';
 
     const name              = document.querySelector('#name');
@@ -383,13 +383,18 @@
 
     function validate(){
 
+        $q('.input-field-invalid').apply((el)=>{
+
+            el.classList.remove('input-field-invalid');
+        });
+
         let creditCardNo = ccno.value.replaceAll(' ','');
 
         let flag = true;
         
         if(!validateCardNumber(creditCardNo)){
 
-            console.log('ERROR CCNO');
+            ccno.classList.add('input-field-invalid');
             flag = false;
         }
 
