@@ -451,116 +451,58 @@
         statusEl.innerText      = '';
         loading.style.display   = 'none';
         
+        let message = t.p({class:'text-danger'},'');
+            
+        let prompt = t.div(()=>{
+                    
+            t.p({class:'text-danger'},'*** You have NOT been charged ***');
+            
+            t.el(message);
+
+            t.div({class:'mb-3'},()=>{
+                
+                t.a({
+                    class:'btn btn-warning me-3',
+                    role:'button'
+                },'Cancel').onclick = (e)=>{
+                    e.preventDefault();
+
+                    if(confirm('Are you sure you want to cancel this transation?')){
+                        document.location.href = '/cart';
+                    }
+
+                }
+
+                t.a({
+                    class:'btn btn-primary',
+                    href:'javascript:window.location.href=window.location.href',
+                    role:'button'
+                },'Retry');
+            })
+            
+        });
+
+        infoEl.innerHTML = '';
+
+        infoEl.append(prompt);
+
         if(type == 1){ //Validation Error
             
-            infoEl.innerHTML = '';
-
-            infoEl.append(
-                t.div(()=>{
-                    
-                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
-                    
-                    t.p({class:'text-danger'},'One or more of the data you entered is invalid');
-                    
-                    t.div({class:'mb-3'},()=>{
-                        t.a({
-                            class:'btn btn-warning me-3',
-                            href:'/cart',
-                            role:'button'
-                        },'Cancel');
-
-                        t.a({
-                            class:'btn btn-primary',
-                            href:'javascript:window.location.href=window.location.href',
-                            role:'button'
-                        },'Retry');
-                    })
-                   
-                })
-            );//End append
+            message.innerText = 'One or more of the data you entered is invalid';
+           
 
         }else if(type == 2){ //Connection Error
-            infoEl.innerHTML = '';
-
-            infoEl.append(
-                t.div(()=>{
-                    
-                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
-                    
-                    t.p({class:'text-danger'},'Connection Error');
-                    
-                    t.div({class:'mb-3'},()=>{
-                        t.a({
-                            class:'btn btn-warning me-3',
-                            href:'/cart',
-                            role:'button'
-                        },'Cancel');
-
-                        t.a({
-                            class:'btn btn-primary',
-                            href:'javascript:window.location.href=window.location.href',
-                            role:'button'
-                        },'Retry');
-                    })
-                   
-                })
-            );//End append
-
+            
+            message.innerText = 'Connection Error';
+           
+            
         }else if(type == 3){ //Transaction Error
             
-            infoEl.innerHTML = '';
-
-            infoEl.append(
-                t.div(()=>{
-                    
-                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
-                    
-                    t.p({class:'text-danger'},'Transaction Error: '+data);
-                    
-                    t.div({class:'mb-3'},()=>{
-                        t.a({
-                            class:'btn btn-warning me-3',
-                            href:'/cart',
-                            role:'button'
-                        },'Cancel');
-
-                        t.a({
-                            class:'btn btn-primary',
-                            href:'javascript:window.location.href=window.location.href',
-                            role:'button'
-                        },'Retry');
-                    })
-                
-                })
-            );//End append
+            message.innerText = 'Transaction Error: '+data;
 
         }else if(type == 4){ //Unkown Reply Ststus
 
-            infoEl.innerHTML = '';
-
-            infoEl.append(
-                t.div(()=>{
-                    
-                    t.p({class:'text-danger'},'*** You have NOT been charged ***');
-                    
-                    t.p({class:'text-danger'},`Unkown reply status from Payment Provider (${data})`);
-                    
-                    t.div({class:'mb-3'},()=>{
-                        t.a({
-                            class:'btn btn-warning me-3',
-                            href:'/cart',
-                            role:'button'
-                        },'Cancel');
-
-                        t.a({
-                            class:'btn btn-primary',
-                            href:'javascript:window.location.href=window.location.href',
-                            role:'button'
-                        },'Retry');
-                    })
-                   
-                })
-            );//End append
+            message.innerText = `Unkown reply status from Payment Provider (${data})`;
         
         }else if(type == 5){ //Subcode error
         
