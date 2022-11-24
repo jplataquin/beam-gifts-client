@@ -8,7 +8,7 @@
 
                 <div class="card mt-5">
                     <div class="card-header text-center">
-                        Order Ref: {{$order->uid}}
+                        <strong>Order Ref:</strong> {{$order->uid}}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Status: {{$status}}</h5>
