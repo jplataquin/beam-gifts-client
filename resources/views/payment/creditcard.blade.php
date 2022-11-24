@@ -493,11 +493,10 @@
 
         infoEl.append(prompt);
         
-        console.log(type);
 
         if(type == 1){ //Validation Error
             
-            message.innerText = 'One or more of the data you entered is invalid';
+            message.innerText = 'The data you entered is invalid';
            
 
         }else if(type == 2){ //Connection Error
