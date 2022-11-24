@@ -17,23 +17,31 @@
                         <p>Date Created: {{$date_created}}</p>
                         <p>Date Paid: {{$date_paid}}</p>
                     </div>
+
+                    <ul class="list-group list-group-flush">
+                        @foreach($items as $item)
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    
+                                </div>
+                                <div class="col">
+                                    {{$item->item_name}}
+                                </div>
+                                <div class="col">
+                                    {{$item->consumed}} / {{$item->quantity}}
+                                </div>
+                            </div>
+                    
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
 
             </div>
         </div>
 
-        <h1>Items</h1>
-        <div>
-            @foreach($items as $item)
-                <div>
-                    {{$item->model->photo}}
-                    <div>
-                        {{$item->item_name}}
-                    </div>
-                    {{$item->consumed}} / {{$item->quantity}}
-                </div>
-            @endforeach
-        </div>
+
     </div>
 
 
