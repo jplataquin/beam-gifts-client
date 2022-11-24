@@ -23,7 +23,7 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-lg-2 text-center">
-                                    <img src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{ json_decode($item->model->photo,true)['150px'] }}" alt=""  width="150px"/>
+                                    <img src="{{config('app')['api_base_url']}}storage/photos/item/200px/{{ json_decode($item->model->photo,true)['200px'] }}" alt=""  width="200px"/>
                                 </div>
                                 <div class="col-lg-5">
                                     {{$item->item_name}}
