@@ -7,7 +7,7 @@
             <div class="col-12">
 
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-center">
                         Order Ref: {{$order->uid}}
                     </div>
                     <div class="card-body">
