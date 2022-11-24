@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
 
-                <div class="card mt-5">
+                <div class="card mt-5 mb-5">
                     <div class="card-header text-center">
                         <strong>Order Ref:</strong> {{$order->uid}}
                     </div>
@@ -23,7 +23,7 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col">
-                                    
+                                {{$item->model->photo}}
                                 </div>
                                 <div class="col">
                                     {{$item->item_name}}
