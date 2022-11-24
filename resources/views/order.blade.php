@@ -22,13 +22,13 @@
                         @foreach($items as $item)
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col">
-                                    <img src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{ json_decode($item->model->photo,true)['150px'] }}" alt=""  width="50px"/>
+                                <div class="col-lg-2 text-center">
+                                    <img src="{{config('app')['api_base_url']}}storage/photos/item/150px/{{ json_decode($item->model->photo,true)['150px'] }}" alt=""  width="150px"/>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-5">
                                     {{$item->item_name}}
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-5">
                                     {{$item->consumed}} / {{$item->quantity}}
                                 </div>
                             </div>
