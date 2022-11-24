@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
 
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header text-center">
                         Order Ref: {{$order->uid}}
                     </div>
