@@ -4,10 +4,10 @@
 
     <div class="container">
         <h1>My Orders</h1>
-
-        <div id="list">
-        </div>
-        <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
+        <hr>
+        <div id="list"></div>
+    
+        <button id="showMoreBtn" class="btn btn-full btn-primary w-100">Show More</button>
     </div>
 
     <script type="module">
