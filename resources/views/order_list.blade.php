@@ -33,7 +33,7 @@
                 }
 
                 reply.data.orders.map(item=>{
-
+                    console.log(item);
                     let el = t.div({class:'card mb-3'},()=>{
                         t.div({class:'card-header'},'Order Ref: '+item.id);
                         t.div({class:'card-body'},()=>{
