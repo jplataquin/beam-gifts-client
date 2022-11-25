@@ -21,9 +21,9 @@
         </div>
         <div class="col-md-6">
 
-            <div style="margin-top:50%"> 
+            <div class="qr_container"> 
                 <div class="text-center mb-3" width="100%" id="qr_logo"></div>
-                
+            </div>
                 
                 <div class="border border-primary mb-3 text-center"> 
                     <h2 class="mt-3 mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
@@ -35,6 +35,11 @@
 
 </div>
 
+<style>
+    .qr_container canvas{
+        width: 100% !important;
+    }
+</style>
 
 <script type="module">
     import '/easyqrcode.js';
