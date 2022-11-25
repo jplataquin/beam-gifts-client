@@ -35,7 +35,7 @@
             </div>
                 
             <div class="border border-primary text-center d-lg-none"> 
-                <h2 class="mb-3 pt-2">Used: {{$item->consumed}} / {{$item->quantity}} </h2>
+                <h2 class="mb-3 pt-2">🎁: {{$item->consumed}} / {{$item->quantity}} </h2>
             </div>
        </div>   
     </div>
