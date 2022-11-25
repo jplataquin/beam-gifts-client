@@ -38,14 +38,14 @@
                     <button class="nav-link active" href="#"  data-bs-toggle="tab" data-bs-target="#howto-tab-pane" role="tab" aria-controls="howto-tab-pane" aria-selected="true">How to Claim?</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" href="#"  data-bs-toggle="tab" data-bs-target="#stores-tab-pane" role="tab" aria-controls="stores-tab-pane" aria-selected="true">How to Claim?</button>
+                    <button class="nav-link" href="#"  data-bs-toggle="tab" data-bs-target="#stores-tab-pane" role="tab" aria-controls="stores-tab-pane" aria-selected="true">Branches</button>
                 </li>
             </ul>
             <div class="tab-content mt-4" id="myTabContent">
                 <div class="tab-pane fade show active" id="howto-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
                     <p>1</p>
                 </div>
-                <div class="tab-pane fade show active" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
+                <div class="tab-pane fade show" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
                     <p>2</p>
                 </div>
             </div>
