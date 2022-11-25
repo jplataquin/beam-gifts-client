@@ -6,9 +6,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <img src="{{ asset('images/gift-1.png') }}" width="100px" />
+            <img src="{{ asset('images/gift-1.png') }}" width="50px" />
             <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
-            <img src="{{ asset('images/gift-1.png') }}" width="100px" />
+            <img src="{{ asset('images/gift-1.png') }}" width="50px" />
             
         </div>
     </div>
