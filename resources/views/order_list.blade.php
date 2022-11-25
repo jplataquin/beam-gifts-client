@@ -67,7 +67,8 @@
                 page++;
 
 
-            }).catch(e=>{
+            }).catch(err=>{
+                console.log(err);
                 alert('Something went wrong');
             });
         }
