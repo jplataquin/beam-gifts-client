@@ -42,7 +42,7 @@
                                     {{$item->price}}
                                     
                                 </div>
-                                <div class="col-lg-5 col">
+                                <div class="col-lg-5 col pt-2">
                                     <button class="btn btn-primary">Open Gift Link</button>
                                 </div>
                             </div>
