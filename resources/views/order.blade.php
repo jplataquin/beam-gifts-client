@@ -22,7 +22,7 @@
                         @foreach($items as $item)
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-12 bg-darkmagenta">
+                                <div class="col-lg-12 bg-darkmagenta pl-2 pt-2">
                                     <h5 class="fontcolor-white" >{{$item->item_name}}</h5>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                     
                                 </div>
                                 <div class="col-lg-5">
-                                    
+                                    <button class="btn btn-primary">Open Gift Link</button>
                                 </div>
                             </div>
                     
