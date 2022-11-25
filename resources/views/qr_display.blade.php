@@ -18,10 +18,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
-            <h5>{{$brand->name}}</h5>
-            <img class="img mb-3" width="100%" src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{ json_decode($brand->photo,true)['200px'] }}"/>    
+        <div class="col-sm-2">
+            <img class="img mb-3" width="200px" src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{ json_decode($brand->photo,true)['200px'] }}"/>    
             
+        </div>
+        <div class="col-sm-10">
+            <h5>{{$brand->name}}</h5>
         </div>
     </div>
     <div class="row">
