@@ -34,7 +34,7 @@
                 <div class="text-center" width="100%" id="qr_logo"></div>
             </div>
                 
-            <div class="border border-primary text-center d-lg-none d-md-block d-sm-block"> 
+            <div class="border border-primary text-center d-none d-md-block"> 
                 <h2 class="mb-3 pt-2">Used: {{$item->consumed}} / {{$item->quantity}} </h2>
             </div>
        </div>   
