@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container bg-darkmagenta">
+<div class="container">
     <div class="row">
         <div class="col-md-12 pt-3">
             <div class="border border-primary mb-3 p-3">
@@ -38,8 +38,8 @@
             item_uid: '{{$item->item_uid}}'
         }),
         
-        width: 300,
-        height: 300,
+        width: '100%',
+        height: '100%',
         colorDark: "#000000",
 
         PI: '#00008F',
