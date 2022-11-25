@@ -49,7 +49,7 @@
                                 <div class="col-lg-5 col pt-2 text-center">
                                     <div class="d-grid gap-2 mx-auto">
                                         <button class="btn btn-warning mb-2">Copy Link</button>
-                                        <button class="btn btn-primary mb-2">Open Link</button>
+                                        <a class="btn btn-primary mb-2" href="/gift/{{$item->uid}}" target="__blank">Open Link</a>
                                     </div>
                                 </div>
                             </div>
