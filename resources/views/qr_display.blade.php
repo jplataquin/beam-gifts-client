@@ -77,10 +77,10 @@
 
                 </div>
                 <div class="tab-pane fade show" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
-                    {{$brand}}
+                
 
                     <div class="branchList">
-                        @foreach($brand->branches as $branch)
+                        @foreach(json_decode($brand->branches,true) as $branch)
                             <div class="border border-primary p-1 mb-2">
                                 <h5>{{$branch['name']}}</h5>
                                 <label>{{$branch['address']}}</label>
