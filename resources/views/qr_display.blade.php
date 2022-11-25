@@ -5,6 +5,11 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+            <img src="{{ asset('images/gift-1.png') }}" class="w-200" />
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 pt-3">
             <div class="border border-primary mb-3 p-3 text-center">
                 <h3>You received an E-gift from:</h3>
@@ -22,10 +27,10 @@
         <div class="col-md-6">
 
             <div class="qr_container"> 
-                <div class="text-center mb-3" width="100%" id="qr_logo"></div>
+                <div class="text-center" width="100%" id="qr_logo"></div>
             </div>
                 
-            <div class="border border-primary mb-3 text-center"> 
+            <div class="border border-primary text-center"> 
                 <h2 class="mt-3 mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
        </div>   
@@ -66,7 +71,7 @@
                     
                     <hr>
 
-                    <h5>*** Contact Us ***</h5>
+                    <h5>Contact Us</h5>
                     <p class="">
                         In the event that you have any questions or clarifications you can contact us at
                         <ul>
