@@ -20,9 +20,14 @@
             </div>
         </div>
         <div class="col-md-6 text-center">
-            <div class="text-center mb-3" width="100%" id="qr_logo"></div>
-            <div class="border border-primary mb-3"> 
-                <h2 class="mt-3 mb-3">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
+            <div class="d-flex align-items-center">
+                <div class="box w-100">
+                    <div class="text-center mb-3" width="100%" id="qr_logo"></div>
+                    
+                    <div class="border border-primary mb-3"> 
+                        <h2 class="mt-3 mb-3">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -38,8 +43,8 @@
             item_uid: '{{$item->item_uid}}'
         }),
         
-        width: '100%',
-        height: '100%',
+        width: 300,
+        height: 300,
         colorDark: "#000000",
 
         PI: '#00008F',
