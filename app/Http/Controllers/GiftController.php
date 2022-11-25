@@ -39,7 +39,7 @@ class GiftController extends Controller
         
         return view('qr_display',[
             'item'  => $orderItem,
-            'brand' => $orderItem->model->brand,
+            'brand' => $orderItem->model->brand(),
             'user'  => $user,
             'photo' => json_decode($orderItem->model->photo,true)
         ]);
