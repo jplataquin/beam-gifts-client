@@ -26,11 +26,16 @@
                                     <img src="{{config('app')['api_base_url']}}storage/photos/item/200px/{{ json_decode($item->model->photo,true)['200px'] }}" alt=""  width="200px"/>
                                 </div>
                                 <div class="col-lg-5">
-                                    {{$item->item_name}}
-                                    <br>
+                                    <h5>{{$item->item_name}}</h5>
+                                    
                                     <strong>Used</strong>
                                     <br>
                                     {{$item->consumed}} / {{$item->quantity}}
+                                    <br>
+                                    <strong>Value</strong>
+                                    <br>
+                                    {{$item->price}}
+                                    
                                 </div>
                                 <div class="col-lg-5">
                                     
