@@ -25,12 +25,25 @@
                 <div class="text-center mb-3" width="100%" id="qr_logo"></div>
             </div>
                 
-                <div class="border border-primary mb-3 text-center"> 
-                    <h2 class="mt-3 mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
+            <div class="border border-primary mb-3 text-center"> 
+                <h2 class="mt-3 mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
+            </div>
+       </div>   
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active" href="#"  data-bs-toggle="tab" data-bs-target="#howto-tab-pane" role="tab" aria-controls="howto-tab-pane" aria-selected="true">How to Claim?</button>
+                </li>
+            </ul>
+            <div class="tab-content mt-4" id="myTabContent">
+                <div class="tab-pane fade show active" id="howto-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
+                    Hello World
                 </div>
             </div>
         </div>
-        
     </div>
 
 </div>
