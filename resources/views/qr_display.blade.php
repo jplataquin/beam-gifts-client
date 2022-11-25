@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="container bg-darkmagenta">
     <div class="row">
         <div class="col-md-12 pt-3">
             <div class="border border-primary mb-3 p-3">
@@ -22,7 +22,7 @@
         <div class="col-md-6 text-center">
             <div class="text-center mb-3" width="100%" id="qr_logo"></div>
             <div class="border border-primary mb-3"> 
-                <h2 class="mt-3 mb-3">{{$item->consumed}} / {{$item->quantity}}</h2>
+                <h2 class="mt-3 mb-3">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
         </div>
         
