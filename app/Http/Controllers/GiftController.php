@@ -37,7 +37,6 @@ class GiftController extends Controller
 
         $user = $user::find($orderItem->user_id);
         
-        print_r($orderItem->model->brand->branches);exit;
         return view('qr_display',[
             'item'  => $orderItem,
             'brand' => $orderItem->model->brand,
