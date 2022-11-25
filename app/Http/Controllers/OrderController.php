@@ -83,7 +83,7 @@ class OrderController extends Controller
         $order = $order->where('user_id',$user_id);
 
         if($status){
-            
+
             $order = $order->where('status',$status);
         }
 
@@ -99,7 +99,8 @@ class OrderController extends Controller
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'orders' => $result
+                'orders' => $result,
+                'status' => $status
             ]
         ]);
     }
