@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-6">
 
-            <div class="qr_container" style="margin-bottom:2.5px"> 
+            <div class="qr_container" style="margin-bottom:9.1px"> 
                 <div class="text-center" width="100%" id="qr_logo"></div>
             </div>
                 
