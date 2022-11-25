@@ -78,16 +78,13 @@ class OrderController extends Controller
         $date_created_order = $request->input('date_created_order') ?? 'desc';
         $status             = $request->input('status') ?? '';
 
-        $order = new Order;
+        $order = new Order();
 
-        DB::enableQueryLog();
         
         $order = $order->where('user_id',$user_id);
 
-        if($status){
-
-            $order = $order->where('status','PAID');
-        }
+        $order = $order->where('status','PAID');
+        
 
         if($limit > 0){
             $page   = $page * $limit;
@@ -103,8 +100,7 @@ class OrderController extends Controller
             'message'=>'',
             'data'=> [
                 'orders' => $result,
-                'status' => $status,
-                'query' => DB::getQueryLog()
+                'status' => $status
             ]
         ]);
     }
