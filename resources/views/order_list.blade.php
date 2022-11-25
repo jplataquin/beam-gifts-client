@@ -5,6 +5,18 @@
     <div class="container mt-3 mb-5">
         <h1>My Orders</h1>
         <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Filter By</label>
+                        <select class="form-control">
+                            <option>asdsad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6"></div>
+            </div>
+        <hr>
         <div id="list"></div>
     
         <button id="showMoreBtn" class="btn btn-full btn-primary w-100">Show More</button>
