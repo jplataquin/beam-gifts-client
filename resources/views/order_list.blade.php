@@ -54,11 +54,11 @@
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Date Created: ');
-                                    t.txt( item.date_created );
+                                    t.txt( item.created_at );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Date Paid: ');
-                                    t.txt(item.date_paid);
+                                    
                                 });
                             });
 
