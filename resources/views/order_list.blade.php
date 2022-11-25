@@ -137,11 +137,14 @@
         list();
 
         orderBy.onchange = (e)=>{
-            console.log('asdasd');
+            page = 0;
+            listEl.innerHTML = '';
             list();
         }
 
         filterBy.onchange = (e)=>{
+            page = 0;
+            listEl.innerHTML = '';
             list();
         }
 

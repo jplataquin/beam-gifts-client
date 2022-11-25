@@ -83,7 +83,10 @@ class OrderController extends Controller
         
         $order = $order->where('user_id',$user_id);
 
-        $order = $order->where('status','PAID');
+        if($status){
+            $order = $order->where('status',$status);
+        }
+       
         
 
         if($limit > 0){
