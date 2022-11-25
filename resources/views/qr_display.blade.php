@@ -19,21 +19,19 @@
                 <h2 class="mt-3 mb-3">{{$item->item_name}}</h2>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-6 ">
          
-            <div class="box w-100">
-                
-                <div class="text-center mb-3" width="100%" id="qr_logo"></div>
+           <div class="text-center mb-3" width="100%" id="qr_logo"></div>
                 
                 
-                <div class="border border-primary mb-3"> 
-                    <h2 class="mt-3 mb-3">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
-                </div>
+           <div class="border border-primary mb-3"> 
+                <h2 class="mt-3 mb-3">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
            
         </div>
         
     </div>
+
 </div>
 
 
