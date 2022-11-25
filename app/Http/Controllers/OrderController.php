@@ -101,7 +101,7 @@ class OrderController extends Controller
             'message'=>'',
             'data'=> [
                 'orders' => $result,
-                'status' => $status.
+                'status' => $status,
                 'query' => DB::getQueryLog()
             ]
         ]);
