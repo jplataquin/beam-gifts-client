@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 pt-3">
-            <div class="border border-primary mb-3 p-3">
+            <div class="border border-primary mb-3 p-3 text-center">
                 <h3>You received an E-gift from:</h3>
                 <h3>{{$user->firstname}} {{$user->lastname}}</h3>
             </div>
