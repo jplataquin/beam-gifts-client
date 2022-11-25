@@ -52,6 +52,17 @@
                             });
 
                             t.div({class:'row'},()=>{
+                                t.div({class:'col-lg-6'},()=>{
+                                    t.strong('Date Created: ');
+                                    t.txt( item.date_created );
+                                });
+                                t.div({class:'col-lg-6'},()=>{
+                                    t.strong('Date Paid: ');
+                                    t.txt(item.date_paid);
+                                });
+                            });
+
+                            t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-12 text-end'},()=>{
                                     t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
                                 });
