@@ -84,19 +84,24 @@
                     <p class="mb-3">Inform their staff that you want to claim an E-gift.</p>
 
                     <h5>Step 3</h5>
-                    <p class="mb-3">Have them scan your QR code, and wait for the validation.</p>
+                    <p class="mb-3">Have them scan your QR code, and wait for validation.</p>
 
                     <h5>Step 4</h5>
-                    <p class="mb-3">Once validation is completed you can claim your E-gift</p>
+                    <p class="mb-3">Claim your E-gift once validation is complete</p>
                     
                     <hr>
                     
                     <h5>*** Item Availability ***</h5>
-                    <p class="">
-                        In the event that your item is not available, you can opt to substitute it for a different item with equal or lower value.
-                        <br>
-                        Note that if you decide to accept an item of lower value, you will not receive monetary change for the difference in amount and your E-gift will be considered consumated.
-                    </p>
+                        <ul>
+                            <li>
+                                In the event that your item is not available, you can opt to substitute it for a different item with equal or lower value.
+                            </li>
+                            <li>
+                                Note that if you decide to accept an item of lower value, you will not receive monetary change for the difference in amount and your E-gift will be considered consumated.
+                    
+                            </li>
+                        </ul>
+                     
                     
                     <hr>
 
