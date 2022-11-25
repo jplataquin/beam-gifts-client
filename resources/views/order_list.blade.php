@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container mb-5">
         <h1>My Orders</h1>
         <hr>
         <div id="list"></div>
