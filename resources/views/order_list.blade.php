@@ -12,7 +12,7 @@
 
     <script type="module">
         import {Template,util} from '/adarna.js';
-
+        console.log(util);
         let page            = 0;
         const listEl        = document.querySelector('#list');
         const showMoreBtn   = document.querySelector('#showMoreBtn');   
