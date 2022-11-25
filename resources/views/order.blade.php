@@ -27,9 +27,13 @@
                                 </div>
                                 <div class="col-lg-5">
                                     {{$item->item_name}}
+                                    <br>
+                                    <strong>Used</strong>
+                                    <br>
+                                    {{$item->consumed}} / {{$item->quantity}}
                                 </div>
                                 <div class="col-lg-5">
-                                    {{$item->consumed}} / {{$item->quantity}}
+                                    
                                 </div>
                             </div>
                     
