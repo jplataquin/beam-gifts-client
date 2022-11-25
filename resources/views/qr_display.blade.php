@@ -40,7 +40,7 @@
        </div>   
     </div>
 
-    <div class="row">
+    <div class="row d-sm-none">
         <div class="col-md-6">
             <div class="border border-primary mb-3 text-center"> 
                 <h2 class="mb-3 pt-2">{{$item->item_name}}</h2>
