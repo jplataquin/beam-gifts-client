@@ -43,18 +43,18 @@
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Total:');
-                                    t.txt( util.numFormat.money('PHP',item.amount) );
+                                   // t.txt( util.numFormat.money('PHP',item.amount) );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Payment Method:');
                                     t.txt('');
                                 });
                             });
-                            t.p(()=>{
-                               
-                            });
-                            t.div({class:'text-end'},()=>{
-                                t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
+
+                            t.div({class:'row'},()=>{
+                                t.div({class:'col-lg-12 text-end'},()=>{
+                                    t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
+                                });
                             });
                            
                         });
