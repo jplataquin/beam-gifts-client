@@ -80,6 +80,8 @@ class OrderController extends Controller
 
         $order = new Order;
 
+        DB::enableQueryLog();
+        
         $order = $order->where('user_id',$user_id);
 
         if($status){
@@ -94,7 +96,7 @@ class OrderController extends Controller
             $result = $order->orderBy('created_at', $date_created_order)->get();
         }
 
-        DB::enableQueryLog();
+
 
         return response()->json([
             'status' => 1,
