@@ -41,11 +41,15 @@
     </div>
 
     <div class="row d-lg-block d-md-none d-sm-none">
-        <div class="col-6">
-        123
+        <div class="col-md-6">
+            <div class="border border-primary mb-3"> 
+                <h2 class="mb-3 pt-2">{{$item->item_name}}</h2>
+            </div>
         </div>
-        <div class="col-6">
-        456
+        <div class="col-md-6">
+            <div class="border border-primary text-center"> 
+                <h2 class="mb-3 pt-2">Used: {{$item->consumed}} / {{$item->quantity}} </h2>
+            </div>
         </div>
     </div>
 
