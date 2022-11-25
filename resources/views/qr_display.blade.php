@@ -91,7 +91,7 @@
                     
                     <hr>
                     
-                    <h5>*** Item Availablity ***</h5>
+                    <h5>*** Item Availability ***</h5>
                     <p class="">
                         In the event that your item is not available, you can opt to substitute it for a different item with equal or lower value.
                         <br>
@@ -100,9 +100,9 @@
                     
                     <hr>
 
-                    <h5>Contact Us</h5>
+                    <h5>Need Help?</h5>
                     <p class="">
-                        In the event that you have any questions or clarifications you can contact us at
+                        For questions and clarifications please contact us at
                         <ul>
                             <li>Email: </li>
                             <li>Mobile: </li>
