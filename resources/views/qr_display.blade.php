@@ -43,7 +43,22 @@
             </ul>
             <div class="tab-content mt-4" id="myTabContent">
                 <div class="tab-pane fade show active" id="howto-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
-                    <p>1</p>
+                    <h5>Step 1</h5>
+                    <p class="mb-3">Choose and visit a participating branch.</p>
+
+                    <h5>Step 2</h5>
+                    <p class="mb-3">Inform their staff that you want to claim an E-gift.</p>
+
+                    <h5>Step 3</h5>
+                    <p class="mb-3">Have them scan the QR code, and wait for the validation.</p>
+
+                    <h5>Step 4</h5>
+                    <p class="mb-3">Claim your E-gift after the validation</p>
+
+                    <h5>Availablity</h5>
+                    <p class="">In the event that your item is not available, you can opt to substitute it for different item with equal or lower value.</p>
+                    <p class="">Note that if you decide to accept an item of lower value, you won't receive monetary change for the difference in amount and your E-gift will be considered consumated.</p>
+                    
                 </div>
                 <div class="tab-pane fade show" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
                     <p>2</p>
