@@ -73,18 +73,24 @@ class OrderController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $limit = (int) $request->input('limit') ?? 0;
-        $page = (int) $request->input('page') ?? 0;
+        $limit              = (int) $request->input('limit') ?? 0;
+        $page               = (int) $request->input('page') ?? 0;
+        $date_created_order = $request->input('date_created_order') ?? 'desc';
+        $status             = $request->input('status') ?? '';
 
         $order = new Order;
 
         $order = $order->where('user_id',$user_id);
 
+        if($status){
+            $order = $order->where('status',$status);
+        }
+
         if($limit > 0){
             $page   = $page * $limit;
-            $result = $order->skip($page)->take($limit)->orderBy('created_at', 'desc')->get();
+            $result = $order->skip($page)->take($limit)->orderBy('created_at', $date_created_order)->get();
         }else{
-            $result = $order->orderBy('created_at', 'desc')->get();
+            $result = $order->orderBy('created_at', $date_created_order)->get();
         }
 
 

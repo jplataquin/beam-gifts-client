@@ -9,18 +9,19 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Order By</label>
-                        <select class="form-control">
-                            <option>Date Created - Ascending</option>
-                            <option>Date Created - Descending</option>
+                        <select id="orderBy" class="form-control">
+                            <option value="asc">Date Created - Ascending</option>
+                            <option value="desc">Date Created - Descending</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
                         <label>Filter By</label>
-                        <select class="form-control">
-                            <option>Status - Paid</option>
-                            <option>Status - Pending</option>
+                        <select id="filterBy" class="form-control">
+                            <option value="">Status - All</option>
+                            <option value="PAID">Status - Paid</option>
+                            <option value="PEND">Status - Pending</option>
                         </select>
                     </div>
                 </div>
@@ -32,11 +33,13 @@
     </div>
 
     <script type="module">
-        import {Template,util} from '/adarna.js';
+        import {Template,util,$q} from '/adarna.js';
         
         let page            = 0;
         const listEl        = document.querySelector('#list');
         const showMoreBtn   = document.querySelector('#showMoreBtn');   
+        const orderBy       = $q('#orderBy').first();
+        const filterBy      = $q('#filterBy').first();
         const t             = new Template();
 
         const statusOpt = {
@@ -58,7 +61,9 @@
         function list(){
             window.util.$get('/api/myorders',{
                 page: page,
-                limit: 5
+                limit: 5,
+                date_created_order: orderBy.value,
+                status: filterBy.value
             }).then(reply=>{
 
                 if(!reply.status){
@@ -130,6 +135,14 @@
         }
 
         list();
+
+        orderBy.onchange = (e)=>{
+            list();
+        }
+
+        filterBy.onchange = (e)=>{
+            list();
+        }
 
         showMoreBtn.onclick = (e)=>{
             e.preventDefault();
