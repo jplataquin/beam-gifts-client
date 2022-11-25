@@ -10,8 +10,8 @@
                     <div class="form-group">
                         <label>Order By</label>
                         <select id="orderBy" class="form-control">
-                            <option value="asc">Date Created - Ascending</option>
                             <option value="desc">Date Created - Descending</option>
+                            <option value="asc">Date Created - Ascending</option>
                         </select>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 }
 
                 reply.data.orders.map(item=>{
-                    console.log(item);
+                
                     let el = t.div({class:'card mb-3'},()=>{
                         t.div({class:'card-header'},'Order Ref: '+item.id);
                         t.div({class:'card-body'},()=>{
@@ -137,6 +137,7 @@
         list();
 
         orderBy.onchange = (e)=>{
+            console.log('asdasd');
             list();
         }
 
