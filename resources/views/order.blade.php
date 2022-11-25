@@ -22,8 +22,8 @@
                         @foreach($items as $item)
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-12 bg-darkmagenta fontcolor-white">
-                                    <h5>{{$item->item_name}}</h5>
+                                <div class="col-lg-12 bg-darkmagenta">
+                                    <h5 class="fontcolor-white" >{{$item->item_name}}</h5>
                                 </div>
                             </div>
                             <div class="row">
