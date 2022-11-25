@@ -15,12 +15,19 @@ class GiftController extends Controller
         return view('gift_list');
     }
 
-    public function qr($item_uid){
+    public function qr($order_uid,$item_uid){
 
-        $orderItem = new OrderItem;
-        $user      = new User;
+        $order     = new Order();
+        $orderItem = new OrderItem();
+        $user      = new User();
 
-        $orderItem = $orderItem::where('status','PAID')->where('item_uid',$item_uid)->first();
+        $order = $order::where('uid',$order_uid)->where('status','PAID')->first();
+
+        if(!$order){
+            return abort(404);
+        }
+
+        $orderItem = $orderItem::where('status','AVLB')->where('uid',$order_uid)->where('item_uid',$item_uid)->first();
 
         if(!$orderItem){
             return abort(404);
