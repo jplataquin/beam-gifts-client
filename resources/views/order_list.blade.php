@@ -21,12 +21,17 @@
         const statusOpt = {
             'PEND': {
                 text:'Pending',
-                color:'yellow'
+                color:'#ebc034'
             },
             'PAID': {
                 text:'Paid',
-                color:'green'
+                color:'#1b702d'
             }
+        };
+
+        const paymentMethodOpt = {
+            'cc':'Credit Card',
+            'gc':'Gcash'
         };
 
         function list(){
@@ -66,7 +71,7 @@
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Payment Method: ');
-                                    t.txt(item.payment_method);
+                                    t.txt(paymentMethodOpt[item.payment_method]);
                                 });
                             });
 
