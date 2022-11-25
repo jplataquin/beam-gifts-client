@@ -94,13 +94,15 @@ class OrderController extends Controller
             $result = $order->orderBy('created_at', $date_created_order)->get();
         }
 
+        DB::enableQueryLog();
 
         return response()->json([
             'status' => 1,
             'message'=>'',
             'data'=> [
                 'orders' => $result,
-                'status' => $status
+                'status' => $status.
+                'query' => DB::getQueryLog()
             ]
         ]);
     }
