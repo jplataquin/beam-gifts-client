@@ -19,7 +19,7 @@
     </div>
     <div class="row">
         <div class="col-sm-2">
-            <img class="img mb-3" width="200px" src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{ json_decode($brand->photo,true)['200px'] }}"/>    
+            <img class="img mb-3" width="150px" src="{{config('app')['api_base_url']}}storage/photos/brand/150px/{{ json_decode($brand->photo,true)['150px'] }}"/>    
             
         </div>
         <div class="col-sm-10">
