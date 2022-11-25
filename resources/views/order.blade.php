@@ -8,10 +8,10 @@
 
                 <div class="card mt-5 mb-5">
                     <div class="card-header text-center">
-                        <strong>Order Ref:</strong> {{$order->uid}}
+                        <strong>Order Ref:</strong> {{ str_pad($order->id,6,0)}}
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Status: {{$status}}</h5>
+                        <h5 class="card-title">Status: <span style="font-color:green">{{$status}}</span> </h5>
                         <p>
                             <strong>Total:</strong> PHP {{number_format($order->amount,2)}}</p>
                         <p>
