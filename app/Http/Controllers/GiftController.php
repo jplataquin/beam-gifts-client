@@ -22,17 +22,17 @@ class GiftController extends Controller
         $orderItem = new OrderItem();
         $user      = new User();
 
-        $order = $order::where('uid',$order_uid)->first();
+        $order = $order::where('uid',$order_uid)->where('status','PAID')->first();
 
         if(!$order){
 
-            return 'HERE 1';
+            return abort(404);
         }
 
         $orderItem = $orderItem::where('status','AVLB')->where('uid',$order_uid)->where('item_uid',$item_uid)->first();
 
         if(!$orderItem){
-            return 'HERE 2';
+            return abort(404);
         }
 
         $user = $user::find($orderItem->user_id);
