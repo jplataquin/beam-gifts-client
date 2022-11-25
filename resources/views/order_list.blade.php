@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container mt-5 mb-5">
+    <div class="container mt-3 mb-5">
         <h1>My Orders</h1>
         <hr>
         <div id="list"></div>
@@ -12,11 +12,22 @@
 
     <script type="module">
         import {Template,util} from '/adarna.js';
-        console.log(util);
+        
         let page            = 0;
         const listEl        = document.querySelector('#list');
         const showMoreBtn   = document.querySelector('#showMoreBtn');   
         const t             = new Template();
+
+        const statusOpt = {
+            'PEND': {
+                text:'Pending',
+                color:'yellow'
+            },
+            'PAID': {
+                text:'Paid',
+                color:'green'
+            }
+        };
 
         function list(){
             window.util.$get('/api/myorders',{
@@ -37,9 +48,17 @@
                     let el = t.div({class:'card mb-3'},()=>{
                         t.div({class:'card-header'},'Order Ref: '+item.id);
                         t.div({class:'card-body'},()=>{
+                            
                             t.div({class:'card-title'},()=>{
-                                t.txt('Status: '+item.status);
+                                t.h3('Status: ',()=>{
+                                    
+                                    t.span({style:{
+                                        color:statusOpt[item.status].color
+                                    }},statusOpt[item.status].text);
+                                   
+                                });
                             });
+
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Total: ');
