@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-lg-5 col pt-2 text-center">
                                     <button class="btn btn-warning mb-2">Copy Link</button>
-                                    &nbsp;&nbsp;
+                                    &nbsp;
                                     <button class="btn btn-primary mb-2">Open Link</button>
                                 </div>
                             </div>
