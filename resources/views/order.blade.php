@@ -22,15 +22,15 @@
                         @foreach($items as $item)
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-12 bg-darkmagenta pl-2 pt-2">
+                                <div class="col-sm-12 bg-darkmagenta pl-2 pt-2">
                                     <h5 class="fontcolor-white" >{{$item->item_name}}</h5>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-2 col-sm-6 text-center">
+                                <div class="col-sm-2 text-center">
                                     <img src="{{config('app')['api_base_url']}}storage/photos/item/200px/{{ json_decode($item->model->photo,true)['200px'] }}" alt=""  width="200px"/>
                                 </div>
-                                <div class="col-lg-5 col-sm-3">
+                                <div class="col-sm-5">
                                     
                                     
                                     <strong>Used</strong>
@@ -42,7 +42,7 @@
                                     {{$item->price}}
                                     
                                 </div>
-                                <div class="col-lg-5 col-sm-3">
+                                <div class="col-sm-5">
                                     <button class="btn btn-primary">Open Gift Link</button>
                                 </div>
                             </div>
