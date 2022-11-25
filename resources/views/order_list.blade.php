@@ -37,9 +37,18 @@
                     let el = t.div({class:'card mb-3'},()=>{
                         t.div({class:'card-header'},'Order Ref: '+item.id);
                         t.div({class:'card-body'},()=>{
-                            t.div({class:'card-title'},'');
-                            t.h5({},'Status: '+item.status);
-                            t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
+                            t.div({class:'card-title'},()=>{
+                                t.txt('Status: '+item.status);
+                            });
+
+                            t.p(()=>{
+                                t.strong('Total:');
+                                t.txt(item.amount);
+                            });
+                            t.div({class:'text-end'},()=>{
+                                t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
+                            });
+                           
                         });
 
                     });

@@ -13,9 +13,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Status: <span style="color:green">{{$status}}</span> </h5>
                         <p>
-                            <strong>Total:</strong> PHP {{number_format($order->amount,2)}}</p>
+                            <strong>Total:</strong> PHP {{number_format($order->amount,2)}}
+                        </p>
                         <p>
-                            <strong>Payment Method:</strong> {{$payment_method}}</p>
+                            <strong>Payment Method:</strong> {{$payment_method}}
+                        </p>
                         <p>
                             <strong>Date Created:</strong> {{$date_created}}</p>
                         <p>
