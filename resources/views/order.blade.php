@@ -20,7 +20,35 @@
 
                     <ul class="list-group list-group-flush">
                         @foreach($items as $item)
-                        <li class="list-group-item">
+                        <li class="list-group-item mb-2">
+                            <div class="row">
+                                <div class="col-lg-12 bg-darkmagenta pl-2 pt-2">
+                                    <h5 class="fontcolor-white" >{{$item->item_name}}</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-6 text-center mb-2">
+                                    <img src="{{config('app')['api_base_url']}}storage/photos/item/200px/{{ json_decode($item->model->photo,true)['200px'] }}" alt=""  width="200px"/>
+                                </div>
+                                <div class="col-lg-5 col">
+                                    
+                                    
+                                    <strong>Used</strong>
+                                    <br>
+                                    {{$item->consumed}} / {{$item->quantity}}
+                                    <br>
+                                    <strong>Value</strong>
+                                    <br>
+                                    {{$item->price}}
+                                    
+                                </div>
+                                <div class="col-lg-5 col pt-2">
+                                    <button class="btn btn-primary">Open Gift Link</button>
+                                </div>
+                            </div>
+                    
+                        </li>
+                        <li class="list-group-item mb-2">
                             <div class="row">
                                 <div class="col-lg-12 bg-darkmagenta pl-2 pt-2">
                                     <h5 class="fontcolor-white" >{{$item->item_name}}</h5>
