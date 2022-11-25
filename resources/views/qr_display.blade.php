@@ -26,12 +26,12 @@
         </div>
         <div class="col-md-6">
 
-            <div class="qr_container"> 
+            <div class="qr_container mb-3"> 
                 <div class="text-center" width="100%" id="qr_logo"></div>
             </div>
                 
             <div class="border border-primary text-center"> 
-                <h2 class="mt-3 mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
+                <h2 class="mb-3 p-2">Used: {{$item->consumed}} / {{$item->quantity}}</h2>
             </div>
        </div>   
     </div>
