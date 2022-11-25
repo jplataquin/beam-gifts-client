@@ -27,10 +27,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-2 text-center">
+                                <div class="col-lg-2 col-sm-6 text-center">
                                     <img src="{{config('app')['api_base_url']}}storage/photos/item/200px/{{ json_decode($item->model->photo,true)['200px'] }}" alt=""  width="200px"/>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 col-sm-3">
                                     
                                     
                                     <strong>Used</strong>
@@ -42,7 +42,7 @@
                                     {{$item->price}}
                                     
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 col-sm-3">
                                     <button class="btn btn-primary">Open Gift Link</button>
                                 </div>
                             </div>
