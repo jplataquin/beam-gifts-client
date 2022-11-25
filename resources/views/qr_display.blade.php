@@ -35,15 +35,12 @@
             </div>
        </div>   
     </div>
-    
-    <div class="row">
-        <div class="col-sm-2">
+
+    <div class="row text-center">
+        <div class="col-sm-6">
             <h5>By: </h5>
             <img class="img mb-3" width="150px" src="{{config('app')['api_base_url']}}storage/photos/brand/150px/{{ json_decode($brand->photo,true)['150px'] }}"/>    
-            
-        </div>
-        <div class="col-sm-10">
-            <h5>{{$brand->name}}</h5>
+            <h5>{{$brand->name}}</h5> 
         </div>
     </div>
    
