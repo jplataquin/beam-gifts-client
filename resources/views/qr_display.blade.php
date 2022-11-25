@@ -77,7 +77,7 @@
 
                 </div>
                 <div class="tab-pane fade show" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
-                    
+                    {{$brand}}
 
                     <div class="branchList">
                         @foreach($brand->branches as $branch)
