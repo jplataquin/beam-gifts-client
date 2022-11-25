@@ -40,15 +40,17 @@
        </div>   
     </div>
 
-    <div class="row d-none d-lg-inline">
-        <div class="col-md-6">
-            <div class="border border-primary mb-3 text-center"> 
-                <h2 class="mb-3 pt-2"> X {{$item->item_name}}</h2>
+    <div class="d-none d-lg-block">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="border border-primary mb-3 text-center"> 
+                    <h2 class="mb-3 pt-2"> X {{$item->item_name}}</h2>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border border-primary text-center"> 
-                <h2 class="mb-3 pt-2"> XUsed: {{$item->consumed}} / {{$item->quantity}} </h2>
+            <div class="col-md-6">
+                <div class="border border-primary text-center"> 
+                    <h2 class="mb-3 pt-2"> XUsed: {{$item->consumed}} / {{$item->quantity}} </h2>
+                </div>
             </div>
         </div>
     </div>
