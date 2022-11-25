@@ -6,7 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <img src="{{ asset('images/gift-1.png') }}" class="w-200" />
+            <img src="{{ asset('images/gift-1.png') }}" width="100px" />
+            <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
+            <img src="{{ asset('images/gift-1.png') }}" width="100px" />
+            
         </div>
     </div>
     <div class="row">
