@@ -139,12 +139,14 @@
         orderBy.onchange = (e)=>{
             page = 0;
             listEl.innerHTML = '';
+            showMoreBtn.style.display = 'block';
             list();
         }
 
         filterBy.onchange = (e)=>{
             page = 0;
             listEl.innerHTML = '';
+            showMoreBtn.style.display = 'block';
             list();
         }
 
