@@ -54,7 +54,9 @@
 
                     <h5>Step 4</h5>
                     <p class="mb-3">Claim your E-gift after the validation</p>
-
+                    
+                    <hr>
+                    
                     <h5>*** Item Availablity ***</h5>
                     <p class="">
                         In the event that your item is not available, you can opt to substitute it for a different item with equal or lower value.
