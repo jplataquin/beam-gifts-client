@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-6">
 
-            <div style="padding:auto"> 
+            <div style="margin-top:50%"> 
                 <div class="text-center mb-3" width="100%" id="qr_logo"></div>
                 
                 
