@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center">
             <img src="{{ asset('images/gift-1.png') }}" class="w-200" />
         </div>
     </div>
@@ -15,6 +15,15 @@
                 <h3>You received an E-gift from:</h3>
                 <h3>{{$user->firstname}} {{$user->lastname}}</h3>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <img class="img mb-3" width="100%" src="{{config('app')['api_base_url']}}storage/photos/brand/200px/{{ json_decode($brand->photo,true)['200px'] }}"/>    
+            
+        </div>
+        <div class="col-sm-10">
+            <h5>{{$brand->name}}</h5>
         </div>
     </div>
     <div class="row">
