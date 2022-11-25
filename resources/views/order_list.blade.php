@@ -8,13 +8,22 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label>Filter By</label>
+                        <label>Order By</label>
                         <select class="form-control">
-                            <option>asdsad</option>
+                            <option>Date Created - Ascending</option>
+                            <option>Date Created - Descending</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-6"></div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Filter By</label>
+                        <select class="form-control">
+                            <option>Status - Paid</option>
+                            <option>Status - Pending</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         <hr>
         <div id="list"></div>
