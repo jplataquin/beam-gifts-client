@@ -50,10 +50,10 @@
                     <p class="mb-3">Inform their staff that you want to claim an E-gift.</p>
 
                     <h5>Step 3</h5>
-                    <p class="mb-3">Have them scan the QR code, and wait for the validation.</p>
+                    <p class="mb-3">Have them scan your QR code, and wait for the validation.</p>
 
                     <h5>Step 4</h5>
-                    <p class="mb-3">Claim your E-gift after the validation</p>
+                    <p class="mb-3">Once validation is completed you can claim your E-gift</p>
                     
                     <hr>
                     
@@ -64,9 +64,31 @@
                         Note that if you decide to accept an item of lower value, you will not receive monetary change for the difference in amount and your E-gift will be considered consumated.
                     </p>
                     
+                    <hr>
+
+                    <h5>*** Contact Us ***</h5>
+                    <p class="">
+                        In the event that you have any questions or clarifications you can contact us at
+                        <ul>
+                            <li>Email: </li>
+                            <li>Mobile: </li>
+                        </ul>
+                    </p>
+
                 </div>
                 <div class="tab-pane fade show" id="stores-tab-pane" role="tabpanel" aria-labelledby="howto-tab" tabindex="0">
-                    <p>2</p>
+                    
+
+                    <div class="branchList">
+                        @foreach($brand->branches as $branch)
+                            <div class="border border-primary p-1 mb-2">
+                                <h5>{{$branch['name']}}</h5>
+                                <label>{{$branch['address']}}</label>
+                                <h6>{{$branch['phone']}}</h6>
+                            </div>
+                        @endforeach
+                    </div>
+                    
                 </div>
             </div>
         </div>
