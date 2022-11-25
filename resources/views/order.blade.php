@@ -12,10 +12,14 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Status: {{$status}}</h5>
-                        <p>Total: PHP {{number_format($order->amount,2)}}</p>
-                        <p>Payment Method: {{$payment_method}}</p>
-                        <p>Date Created: {{$date_created}}</p>
-                        <p>Date Paid: {{$date_paid}}</p>
+                        <p>
+                            <strong>Total:</strong> PHP {{number_format($order->amount,2)}}</p>
+                        <p>
+                            <strong>Payment Method:</strong> {{$payment_method}}</p>
+                        <p>
+                            <strong>Date Created:</strong> {{$date_created}}</p>
+                        <p>
+                            <strong>Date Paid:</strong> {{$date_paid}}</p>
                     </div>
 
                     <ul class="list-group list-group-flush">
