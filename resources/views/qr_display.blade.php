@@ -36,11 +36,12 @@
        </div>   
     </div>
 
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-sm-12  text-center">
             <h5>By: </h5>
             <img class="img mb-3" width="150px" src="{{config('app')['api_base_url']}}storage/photos/brand/150px/{{ json_decode($brand->photo,true)['150px'] }}"/>    
             <h5>{{$brand->name}}</h5> 
+
         </div>
     </div>
    
