@@ -43,7 +43,7 @@
                                     
                                 </div>
                                 <div class="col-lg-5 col pt-2 text-center">
-                                    <button class="btn btn-warning">Copy Link</button>
+                                    <button class="btn btn-warning mr-2">Copy Link</button>
                                     <button class="btn btn-primary">Open Gift Link</button>
                                 </div>
                             </div>
