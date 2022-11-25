@@ -11,7 +11,7 @@
     </div>
 
     <script type="module">
-        import {Template} from '/adarna.js';
+        import {Template,util} from '/adarna.js';
 
         let page            = 0;
         const listEl        = document.querySelector('#list');
@@ -40,10 +40,18 @@
                             t.div({class:'card-title'},()=>{
                                 t.txt('Status: '+item.status);
                             });
-
+                            t.div({class:'row'},()=>{
+                                t.div({class:'col-lg-6'},()=>{
+                                    t.strong('Total:');
+                                    t.txt( util.numFormat.money('PHP',item.amount) );
+                                });
+                                t.div({class:'col-lg-6'},()=>{
+                                    t.strong('Payment Method:');
+                                    t.txt('');
+                                });
+                            });
                             t.p(()=>{
-                                t.strong('Total:');
-                                t.txt(item.amount);
+                               
                             });
                             t.div({class:'text-end'},()=>{
                                 t.a({class:'btn btn-primary', href:'/myorders/'+item.uid },'View');
