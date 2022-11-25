@@ -81,19 +81,19 @@ class OrderController extends Controller
         $order = new Order;
 
         DB::enableQueryLog();
-
+        
         $order = $order->where('user_id',$user_id);
 
         if($status){
 
-            $order = $order->where('status',$status);
+            $order = $order->where('status','PAID');
         }
 
         if($limit > 0){
             $page   = $page * $limit;
-            $result = $order->skip($page)->take($limit)->orderBy('created_at', $date_created_order)->toSql();
+            $result = $order->skip($page)->take($limit)->orderBy('created_at', $date_created_order)->get();
         }else{
-            $result = $order->orderBy('created_at', $date_created_order)->toSql();
+            $result = $order->orderBy('created_at', $date_created_order)->get();
         }
 
 
