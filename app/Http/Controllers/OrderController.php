@@ -83,7 +83,7 @@ class OrderController extends Controller
         $order = $order->where('user_id',$user_id);
 
         if($status){
-            echo 'asdads';exit;
+            
             $order = $order->where('status',$status);
         }
 
