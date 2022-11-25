@@ -62,7 +62,7 @@ Auth::routes();
 
 Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
 
-Route::get('/gift/{order_uid}/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
+Route::get('/gift/qr/{order_uid}/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
 
 
 Route::get('/tic',[App\Http\Controllers\GiftController::class, 'tictactoe']);
