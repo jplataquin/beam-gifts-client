@@ -16,22 +16,17 @@ class CartController extends Controller
 {
 
     public function cartList(Request $request){
-        \Cart::session(Auth::user()->id);
-        
 
-        $payment = config('payment');
+        \Cart::session(Auth::user()->id); 
+
 
         $total = \Cart::getTotal();
 
-        $service_fee  = $payment['service_fee'];
-
         //CC
-        $payment_processor_fee_cc       = $payment['payment_processor_fee']['cc']($total + $service_fee);
-        $grand_total_cc                 = $total + $service_fee + $payment_processor_fee_cc;
+        $cc = $this->calculation('cc',$total);
 
         //GC
-        $payment_processor_fee_gc       = $payment['payment_processor_fee']['gc']($total + $service_fee);
-        $grand_total_gc                 = $total + $service_fee + $payment_processor_fee_gc;
+        $gc = $this->calculation('gc',$total);
 
         return view('cart',[
             'items'                 => \Cart::getContent(),
@@ -39,12 +34,12 @@ class CartController extends Controller
             'service_fee'           => $service_fee,
             'paymentCalculation'    => [
                 'cc' => [
-                    'payment_processor_fee' => $payment_processor_fee_cc,
-                    'grand_total'           => $grand_total_cc
+                    'payment_processor_fee' => $cc['payment_processor_fee'],
+                    'grand_total'           => $cc['grand_total']
                 ],
                 'gc' => [
-                    'payment_processor_fee' => $payment_processor_fee_gc,
-                    'grand_total'           => $grand_total_gc
+                    'payment_processor_fee' => $gc['payment_processor_fee'],
+                    'grand_total'           => $gc['grand_total']
                 ]
             ] 
         ]);
@@ -112,6 +107,42 @@ class CartController extends Controller
         );
     }
 
+    private function calculation($type,$total){
+       
+        $payment = config('payment');
+        
+        $service_fee  = $payment['service_fee'];
+
+        if($type == 'cc'){
+            //CC
+            $payment_processor_fee_cc       = $payment['payment_processor_fee']['cc']($total + $service_fee);
+            $grand_total_cc                 = $total + $service_fee + $payment_processor_fee_cc;
+
+            return [
+                'total'                 => $total,
+                'service_fee'           => $service_fee,
+                'payment_processor_fee' => $payment_processor_fee_cc,
+                'grand_total'           => $grand_total_cc
+            ];
+        }
+        
+        if($type == 'gc'){
+
+            //GC
+            $payment_processor_fee_gc       = $payment['payment_processor_fee']['gc']($total + $service_fee);
+            $grand_total_gc                 = $total + $service_fee + $payment_processor_fee_gc;
+            
+            return [
+                'total'                 => $total,
+                'service_fee'           => $service_fee,
+                'payment_processor_fee' => $payment_processor_fee_gc,
+                'grand_total'           => $grand_total_gc
+            ];
+        }
+        
+    }
+
+
     public function removeCart(Request $request){
         
         if(!$request->id){
@@ -122,7 +153,6 @@ class CartController extends Controller
             ]);
         }
 
-        $payment = config('payment');
 
         $cart = \Cart::session(Auth::user()->id);
         
@@ -130,15 +160,11 @@ class CartController extends Controller
 
         $total = $cart->getTotal();
 
-        $service_fee  = $payment['service_fee'];
-
         //CC
-        $payment_processor_fee_cc       = $payment['payment_processor_fee']['cc']($total + $service_fee);
-        $grand_total_cc                 = $total + $service_fee + $payment_processor_fee_cc;
+        $cc = $this->calculation('cc',$total);
 
         //GC
-        $payment_processor_fee_gc       = $payment['payment_processor_fee']['gc']($total + $service_fee);
-        $grand_total_gc                 = $total + $service_fee + $payment_processor_fee_gc;
+        $gc = $this->calculation('gc',$total);
 
         return response()->json([
             'status' => 1,
@@ -149,12 +175,12 @@ class CartController extends Controller
                 'total' => $total,
                 'paymentCalculation'    => [
                     'cc' => [
-                        'payment_processor_fee' => $payment_processor_fee_cc,
-                        'grand_total'           => $grand_total_cc
+                        'payment_processor_fee' => $cc['payment_processor_fee'],
+                        'grand_total'           => 
                     ],
                     'gc' => [
-                        'payment_processor_fee' => $payment_processor_fee_gc,
-                        'grand_total'           => $grand_total_gc
+                        'payment_processor_fee' => $gc['payment_processor_fee'],
+                        'grand_total'           => $gc['grand_total']
                     ]
                 ]
             ]
@@ -187,12 +213,21 @@ class CartController extends Controller
         $paymentMethod  = $request->paymentMethod;
 
         //TODO validate payment method
-        //TODO Validate items
+        if(!in_array($paymentMethod,['cc','gc'])){
+            return response()->json([
+                'status' => 1,
+                'message'=>'Unsupported payment method',
+                'data'=> []
+            ]);
+        }
 
         foreach($items as $item){
 
             $itemModel = Item::findOrFail($item->attributes->item_id);
             
+            
+            //TODO Validate items
+
             //Get price from database;
             $total = $total + ($itemModel->price * $item->quantity);
 
@@ -216,12 +251,17 @@ class CartController extends Controller
         }
 
 
+        $calculation = $this->calculation($paymentMethod,$total);
+
+
+        
         $order = new Order();
 
 
         $order->uid             = $uid;
         $order->user_id         = $user_id;
         $order->amount          = $total;
+        $order->calculation     = json_encode($calculation);
         $order->status          = 'PEND';
         $order->payment_method  = $paymentMethod;
 
