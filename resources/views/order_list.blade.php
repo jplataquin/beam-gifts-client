@@ -63,7 +63,9 @@
                 reply.data.orders.map(item=>{
                 
                     let el = t.div({class:'card mb-3'},()=>{
-                        t.div({class:'card-header'},'Order Ref: '+item.id);
+                        let id = item.id+''.padStart(6,0);
+
+                        t.div({class:'card-header'},'Order Ref: '+id);
                         t.div({class:'card-body'},()=>{
                             
                             t.div({class:'card-title'},()=>{
