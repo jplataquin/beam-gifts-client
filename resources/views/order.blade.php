@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 @if($order->status == 'PEND')
-                                <button id="payNowBtn" class="btn btn-primary">Pay Now</button>
+                                 <button id="payNowBtn" class="btn btn-primary">Pay Now</button>
 
                                 @endif
                             </div>
@@ -91,15 +91,30 @@
         import {$q} from '/adarna.js';
 
         const statusEl = $q('#status').first();
+        const payNowBtn = $q('#payNowBtn').first();
 
         let status = statusEl.innerText;
 
         let statusText = window.options.orderStatus[status].text;
         let statusColor = window.options.orderStatus[status].color;
+        statusEl.innerText      = statusText;
+        statusEl.style.color    = statusColor;
 
-        statusEl.innerText = statusText;
+        let paymentMethod = "{{$order->payment_method}}";
 
-        statusEl.style.color = statusColor;
+        payNowBtn.onclick = (e) => {
+
+            switch (paymentMethod){
+                case 'cc':
+
+                    document.location.href =  '/payment/creditcard/{{$order->uid}}';
+                    
+                    break;
+                case 'gc':
+
+                    break;
+            }
+        }
     </script>
 
 @endsection
