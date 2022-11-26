@@ -78,9 +78,9 @@
         let statusText = window.options.orderStatus[status].text;
         let statusColor = window.options.orderStatus[status].color;
 
-        status.innerText = statusText;
+        statusEl.innerText = statusText;
 
-        status.style.color = statusColor;
+        statusEl.style.color = statusColor;
     </script>
 
 @endsection
