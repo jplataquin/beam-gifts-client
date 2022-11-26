@@ -42,21 +42,7 @@
         const filterBy      = $q('#filterBy').first();
         const t             = new Template();
 
-        const statusOpt = {
-            'PEND': {
-                text:'Pending',
-                color:'#ebc034'
-            },
-            'PAID': {
-                text:'Paid',
-                color:'#1b702d'
-            }
-        };
 
-        const paymentMethodOpt = {
-            'cc':'Credit Card',
-            'gc':'Gcash'
-        };
 
         function list(){
             window.util.$get('/api/myorders',{
@@ -83,9 +69,14 @@
                             t.div({class:'card-title'},()=>{
                                 t.h3('Status: ',()=>{
                                     
-                                    t.span({style:{
-                                        color:statusOpt[item.status].color
-                                    }},statusOpt[item.status].text);
+                                    t.span({
+                                        style:
+                                        {
+                                            color: window.options.orderStatus[item.status].color
+                                        }
+                                    },
+                                        window.options.orderStatus[item.status].text
+                                    );
                                    
                                 });
                             });
@@ -97,7 +88,7 @@
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Payment Method: ');
-                                    t.txt(paymentMethodOpt[item.payment_method]);
+                                    t.txt(window.options.paymentMethod[item.payment_method].text);
                                 });
                             });
 
@@ -109,7 +100,14 @@
                                     let dt = dateArr[0].split('-');
                                     let tm = dateArr[1].split(':');
 
-                                    let d = util.dateTime(dt[0],dt[1],dt[2],tm[0],tm[1],tm[2]);
+                                    let d = util.dateTime({
+                                        year:dt[0],
+                                        month:dt[1],
+                                        date:dt[2],
+                                        hour:tm[0],
+                                        min:tm[1],
+                                        sec:tm[2]
+                                    });
 
                                     t.txt( d.month().short+' '+d.dd()+', '+d.yyyy()+' '+d.time24hrs() );
                                 });

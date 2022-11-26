@@ -212,3 +212,27 @@ window.util.moneyFormat = (currency,number) => {
  
     return currency.toUpperCase()+' '+number.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 } 
+
+
+window.options = {};
+
+window.options.orderStatus = {
+    'PEND': {
+        text:'Pending',
+        color:'#ebc034'
+    },
+    'PAID': {
+        text:'Paid',
+        color:'#1b702d'
+    }
+};
+
+
+window.options.paymentMethod = {
+    'cc': {
+        text: 'Credit Card'
+    },
+    'gc':{
+        text: 'Gcash'
+    }
+};
