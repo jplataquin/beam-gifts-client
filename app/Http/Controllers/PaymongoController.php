@@ -66,11 +66,11 @@ class PaymongoController extends Controller
         }
         
         //Validate order is not expired
-        $hours = round((strtotime('now') - strtotime('2022-11-26T05:00:00.0000Z'))/3600, 1);
+        $hours = round((strtotime('now') - strtotime($result->created_at))/3600, 1);
 
-       // if($hours > 24){
-            return $hours;
-        //}
+        if($hours > 24){
+            return $result->created_at;
+        }
 
         return view('payment/creditcard',[
             'uid'       => $uid,
