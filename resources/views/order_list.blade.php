@@ -114,7 +114,7 @@
                                     t.txt( d.month().short+' '+d.dd()+', '+d.yyyy()+' '+d.time24hrs() );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
-                                    t.strong('Date Paid: ');
+                                   
                                     
                                 });
                             });
