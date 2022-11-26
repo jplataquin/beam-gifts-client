@@ -115,6 +115,10 @@
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                    
+                                    if(item.status == 'PEND'){
+                                        t.strong('Expires in: ');
+                                        t.txt('24 hours');
+                                    }
                                     
                                 });
                             });
