@@ -33,17 +33,16 @@ class OrderController extends Controller
             $order = $this->validatePaymongoPayment($order);
         }
 
-        $status         = '';
         $date_created   = date('M d, Y H:i:s',strtotime($order->created_at));
         $date_paid      = 'N/A';
         $payment_intent = [];
         $payment_method = '';
 
         if($order->status == 'PEND'){
-            $status = 'Not Paid';
+         
         }else if($order->status == 'PAID'){
             
-            $status         = 'Paid';
+        
             $payment_intent = json_decode($order->paymongo_payment_intent_data,true);
 
             $payment_time   = (int) $payment_intent['data']['attributes']['payments'][0]['attributes']['paid_at'];
@@ -59,7 +58,6 @@ class OrderController extends Controller
         $payment_method = $payment_method_opt[$order->payment_method];
 
         return view('order',[
-            'status'            => $status,
             'order'             => $order,
             'items'             => $order->items,
             'payment_intent'    => $payment_intent,
