@@ -24,7 +24,11 @@
                                     <strong>Date Created:</strong> {{$date_created}}
                                 </p>
                                 <p>
-                                    <strong>Date Paid:</strong> {{$date_paid}}
+                                    @if($order->status == 'PAID')
+                                        <strong>Date Paid:</strong> {{$date_paid}}
+                                    @elseif($order->status == 'PEND')
+                                        <strong>Expires in:</strong> 24 hours
+                                    @endif
                                 </p>
                             </div>
                             <div class="col-md-6 text-center">
