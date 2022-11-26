@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Status: <span id="status">{{$order->status}}</span> </h5>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <p>
                                     <strong>Total:</strong> PHP {{number_format($order->amount,2)}}
                                 </p>
@@ -31,7 +31,7 @@
                                     @endif
                                 </p>
                             </div>
-                            <div class="col-md-6 text-center">
+                            <div class="col-md-4 text-center">
                                 @if($order->status == 'PEND')
                                  <button id="payNowBtn" class="btn btn-primary">Pay Now</button>
 
