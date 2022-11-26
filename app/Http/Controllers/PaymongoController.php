@@ -60,12 +60,18 @@ class PaymongoController extends Controller
 
         $result = $order::where('uid',$uid)->where('status','PEND')->first();
 
-        //TODO validate $uid;
-
+        
         if(!$result){
             return abort(404);
         }
- 
+        
+        //Validate order is not expired
+        $hours = round((strtotime('now') - strtotime($result->created_at))/3600, 1);
+
+        if($hours > 24){
+            return $hours;
+        }
+
         return view('payment/creditcard',[
             'uid'       => $uid,
             'order'     => $result,
