@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->json('calculation')->default('{}')->after('amount');
+            $table->json('calculation')->after('amount');
         });
     }
 
