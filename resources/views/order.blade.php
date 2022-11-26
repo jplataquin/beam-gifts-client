@@ -12,16 +12,29 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Status: <span id="status">{{$order->status}}</span> </h5>
-                        <p>
-                            <strong>Total:</strong> PHP {{number_format($order->amount,2)}}
-                        </p>
-                        <p>
-                            <strong>Payment Method:</strong> {{$payment_method}}
-                        </p>
-                        <p>
-                            <strong>Date Created:</strong> {{$date_created}}</p>
-                        <p>
-                            <strong>Date Paid:</strong> {{$date_paid}}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <strong>Total:</strong> PHP {{number_format($order->amount,2)}}
+                                </p>
+                                <p>
+                                    <strong>Payment Method:</strong> {{$payment_method}}
+                                </p>
+                                <p>
+                                    <strong>Date Created:</strong> {{$date_created}}
+                                </p>
+                                <p>
+                                    <strong>Date Paid:</strong> {{$date_paid}}
+                                </p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                @if($order->status == 'PEND')
+                                <button id="payNowBtn" class="btn btn-primary">Pay Now</button>
+
+                                @endif
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <ul class="list-group list-group-flush">
@@ -45,7 +58,7 @@
                                     <br>
                                     <strong>Value</strong>
                                     <br>
-                                    {{$item->price}}
+                                    PHP {{number_format($item->price,2)}}
                                     
                                 </div>
                                 <div class="col-lg-5 col pt-2 text-center">
