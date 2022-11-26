@@ -91,7 +91,7 @@
         import {$q} from '/adarna.js';
 
         const statusEl = $q('#status').first();
-        const payNowBtn = $q('#payNowBtn').first();
+        const payNowBtn = $q('#payNowBtn').first() ?? false;
 
         let status = statusEl.innerText;
 
@@ -102,19 +102,23 @@
 
         let paymentMethod = "{{$order->payment_method}}";
 
-        payNowBtn.onclick = (e) => {
+        if(payNowBtn){
 
-            switch (paymentMethod){
-                case 'cc':
+            payNowBtn.onclick = (e) => {
 
-                    document.location.href =  '/payment/creditcard/{{$order->uid}}';
-                    
-                    break;
-                case 'gc':
+                switch (paymentMethod){
+                    case 'cc':
 
-                    break;
+                        document.location.href =  '/payment/creditcard/{{$order->uid}}';
+                        
+                        break;
+                    case 'gc':
+
+                        break;
+                }
             }
         }
+        
     </script>
 
 @endsection
