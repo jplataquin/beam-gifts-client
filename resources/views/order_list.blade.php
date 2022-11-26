@@ -109,9 +109,9 @@
                                     let dt = dateArr[0].split('-');
                                     let tm = dateArr[1].split(':');
 
-                                    let date = util.dateTime(dt[0],dt[1],dt[2],tm[0],tm[1],tm[2]);
+                                    let d = util.dateTime(dt[0],dt[1],dt[2],tm[0],tm[1],tm[2]);
 
-                                    t.txt( date.month().short+' '+date.dd()+', '+date.yyyy()+' '+d.time24hrs() );
+                                    t.txt( d.month().short+' '+d.dd()+', '+d.yyyy()+' '+d.time24hrs() );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Date Paid: ');
