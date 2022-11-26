@@ -11,7 +11,7 @@
                         <strong>Order Ref:</strong> {{ str_pad($order->id,6,0,STR_PAD_LEFT)}}
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Status: <span style="color:green">{{$status}}</span> </h5>
+                        <h5 class="card-title">Status: <span id="status">{{$status}}</span> </h5>
                         <p>
                             <strong>Total:</strong> PHP {{number_format($order->amount,2)}}
                         </p>
@@ -68,5 +68,19 @@
 
     </div>
 
+    <script type="module">
+        import {$q} from '/adarna.js';
+
+        const statusEl = $q('#status').first();
+
+        let status = statusEl.innerText;
+
+        let statusText = window.options.orderStatus[status].text;
+        let statusColor = window.options.orderStatus[status].color;
+
+        status.innerText = statusText;
+
+        status.style.color = statusColor;
+    </script>
 
 @endsection
