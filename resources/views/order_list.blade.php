@@ -104,7 +104,14 @@
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Date Created: ');
-                                    t.txt( item.created_at );
+
+                                    let dateArr = item.created_at.split('.')[0].split('T');
+                                    let d = dateArr[0].split('-');
+                                    let t = dateArr[1].split(':');
+
+                                    let date = util.dateTime(d[0],d[1],d[2],t[0],t[1],t[2]);
+
+                                    t.txt( date.month().short+' '+date.dd()+', '+date.yyyy()+' '+d.time24hrs() );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Date Paid: ');
