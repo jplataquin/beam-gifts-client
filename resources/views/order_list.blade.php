@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label>Order By</label>
+                        <label>Ordered By</label>
                         <select id="orderBy" class="form-control">
                             <option value="desc">Date Created - Descending</option>
                             <option value="asc">Date Created - Ascending</option>
