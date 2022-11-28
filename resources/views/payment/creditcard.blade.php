@@ -163,7 +163,6 @@
     const iframe    = t.iframe({
         style:{
             display:'block', 
-            border:'none',
             height:'100vh',        /* Viewport-relative units */
             width:'100%'
         }
