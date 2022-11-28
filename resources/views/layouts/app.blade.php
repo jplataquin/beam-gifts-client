@@ -272,6 +272,6 @@
     </script>
 
     
-    <script type="text/javascript" src="/toastify.js"></script>
+    <script type="text/javascript" src="/js/toastify.js"></script>
 </body>
 </html>

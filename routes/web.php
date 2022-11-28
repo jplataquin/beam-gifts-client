@@ -94,7 +94,7 @@ Route::get('bootstrap.js', function(){
 
 });
 
-Route::get('/toastify.js', function(){
+Route::get('js/toastify.js', function(){
 
     $response = Response::make(File::get(base_path('node_modules/toastify-js/src/toastify.js')), 200);
     $response->header("Content-Type", 'text/javascript');
