@@ -645,7 +645,10 @@
                 failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
             
-        }).catch(err=>{
+        });
+        
+        
+        /**.catch(err=>{
 
             if(err.response.status == 400){
             
@@ -658,7 +661,7 @@
                 failed(2,err.response,paymentMethodId,paymentIntentId);
             }
 
-        });
+        });**/
 
     }
 
@@ -698,7 +701,6 @@
 
     window.addEventListener('message', ev => {
             
-        console.log('here',ev.data);
 
         if (ev.data === '3DS-authentication-complete') {
             // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
