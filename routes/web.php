@@ -94,6 +94,22 @@ Route::get('bootstrap.js', function(){
 
 });
 
+Route::get('js/toastify.js', function(){
+
+    $response = Response::make(File::get(base_path('node_modules/toastify-js/src/toastify.js')), 200);
+    $response->header("Content-Type", 'text/javascript');
+
+    return $response;
+});
+
+
+Route::get('css/toastify.css', function(){
+
+    $response = Response::make(File::get(base_path('node_modules/toastify-js/src/toastify.css')), 200);
+    $response->header("Content-Type", 'text/css');
+
+    return $response;
+});
 
 Route::get('xupdate',function(){
  
