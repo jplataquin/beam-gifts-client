@@ -217,9 +217,13 @@ window.toastCenter = (text)=>{
     Toastify({
         text: text,
         duration: 2000,
-        gravity: "top", // `top` or `bottom`
+        gravity: "bottom", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
+        offset: {
+            x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '5em' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
         style: {
           background: "linear-gradient(to right, #C70A80, #590696)",
         },
