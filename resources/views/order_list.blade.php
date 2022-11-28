@@ -86,7 +86,7 @@
                             t.div({class:'row'},()=>{
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Total: ');
-                                    t.txt( ''+util.numFormat.money('PHP',item.amount) );
+                                    t.txt( ''+util.numFormat.money('PHP',item.calculation.grand_total) );
                                 });
                                 t.div({class:'col-lg-6'},()=>{
                                     t.strong('Payment Method: ');

@@ -93,7 +93,9 @@ class OrderController extends Controller
             $result = $order->orderBy('created_at', $date_created_order)->get();
         }
 
-
+        foreach($result as $i => $row){
+            $result[ $i ]['calculation'] = json_decode($result[ $i ]['calculation'],true);
+        }
 
         return response()->json([
             'status' => 1,
