@@ -168,6 +168,8 @@
         }
     });
 
+    const dummy = t.div();
+
     let paymentMethodId,clientKey,key,paymentIntentId;
 
     iframe.onload = ()=>{
@@ -671,14 +673,16 @@
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
 
-            console.log(paymentIntentStatus);
-            
+
             if (paymentIntentStatus === 'succeeded') {
             // You already received your customer's payment. You can show a success message from this condition.
                 success(paymentIntent,paymentMethodId,paymentIntentId);
             } else if(paymentIntentStatus === 'awaiting_payment_method') {
             // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
                
+                formContainer.style.display = 'block';
+                dummy.append(iframe);
+                
                 failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
