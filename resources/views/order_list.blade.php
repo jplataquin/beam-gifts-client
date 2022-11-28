@@ -62,8 +62,6 @@
 
                 reply.data.orders.map(item=>{
                     
-                    console.log(item.calculation.grand_total);
-
                     let el = t.div({class:'card mb-3'},()=>{
                         let id = item.id+'';
 

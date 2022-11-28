@@ -459,7 +459,7 @@
         loading.style.display   = 'none';
         
         let message = t.p({class:'text-danger'},'');
-            
+        
         let prompt = t.div(()=>{
                     
             t.p({class:'text-danger'},'*** You have NOT been charged ***');
@@ -468,6 +468,7 @@
 
             t.div({class:'mb-3'},()=>{
                 
+                /** 
                 t.a({
                     class:'btn btn-warning me-3',
                     role:'button'
@@ -478,13 +479,16 @@
                         document.location.href = '/cart';
                     }
 
-                }
+                } **/
 
                 t.a({
-                    class:'btn btn-primary',
-                    href:'javascript:window.location.href=window.location.href',
+                    class:'btn btn-warning',
+                    href:'#',
                     role:'button'
-                },'Retry');
+                },'Retry').onclick = (e) =>{
+                    e.preventDefault();
+                    myModal.hide();
+                };
             })
             
         });
@@ -526,6 +530,8 @@
                     });
 
                     t.div({class:'mb-3'},()=>{
+                       
+                        /**  
                         t.a({
                             class:'btn btn-warning me-3',
                             href:'/cart',
@@ -537,13 +543,16 @@
                                 document.location.href = '/cart';
                             }
 
-                        };
+                        }; **/
 
                         t.a({
-                            class:'btn btn-primary',
+                            class:'btn btn-warning',
                             href:'javascript:window.location.href=window.location.href',
                             role:'button'
-                        },'Retry');
+                        },'Retry').onclick = (e)=>{
+                            e.preventDefault();
+                            myModal.hide();
+                        };
                     })
                    
                 })
