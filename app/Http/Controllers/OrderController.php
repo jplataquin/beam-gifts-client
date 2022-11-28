@@ -64,7 +64,7 @@ class OrderController extends Controller
             'date_created'      => $date_created,
             'date_paid'         => $date_paid,
             'payment_method'    => $payment_method,
-            'calculation'       => json_decde($order->calculation)
+            'calculation'       => json_decode($order->calculation)
         ]);
     }
 
