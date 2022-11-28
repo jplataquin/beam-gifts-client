@@ -1,5 +1,5 @@
 import './bootstrap';
-import Toastify from 'toastify-js'
+import Toastify from './toastify-js'
 
 
 /** Feeze UI **/
