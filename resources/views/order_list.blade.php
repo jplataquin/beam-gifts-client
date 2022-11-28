@@ -61,7 +61,9 @@
                 }
 
                 reply.data.orders.map(item=>{
-                
+                    
+                    console.log(item);
+                    
                     let el = t.div({class:'card mb-3'},()=>{
                         let id = item.id+'';
 
