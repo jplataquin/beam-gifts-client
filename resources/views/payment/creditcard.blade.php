@@ -683,8 +683,12 @@
                 formContainer.style.display = 'block';
                 dummy.append(iframe);
 
-                failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
-                
+                setTimeout(()=>{
+
+                    failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
+
+                },2000);
+
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
@@ -693,7 +697,13 @@
             }else{
                 formContainer.style.display = 'block';
                 dummy.append(iframe);
-                failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
+
+                setTimeout(()=>{
+                    
+                    failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
+                    
+                },2000);
+                
             }
         }).catch(err=>{
             console.log('HTTP ERROR',err);
