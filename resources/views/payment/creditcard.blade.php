@@ -671,6 +671,8 @@
             let paymentIntent       = response.data.data;
             let paymentIntentStatus = paymentIntent.attributes.status;
 
+            console.log(paymentIntentStatus);
+            
             if (paymentIntentStatus === 'succeeded') {
             // You already received your customer's payment. You can show a success message from this condition.
                 success(paymentIntent,paymentMethodId,paymentIntentId);
