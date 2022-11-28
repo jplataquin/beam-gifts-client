@@ -92,11 +92,43 @@
     const buyNowBtn     = document.querySelector('#buyNowBtn');
     const qty           = document.querySelector('#qty');
 
+    buyNowBtn.onclick = (e)=>{
+        e.preventDefault();
+        window.FreezeUI();
+
+        window.util.addToCart({
+            id:'{{$item->id}}',
+            qty: qty.value
+        }).then(reply=>{
+
+            window.UnFreezeUI();
+            
+
+            if(reply.status == -2){
+                document.location.href = '/validate/email';
+                return false;
+            }
+
+            if(reply.status <= 0){
+                alert(reply.message);
+                return;
+            }
+
+
+            let qty =  Object.keys(reply.data.items).length ?? 0;
+
+            window.util.cartQuantity(qty);
+
+            document.location.href = '/cart';
+
+        }).catch(err=>{
+            window.UnFreezeUI();
+            alert(err.message);
+        });
+    }
+
     addToCartBtn.onclick = (e)=>{
         e.preventDefault();
-
-        addToCartBtn.disabled = true;
-        buyNowBtn.disabled = true;
 
         window.FreezeUI();
 
