@@ -52,6 +52,16 @@ class CartController extends Controller
         $id    = (int) $request->input('id') ?? 0;
         $qty   = (int) $request->input('qty') ?? 0;
 
+        $count = count(\Cart::getContent());
+
+        if($count >= 10){
+            return response()->json([
+                'status' => 0,
+                'message'=>'A limit maximum for 10 items per cart',
+                'data'=> []
+            ]);
+        }
+
         $item = new Item();
 
         $item = $item::where('id', $id)->where('status','ACTV')->first();
@@ -150,7 +160,7 @@ class CartController extends Controller
         if(!$request->id){
             return response()->json([
                 'status' => 0,
-                'message'=> 'item ID is required for this operation',
+                'message'=> 'Item ID is required for this operation',
                 'data'=> []
             ]);
         }
@@ -190,6 +200,8 @@ class CartController extends Controller
     }
 
     public function clearAllCart(){
+
+        \Cart::session(Auth::user()->id); 
         \Cart::clear();
 
         return response()->json([
