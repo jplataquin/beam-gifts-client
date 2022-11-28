@@ -326,7 +326,8 @@
             
             }).catch(err=>{
 
-
+                console.log(err);
+                
                 if(err.status == 400){
                     err.json().then(data => {
                         failed(1,data,paymentMethodId,paymentIntentId);
