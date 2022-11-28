@@ -212,6 +212,20 @@ window.util.moneyFormat = (currency,number) => {
 } 
 
 
+window.toastCenter = (text)=>{
+
+    Toastify({
+        text: text,
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+    }).showToast();
+}
+
 window.options = {};
 
 window.options.orderStatus = {
