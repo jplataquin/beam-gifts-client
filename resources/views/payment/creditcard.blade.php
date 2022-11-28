@@ -289,7 +289,7 @@
             clientKey       = reply.data.clientKey;
             key             = reply.data.key;
 
-            paymentMethod(key,{
+            return paymentMethod(key,{
                 'data':{
                     'attributes':{
                         type:'card',
@@ -323,24 +323,18 @@
                 
                 return attach(paymentMethodId,clientKey,key);
             
-            });/**.catch(err=>{
+            });
 
-                console.log(err);
-
-                if(err.status == 400){
-                    err.json().then(data => {
-                        failed(1,data,paymentMethodId,paymentIntentId);
-                    });
-                }else{
-                    failed(2,err,paymentMethodId,paymentIntentId);
-                }
-               
-                
-            });**/
-
-        });/*.catch(err=>{
-            failed(2,err,paymentMethodId,paymentIntentId);
-        });*/
+        }).catch(err=>{
+           
+            if(err.status == 400){
+                err.json().then(data => {
+                    failed(1,data,paymentMethodId,paymentIntentId);
+                });
+            }else{
+                failed(2,err,paymentMethodId,paymentIntentId);
+            }
+        });
     }
 
     function validateCardNumber(number){
@@ -699,7 +693,8 @@
 
 
     window.addEventListener('message', ev => {
-            
+        
+        console.log(ev,ev.data);
 
         if (ev.data === '3DS-authentication-complete') {
             // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
