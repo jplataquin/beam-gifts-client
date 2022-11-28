@@ -120,7 +120,7 @@
                 return;
             }
 
-            window.toastCenter('Item added');
+            window.toastCenter('Item added',1000);
 
             let qty =  Object.keys(reply.data.items).length ?? 0;
 

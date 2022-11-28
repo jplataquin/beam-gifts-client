@@ -212,12 +212,12 @@ window.util.moneyFormat = (currency,number) => {
 } 
 
 
-window.toastCenter = (text)=>{
+window.toastCenter = (text,duration)=>{
 
     Toastify({
         text: text,
-        duration: 2000,
-        gravity: "bottom", // `top` or `bottom`
+        duration: duration ?? 2000,
+        gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         offset: {
