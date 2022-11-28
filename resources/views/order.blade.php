@@ -21,18 +21,6 @@
                                     </p>
                                 @endforeach
                                 <p>
-                                    <strong>Total :</strong> PHP {{number_format($calculation->total,2)}}
-                                </p>
-                                <p>
-                                    <strong>Service Fee :</strong> PHP {{number_format($calculation->service_fee,2)}}
-                                </p>
-                                <p>
-                                    <strong>Payment Processor Fee :</strong> PHP {{number_format($calculation->payment_processor_fee,2)}}
-                                </p>
-                                <p>
-                                    <strong>Grand Total :</strong> PHP {{number_format($calculation->grand_total,2)}}
-                                </p>
-                                <p>
                                     <strong>Payment Method:</strong> {{$payment_method}}
                                 </p>
                                 <p>
