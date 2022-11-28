@@ -4,7 +4,7 @@
 
 
 <section class="checkout-form py-5" id="mainContainer">
-        <div class="container">
+        <div class="container" id="formContainer">
             <div class="row justify-content-center">
                 <div class="col-md-6 my-2">
                     <div class="left-col border rounded p-0">
@@ -145,7 +145,7 @@
     const email             = document.querySelector('#email');
     const phone             = document.querySelector('#phone');
     const payBtn            = document.querySelector('#payBtn');
-    // formContainer     = document.querySelector('#formContainer');
+    const formContainer     = document.querySelector('#formContainer');
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
     const statusEl          = document.querySelector('#status');
@@ -439,7 +439,7 @@
     }
 
     function showIframe(url){
-        //formContainer.style.display = 'none';
+        formContainer.style.display = 'none';
         iframe.src                  = url;
         mainContainer.append(iframe);
     }
