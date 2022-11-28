@@ -14,6 +14,12 @@
                         <h5 class="card-title">Status: <span id="status">{{$order->status}}</span> </h5>
                         <div class="row">
                             <div class="col-md-8">
+
+                                @foreach($calculation->order as $key)
+                                    <p>
+                                        <strong>{{$key}} :</strong> PHP {{number_format($calculation->$key,2)}}
+                                    </p>
+                                @endforeach
                                 <p>
                                     <strong>Total :</strong> PHP {{number_format($calculation->total,2)}}
                                 </p>
