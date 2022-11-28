@@ -222,7 +222,7 @@ window.toastCenter = (text)=>{
         stopOnFocus: true, // Prevents dismissing of toast on hover
         offset: {
             x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: '10em' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            y: '30em' // vertical axis - can be a number or a string indicating unity. eg: '2em'
         },
         style: {
           background: "linear-gradient(to right, #C70A80, #590696)",
