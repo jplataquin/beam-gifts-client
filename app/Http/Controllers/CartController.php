@@ -31,7 +31,7 @@ class CartController extends Controller
         return view('cart',[
             'items'                 => \Cart::getContent(),
             'total'                 => $total,
-            'service_fee'           => $service_fee,
+            'service_fee'           => $cc['service_fee'],
             'paymentCalculation'    => [
                 'cc' => [
                     'payment_processor_fee' => $cc['payment_processor_fee'],
