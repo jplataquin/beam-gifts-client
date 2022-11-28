@@ -4,7 +4,6 @@ window._ = _;
 import 'bootstrap';
 
 
-import "toastify-js/src/toastify.css";
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
