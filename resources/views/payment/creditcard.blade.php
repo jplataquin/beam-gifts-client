@@ -682,14 +682,17 @@
                
                 formContainer.style.display = 'block';
                 dummy.append(iframe);
-                
+
                 failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
+                
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
                 setTimeout(()=>{
                     monitor(paymentMethodId,clientKey,key);
                 },2000);
             }else{
+                formContainer.style.display = 'block';
+                dummy.append(iframe);
                 failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
             }
         }).catch(err=>{
