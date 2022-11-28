@@ -11,7 +11,7 @@
                         <div class="checkout-formCont p-3">
                             <h4 class="mb-3">Enter your card details.</h4>
                             <p class="grand-total">
-                                <strong class="fs-4">To pay:</strong><span class="fs-4 ms-1">PHP {{number_format($order->calculation->grand_total,2)}}</span>
+                                <strong class="fs-4">To pay:</strong><span class="fs-4 ms-1">PHP {{number_format($order->calculation->amount,2)}}</span>
                             </p>
                             <form action="">
                                 <div class="form-field">
@@ -327,7 +327,7 @@
             }).catch(err=>{
 
                 console.log(err);
-                
+
                 if(err.status == 400){
                     err.json().then(data => {
                         failed(1,data,paymentMethodId,paymentIntentId);
