@@ -274,7 +274,7 @@ class CartController extends Controller
 
         $order->uid             = $uid;
         $order->user_id         = $user_id;
-        $order->amount          = $total;
+        $order->amount          = $calculation[$paymentMethod]['grand_total'];
         $order->calculation     = json_encode($calculation);
         $order->status          = 'PEND';
         $order->payment_method  = $paymentMethod;
