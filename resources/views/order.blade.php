@@ -17,7 +17,7 @@
 
                                 @foreach($calculation->order as $key)
                                     <p>
-                                        <strong>{{ str_replace(' ', '',$key) }} :</strong> PHP {{number_format($calculation->$key,2)}}
+                                        <strong>{{ str_replace("_", " ",$key) }} :</strong> PHP {{number_format($calculation->$key,2)}}
                                     </p>
                                 @endforeach
                                 <p>
