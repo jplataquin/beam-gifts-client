@@ -216,7 +216,7 @@ window.toastCenter = (text)=>{
 
     Toastify({
         text: text,
-        duration: 3000,
+        duration: 2000,
         gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover

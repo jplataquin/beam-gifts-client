@@ -120,7 +120,7 @@
                 return;
             }
 
-            alert('Item in cart');
+            window.toastCenter('Item added');
 
             let qty =  Object.keys(reply.data.items).length ?? 0;
 
