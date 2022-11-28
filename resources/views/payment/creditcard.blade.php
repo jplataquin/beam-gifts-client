@@ -274,7 +274,6 @@
         }
         
         
-        payBtn.disabled = true;
         myModal.show();
         
         statusEl.innerText = 'Sending data';
