@@ -145,7 +145,7 @@
     const email             = document.querySelector('#email');
     const phone             = document.querySelector('#phone');
     const payBtn            = document.querySelector('#payBtn');
-    const formContainer     = document.querySelector('#formContainer');
+    // formContainer     = document.querySelector('#formContainer');
     const mainContainer     = document.querySelector('#mainContainer');
     const modalEl           = document.querySelector('#modal');
     const statusEl          = document.querySelector('#status');
@@ -324,7 +324,7 @@
                 
                 return attach(paymentMethodId,clientKey,key);
             
-            }).catch(err=>{
+            });/**.catch(err=>{
 
                 console.log(err);
 
@@ -337,11 +337,11 @@
                 }
                
                 
-            });
+            });**/
 
-        }).catch(err=>{
+        });/*.catch(err=>{
             failed(2,err,paymentMethodId,paymentIntentId);
-        });
+        });*/
     }
 
     function validateCardNumber(number){
@@ -439,7 +439,7 @@
     }
 
     function showIframe(url){
-        formContainer.style.display = 'none';
+        //formContainer.style.display = 'none';
         iframe.src                  = url;
         mainContainer.append(iframe);
     }
