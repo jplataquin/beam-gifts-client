@@ -176,7 +176,7 @@ class CartController extends Controller
                 'paymentCalculation'    => [
                     'cc' => [
                         'payment_processor_fee' => $cc['payment_processor_fee'],
-                        'grand_total'           => 
+                        'grand_total'           => $cc['grand_total']
                     ],
                     'gc' => [
                         'payment_processor_fee' => $gc['payment_processor_fee'],
