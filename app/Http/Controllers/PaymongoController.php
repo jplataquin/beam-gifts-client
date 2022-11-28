@@ -72,7 +72,8 @@ class PaymongoController extends Controller
             return abort(404);
         }
 
-
+        $result['calculation'] = json_decode($result['calculation']);
+        
         return view('payment/creditcard',[
             'uid'       => $uid,
             'order'     => $result,
