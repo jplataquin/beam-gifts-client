@@ -57,7 +57,7 @@ class CartController extends Controller
         if($count >= 10){
             return response()->json([
                 'status' => 0,
-                'message'=>'A limit maximum for 10 items per cart',
+                'message'=>'There is a maximum limit of 10 items per cart',
                 'data'=> []
             ]);
         }
