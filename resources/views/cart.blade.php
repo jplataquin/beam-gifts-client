@@ -141,7 +141,8 @@
                         document.location.href = '/payment/creditcard/'+uid;
                         break;
                     case 'gc':
-
+                        document.location.href = '/payment/gcash/'+uid;
+                        
                         break;
 
                     default:

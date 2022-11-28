@@ -122,7 +122,8 @@ class CartController extends Controller
                 'total'                 => $total,
                 'service_fee'           => $service_fee,
                 'payment_processor_fee' => $payment_processor_fee_cc,
-                'grand_total'           => $grand_total_cc
+                'grand_total'           => $grand_total_cc,
+                'order'                 => ['total','service_fee','payment_processor_fee','grand_total']
             ];
         }
         
@@ -136,7 +137,8 @@ class CartController extends Controller
                 'total'                 => $total,
                 'service_fee'           => $service_fee,
                 'payment_processor_fee' => $payment_processor_fee_gc,
-                'grand_total'           => $grand_total_gc
+                'grand_total'           => $grand_total_gc,
+                'order'                 => ['total','service_fee','payment_processor_fee','grand_total']
             ];
         }
         
