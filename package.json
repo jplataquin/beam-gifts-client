@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "adarna": "^1.0.21",
-        "easyqrcodejs": "^4.4.12"
+        "easyqrcodejs": "^4.4.12",
+        "toastify-js": "^1.12.0"
     }
 }
