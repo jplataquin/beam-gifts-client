@@ -129,7 +129,7 @@
                 let url = el.getAttribute('data-url');
 
                 navigator.clipboard.writeText(url).then(() => {
-                    window.centerToaost('Link Copied');
+                    window.toastCenter('Link Copied');
                 }).catch(err=>{
                     alert(err.message);
                 });
