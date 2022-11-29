@@ -686,7 +686,7 @@
 
                 
                 failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
-                modal.show();
+                myModal.show();
                 
 
             } else if (paymentIntentStatus === 'processing'){
@@ -698,11 +698,9 @@
                 formContainer.style.display = 'block';
                 dummy.append(iframe);
 
-                setTimeout(()=>{
+                failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
                     
-                    failed(4,paymentIntentStatus,paymentMethodId,paymentIntentId);
-                    
-                },2000);
+                myModal.show();
                 
             }
         }).catch(err=>{
