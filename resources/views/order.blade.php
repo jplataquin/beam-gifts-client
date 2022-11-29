@@ -122,7 +122,7 @@
             }
         }
 
-        $('.copylink').apply((el)=>{
+        $q('.copylink').apply((el)=>{
             el.onclick = (e)=>{
                 e.preventDefault();
 
