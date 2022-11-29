@@ -89,6 +89,7 @@
                                         
                                         <a class="dropdown-item" href="/profile">Profile</a>
                                         <a class="dropdown-item" href="/myorders">My Orders</a>
+                                        <a class="dropdown-item" href="/mygifts">My Gifts</a>
 
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -160,6 +161,7 @@
                     <a href="/gifts">Gifts</a>
                 </li>
 
+
                 @guest
                 
                     @if (Route::has('register'))
@@ -180,6 +182,9 @@
                         <a href="/myorders">My Orders</a>
                     </li>
 
+                    <li class="my-2">
+                        <a href="/mygifts">My Gifts</a>
+                    </li>
                 
                 @endguest
              
