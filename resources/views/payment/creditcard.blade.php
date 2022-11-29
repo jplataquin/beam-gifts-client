@@ -445,7 +445,7 @@
         
         if(year <= dtyear){
 
-            if(month > dtmonth){
+            if(month < dtmonth){
                 flag = false;
                 expiry.classList.add('input-field-invalid');
             }
