@@ -71,7 +71,7 @@
                                 <div class="col-lg-5 col pt-2 text-center">
                                     @if($order->status == 'PAID')
                                     <div class="d-grid gap-2 mx-auto">
-                                        <button class="btn btn-warning mb-2 copylink" data-url="{{url('/gift/qr/'.$order->uid.'/'.$item->item_uid')}}">Copy Link</button>
+                                        <button class="btn btn-warning mb-2 copylink" data-url="{{ url( '/gift/qr/'.$order->uid.'/'.$item->item_uid)}}">Copy Link</button>
                                         <a class="btn btn-primary mb-2" href="/gift/qr/{{$order->uid}}/{{$item->item_uid}}" target="__blank">Open Link</a>
                                     </div>
                                     @endif
