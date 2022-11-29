@@ -274,10 +274,12 @@
             return false;
         }
         
-        
+        loading.style.display   = 'block';
+        statusEl.innerText = 'Sending data';
+        infoEl.innerHTML = '';
         myModal.show();
         
-        statusEl.innerText = 'Sending data';
+       
     
 
         let exp = expiry.value.split('/');
