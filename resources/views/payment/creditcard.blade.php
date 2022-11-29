@@ -625,7 +625,8 @@
                 // The PaymentIntent encountered a processing error. You can refer to paymentIntent.attributes.last_payment_error to check the error and render the appropriate error message.
                 //Transaction Error
                 failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
-                
+        
+
             } else if (paymentIntentStatus === 'processing'){
                 
                 statusEl.innerText = 'Pending';
@@ -683,11 +684,10 @@
                 formContainer.style.display = 'block';
                 dummy.append(iframe);
 
-                setTimeout(()=>{
-
-                    failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
-
-                },2000);
+                
+                failed(3,paymentIntent.attributes.last_payment_error,paymentMethodId,paymentIntentId);
+                modal.show();
+                
 
             } else if (paymentIntentStatus === 'processing'){
             // You need to requery the PaymentIntent after a second or two. This is a transitory status and should resolve to `succeeded` or `awaiting_payment_method` quickly.
