@@ -431,6 +431,27 @@
            
         });
 
+        
+        
+        let exp = expiry.value.split('/');
+        let month = parseInt(exp[0]);
+        let year = parseInt(exp[1]);
+
+        let dt      = util.dateTime();
+        let dtyear  = ''+dt.yyyy();
+        dtyear      = parseInt(dtyear.substr(2,3));
+
+        let dtmonth = parseInt(dt.MM());
+        
+        if(year <= dtyear){
+
+            if(month > dtmonth){
+                flag = false;
+                expiry.classList.add('input-field-invalid');
+            }
+            
+        }
+
         if(!flag){
             $q('.input-field-invalid').first().focus();
         }
