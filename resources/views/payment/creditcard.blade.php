@@ -274,9 +274,12 @@
             return false;
         }
         
+        modalTitle.innerText    = 'Please wait';
+        mTitle.innerText        = 'Processing Payment';
         loading.style.display   = 'block';
-        statusEl.innerText = 'Sending data';
-        infoEl.innerHTML = '';
+        statusEl.innerText      = 'Sending data';
+        infoEl.innerHTML        = '';
+
         myModal.show();
         
        
@@ -439,6 +442,7 @@
         formContainer.style.display = 'none';
         iframe.src                  = url;
         mainContainer.append(iframe);
+        iframe.contentWindow.focus();
     }
 
     function success(paymentIntent,paymentMethodId,paymentIntentId){
@@ -713,7 +717,6 @@
 
     window.addEventListener('message', ev => {
         
-        console.log(ev,ev.data);
 
         if (ev.data === '3DS-authentication-complete') {
             // 3D Secure authentication is complete. You can requery the payment intent again to check the status.
