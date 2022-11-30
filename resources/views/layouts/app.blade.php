@@ -223,12 +223,11 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-12 my-3">
                     <ul class="footer-col">
-                        <li><h4 class="footer-title">Brand Name</h4></li>
-                        <li><a class="footer-item" href="#">About Us</a></li>
-                        <li><a class="footer-item" href="#">Invite Friends</a></li>
-                        <li><a class="footer-item" href="#">Blog</a></li>
+                        <li><h4 class="footer-title">Beam Gifts</h4></li>
+                        <li><a class="footer-item" href="/about_us">About Us</a></li>
                     </ul>
                 </div>
+                <!--
                 <div class="col-md-3 col-sm-6 col-12 my-3">
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Send gifts to</h4></li>
@@ -237,12 +236,12 @@
                         <li><a class="footer-item" href="#"><img class="langImg" src="{{ asset('images/ca.png') }}" alt=""> Canada</a></li>
                     </ul>
                 </div>
+                -->
                 <div class="col-md-3 col-sm-6 col-12 my-3">
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Support</h4></li>
-                        <li><a class="footer-item" href="#">Help</a></li>
-                        <li><a class="footer-item" href="#">How to use</a></li>
-                        <li><a class="footer-item" href="#">support@domain.com</a></li>
+                        <li><a class="footer-item" href="/contact_us">Contact Us</a></li>
+                        <li><a class="footer-item" href="/how_to_use">How to use</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 my-3">
@@ -254,7 +253,7 @@
                     </ul>
                 </div>
                 <div class="col-12">
-                    <p class="copyright text-center mb-3 mt-5">© Company Name or its affiliates 2022</p>
+                    <p class="copyright text-center mb-3 mt-5">© Beam Gifts 2023</p>
                 </div>
             </div>
         </div>
