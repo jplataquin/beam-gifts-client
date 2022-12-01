@@ -60,6 +60,7 @@
         const t             = new Template();
 
         function list(){
+
             window.util.$get('/api/mygifts',{
                 page: page,
                 limit: 5,
@@ -77,7 +78,7 @@
 
                
                 reply.data.items.map(item=>{
-                    console.log(item);
+              
                     let el = t.div({
                         class:'card mb-3',
                         style:{width: '18rem'}
@@ -107,8 +108,9 @@
                                     date: exp_arr{2}
                                 });
 
-                                t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
+                                //t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
                             });
+
                             t.div({class:'text-center'},()=>{
                                 t.a({href:'#',class:'btn btn-secondary'},'Logs'); 
                                 t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link'); 
