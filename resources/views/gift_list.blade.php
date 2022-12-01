@@ -100,6 +100,8 @@
                                 t.br();
                                 t.txt('Expiry: '+item.expires_at);
                             });
+                            t.a({href:'#',class:'btn btn-secondary'},'Logs'); 
+                            t.a({href:'#',class:'btn btn-warning'},'Copy Link'); 
                             t.a({href:'#',class:'btn btn-primary'},'View');
                         });
                     });
