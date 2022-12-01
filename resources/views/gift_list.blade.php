@@ -105,10 +105,7 @@
                                 let d = util.dateTime({
                                     year: exp_arr[0],
                                     month: exp_arr[1],
-                                    date: exp_arr[2],
-                                    hour:0,
-                                    min:0,
-                                    sec:0
+                                    date: exp_arr[2]
                                 });
                                 console.log(d.dd());
                                //  t.txt('Expiry: '+d.month().short+' ');
