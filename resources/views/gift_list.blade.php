@@ -94,7 +94,7 @@
                             t.p({class:'card-text'},()=>{
                                 t.txt(window.options.giftStatus[item.status].text);
                                 t.br();
-                                t.txt(item.quantity);
+                                t.txt(item.consumed+'/'+item.quantity);
                                 t.br();
                                 t.txt(item.brand_name);
                                 t.br();
