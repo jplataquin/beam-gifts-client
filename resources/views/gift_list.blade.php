@@ -39,9 +39,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Brand</label>
-                        <select id="brand" class="form-control">
-                           
-                        </select>
+                        <input type="text" id="brand" class="form-control"/>
                     </div>
                 </div>
             </div>
