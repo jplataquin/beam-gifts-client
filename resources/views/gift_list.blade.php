@@ -60,6 +60,8 @@
         const t             = new Template();
 
         function list(){
+            
+            window.FreezeUI();
 
             window.util.$get('/api/mygifts',{
                 page: page,
@@ -67,6 +69,8 @@
                 status: status.value,
                 brand: brand.value
             }).then(reply=>{
+
+                window.UnFreezeUI();
 
                 if(!reply.status){
                     alert(reply.message);
