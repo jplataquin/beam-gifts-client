@@ -252,3 +252,15 @@ window.options.paymentMethod = {
         text: 'Gcash'
     }
 };
+
+window.options.giftStatus ={
+    'AVLB':{
+        text:'Available'
+    },
+    'CLMD':{
+        text:'Claimed'
+    },
+    'EXPR':{
+        text:'Expired'
+    }
+}

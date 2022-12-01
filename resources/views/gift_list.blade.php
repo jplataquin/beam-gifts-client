@@ -77,7 +77,7 @@
 
                
                 reply.data.items.map(item=>{
-
+                    console.log(item);
                     let el = t.div({
                         class:'card mb-3',
                         style:{width: '18rem'}
@@ -92,7 +92,9 @@
                         },()=>{
                             t.h5({class:'card-title'},item.item_name);
                             t.p({class:'card-text'},()=>{
-                                t.txt(item.status);
+                                t.txt(window.options.giftStatus[item.status].text);
+                                t.br();
+                                t.txt(item.quantity);
                                 t.br();
                                 t.txt(item.brand_name);
                                 t.br();
