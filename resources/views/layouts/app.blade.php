@@ -67,7 +67,7 @@
 
                     <div class="rnav-col">
                         <ul class="dnavs">
-                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/how_to_use">How to Use</a></li>
  
                         
 
