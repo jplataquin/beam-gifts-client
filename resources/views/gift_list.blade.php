@@ -105,10 +105,10 @@
                                 let d = util.dateTime({
                                     year: exp_arr[0],
                                     month: exp_arr[1],
-                                    date: exp_arr{2}
+                                    date: exp_arr[2]
                                 });
 
-                                //t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
+                                 t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
                             });
 
                             t.div({class:'text-center'},()=>{
