@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!--
     <div class="container">
         <h1>My Gifts</h1>
 
@@ -20,7 +20,32 @@
                 <input type="text" id="brand" class="form-control"/>
             </div>
         </div>
-
+-->
+    <div class="container mt-3 mb-5">
+        <h1>My Gifts
+        <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="status" class="form-control">
+                            <option value=""> - </option>
+                            <option value="AVLB">Available</option>
+                            <option value="CLMD">Claimed</option>
+                            <option value="EXPR">Expired</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <select id="filterBy" class="form-control">
+                           
+                        </select>
+                    </div>
+                </div>
+            </div>
+        <hr>
         <div id="list" class="d-flex justify-content-around flex-wrap"></div>
         <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
     </div>
