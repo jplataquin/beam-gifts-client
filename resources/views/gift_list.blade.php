@@ -91,12 +91,12 @@
                             class:'card-body'
                         },()=>{
                             t.h5({class:'card-title'},item.item_name);
+                            t.strong(item.brand_name);
                             t.p({class:'card-text'},()=>{
                                 t.txt(window.options.giftStatus[item.status].text);
                                 t.br();
                                 t.txt('🎁 '+item.consumed+' / '+item.quantity);
-                                t.br();
-                                t.txt(item.brand_name);
+                              
                                 t.br();
                                 t.txt('Expiry: '+item.expires_at);
                             });
