@@ -108,7 +108,7 @@
                                     date: exp_arr[2]
                                 });
                                 console.log(d);
-                               //  t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
+                                 t.txt('Expiry: '+d.month().short+' '+d.dd()+', '+d.yyyy());
                             });
 
                             t.div({class:'text-center'},()=>{
