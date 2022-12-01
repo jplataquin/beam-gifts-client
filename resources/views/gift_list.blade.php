@@ -107,8 +107,8 @@
                                     month: exp_arr[1],
                                     date: exp_arr[2]
                                 });
-                                console.log(d.dd());
-                               //  t.txt('Expiry: '+d.month().short+' ');
+                               
+                                t.txt('Expiry: '+d.month().short+' ');
                             });
 
                             t.div({class:'text-center'},()=>{
