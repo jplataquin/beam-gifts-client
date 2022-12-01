@@ -80,7 +80,7 @@
 
                     let el = t.div({
                         class:'card mb-3',
-                        style:{width: '18rem'}
+                        style:{width: '18rem',height:'20rem'}
                     },()=>{
                         t.img({
                             class:'card-img-top', 
