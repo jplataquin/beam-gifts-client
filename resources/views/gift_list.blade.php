@@ -49,7 +49,7 @@
     </div>
 
     <script type="module">
-        import {Template} from '/adarna.js';
+        import {Template,util} from '/adarna.js';
 
         let page            = 0;
         const listEl        = document.querySelector('#list');
@@ -98,14 +98,23 @@
                                 t.txt('🎁 '+item.consumed+' / '+item.quantity);
                               
                                 t.br();
-                                t.txt('Expiry: '+item.expires_at);
+
+                                let exp_arr = item.expires_at.split(' ')[0].split('-');
+
+                                let d = util.dateTime({
+                                    year: exp_arr[0],
+                                    month: exp_arr[1],
+                                    date: exp_arr{2}
+                                });
+
+                                t.txt('Expiry: '+d.mmm()+' '+d.d()+', '+d.yyyy());
                             });
                             t.div({class:'text-center'},()=>{
                                 t.a({href:'#',class:'btn btn-secondary'},'Logs'); 
-                                    t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link'); 
-                                    t.a({href:'#',class:'btn btn-primary'},'View');
-                                });
+                                t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link'); 
+                                t.a({href:'#',class:'btn btn-primary'},'View');
                             });
+                        });
                           
                     });
 
