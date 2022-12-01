@@ -39,7 +39,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Brand</label>
-                        <select id="filterBy" class="form-control">
+                        <select id="brand" class="form-control">
                            
                         </select>
                     </div>
