@@ -126,9 +126,6 @@
                 page++;
 
 
-            }).catch(e=>{
-                console.log(e);
-                alert('Something went wrong');
             });
         }
 
