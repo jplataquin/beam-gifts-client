@@ -107,7 +107,7 @@
                                     month: exp_arr[1],
                                     date: exp_arr[2]
                                 });
-                                console.log(d,d.month().short);
+                                console.log(d,exp_arr);
                                //  t.txt('Expiry: '+d.month().short+' ');
                             });
 
