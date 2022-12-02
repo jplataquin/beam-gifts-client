@@ -85,7 +85,7 @@ class GiftController extends Controller
         $item_ids = [];
         for($i = 0; $i <= count($result) - 1; $i++){
 
-            $item_ids[] $result[$i]->item_id;
+            $item_ids[] = $result[$i]->item_id;
         
         }
 
