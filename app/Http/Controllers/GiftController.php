@@ -93,7 +93,8 @@ class GiftController extends Controller
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'items' => $result
+                'items' => $result,
+                'ids' =>  $item_ids
             ]
         ]);
     }
