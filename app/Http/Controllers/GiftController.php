@@ -82,19 +82,24 @@ class GiftController extends Controller
 
         $result = $result->get();
 
-        $item_ids = [];
+        //Workaround because I cannot add items table to join yet
+        $item_data = [];
         for($i = 0; $i <= count($result) - 1; $i++){
 
-            $item_ids[] = $result[$i]->item_id;
-        
+            $id = $result[$i]->item_id;
+
+            if(! isset($item_data[$id]) ){
+                $item_data[$id] = Item::find($id);
+            }
+            
+            $result[$i]->photo = json_decode($item_data[$id],true);
         }
 
         return response()->json([
             'status' => 1,
             'message'=>'',
             'data'=> [
-                'items' => $result,
-                'ids' =>  $item_ids
+                'items' => $result
             ]
         ]);
     }
