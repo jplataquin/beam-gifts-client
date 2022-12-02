@@ -93,7 +93,7 @@ class GiftController extends Controller
                 $item_data[$id] = Item::find($id);
             }
             
-            $result[$i]->photo = json_decode($item_data[$id],true);
+            $result[$i]->photo = json_decode($item_data[$id]->photo,true);
         }
 
         return response()->json([
