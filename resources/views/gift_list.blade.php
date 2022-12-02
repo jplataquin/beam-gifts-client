@@ -141,7 +141,9 @@
                                 t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link').onclick = (e)=>{
                                     e.preventDefault();
 
-                                    navigator.clipboard.writeText(url).then(() => {
+                                    navigator.clipboard.writeText(
+                                        window.siteURL('/gift/qr/'+item.uid+'/'+item.item_uid)
+                                    ).then(() => {
                                         window.toastCenter('Link Copied');
                                     }).catch(err=>{
                                         alert(err.message);
