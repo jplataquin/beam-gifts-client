@@ -113,6 +113,8 @@
                                 });
                                
                                 t.txt('Expiry: '+d.month().short+' '+d.dd()+', '+d.yyyy());
+                                t.br();
+                                t.txt('Order Ref: '+item.order_id);
                             });
 
                             t.div({class:'text-center'},()=>{
