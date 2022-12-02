@@ -65,7 +65,7 @@
 
             window.util.$get('/api/mygifts',{
                 page: page,
-                limit: 5,
+                limit: 8,
                 status: status.value,
                 brand: brand.value
             }).then(reply=>{

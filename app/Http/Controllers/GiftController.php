@@ -85,6 +85,7 @@ class GiftController extends Controller
 
         //Workaround because I cannot add items table to join yet
         $item_data = [];
+        
         for($i = 0; $i <= count($result) - 1; $i++){
 
             $id = $result[$i]->item_id;
