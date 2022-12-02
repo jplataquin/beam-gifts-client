@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\OrderItem;
 use App\Models\Order;
-use App\Models\Items;
+use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
@@ -90,7 +90,7 @@ class GiftController extends Controller
             $id = $result[$i]->item_id;
 
             if(! isset($item_data[$id]) ){
-                $item_data[$id] = Items::find($id);
+                $item_data[$id] = Item::find($id);
             }
             
             $result[$i]->photo = json_decode($item_data[$id],true);
