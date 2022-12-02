@@ -63,6 +63,12 @@ class GiftController extends Controller
             $page   = $page * $limit;
         }
         
+        $orderByFilter = [
+            'expiry_at' => 'order_items.expiry_at'
+        ];
+        
+        $orderBy = $orderByFilter[$orderBy] ?? 'id';
+
         $result = DB::table('order_items')
             ->join('orders', function ($join) use($user_id) {
                 
