@@ -79,6 +79,10 @@ class GiftController extends Controller
 
         $result = $result->get();
 
+        foreach($result as $i => $key){
+            $result[$i]->photos = json_decode($result[$i]->photos,true);
+        }
+
         return response()->json([
             'status' => 1,
             'message'=>'',
