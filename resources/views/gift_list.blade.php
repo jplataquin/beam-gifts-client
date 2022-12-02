@@ -182,12 +182,25 @@
             list();
         }
 
+        let brandSearchFlag = true;
+
         brand.onkeyup = (e)=>{
             
             if(brand.value.length >= 3){
-                listEl.innerHTML = '';
-                page = 0;
-                list();
+
+                if(brandSearchFlag){
+                    brandSearchFlag = false;
+                    setTimeout(()=>{
+
+                        listEl.innerHTML = '';
+                        page = 0;
+                        list();
+                        brandSearchFlag = true;
+
+                    },1000)
+                }
+                
+                
             }
             
         }
