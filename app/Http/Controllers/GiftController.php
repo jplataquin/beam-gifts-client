@@ -62,9 +62,12 @@ class GiftController extends Controller
         
         $result = DB::table('order_items')
             ->join('orders', function ($join) use($user_id) {
+                
                 $join->on('orders.uid', '=', 'order_items.uid')
                     ->where('orders.user_id', '=', $user_id)
                     ->where('orders.status', '=', 'PAID');
+
+                $join->on('items.id','=','order_items.item_id');
             })
             ->skip($page)->take($limit)
             ->select('order_items.*', 'orders.uid');
