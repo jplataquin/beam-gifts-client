@@ -64,9 +64,9 @@ class GiftController extends Controller
         }
         
         $orderByFilter = [
-            'expiry_at' => 'order_items.expiry_at'
+            'expires_at' => 'order_items.expires_at'
         ];
-        
+
         $orderBy = $orderByFilter[$orderBy] ?? 'id';
 
         $result = DB::table('order_items')

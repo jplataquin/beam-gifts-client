@@ -82,7 +82,7 @@
             let filter = filterBy.value;
 
             if(filter == 1){
-                params.order_by = 'expiry_at';
+                params.order_by = 'expires_at';
                 params.order    = 'asc';
             }
 
