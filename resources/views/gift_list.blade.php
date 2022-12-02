@@ -25,7 +25,7 @@
         <h1>My Gifts</h1>
         <hr>
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <div class="form-group">
                         <label>Status</label>
                         <select id="status" class="form-control">
@@ -38,6 +38,15 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
+                        <label>Filter By</label>
+                        <select id="filterBy" class="form-control">
+                            <option value=""> - </option>
+                            <option value="1">Expiry - Descending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
                         <label>Brand</label>
                         <input type="text" id="brand" class="form-control"/>
                     </div>
@@ -49,26 +58,35 @@
     </div>
 
     <script type="module">
-        import {Template,util} from '/adarna.js';
+        import {Template,util,$q} from '/adarna.js';
 
         let page            = 0;
-        const listEl        = document.querySelector('#list');
-        const showMoreBtn   = document.querySelector('#showMoreBtn');   
-        const status        = document.querySelector('#status');
-        const brand         = document.querySelector('#brand');
-        
+        const listEl        = $q('#list').first();
+        const showMoreBtn   = $q('#showMoreBtn').first();   
+        const status        = $q('#status').first();
+        const brand         = $q('#brand').first();
+        const filterBy      = $q('#filterBy').first();
         const t             = new Template();
 
         function list(){
             
             window.FreezeUI();
 
-            window.util.$get('/api/mygifts',{
+            let params = {
                 page: page,
                 limit: 8,
                 status: status.value,
                 brand: brand.value
-            }).then(reply=>{
+            };
+
+            let filter = filterBy.value;
+
+            if(filter == 1){
+                params.order_by = 'expiry_at';
+                params.order    = 'desc';
+            }
+
+            window.util.$get('/api/mygifts',params).then(reply=>{
 
                 window.UnFreezeUI();
 
@@ -138,6 +156,14 @@
         list();
 
         status.onchange = (e)=>{
+            e.preventDefault();
+            listEl.innerHTML = '';
+            page = 0;
+            list();
+        }
+
+
+        filterBy.onchange = (e)=>{
             e.preventDefault();
             listEl.innerHTML = '';
             page = 0;
