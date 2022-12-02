@@ -89,7 +89,7 @@
                     },()=>{
                         t.img({
                             class:'card-img-top', 
-                            src:"{{config('app')['api_base_url']}}storage/photos/item/200px/}}"+item.photo['200px']//'https://via.placeholder.com/300.jpg?text=TEST'
+                            src:"{{config('app')['api_base_url']}}storage/photos/item/200px/"+item.photo['200px']//'https://via.placeholder.com/300.jpg?text=TEST'
                         });
 
                         t.div({
