@@ -132,7 +132,7 @@
                                
                                 t.txt('Expiry: '+d.month().short+' '+d.dd()+', '+d.yyyy());
                                 t.br();
-                                t.txt('Order Ref: '+item.oid);
+                                t.txt('Order Ref: '+item.oid.padStart(6,0));
                             });
 
                             t.div({class:'text-center'},()=>{

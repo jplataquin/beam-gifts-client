@@ -36,8 +36,8 @@
         import {Template,util,$q} from '/adarna.js';
         
         let page            = 0;
-        const listEl        = document.querySelector('#list');
-        const showMoreBtn   = document.querySelector('#showMoreBtn');   
+        const listEl        = $q('#list').first();
+        const showMoreBtn   = $q('#showMoreBtn').first();   
         const orderBy       = $q('#orderBy').first();
         const filterBy      = $q('#filterBy').first();
         const t             = new Template();
