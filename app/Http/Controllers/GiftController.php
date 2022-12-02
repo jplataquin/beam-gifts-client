@@ -52,10 +52,12 @@ class GiftController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $limit  = (int) $request->input('limit') ?? 0;
-        $page   = (int) $request->input('page') ?? 0;
-        $brand  = $request->input('brand');
-        $status = $request->input('status');
+        $limit      = (int) $request->input('limit') ?? 0;
+        $page       = (int) $request->input('page') ?? 0;
+        $brand      = $request->input('brand');
+        $status     = $request->input('status');
+        $orderBy    = $request->input('order_by') ?? 'id';
+        $order      = $request->input('order') ?? 'DESC';
 
         if($limit > 0){
             $page   = $page * $limit;
@@ -71,7 +73,7 @@ class GiftController extends Controller
                 //$join->on('items.id','=','order_items.item_id');
             })
             ->skip($page)->take($limit)
-            ->select('order_items.*', 'orders.uid');
+            ->select('order_items.*', 'orders.id as oid','orders.uid');
             
         if($status){
             $result = $result->where('order_items.status',$status);
@@ -81,11 +83,15 @@ class GiftController extends Controller
             $result = $result->where('order_items.brand_name','LIKE','%'.$brand.'%');
         }
 
+        if($orderBy && $order){
+            $result = $result->orderBy($orderBy,$order);
+        }
+
         $result = $result->get();
 
         //Workaround because I cannot add items table to join yet
         $item_data = [];
-        
+
         for($i = 0; $i <= count($result) - 1; $i++){
 
             $id = $result[$i]->item_id;

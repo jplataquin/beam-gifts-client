@@ -41,7 +41,7 @@
                         <label>Filter By</label>
                         <select id="filterBy" class="form-control">
                             <option value=""> - </option>
-                            <option value="1">Expiry - Descending</option>
+                            <option value="1">Expiry - Ascending</option>
                         </select>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
 
             if(filter == 1){
                 params.order_by = 'expiry_at';
-                params.order    = 'desc';
+                params.order    = 'asc';
             }
 
             window.util.$get('/api/mygifts',params).then(reply=>{
