@@ -199,10 +199,25 @@
 
                     },1000)
                 }
-                
-                
-            }
-            
+            }  
+        }
+
+        brand.onchange = ()=>{
+
+            if(brand.value.length >= 3){
+
+                if(brandSearchFlag){
+                    brandSearchFlag = false;
+                    setTimeout(()=>{
+
+                        listEl.innerHTML = '';
+                        page = 0;
+                        list();
+                        brandSearchFlag = true;
+
+                    },1000)
+                }
+            }  
         }
 
         showMoreBtn.onclick = (e)=>{
