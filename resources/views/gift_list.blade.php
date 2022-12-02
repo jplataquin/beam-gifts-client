@@ -25,7 +25,7 @@
         <h1>My Gifts</h1>
         <hr>
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Status</label>
                         <select id="status" class="form-control">
@@ -36,7 +36,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Filter By</label>
                         <select id="filterBy" class="form-control">
@@ -45,7 +45,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Brand</label>
                         <input type="text" id="brand" class="form-control"/>
