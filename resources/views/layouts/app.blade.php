@@ -36,6 +36,11 @@
     </script>
     -->
 
+    <script type="text/javascript">
+        window.siteURL = (url)=>{
+            return '{{url("/")}}'+url;
+        }
+    </script>
 </head>
 <body>
 

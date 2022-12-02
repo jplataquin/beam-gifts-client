@@ -138,7 +138,16 @@
 
                             t.div({class:'text-center'},()=>{
                                 t.a({href:'#',class:'btn btn-secondary'},'Logs'); 
-                                t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link'); 
+                                t.a({href:'#',class:'btn btn-warning ms-2 me-2'},'Copy Link').onclick = (e)=>{
+                                    e.preventDefault();
+
+                                    navigator.clipboard.writeText(url).then(() => {
+                                        window.toastCenter('Link Copied');
+                                    }).catch(err=>{
+                                        alert(err.message);
+                                    });
+                                }; 
+
                                 t.a({href:'/gift/qr/'+item.uid+'/'+item.item_uid, target:'_blank',class:'btn btn-primary'},'Open');
                             });
                         });
