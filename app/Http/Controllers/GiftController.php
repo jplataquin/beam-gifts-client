@@ -67,7 +67,7 @@ class GiftController extends Controller
                     ->where('orders.user_id', '=', $user_id)
                     ->where('orders.status', '=', 'PAID');
 
-                $join->on('items.id','=','order_items.item_id');
+                //$join->on('items.id','=','order_items.item_id');
             })
             ->skip($page)->take($limit)
             ->select('order_items.*', 'orders.uid');
@@ -82,9 +82,10 @@ class GiftController extends Controller
 
         $result = $result->get();
 
+        $item_ids = [];
         for($i = 0; $i <= count($result) - 1; $i++){
 
-            $result[$i]->photo = json_decode($result[$i]->photo,true);
+            $item_ids[] $result[$i]->item_id;
         
         }
 
