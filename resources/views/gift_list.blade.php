@@ -45,7 +45,7 @@
             </div>
         <hr>
         <div id="list" class="d-flex justify-content-around flex-wrap"></div>
-        <button id="showMoreBtn" class="btn btn-full btn-primary">Show More</button>
+        <button id="showMoreBtn" class="btn btn-full btn-primary w-100">Show More</button>
     </div>
 
     <script type="module">
