@@ -5,7 +5,7 @@
 <div class="container">
     <h1>About Us</h1>
     <hr>
-    <div style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px">
+    <div style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px;margin-bottom:10px">
         <p>Hello There!</p>
 
         <p style="text-indent:1cm;">
@@ -20,7 +20,7 @@
             We hope that you will try and avail our products and services.</p>
             
         <p>
-            Any feedback to improve your customer experience is very much apprieciated. (feedback@beam.gifts)
+            Any feedback to improve your experience with us, is very much apprieciated. (feedback@beam.gifts)
         </p>
         
         <p class="mt-5">
