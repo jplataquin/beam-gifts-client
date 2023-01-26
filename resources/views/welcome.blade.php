@@ -91,7 +91,7 @@
      <!-- Categories -->
 
      <section class="categories py-5">
-        <h3>Categories</h3>
+        <h3>Brand Category</h3>
         <div class="container">
             <!--
             <div class="row">
