@@ -33,9 +33,18 @@
     
 
 
+    <section class="topBrands py-5 py-5">
+        <h3>Featured Brands</h3>
+        <div class="container">
+            <div class="row" id="brandsContainer">
+                
+            </div>
+    </section>
+
+
  <!-- Ocassions -->
     <section class="occasions py-5">
-        <h3>Events</h3>
+        <h3>Gift Category</h3>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-6 text-center">
@@ -78,13 +87,6 @@
         </div>
     </section>
 
-    <section class="topBrands py-5 py-5">
-        <h3>Featured Brands</h3>
-        <div class="container">
-            <div class="row" id="brandsContainer">
-                
-            </div>
-    </section>
 
      <!-- Categories -->
 
