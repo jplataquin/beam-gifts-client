@@ -246,7 +246,7 @@
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Support</h4></li>
                         <li><a class="footer-item" href="/contact_us">Contact Us</a></li>
-                        <li><a class="footer-item" href="/how_to_use">How to use</a></li>
+                        <li><a class="footer-item" href="/faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 my-3">
