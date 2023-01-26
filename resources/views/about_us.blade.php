@@ -13,11 +13,7 @@
     
 
     <p>
-        Currently our area of operation is only limited to Iloilo city,
-        but our team is working tirelessy to bring Beam Gifts to the entire country (Philippines) and beyond.
-    </p>
-
-    <p>
+        Currently our area of operation is only limited to Iloilo city, but our team is working tirelessy to bring Beam Gifts to the entire country (Philippines) and beyond.
         We hope that you will try and avail our products and services. Any feedback to improve your customer experience is very much apprieciated.
     </p>
 </div>
