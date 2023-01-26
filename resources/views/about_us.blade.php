@@ -8,7 +8,7 @@
 
     <p>Hello There!</p>
 
-    <p style="text-indent:2cm;">
+    <p style="text-indent:1cm;">
         Beam Gifts is an online gift buying and sending platform that was established to provide covenience for both the giver and receiver.
         Our team continously curate various products and services to insure they become the perfect gifts for all your love ones.
         We work with reliable partners and providers in order to deliver a wide range of high quality gifts that are categorized and accessible anytime.
@@ -20,10 +20,10 @@
         We hope that you will try and avail our products and services.</p>
         
     <p>
-        Any feedback to improve your customer experience is very much apprieciated.
+        Any feedback to improve your customer experience is very much apprieciated. (feedback@beam.gifts)
     </p>
-
-    <p>
+    
+    <p class="mt-5">
         Regards,
         <br>
         Beam Gifts Team
