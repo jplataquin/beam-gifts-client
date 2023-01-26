@@ -100,7 +100,7 @@
 
                
                 reply.data.items.map(item=>{
-                    console.log(item.photo);
+                 
                     let el = t.div({
                         class:'card mb-3',
                         style:{width: '18rem'}

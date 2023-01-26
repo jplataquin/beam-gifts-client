@@ -60,6 +60,11 @@ Route::middleware(['auth',CartSetup::class])->group(function () {
 Auth::routes();
 
 
+Route::get('/about_us',function(){
+
+    return view('about_us');
+});
+
 Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
 
 Route::get('/gift/qr/{order_uid}/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);
