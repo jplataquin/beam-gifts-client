@@ -5,7 +5,7 @@
 <div class="container">
     <h1>About Us</h1>
     <hr>
-    <div style="padding:20px; background-color:#FFFFFF">
+    <div style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px">
         <p>Hello There!</p>
 
         <p style="text-indent:1cm;">
