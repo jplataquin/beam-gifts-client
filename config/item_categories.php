@@ -6,7 +6,7 @@ return [
 
         'DSRT' => 'Cakes & Dessert',
         'DINE' => 'Dining',
-        'BEVR' => 'Beverages'
+        'BEVR' => 'Beverages',
 
         'FLOW' => 'Flowers',
         'TYNV' => 'Toys & Novelty',
