@@ -11,10 +11,10 @@ return [
         'FLOW' => 'Flowers',
         'TYNV' => 'Toys & Novelty',
 
-        'APGA' => 'Appliance & Gadgets',
+        'APGA' => 'Electronics',
 
 
-        'BETR' => 'Beauty Treatments',
+        'BETR' => 'Beauty',
         'SPMA' => 'Spa & Massage',
         
     ]
