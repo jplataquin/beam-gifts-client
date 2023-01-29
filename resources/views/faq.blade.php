@@ -8,7 +8,7 @@
 
     <div class="mb-5 bg-light p-3">
         <div class="mb-3 fw-bold fs-4">
-            Q: How can the recieve claim a gift item?
+            Q: How can the recepient claim the gift?
         </div>    
         <div class="fs-3">
             A: 
@@ -26,7 +26,6 @@
     </div>
     
     
-
     <div class="mb-5 bg-light p-3">
         <div class="mb-3 fw-bold fs-4">
             Q: How do I refund a gift item?
