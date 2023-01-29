@@ -19,8 +19,10 @@
         </p>
 
         <p>
-            Currently our area of operation is only limited to Iloilo city, but we are working tirelessy to bring our service to the entire country (Philippines) and beyond.  
-            Any feedback to improve our service and your experience with us, is very much apprieciated. (feedback@beam.gifts)
+            Currently our area of operation is only limited to Iloilo city, 
+            but we are working tirelessy to reach the entire country (Philippines) and beyond.  
+            Any feedback to improve your experience with us is highly apprieciated. 
+            Please share your thoughts about us by sending a message at "feedback@beam.gifts".
         </p>
         
         <p class="mt-5">
