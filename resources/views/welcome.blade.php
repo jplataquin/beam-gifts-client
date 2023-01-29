@@ -48,10 +48,10 @@
         <div class="container">
             <div class="row">
 
-                @foreach(config('item_categories.options') as $key=>$text)
+                @foreach( config('item_categories.options') as $key=>$text)
                 <div class="col-lg-2 col-md-4 col-6 text-center">
                     <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/icon/{{$key}}.png') }}" alt="">
+                        <img class="occasionImg m-auto mb-2" src="{{ asset( 'images/icon/'.$key.'.png' ) }}" alt="">
                         {{$text}}
                     </div>
                 </div>
