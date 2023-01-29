@@ -14,7 +14,7 @@
         </p>
         
         <p>
-            In order to provide your love ones with the perfect gift, our team continously curate various brands and services to ensure high quality and memorable items. 
+            In order to provide your love ones with the memorable and perfect gift, our team continously curate the various brands and services we offer. 
             We work with reliable partners through out the city in order to provide you with a wide range of selction from coffee beverages to a spa massage.
         </p>
 
