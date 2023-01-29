@@ -979,6 +979,10 @@ h1, h2, h3, h4, h5, h6, p{
     background-color: #8B008B !important;
 }
 
+.bg-white{
+    background-color: #FFFFFF !important;
+}
+
 .fontcolor-white{
     color:#FFFFFF !important;
 }
