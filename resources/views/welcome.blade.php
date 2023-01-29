@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-6 py-5">
 
-                <h1 class="heroT">Beam a gift<br>to Iloilo / Bacolod</h1>
+                <h1 class="heroT">Beam a gift<br>to Iloilo</h1>
                 <p class="heroD">Let your love ones feel the beam</p>
                 <div class="text-end">
                     <button onclick="document.location.href='/gifts'" class="button gift-btn mt-2">Beam One Now</button>
@@ -47,12 +47,16 @@
         <h3>Gift Category</h3>
         <div class="container">
             <div class="row">
+
+                @foreach(config('item_categories')['option'] as $key=>$text)
                 <div class="col-lg-2 col-md-4 col-6 text-center">
                     <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/new.png') }}" alt="">
-                        New Gifts
+                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/icon/{{$key}}.png') }}" alt="">
+                        {{$text}}
                     </div>
                 </div>
+                @endforeach
+                <!--
                 <div class="col-lg-2 col-md-4 col-6 text-center">
                     <div class="occasion p-2 my-2" href="#">
                         <img class="occasionImg m-auto mb-2" src="{{ asset('images/birthday-cake.png') }}" alt="">
@@ -83,6 +87,7 @@
                         Health Gifts
                     </div>
                 </div>
+                    -->
             </div>
         </div>
     </section>
