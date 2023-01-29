@@ -9,18 +9,18 @@
         <p>Hello There!</p>
 
         <p style="text-indent:1cm;">
-            Beam Gifts is an online gift buying and sending platform that was established to provide covenience for both the giver and receiver.
-            Our team continously curate various products and services to insure they become the perfect gifts for all your love ones.
-            We work with reliable partners and providers in order to deliver a wide range of high quality gifts that are categorized and accessible anytime.
+            Beam Gifts is an e-commerce platform used for sending and buying gifts online. 
+            We have established our site in order to provide covenience to both giver and recepient.
         </p>
         
+        <p>
+            In order to provide your love ones with the perfect gift, our team continously curate various brands and services to ensure high quality and memorable items. 
+            We work with reliable partners through out the city in order to provide you with a wide range of selction from coffee beverages to a spa massage.
+        </p>
 
         <p>
-            Currently our area of operation is only limited to Iloilo city, but our team is working tirelessy to bring Beam Gifts to the entire country (Philippines) and beyond.
-            We hope that you will try and avail our products and services.</p>
-            
-        <p>
-            Any feedback to improve your experience with us, is very much apprieciated. (feedback@beam.gifts)
+            Currently our area of operation is only limited to Iloilo city, but we are working tirelessy to bring our service to the entire country (Philippines) and beyond.  
+            Any feedback to improve our service and your experience with us, is very much apprieciated. (feedback@beam.gifts)
         </p>
         
         <p class="mt-5">
