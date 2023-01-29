@@ -31,9 +31,10 @@
             Q: How do I refund a gift item?
         </div>    
         <div class="fs-3">
-            A: Only the buyer of the gift can request for a refund. 
-            In order to initiate a refund, you can email the details of your purchase at "refund@beam.gifts".
-            Note that 
+            A: Only the buyer can request for a refund. 
+            In order to initiate the process, please email us using your registered email at "refund@beam.gifts".
+            Note that refunds are subject to our <a href="/tos">terms and services</a>, and due to third party payment providers we will not be able to refund
+            the exact amount.
         </div>
     </div>
 
