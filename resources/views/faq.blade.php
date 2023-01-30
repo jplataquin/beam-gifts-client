@@ -6,7 +6,7 @@
     <h1>Frequenty Asked Questions (FAQ)</h1>
     
 
-    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
+    <div class="mb-3 bg-white p-3 rounded border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: How to claim a E-gift?
         </div>    
