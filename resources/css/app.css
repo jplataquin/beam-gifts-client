@@ -981,6 +981,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .border-darkmagenta{
     border-color: #8B008B !important;
+    border-style: solid;
 }
 
 .bg-white{
