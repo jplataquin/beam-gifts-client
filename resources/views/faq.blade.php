@@ -10,7 +10,7 @@
         <div class="mb-3 fw-bold fs-4">
             Q: How to claim a E-gift?
         </div>    
-        <div class="fs-2">
+        <div class="fs-5">
             A: The receiver of the E-gift can present the QR code to the establishment in order to claim the item. 
             For more details please check the "<a href="/how-to-claim">how to claim</a>" page.
         </div>
@@ -21,7 +21,7 @@
         <div class="mb-3 fw-bold fs-4">
             Q: What happens if I sent the E-gift to the wrong person?
         </div>    
-        <div class="fs-2">
+        <div class="fs-5">
             A: Unfortnately the responsiblity of securing and sending the E-gift falls in the hands of the user who bought and sent it.
             Currently Beam Gifts does not have any password protection or security measure to prevent such mistake from happening. 
         </div>
@@ -42,7 +42,7 @@
         <div class="mb-3 fw-bold fs-4">
             Q: What happens if the E-gift I want to claim is not available or is out of stock.
         </div>    
-        <div class="fs-2">
+        <div class="fs-5">
             A: All E-gift items can be substituted for another item with equal or lesser value upon cliaming. 
             Note that no monetary change is given for items with lesser value.
         </div>
