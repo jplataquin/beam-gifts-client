@@ -6,7 +6,7 @@
     <h1>Frequenty Asked Questions (FAQ)</h1>
     
 
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: How to claim a E-gift?
         </div>    
@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: What happens if I sent the E-gift to the wrong person?
         </div>    
@@ -27,7 +27,7 @@
         </div>
     </div>
     
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: Is it safe to share my E-gift QR code publicly or online?
         </div>    
@@ -38,7 +38,7 @@
     </div>
 
 
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: What happens if the E-gift I want to claim is not available or is out of stock.
         </div>    
@@ -49,7 +49,7 @@
     </div>
 
 
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: Can I request to change the QR code of the E-gift?
         </div>    
@@ -59,7 +59,7 @@
     </div>
     
     
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: How do I refund a E-gift item?
         </div>    
@@ -72,7 +72,7 @@
     </div>
 
 
-    <div class="mb-3 bg-white p-3">
+    <div class="mb-3 bg-white p-3 rounded border border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
             Q: What happens if the brand or service is no longer available and my E-gift has not yet been claimed.
         </div>    
