@@ -11,7 +11,7 @@
 
 
             <div class="col-md-6">
-                <img class="heroBanner" src="{{asset('images/new_main_kr.png')}}" alt="" width="100%">
+                <img class="heroBanner" src="{{asset('images/banner-image.png')}}" alt="" width="100%">
                 <img class="heroLogo" src="{{ asset('images/logo.png') }}" alt="" width="100%">
             </div>
             <div class="col-md-6 py-5">
