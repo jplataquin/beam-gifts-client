@@ -8,7 +8,7 @@ return [
         'FLOSHP'  => 'Flower Shop', //Flowers
         'NOVSHP'  => 'Novelty Shop', //Toys & Novelty 
         'ELCSHP'  => 'Electronics Shop', //Appliance & Gadgets
-        'HELWEL'  => 'Health & Wellness', //Spa & Massage, Beauty Treatments
+        'BEAWEL'  => 'Beauty & Wellness', //Spa & Massage, Beauty Treatments
     ]
     
 ];

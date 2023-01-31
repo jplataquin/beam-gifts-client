@@ -100,6 +100,19 @@
      <section class="categories py-5">
         <h3>Brand Category</h3>
         <div class="container">
+
+            <div class="row mt-3 category-row">
+            @foreach( config('brand_categories.options') as $key=>$text)
+                <div class="col-lg-2 col-md-4 col-6 text-center">
+                    <div class="occasion p-2 my-2" href="/weh">
+                        
+                        <img class="occasionImg m-auto mb-2" src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
+                        {{$text}}
+                        
+                    </div>
+                </div>
+                @endforeach
+            </div>
             <!--
             <div class="row">
                 <div class="col-12">
@@ -110,6 +123,8 @@
                 </div>
             </div>
             -->
+
+            <!--
             <div class="row mt-3 category-row">
                 <div class="col-lg-2 col-md-4 col-6 text-center">
                     <a href="#">
@@ -148,6 +163,7 @@
                     </a>
                 </div>
             </div>
+                -->
         </div>
     </section>
 
