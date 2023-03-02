@@ -161,7 +161,7 @@
 
 
 
-        <div id="mobile-side" style="z-index:10;position:sticky;" class="mobile-navSidebar border-start d-lg-none">
+        <div id="mobile-side" style="z-index:10;position:absolute;" class="mobile-navSidebar border-start d-lg-none">
            
             <div style="position:relative">
             <ul class="mobile-nav m-0 p-3 text-end">
