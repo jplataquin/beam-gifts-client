@@ -193,7 +193,7 @@
             </ul>
 
             @auth          
-               <div class="" style="position: fixed; bottom: 70px;">
+               <div class="" style="position: fixed; bottom: 70px;width: 199px">
 
                     <ul class="mobile-nav m-0 p-3 text-end">
                         <li class="my-2">
@@ -205,7 +205,7 @@
                         </li>
                     </ul>
                 
-                    <a class="btn btn-warning" width="width: 199px" role="button" href="{{ route('logout') }}"
+                    <a class="btn btn-warning" width="100%" role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
