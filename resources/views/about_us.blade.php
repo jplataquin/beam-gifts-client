@@ -9,12 +9,11 @@
         <p>Hello There!</p>
 
         <p style="text-indent:1cm;">
-            Beam Gifts is an e-commerce platform used for sending and buying gifts online. 
-            We have established our site in order to provide covenience to both giver and recepient.
+            Beam Gifts is an online E-gift buying and sending platform that aims to provide covenience for both giver and recepient.
         </p>
         
         <p>
-            In order to provide your love ones with the memorable and perfect gift, our team continously curate the various brands and services we offer. 
+            Our team curates all our gift   memorable and perfect gift for your love ones. our team continously curate various brands and services. 
             We work with reliable partners through out the city in order to provide you with a wide range of selction from coffee beverages to a spa massage.
         </p>
 

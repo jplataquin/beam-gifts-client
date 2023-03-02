@@ -29,7 +29,7 @@ Route::middleware([CartSetup::class])->group(function () {
     Route::get('/brand/{name}',[App\Http\Controllers\BrandController::class, 'display']);
 
     Route::get('/gifts',[App\Http\Controllers\ItemController::class, 'index']);
-    Route::get('/gifts/{$category}',[App\Http\Controllers\ItemController::class, 'index']);
+    Route::get('/gifts/{category}',[App\Http\Controllers\ItemController::class, 'index']);
     Route::get('/gift/{brandname}/{itemname}',[App\Http\Controllers\ItemController::class, 'display']);
     
 });
