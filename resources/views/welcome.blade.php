@@ -36,9 +36,7 @@
     <section class="topBrands py-5 py-5">
         <h3>Featured Brands</h3>
         <div class="container">
-            <div class="row" id="brandsContainer">
-                
-            </div>
+            <div class="row" id="brandsContainer"></div>
     </section>
 
 
@@ -119,7 +117,7 @@
                     t.a({href:'/brand/'+window.util.spaceToDash(brand.name)},()=>{
                         t.img({
                             src: imgBaseUrl+'storage/photos/brand/200px/'+brand.photo['200px'],
-                            class:'occasionImg mb-2'
+                            class:'tileImg mb-2'
                         });
                         
                         t.h3({class:'categoryN'},brand.name);
@@ -139,7 +137,7 @@
                     t.a({href:'/brands'},()=>{
                         t.img({
                             src: 'https://via.placeholder.com/200',
-                            class:'occasionImg mb-2'
+                            class:'tileImg mb-2'
                         });
                         
                         t.h3({class:'categoryN'},'Show More');
@@ -149,7 +147,7 @@
             );
 
         }).catch((e)=>{
-            console.log('here',e);
+            console.log('error',e);
         });
 
         $q('.clickable-link').apply((el)=>{
