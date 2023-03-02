@@ -43,7 +43,7 @@
 
 
  <!-- Ocassions -->
-    <section class="occasions py-5">
+    <section class="tiles py-5">
         <h3>Gift Category</h3>
         <div class="container">
             <div class="row">
