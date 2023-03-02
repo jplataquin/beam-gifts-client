@@ -78,13 +78,16 @@
                         
 
                             @guest
+
+                            
+                                @if (Route::has('register'))
+                                    <li><a href="{{ route('register') }}" class="button singup-btn">Sign Up</a></li>
+                                @endif
+                                
                                 @if (Route::has('login'))
                                     <li><a href="{{ route('login') }}" class="login-btn">{{ __('Login') }}</a></li>
                                 @endif
 
-                                @if (Route::has('register'))
-                                    <li><a href="{{ route('register') }}" class="button singup-btn">Sign Up</a></li>
-                                @endif
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="button ps-2 pe-2 nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -200,8 +203,19 @@
             </ul>
 
             @auth          
-               <div class="">
-                    <a class="btn btn-warning" style="position: fixed; bottom: 70px; width: 199px;" role="button" href="{{ route('logout') }}"
+               <div class="" style="position: fixed; bottom: 70px; width: 199px;">
+
+                    <ul class="mobile-nav m-0 p-3 text-end">
+                        <li class="my-2">
+                            <a href="/myorders">My Orders</a>
+                        </li>
+
+                        <li class="my-2">
+                            <a href="/mygifts">My Gifts</a>
+                        </li>
+                    </ul>
+                
+                    <a class="btn btn-warning" " role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
