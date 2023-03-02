@@ -285,13 +285,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 
-/* Ocassions */
+/* Tile */
 
 .occasions{
     background-color: #f8f8f8;
 }
 
-.occasion{
+
+.tile{
     width: 100%;
     display: grid;
     border: none;
@@ -305,15 +306,16 @@ h1, h2, h3, h4, h5, h6, p{
     border-radius: 18px;
     cursor: pointer;
     transition: 0.3s;
+    text-overflow:ellipsis;
 }
 
-.occasion:hover{
+.tile:hover{
     color: #C70A80;
     transform: scale(1.1);
     
 }
 
-.occasionImg{
+.tileImg{
     width: auto;
     height: 100px;
 }

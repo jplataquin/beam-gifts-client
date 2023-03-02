@@ -50,7 +50,7 @@
 
                 @foreach( config('item_categories.options') as $key=>$text)
                 <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="clickable-link occasion p-2 my-2" data-href="/gifts/{{preg_replace('/[[:space:]]+/', '-', strtolower($text));}}">
+                    <div class="clickable-link tile p-2 my-2" data-href="/gifts/{{preg_replace('/[[:space:]]+/', '-', strtolower($text));}}">
                         
                         <img class="occasionImg m-auto mb-2"  src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
                         {{$text}}
@@ -104,14 +104,14 @@
             <div class="row mt-3 category-row">
             @foreach( config('brand_categories.options') as $key=>$text)
                 <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="clickable-link occasion p-2 my-2"  data-href="/brands/{{preg_replace('/[[:space:]]+/', '-', strtolower($text));}}">
+                    <div class="clickable-link tile p-2 my-2"  data-href="/brands/{{preg_replace('/[[:space:]]+/', '-', strtolower($text));}}">
                         
-                        <img class="occasionImg m-auto mb-2" src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
+                        <img class="tileImg m-auto mb-2" src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
                         {{$text}}
                         
                     </div>
                 </div>
-                @endforeach
+            @endforeach
             </div>
             <!--
             <div class="row">
