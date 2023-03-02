@@ -50,9 +50,9 @@
 
                 @foreach( config('item_categories.options') as $key=>$text)
                 <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="/weh">
+                    <div class="clickable-link occasion p-2 my-2" data-href="/gifts/{{preg_replace('/[[:space:]]+/', '-', $key);}}">
                         
-                        <img class="occasionImg m-auto mb-2" src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
+                        <img class="occasionImg m-auto mb-2"  src="{{ asset( 'images/icons/'.$key.'.png' ) }}" alt="">
                         {{$text}}
                         
                     </div>
@@ -169,7 +169,7 @@
 
 
     <script type="module">
-        import {Template} from '/adarna.js';
+        import {Template,$q} from '/adarna.js';
 
         const apiBaseUrl = '{{config("app")["api_base_url"]}}api/';
         const imgBaseUrl = '{{config("app")["api_base_url"]}}';
@@ -229,6 +229,16 @@
         }).catch((e)=>{
             console.log('here',e);
         });
+
+        $q('.clickable-link').apply((el)=>{
+
+            el.onclick = (e)=>{
+                let href = el.getAttribute('data-href');
+
+                document.location.href = href;
+            }
+        });
+        
     </script>
 </div>
 @endsection
