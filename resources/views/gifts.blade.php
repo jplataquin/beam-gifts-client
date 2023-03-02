@@ -97,17 +97,17 @@
             getList();
         }
 
-        console.log('here');
     });
 
 
+    //If filter category was preselected
     let option = '{{$option}}';
 
     if(option != ''){
 
         
         let filterButton = $q('.fltItem[data-value="'+option+'"]').first();
-        console.log('filterbuttoin',filterButton,option);
+      
         if(filterButton){
             filterButton.click();
         }
