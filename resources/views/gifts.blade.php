@@ -85,7 +85,7 @@
         }
     }
 
-    Array.from(document.querySelectorAll('.fltItem')).map(filter => {
+    $q('.fltItem')).apply(filter => {
 
         filter.onclick = (e)=>{
             page            = 1;
@@ -100,8 +100,10 @@
         let option = '{{$option}}';
 
         if(option != ''){
-            let filterButton = $q('.fltItem [data-value="'+option+'"]').first();
 
+           
+            let filterButton = $q('.fltItem [data-value="'+option+'"]').first();
+            console.log('filterbuttoin',filterButton);
             if(filterButton){
                 filterButton.click();
             }
