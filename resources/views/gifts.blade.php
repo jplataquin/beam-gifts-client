@@ -60,7 +60,7 @@
 
 
 <script type="module">
-    import {Template} from '/adarna.js';
+    import {Template,$q} from '/adarna.js';
 
     const brandListEl = document.querySelector('#item_list');
     const showMoreBtn = document.querySelector('#showMore');
