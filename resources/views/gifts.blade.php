@@ -97,18 +97,21 @@
             getList();
         }
 
-        let option = '{{$option}}';
-
-        if(option != ''){
-
-           
-            let filterButton = $q('.fltItem[data-value="'+option+'"]').first();
-            console.log('filterbuttoin',filterButton,option);
-            if(filterButton){
-                filterButton.click();
-            }
-        }
+        
     });
+
+
+    let option = '{{$option}}';
+
+    if(option != ''){
+
+        
+        let filterButton = $q('.fltItem[data-value="'+option+'"]').first();
+        console.log('filterbuttoin',filterButton,option);
+        if(filterButton){
+            filterButton.click();
+        }
+    }
 
     function clearList(){
         Array.from(document.querySelectorAll('.gift-item')).map(item => {
