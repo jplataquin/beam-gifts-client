@@ -163,12 +163,7 @@
                     </a>
                 </li>
        
-                <li class="my-2">
-                    <a href="/brands">Brands</a>
-                </li>
-                <li class="my-2">
-                    <a href="/gifts">Gifts</a>
-                </li>
+                
 
 
                 @guest
@@ -196,6 +191,13 @@
                <div class="" style="position: fixed; bottom: 70px;width: 199px">
 
                     <ul class="mobile-nav m-0 p-3 text-end">
+                        <li class="my-2">
+                            <a href="/brands">Brands</a>
+                        </li>
+                        <li class="my-2">
+                            <a href="/gifts">Gifts</a>
+                        </li>
+                        
                         <li class="my-2">
                             <a href="/myorders">Orders</a>
                         </li>
