@@ -58,38 +58,7 @@
                     </div>
                 </div>
                 @endforeach
-                <!--
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/birthday-cake.png') }}" alt="">
-                        Birthday Gift
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/delivery.png') }}" alt="">
-                        Delivery Gifts
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/engagement-ring.png') }}" alt="">
-                        Wedding Gifts
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/dollar.png') }}" alt="">
-                        Under $5
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <div class="occasion p-2 my-2" href="#">
-                        <img class="occasionImg m-auto mb-2" src="{{ asset('images/health.png') }}" alt="">
-                        Health Gifts
-                    </div>
-                </div>
-                    -->
+                
             </div>
         </div>
     </section>
@@ -113,57 +82,7 @@
                 </div>
             @endforeach
             </div>
-            <!--
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-cont">
-                        <h2 class="title">Our Categories</h2>
-                        <div class="title-bg"></div>
-                    </div>
-                </div>
-            </div>
-            -->
-
-            <!--
-            <div class="row mt-3 category-row">
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 1</h3>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 2</h3>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 3</h3>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 4</h3>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 5</h3>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center">
-                    <a href="#">
-                        <img class="categoryImg mb-2" src="{{ asset('images/placeholder.png') }}" alt=""  >
-                        <h3 class="categoryN">Category 6</h3>
-                    </a>
-                </div>
-            </div>
-                -->
+           
         </div>
     </section>
 
