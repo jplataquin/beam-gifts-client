@@ -12,8 +12,22 @@ class ItemController extends Controller
 {
 
 
-    public function index(Request $request){
-        return view('gifts');
+    public function index(Request $request, $category){
+
+        $options = config('item_categories')['options'];
+
+        $opt = '';
+
+        foreach($options as $key => $val){
+            
+            if( preg_replace( '/[[:space:]]+/', '-', strtolower($val) ) == $category){
+                $opt = $key;
+            }
+        }
+        
+        return view('gifts',[
+            'option' => $opt
+        ]);
     }
 
 

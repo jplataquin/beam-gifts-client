@@ -96,6 +96,16 @@
             clearList();
             getList();
         }
+
+        let option = '{{$option}}';
+
+        if(option != ''){
+            let filterButton = $q('.fltItem [data-value="'+option+'"]').first();
+
+            if(filterButton){
+                filterButton.click();
+            }
+        }
     });
 
     function clearList(){
@@ -111,7 +121,7 @@
         window.util.$get('/api/item_list',{
             page        : page,
             category    : category,
-            query       : query
+            query       : query,
         }).then(reply => {
             
             showMoreBtn.disabled = false;
