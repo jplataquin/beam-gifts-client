@@ -136,9 +136,7 @@
                 <div class="col-3 text-center">
                     <a href="/profile"><img src="{{ asset('images/user.png') }}" alt="" width="30px" height="30px"></a>
                 </div>
-                <div class="col-3 text-center">
-                    <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
-                </div>
+                
                 <div class="col-3 text-center">
                     <a href="/cart">
                         <div class="shopping-cart">
@@ -147,6 +145,11 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="col-3 text-center">
+                    <a href="/"><img src="{{ asset('images/home.png') }}" alt="" width="30px" height="30px"></a>
+                </div>
+          
                 <div class="col-3 text-center">
                     <a href="#" onclick="openNav()" id="mobilenavHAM"><img src="{{ asset('images/ham.png') }}" alt="" width="30px" height="30px"></a>
                     <a href="#" onclick="closeNav()" id="mobilenavClose"><img src="{{ asset('images/close.png') }}" alt="" width="30px"></a>
@@ -164,16 +167,8 @@
                 </li>
        
                 
-
-
-              
-             
-                
-
-                
             </ul>
 
-                   
                <div class="" style="position: fixed; bottom: 70px;width: 199px">
 
                     <ul class="mobile-nav m-0 p-3 text-end">
@@ -186,13 +181,13 @@
                         
 
                         @auth 
-                        <li class="my-2">
-                            <a href="/myorders">Orders</a>
-                        </li>
+                            <li class="my-2">
+                                <a href="/myorders">Orders</a>
+                            </li>
 
-                        <li class="my-2">
-                            <a href="/mygifts">Inventory</a>
-                        </li>
+                            <li class="my-2">
+                                <a href="/mygifts">Inventory</a>
+                            </li>
                         @endauth
                     </ul>
                     
