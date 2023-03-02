@@ -206,11 +206,11 @@
                         @else
                 
                         @if (Route::has('register'))
-                            <a class="btn btn-warning w-100" role="button" href="{{ route('register') }}">Sign Up</a>
+                            <a class="btn btn-warning w-100 mb-2" role="button" href="{{ route('register') }}">Sign Up</a>
                         @endif
                         
                         @if (Route::has('login'))
-                            <a class="btn btn-warning w-100" role="button" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-primary w-100" role="button" href="{{ route('login') }}">Login</a>
                         @endif
                     @endauth
 
