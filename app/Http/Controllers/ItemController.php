@@ -12,17 +12,24 @@ class ItemController extends Controller
 {
 
 
-    public function index(Request $request, $category){
-
-        $options = config('item_categories')['options'];
+    public function index(Request $request, $category = null){
 
         $opt = '';
 
-        foreach($options as $key => $val){
-            
-            if( preg_replace( '/[[:space:]]+/', '-', strtolower($val) ) == $category){
-                $opt = $key;
+
+        if($category != null){
+
+            $options = config('item_categories')['options'];
+
+
+            foreach($options as $key => $val){
+                
+                if( preg_replace( '/[[:space:]]+/', '-', strtolower($val) ) == $category){
+                    $opt = $key;
+                }
             }
+
+            
         }
         
         return view('gifts',[
