@@ -293,7 +293,6 @@ h1, h2, h3, h4, h5, h6, p{
 
 
 .tileText{
-    width: 135px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
