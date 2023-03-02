@@ -197,15 +197,15 @@
 
                     <ul class="mobile-nav m-0 p-3 text-end">
                         <li class="my-2">
-                            <a href="/myorders">My Orders</a>
+                            <a href="/myorders">Orders</a>
                         </li>
 
                         <li class="my-2">
-                            <a href="/mygifts">My Gifts</a>
+                            <a href="/mygifts">Inventory</a>
                         </li>
                     </ul>
                 
-                    <a class="btn btn-warning" width="100%" role="button" href="{{ route('logout') }}"
+                    <a class="btn btn-warning w-100" role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
