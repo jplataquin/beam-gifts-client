@@ -185,16 +185,6 @@
                         </li>
                     @endif
 
-                @else
-
-                    <li class="my-2">
-                        <a href="/myorders">My Orders</a>
-                    </li>
-
-                    <li class="my-2">
-                        <a href="/mygifts">My Gifts</a>
-                    </li>
-                
                 @endguest
              
                 
@@ -203,7 +193,7 @@
             </ul>
 
             @auth          
-               <div class="" style="position: fixed; bottom: 70px; width: 199px;">
+               <div class="" style="position: fixed; bottom: 70px;">
 
                     <ul class="mobile-nav m-0 p-3 text-end">
                         <li class="my-2">
@@ -215,7 +205,7 @@
                         </li>
                     </ul>
                 
-                    <a class="btn btn-warning" " role="button" href="{{ route('logout') }}"
+                    <a class="btn btn-warning" width="width: 199px" role="button" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
