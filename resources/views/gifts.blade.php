@@ -103,7 +103,7 @@
 
            
             let filterButton = $q('.fltItem [data-value="'+option+'"]').first();
-            console.log('filterbuttoin',filterButton);
+            console.log('filterbuttoin',filterButton,option);
             if(filterButton){
                 filterButton.click();
             }
