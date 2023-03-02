@@ -29,7 +29,9 @@ class ItemController extends Controller
                 }
             }
 
-            
+            if($opt == ''){
+                return abort(404);
+            }
         }
         
         return view('gifts',[
