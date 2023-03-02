@@ -25,7 +25,7 @@ Route::middleware([CartSetup::class])->group(function () {
     })->name('home');
 
 
-    Route::get('/brands',[App\Http\Controllers\BrandController::class, 'index']);
+    Route::get('/brands/{category?}',[App\Http\Controllers\BrandController::class, 'index']);
     Route::get('/brand/{name}',[App\Http\Controllers\BrandController::class, 'display']);
 
     Route::get('/gifts/{category?}',[App\Http\Controllers\ItemController::class, 'index']);

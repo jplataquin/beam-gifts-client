@@ -16,7 +16,6 @@ class ItemController extends Controller
 
         $opt = '';
 
-
         if($category != null){
 
             $options = config('item_categories')['options'];

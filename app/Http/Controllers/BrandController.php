@@ -12,8 +12,30 @@ class BrandController extends Controller
 {
 
 
-    public function index(Request $request){
-        return view('brands');
+    public function index(Request $request,$category = null){
+
+        $opt = '';
+
+        if($category != null){
+
+            $options = config('brand_categories')['options'];
+
+
+            foreach($options as $key => $val){
+                
+                if( preg_replace( '/[[:space:]]+/', '-', strtolower($val) ) == $category){
+                    $opt = $key;
+                }
+            }
+
+            if($opt == ''){
+                return abort(404);
+            }
+        }
+
+        return view('brands',[
+            'option' => $opt
+        ]);
     }
 
     public function display($name)
