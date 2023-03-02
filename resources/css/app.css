@@ -972,6 +972,10 @@ h1, h2, h3, h4, h5, h6, p{
         overflow-y: auto;
         overflow-wrap: break-word;
     }
+
+    .tile{
+        width: 135px;
+    }
 }
 
 
