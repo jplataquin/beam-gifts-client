@@ -129,7 +129,7 @@
             </div>
         </div>
 
-        <div id="mobile-nav" class="mobile-navigation w-100 py-3 border-top d-lg-none">
+        <div id="mobile-nav" style="z-index:20" class="mobile-navigation w-100 py-3 border-top d-lg-none">
           
             <div id="mobile-navBot-items" class="row justify-content-center">
                 
@@ -157,7 +157,11 @@
             </div>
         </div>        
 
-        <div id="mobile-side" style="z-index:999;position:absolute" class="mobile-navSidebar border-start d-lg-none">
+
+
+
+
+        <div id="mobile-side" style="z-index:10;position:absolute" class="mobile-navSidebar border-start d-lg-none">
            
             <div style="position:relative">
             <ul class="mobile-nav m-0 p-3 text-end">
