@@ -166,28 +166,14 @@
                 
 
 
-                @guest
-                
-                    @if (Route::has('register'))
-                        <li class="my-2">
-                            <a href="{{ route('register') }}">Sign Up</a>
-                        </li>
-                    @endif
-                    
-                    @if (Route::has('login'))
-                        <li class="my-2">
-                            <a href="{{ route('login') }}">Login</a>
-                        </li>
-                    @endif
-
-                @endguest
+              
              
                 
 
                 
             </ul>
 
-            @auth          
+                   
                <div class="" style="position: fixed; bottom: 70px;width: 199px">
 
                     <ul class="mobile-nav m-0 p-3 text-end">
@@ -198,6 +184,8 @@
                             <a href="/gifts">Gifts</a>
                         </li>
                         
+
+                        @auth 
                         <li class="my-2">
                             <a href="/myorders">Orders</a>
                         </li>
@@ -205,15 +193,31 @@
                         <li class="my-2">
                             <a href="/mygifts">Inventory</a>
                         </li>
+                        @endauth
                     </ul>
+                    
+                    @auth 
+                        <a class="btn btn-warning w-100" role="button" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        @else
                 
-                    <a class="btn btn-warning w-100" role="button" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                        @if (Route::has('register'))
+                            <a class="btn btn-warning w-100" role="button" href="{{ route('register') }}">Sign Up</a>
+                        @endif
+                        
+                        @if (Route::has('login'))
+                            <a class="btn btn-warning w-100" role="button" href="{{ route('login') }}">Login</a>
+                        @endif
+                    @endauth
+
+
+
                 </div>
-            @endauth
+           
         </div>
     </section>
 
