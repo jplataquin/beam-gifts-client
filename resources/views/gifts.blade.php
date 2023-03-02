@@ -85,7 +85,7 @@
         }
     }
 
-    $q('.fltItem')).apply(filter => {
+    $q('.fltItem').apply(filter => {
 
         filter.onclick = (e)=>{
             page            = 1;
