@@ -100,18 +100,6 @@
     });
 
 
-    //If filter category was preselected
-    let option = '{{$option}}';
-
-    if(option != ''){
-
-        
-        let filterButton = $q('.fltItem[data-value="'+option+'"]').first();
-      
-        if(filterButton){
-            filterButton.click();
-        }
-    }
 
     function clearList(){
         Array.from(document.querySelectorAll('.gift-item')).map(item => {
@@ -188,7 +176,24 @@
         getList();
     }
 
-    getList();
+
+    
+    //If filter category was preselected
+    let option = '{{$option}}';
+
+    if(option != ''){
+
+        
+        let filterButton = $q('.fltItem[data-value="'+option+'"]').first();
+      
+        if(filterButton){
+            filterButton.click();
+        }
+
+    }else{
+        getList();
+    }
+   
 </script>
 
 @endsection
