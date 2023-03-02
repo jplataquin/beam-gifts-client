@@ -157,7 +157,9 @@
             </div>
         </div>        
 
-        <div id="mobile-side" style="z-index:999" class="mobile-navSidebar border-start d-lg-none">
+        <div id="mobile-side" style="z-index:999;position:absolute" class="mobile-navSidebar border-start d-lg-none">
+           
+            <div style="position:relative">
             <ul class="mobile-nav m-0 p-3 text-end">
          
                 <li class="my-2">
@@ -212,7 +214,7 @@
 
 
                 </div>
-           
+            </div> 
         </div>
     </section>
 
