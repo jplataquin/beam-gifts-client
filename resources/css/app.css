@@ -12,6 +12,7 @@ body{
     font-family: 'Poppins', sans-serif;
     transition: margin-right .5s;
     position: relative;
+
 }
 
 .our_color{
@@ -978,6 +979,10 @@ h1, h2, h3, h4, h5, h6, p{
         width: 150px;
         font-size: 12px;
 
+    }
+
+    .topbar{
+        position: sticky;
     }
 }
 
