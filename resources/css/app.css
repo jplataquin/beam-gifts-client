@@ -983,6 +983,8 @@ h1, h2, h3, h4, h5, h6, p{
 
     .topbar{
         position: sticky;
+        width:100%;
+        top:0;
     }
 }
 
