@@ -970,6 +970,9 @@ h1, h2, h3, h4, h5, h6, p{
         top: 10px;
     }
 
+    .topbar {
+        background-color: #c70a80;;
+    }
     /*
     .heroLogo{
         margin-top: 50px;
