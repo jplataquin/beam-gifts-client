@@ -956,6 +956,7 @@ h1, h2, h3, h4, h5, h6, p{
         top: 10px;
     }
 
+    /*
     .heroLogo{
         margin-top: 50px;
         display: inline;
@@ -963,7 +964,7 @@ h1, h2, h3, h4, h5, h6, p{
 
     .heroBanner{
         display:none;
-    }
+    }*/
 
     .branchList{
         max-height: 200px;
