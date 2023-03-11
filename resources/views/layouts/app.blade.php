@@ -44,8 +44,8 @@
     </script>
 </head>
 <body>
-    <div class="topbar py-2">
-        &nbsp;
+    <div class="topbar py-2 text-center">
+        <img class="logoHorizontal" src="{{ asset('images/logo.png') }}" alt="" width="100px">
     </div>
 
     <section class="header">
