@@ -45,9 +45,7 @@
 </head>
 <body>
     <div class="topbar py-2 text-center">
-        <div class="mx-auto d-block">
-            <img class="logoHorizontal" src="{{ asset('images/logo_horizontal.png') }}" alt="" height="35px">
-        </div>
+            <img class="logoHorizontal mx-auto" src="{{ asset('images/logo_horizontal.png') }}" alt="" height="35px">
     </div>
 
     <section class="header">
