@@ -22,6 +22,7 @@
     
     <link href="/css/toastify.css" rel="stylesheet">
     <link rel="manifest" href="{{ asset('images/favicon_io/site.webmanifest') }}" />
+    
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     
