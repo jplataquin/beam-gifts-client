@@ -85,9 +85,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Header */
 
-.header{
-    background-color:#9608C7;
-}
+
 
 /* TopBar */
 
@@ -952,14 +950,6 @@ h1, h2, h3, h4, h5, h6, p{
 /* Responsive */
 
 
-@media (max-width: 991px) {
-
-    .logoHorizontal{
-        display:block;
-    }
-
-}
-
 @media (max-width: 768px) {
     .filter-column .fltCont{
         display: flex;
@@ -970,9 +960,7 @@ h1, h2, h3, h4, h5, h6, p{
         top: 10px;
     }
 
-    .topbar {
-        background-color: #9608C7;;
-    }
+ 
     /*
     .heroLogo{
         margin-top: 50px;
