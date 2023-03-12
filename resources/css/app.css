@@ -143,8 +143,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .logo{
-    width: 98%;
-    max-width: 160px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .lnav-col{
