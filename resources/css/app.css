@@ -975,15 +975,10 @@ h1, h2, h3, h4, h5, h6, p{
     }
 
  
-    /*
-    .heroLogo{
-        margin-top: 50px;
-        display: inline;
+    .search-bar{
+        top:30px;
+        position:sticky;
     }
-
-    .heroBanner{
-        display:none;
-    }*/
 
     .logoHorizontal{
         display:block;
