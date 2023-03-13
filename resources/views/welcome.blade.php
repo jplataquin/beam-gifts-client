@@ -34,7 +34,10 @@
 
     <div class="row mt-3">
         <div class="form-group">
-            <input type="text" class="form-control"/>
+            <div class="input-group"> 
+                <span class="input-group-text">@</span>
+                <input type="text" placeholder="search" class="form-control"/>
+            </div>
         </div>
     </div>
 
