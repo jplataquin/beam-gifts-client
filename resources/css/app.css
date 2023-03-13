@@ -142,6 +142,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Navigation Bar */
 
+#mobie-side{
+    min-height: 100vh;
+}
+
 .header-row{
     max-width: 1140px;
     padding: 0px 15px;
