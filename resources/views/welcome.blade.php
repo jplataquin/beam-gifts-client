@@ -30,7 +30,7 @@
 
 
 
-<div class="row mt-3 search-bar">
+<div class="row mt-3 ml-3 mr-3 search-bar">
     <div class="form-group">
         <div class="input-group"> 
             <span class="input-group-text">
