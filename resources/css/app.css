@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .search-bar{
-    top:120px;
+    top:120;
     position:sticky;
 }
 
