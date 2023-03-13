@@ -29,13 +29,18 @@
 </section>
 
 
+
 <div class="container">
-    
+
+    <div class="row mb-3">
+        <div class="form-group">
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
 
 
     <section class="topBrands py-5 py-5">
         <h3>Featured Brands</h3>
-        <div class="container">
             <div class="row" id="brandsContainer"></div>
     </section>
 
@@ -45,11 +50,6 @@
         <h3>Categories</h3>
         
         <div class="container">
-            <div class="row">
-                <div class="form-group">
-                    <input type="text" class="form-control"/>
-                </div>
-            </div>
             <div class="row">
 
                 @foreach( config('item_categories.options') as $key=>$text)
@@ -68,7 +68,7 @@
         </div>
     </section>
 
-
+</div>
      <!-- Categories -->
     <!--
      <section class="categories py-5">
@@ -93,7 +93,6 @@
         </div>
     </section>
 -->
-
 
     <script type="module">
         import {Template,$q} from '/adarna.js';
