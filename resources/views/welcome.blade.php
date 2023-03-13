@@ -42,8 +42,14 @@
 
  <!-- Ocassions -->
     <section class="tiles py-5">
-        <h3>Gift Category</h3>
+        <h3>Categories</h3>
+        
         <div class="container">
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" class="form-control"/>
+                </div>
+            </div>
             <div class="row">
 
                 @foreach( config('item_categories.options') as $key=>$text)
