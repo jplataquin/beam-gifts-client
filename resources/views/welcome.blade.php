@@ -33,7 +33,7 @@
 <div class="container">
 
     <div class="row mt-3">
-        <div class="form-group">
+        <div class="form-group search-bar">
             <div class="input-group"> 
                 <span class="input-group-text">
 
