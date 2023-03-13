@@ -34,7 +34,7 @@
 
     <div class="row mt-3">
         <div class="form-group search-bar">
-            <div class="input-group"> 
+            <div class="input-group search-bar"> 
                 <span class="input-group-text">
 
                 <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
