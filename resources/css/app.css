@@ -144,6 +144,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 #mobile-side{
     min-height: 100vh;
+    z-index:2;
 }
 
 .header-row{
