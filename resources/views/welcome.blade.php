@@ -64,7 +64,7 @@
 
 
      <!-- Categories -->
-
+    <!--
      <section class="categories py-5">
         <h3>Brand Category</h3>
         <div class="container">
@@ -86,6 +86,7 @@
            
         </div>
     </section>
+-->
 
 
     <script type="module">
