@@ -181,7 +181,7 @@
 
 
         $q('#search').apply((el)=>{
-            el.onkeyup = (e)=>{
+            el.onkeypress = (e)=>{
 
                 if(e.key === 'Enter' || e.keyCode === 13){
                     alert('asadads');
