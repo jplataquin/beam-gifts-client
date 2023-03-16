@@ -9,7 +9,7 @@
 
 
 <p>
-These Terms of Service (Terms) govern your use of Beam Gifts (Beam Gifts, we, our, or us), a proprietary gifting service platform (Service).
+These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (Beam Gifts, we, our, or us), a proprietary gifting service platform (Service).
 By using the Service, you agree to be bound by these terms.
 </p>
 
