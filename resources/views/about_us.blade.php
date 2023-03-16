@@ -31,7 +31,7 @@
 
 
         <p class="mt-5">
-            Beam a gift to someone now!
+            Beam a gift to someone now 😘
             <br>
             Regards,
             <br>
