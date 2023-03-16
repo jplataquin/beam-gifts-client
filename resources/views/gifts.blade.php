@@ -38,7 +38,7 @@
                                  <p class="totals">Total 15</p> 
                                 </div>
                                 -->
-                                <div class="col-12 text-start">
+                                <div class="col-12 text-start" style="z-index:-1">
                                     <div class="input-group"> 
                                         <span class="input-group-text">
                                             <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
