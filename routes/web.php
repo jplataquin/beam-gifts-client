@@ -66,6 +66,11 @@ Route::get('/about_us',function(){
 });
 
 
+Route::get('/tos',function(){
+
+    return view('tos');
+});
+
 Route::get('/faq',function(){
 
     return view('faq');
