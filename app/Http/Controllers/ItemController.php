@@ -14,8 +14,8 @@ class ItemController extends Controller
 
     public function index(Request $request, $category = null){
 
-        $query = $request->input('query');
-        
+        $query = $request->input('q');
+
         $opt = '';
 
         if($category != null){

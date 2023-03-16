@@ -185,7 +185,7 @@
 
                 if(e.key === 'Enter' || e.keyCode === 13){
                     
-                    document.location.href = '/gifts?='+encodeURI(el.value);
+                    document.location.href = '/gifts?q='+encodeURI(el.value);
                 }
             }
         });
