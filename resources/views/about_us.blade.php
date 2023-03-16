@@ -13,10 +13,13 @@
         </p>
         
         <p>
-            We provide gifts that are memorable for any occasion and can bring joy to your love ones. 
-            Our team continously curate all the brands and services in order to deliver the best meaningful gift throughout the city. 
+            We provide gifts that are memorable that can bring joy to your love ones. 
         </p>
 
+        <p>
+            Our team continously curate all the brands and services in order to deliver the best meaningful gift throughout the city. 
+        </p>
+        
         <p>
             Our service operates mainly in the Iloilo city, 
             and we are working tirelessy to reach the entire country (Philippines) and beyond.  
