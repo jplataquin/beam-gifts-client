@@ -5,11 +5,11 @@
 <div class="container">
     <h1>About Us</h1>
     <hr>
-    <div style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px;margin-bottom:10px;text-align: justify;">
+    <div class="w-50" style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px;margin-bottom:10px;text-align: justify;">
         <p>Hello There!</p>
 
         <p>
-            "Beam Gifts" is a convenient platform for sending and receiving a gift through the internet.
+            "Beam Gifts" is a convenient platform for sending and receiving gifts through the internet.
             We provide gift items for any occasion that will bring joy to your love ones. 
         </p>
 
