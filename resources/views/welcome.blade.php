@@ -184,7 +184,8 @@
             el.onkeypress = (e)=>{
 
                 if(e.key === 'Enter' || e.keyCode === 13){
-                    alert('asadads');
+                    
+                    document.location.href = '/gifts?='+encodeURI(el.value);
                 }
             }
         });
