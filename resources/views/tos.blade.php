@@ -33,9 +33,18 @@ You agree that we retain the unfettered right to modify any aspect of the Servic
 
 <p>
 All descriptions, images, references, features, content, specifications, services and prices of services described or depicted in the Service, are subject to change (including availability) at any time without notice.
-Proprietary Rights
+</p>
+
+<h5>Proprietary Rights</h5>
+
+<p>
 The Service and its content, features, and functionality are owned by Beam Gifts, its licensors, or other providers of such material and is protected by copyright and other laws and international treaty provisions. Except for the rights explicitly granted in these Terms, these Terms do not grant you any rights to patents, copyrights, trade secrets, trademarks, source code, or any other right, title or interest in the Service, ownership of which is retained by Beam Gifts and its suppliers, as applicable.
-User Account
+
+
+
+<h5>User Account</h5>
+
+<p>
 You will need to provide information such as your name, birth date, and email address to register for an Account and/or use the Service. You represent and warrant that the information you register with and all information entered or collected in the course of creating your Account and any information you add or update from your settings (Account Information) are true and accurate.
 </p>
 
