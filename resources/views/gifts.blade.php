@@ -10,7 +10,7 @@
                         <h2 class="title">Gifts</h2>
                         <div class="title-bg"></div>
                     </div>
-                    <div class="subTitle">What do you want to beam?</div>
+                    <div class="subTitle">What to beam? 🤔</div>
                 </div>
             </div>
             <div class="row mt-5">
