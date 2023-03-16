@@ -9,8 +9,8 @@
         <p>Hello There!</p>
 
         <p>
-            "Beam Gifts" is a convenient platform for sending and receiving a gift items through the internet.
-            We provide gifts for any occasion that will bring joy to your love ones. 
+            "Beam Gifts" is a convenient platform for sending and receiving a gift through the internet.
+            We provide gift items for any occasion that will bring joy to your love ones. 
         </p>
 
         <p>
