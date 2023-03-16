@@ -13,7 +13,7 @@
         <div class="fs-5">
             A: The recipient shall present the QR code to the establishment before the gift is released.
             
-            For more details on how to claim please visit the "<a href="/how-to-claim">how to claim</a>" page.
+            For more details on how to claim please visit the "<a href="/guide">Guide</a>" page.
         </div>
     </div>
 
