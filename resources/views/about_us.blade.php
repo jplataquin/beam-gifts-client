@@ -10,7 +10,7 @@
 
         <p>
             "Beam Gifts" is a convenient platform for sending and receiving gifts through the internet.
-            We provide items for any occasion that will bring joy to your love ones. 
+            We aim provide items for any occasion that will bring joy to your love ones. 
         </p>
 
         <p>
