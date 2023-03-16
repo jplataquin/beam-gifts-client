@@ -27,7 +27,11 @@
             Send us a message and share your thoughts about us in "feedback@beam.gifts".
         </p>
         
+
+
+
         <p class="mt-5">
+            Beam a gift to someone special now!
             Regards,
             <br>
             Beam Gifts Team
