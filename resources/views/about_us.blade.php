@@ -14,7 +14,7 @@
         </p>
 
         <p>
-            Our team curate the brands and services throughout the city and include them in our line up of memorable gifts. 
+            Our team curates the brands and services throughout the city and include them in our line up of memorable gifts. 
         </p>
         
         <p>
