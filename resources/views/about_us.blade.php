@@ -32,6 +32,7 @@
 
         <p class="mt-5">
             Beam a gift to someone special now!
+            <br>
             Regards,
             <br>
             Beam Gifts Team
