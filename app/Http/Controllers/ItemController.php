@@ -14,6 +14,8 @@ class ItemController extends Controller
 
     public function index(Request $request, $category = null){
 
+        $query = $request->input('query');
+        
         $opt = '';
 
         if($category != null){
@@ -34,7 +36,8 @@ class ItemController extends Controller
         }
         
         return view('gifts',[
-            'option' => $opt
+            'option' => $opt,
+            'query'  => $query
         ]);
     }
 

@@ -71,7 +71,7 @@
 
     let page        = 1;
     let category    = '';
-    let query       = '';
+    let query       = '{{$query}}';
 
     queryEl.onkeyup = (e)=>{
     
