@@ -9,12 +9,12 @@
         <p>Hello There!</p>
 
         <p>
-            "Beam Gifts" is a convenient platform for sending and receiving a gifts through the internet.
+            "Beam Gifts" is a convenient platform for sending and receiving a gift items through the internet.
             We provide gifts for any occasion that will bring joy to your love ones. 
         </p>
 
         <p>
-            Our team curates the brands and services throughout the city and include them in our line up of memorable gifts. 
+            We curate brands and services throughout the city and include them in our line up of memorable gifts. 
         </p>
         
         <p>
