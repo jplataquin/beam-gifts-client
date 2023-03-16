@@ -14,11 +14,11 @@
         </p>
 
         <p>
-            Our team continously curate all the brands and services in order to deliver the best meaningful gift throughout the city. 
+            Our team curate the brands and services throughout the city and include them in our line up of memorable gifts. 
         </p>
         
         <p>
-            Our service operates mainly in the Iloilo city, 
+            We operates mainly in Iloilo city, 
             and we are working tirelessy to reach the entire country (Philippines) and beyond.  
         </p>
 
