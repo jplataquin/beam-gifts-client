@@ -10,7 +10,7 @@
                         <h2 class="title">Gifts</h2>
                         <div class="title-bg"></div>
                     </div>
-                    <div class="subTitle">What would you like to beam?</div>
+                    <div class="subTitle">What do you want to beam?</div>
                 </div>
             </div>
             <div class="row mt-5">
@@ -39,7 +39,16 @@
                                 </div>
                                 -->
                                 <div class="col-12 text-start">
-                                    <input id="query" value="{{$query}}" type="text" class="form-control" placeholder="Search Gift"/>
+                                    <div class="input-group"> 
+                                        <span class="input-group-text">
+                                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.1" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" fill="#323232"/>
+                                                <path d="M15 15L21 21" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#323232" stroke-width="2"/>
+                                            </svg>
+                                        </span>
+                                        <input id="query" value="{{$query}}" type="text" class="form-control" placeholder="Search Gift"/>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row mt-5">
