@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <h1>About Us</h1>
     <hr>
-    <div id="abount-us-note">
+    <div id="about-us-note">
         <p>Hello There!</p>
 
         <p>
