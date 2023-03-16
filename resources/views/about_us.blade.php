@@ -20,7 +20,7 @@
         
         <p>
             We operate in Iloilo city, 
-            and we are working tirelessy to reach the entire country (Philippines) and beyond.  
+            and we are working non-stop to reach the entire country (Philippines) and beyond.  
         </p>
 
         <p>
