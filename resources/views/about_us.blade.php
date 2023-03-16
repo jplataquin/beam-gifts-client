@@ -10,7 +10,7 @@
 
         <p>
             "Beam Gifts" is a convenient platform for sending and receiving gifts through the internet.
-            We aim provide items for any occasion that will bring joy to your love ones. 
+            We aim to provide items for any occasion that will bring joy to your loved ones. 
         </p>
 
         <p>
@@ -19,8 +19,8 @@
         </p>
         
         <p>
-            We operate in Iloilo city, 
-            and we are working non-stop to reach the entire country (Philippines) and beyond.  
+            We currently operate in Iloilo city, 
+            but we are working non-stop to reach the entire country (Philippines) and beyond.  
         </p>
 
         <p>
