@@ -9,17 +9,29 @@
 
 
 <p>
-These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (Beam Gifts, we, our, or us), a proprietary gifting service platform (Service).
+These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (<strong>Beam Gifts</strong>, <strong>we</strong>, <strong>our</strong>, or <strong>us</strong>), a proprietary gifting service platform (Service).
 By using the Service, you agree to be bound by these terms.
 </p>
 
 <h5>Eligibility</h5>
 
 <p>
-You must be at least 18 years and the age of majority in your state of residence, and you must register for an account (Account) to use the Service.
-Changes to Terms
+You must be at least 18 years and the age of majority in your state of residence, and you must register for an account (<strong>Account</strong>) to use the Service.
+
+</p>
+
+
+<h5>Changes to Terms</h5>
+
+<p>
 We reserve the right, at our discretion, to change or modify these Terms at any time. Although it is your responsibility to review these Terms from time to time for any changes, we will notify you of any revisions to these Terms by posting them at this location. If you do not agree to the revised Terms, you must stop using our Service. Your continued use of our Service following any revision to these Terms signifies your assent to and acceptance of the revised Terms.
+</p>
+
+<p>
 You agree that we retain the unfettered right to modify any aspect of the Service. You acknowledge that we have been, is, and will be constantly making changes to the Service. These changes include modifications to features, functions or abilities of any element of the Service.
+</p>
+
+<p>
 All descriptions, images, references, features, content, specifications, services and prices of services described or depicted in the Service, are subject to change (including availability) at any time without notice.
 Proprietary Rights
 The Service and its content, features, and functionality are owned by Beam Gifts, its licensors, or other providers of such material and is protected by copyright and other laws and international treaty provisions. Except for the rights explicitly granted in these Terms, these Terms do not grant you any rights to patents, copyrights, trade secrets, trademarks, source code, or any other right, title or interest in the Service, ownership of which is retained by Beam Gifts and its suppliers, as applicable.
@@ -35,6 +47,9 @@ You will need to provide information such as your name, birth date, and email ad
 Fees for using the Service are displayed in your order. We reserve the right to adjust fees in our sole discretion, at any time and without notice to you. Your completion of a purchase constitutes your acceptance of all fees. Product prices and fees are shown in Philippine peso and/or local currencies. Displayed foreign currency fees and prices are converted into Philippine peso upon checkout. Displayed prices do not include applicable taxes and other fees or charges, which will be included at checkout.
 From time to time, we may offer incentives for inviting others to use the Service (Referral Program). Any incentives under such Referral Program will be subject to the then current Referral Program terms, if applicable, and otherwise at our sole discretion.
 Payment
+<p>
+
+<p>
 You agree to pay for all gifts you purchase on your Account in accordance with the prices and payment terms in effect at the time the purchase is made. You also agree to pay all applicable taxes. To purchase a gift, you must provide valid payment information (e.g. credit card, debit card, and/or bank account information) through the Service. By placing an order for a gift, you also agree and authorize (i) the payment method(s) you provide to be immediately charged for all fees and taxes applicable to your order, (ii) Beam Gifts to automatically charge alternative payment methods associated with your account if a primary payment method is declined or no longer available, (iii) Beam Gifts to share payment information and instructions required to complete the payment transactions between Beam Gifts, our payment processors, and their third-party payment service providers (e.g., credit card transaction processing, merchant settlement, and related services), and (iv) no additional notice or consent is required for the foregoing authorizations. You agree to immediately update your Account in the event of any change in your payment information. If a payment method cannot be verified, is invalid or is otherwise not acceptable, your purchase may be suspended or canceled. We may also cancel a gift (defined below) if we discover after issuance that the gift and/or payment for it was fraudulent or incomplete. Beam Gifts reserves the right to collect any outstanding payment due, and may transfer the collection of your outstanding balance to a third-party collection agency.
 Third Party Gift Items
 Third party gift items cannot be redeemed through or within the Service and must be redeemed with the issuing merchant. Gift items are a third-party service feature, and Beam Gifts has no control over and disclaims any and all liability whatsoever associated with your recipient’s ability to use gift items. Gift items must be used in accordance with the terms and conditions specified by the merchant or other party who issued that gift items. The expiration of your gift item is dependent on the specific merchant policies. We have no control over the expiration date. You or your gift item recipient must contact the issuing merchant directly to resolve any issues with the gift item.
