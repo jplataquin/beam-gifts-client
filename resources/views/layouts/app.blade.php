@@ -248,6 +248,7 @@
                     <ul class="footer-col">
                         <li><h4 class="footer-title">Beam Gifts</h4></li>
                         <li><a class="footer-item" href="/about_us">About Us</a></li>
+                        <li><a class="footer-item" href="/tos">Terms of Service</a></li>
                     </ul>
                 </div>
                 <!--
