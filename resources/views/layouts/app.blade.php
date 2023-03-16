@@ -53,7 +53,7 @@
             <img class="logoHorizontal mx-auto" src="{{ asset('images/logo_horizontal.png') }}" alt="" height="35px">
     </div>
 
-    <section class="header">
+    <section class="header" style="z-index:99999">
         
 
         <div class="navigationbar py-3 d-lg-block d-none">
