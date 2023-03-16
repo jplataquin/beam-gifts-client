@@ -962,10 +962,27 @@ h1, h2, h3, h4, h5, h6, p{
     display:none;
 }
 
+
+
+#about-us-note{
+    padding:20px; 
+    background-color:#FFFFFF; 
+    border-radius: 25px; 
+    font-size:20px;
+    margin-bottom:10px;
+    text-align: justify;
+    width:80%;
+}
+
 /* Responsive */
 
 
 @media (max-width: 768px) {
+
+    #about-us-note{
+        width:100%;
+    }
+
     .filter-column .fltCont{
         display: flex;
     }

@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <h1>About Us</h1>
     <hr>
-    <div class="w-50" style="padding:20px; background-color:#FFFFFF; border-radius: 25px;font-size:20px;margin-bottom:10px;text-align: justify;">
+    <div id="abount-us-note">
         <p>Hello There!</p>
 
         <p>
