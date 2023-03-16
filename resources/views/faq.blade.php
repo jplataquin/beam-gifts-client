@@ -32,7 +32,7 @@
         <div class="mb-3 fw-bold fs-4">
             Q: Is it safe to share my gift link (QR Code) publicly?
         </div>    
-        <div class="fs-2">
+        <div class="fs-5">
             A: No, please keep the link or QR code confidential. 
             Sharing the link or QR code publicly can result in the gift being stolen.
         </div>
@@ -41,7 +41,7 @@
 
     <div class="mb-3 bg-white p-3 rounded border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
-            Q: What happens if the gift I want to claim is not available or is out of stock.
+            Q: What happens if the item I want to claim is not available or is out of stock.
         </div>    
         <div class="fs-5">
             A: All gift items can be substituted for another item with equal or lesser value upon cliaming. 
@@ -75,11 +75,11 @@
 
     <div class="mb-3 bg-white p-3 rounded border-darkmagenta">
         <div class="mb-3 fw-bold fs-4">
-            Q: What happens if the brand or establishment is no longer existing.
+            Q: What happens if the brand or establishment no longer exist.
         </div>    
         <div class="fs-5">
             A: In the event that the brand or establishment has closed down or no longer exists, the user who bought the gift can request for a refund.
-            Note that the link must not be expired and shall be subject to our <a href="/tos">terms of service</a>,.
+            Note that the iteem must not be expired and shall be subject to our <a href="/tos">terms of service</a>,.
         </div>
     </div>
 
