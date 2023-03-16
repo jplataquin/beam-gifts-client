@@ -39,7 +39,7 @@
                                 </div>
                                 -->
                                 <div class="col-12 text-start">
-                                    <input id="query" type="text" class="form-control" placeholder="Search Gift"/>
+                                    <input id="query" value="{{$query}}" type="text" class="form-control" placeholder="Search Gift"/>
                                 </div>
                             </div>
                             <div class="row mt-5">
