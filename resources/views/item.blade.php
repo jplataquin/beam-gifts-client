@@ -75,11 +75,9 @@
                         </div>
                         <div class="tab-pane fade" id="rp-tab-pane" role="tabpanel" aria-labelledby="rp-tab" tabindex="0">
                             <p class="product-desc">
-                                - If gift card was deleted or not received, please contact SodaGift customer support.
-
-                                [Cancel and Refund Policy]
-
-                                - Buyer can request cancellation or refund of unused gift card.
+                                - If gift item was not received, please contact Beam Gifts customer support. (email: support@beam.gifts)
+                                <br>
+                                - Buyer can request refund of unused not expired gift item. (email: refund@beam.gifts)
                             </p>
                         </div>
                     </div>
