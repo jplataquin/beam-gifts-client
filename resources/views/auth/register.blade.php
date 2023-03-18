@@ -132,6 +132,10 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Terms & Services</label>
 
                             <div class="col-md-6">
+                                <div>
+                                    <a href="/tos" target="__blank">Please Read</a>
+                                </div>
+
                                 Agree: <input id="" type="checkbox" class="" name="tos_agree" value="1" required/>
                             </div>
                         </div>
