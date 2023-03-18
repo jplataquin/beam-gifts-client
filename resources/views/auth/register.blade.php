@@ -134,7 +134,7 @@
                             <div class="col-md-6">
                                 <div>
                                     <a href="/tos" target="__blank">Please Read</a>
-                                    <div class="w-100" style="max-height:300px; overflo-y:auto">
+                                    <div class="w-100" style="max-height:300px; overflow-y:scroll">
                                     @include('tos_content');
                                     </div>
                                 </div>
