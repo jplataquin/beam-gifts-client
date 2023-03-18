@@ -134,6 +134,9 @@
                             <div class="col-md-6">
                                 <div>
                                     <a href="/tos" target="__blank">Please Read</a>
+                                    <div class="w-100" style="height:300px; overflo-y:auto">
+                                    @include('tos_blade');
+                                    </div>
                                 </div>
 
                                 Agree: <input id="" type="checkbox" class="" name="tos_agree" value="1" required/>
