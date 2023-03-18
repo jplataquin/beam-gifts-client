@@ -81,7 +81,7 @@
     If an unredeemed gift item has expired or has been used, Beam Gifts will not provide any refund irrespective of the gift balance, and the gift item is non-refundable and non-returnable. 
     </p>
 
-    <h5>Gift Items Eligible for Refund</h5>
+    <h5>Gift Items that are Eligible for Refund</h5>
 
     <p>
     Gift items that are not yet expired and have not been redeemed are eligible for refund if the purchaser of the said gift item has notified Beam Gifts through the appropriate channels (Email: refund@beam.gifts) using their registered email address. The time and date used to determine the expiration of the gift item is based on Philippine Standard Time (UTC+08:00). 
