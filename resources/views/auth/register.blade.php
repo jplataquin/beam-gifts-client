@@ -135,7 +135,7 @@
                                 <div>
                                     <a href="/tos" target="__blank">Please Read</a>
                                     <div class="w-100" style="height:300px; overflo-y:autoa">
-                                    @include('../tos_blade');
+                                    @include('tos_content');
                                     </div>
                                 </div>
 
