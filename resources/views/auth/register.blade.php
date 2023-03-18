@@ -134,8 +134,8 @@
                             <div class="col-md-6">
                                 <div>
                                     <a href="/tos" target="__blank">Please Read</a>
-                                    <div class="w-100" style="height:300px; overflo-y:auto">
-                                    @include('tos_blade');
+                                    <div class="w-100" style="height:300px; overflo-y:autoa">
+                                    @include('../tos_blade');
                                     </div>
                                 </div>
 
