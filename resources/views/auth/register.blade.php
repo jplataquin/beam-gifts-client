@@ -129,7 +129,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Terms & Services</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Terms of Service</label>
 
                             <div class="col-md-6">
                                 <div>
@@ -138,6 +138,7 @@
                                     @include('tos_content');
                                     </div>
                                 </div>
+
 
                                 Agree: <input id="" type="checkbox" class="" name="tos_agree" value="1" required/>
                             </div>
