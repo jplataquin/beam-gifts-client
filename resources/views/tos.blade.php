@@ -9,7 +9,7 @@
 
 
 <p>
-These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (<strong>Beam Gifts</strong>, <strong>we</strong>, <strong>our</strong>, or <strong>us</strong>), a proprietary gifting service platform (Service).
+These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (<strong>Beam Team</strong>, <strong>we</strong>, <strong>our</strong>, or <strong>us</strong>), a proprietary gifting service platform (<strong>Service</strong>).
 By using the Service, you agree to be bound by these terms.
 </p>
 
@@ -92,11 +92,17 @@ The mode of payment for the refund will be done electronically through online ba
 <p>
 We can terminate or refuse your access to the Service at any time, for any reason. We can also terminate, close, or suspend your Account at any time for any reason. Termination for any reason does not relieve you of any of your obligations to us under these Terms and any amounts owed to us as provided in these Terms or any other agreement you have with us. We will not be responsible for any loss, damage, harm or consequences, including any delay or inconvenience you may suffer as a result of our exercise of our rights under this section.
 Any pending transactions at the time of termination, closure, or suspension of your Account will be settled. If an investigation is pending at the time of closure, we may hold your funds until resolution of the investigation.
-Electronic Communications
-When you use the Service or send emails to us, you are communicating with us electronically. You consent to receive communications from us electronically. We may communicate with you by email (if provided by you) or by posting notices through the Service. You agree that all agreements, notices, disclosures and other communications that we provide you electronically satisfy any legal requirement that such communications be in writing.
-Links
-The Service contains links to websites operated by third parties. We do not monitor or control the linked sites and make no representations regarding, and are not liable or responsible for the accuracy, completeness, timeliness, reliability or availability of, any of the content uploaded, displayed, or distributed, or products, or services available at these sites. If you choose to access any third-party site, you do so at your own risk. The presence of a link to a third-party site does not constitute or imply our endorsement, sponsorship, or recommendation of the third party or of the content, products, or services contained on, or available through, the third-party site. We reserve the right to disable links from or to third party sites.
 
+
+<h5>Electronic Communications</h5>
+<p>
+When you use the Service or send emails to us, you are communicating with us electronically. You consent to receive communications from us electronically. We may communicate with you by email (if provided by you) or by posting notices through the Service. You agree that all agreements, notices, disclosures and other communications that we provide you electronically satisfy any legal requirement that such communications be in writing.
+</p>
+
+
+<h5>Links</h5>
+<p>
+The Service contains links to websites operated by third parties. We do not monitor or control the linked sites and make no representations regarding, and are not liable or responsible for the accuracy, completeness, timeliness, reliability or availability of, any of the content uploaded, displayed, or distributed, or products, or services available at these sites. If you choose to access any third-party site, you do so at your own risk. The presence of a link to a third-party site does not constitute or imply our endorsement, sponsorship, or recommendation of the third party or of the content, products, or services contained on, or available through, the third-party site. We reserve the right to disable links from or to third party sites.
 Your correspondence or dealings with the linked website, merchants or service providers are solely between you and such third parties, and Beam Gifts is neither responsible nor liable for any part of such dealings. Any charges you incur in relation to those third parties are your responsibility. You understand that when you provide data to such third parties, you are providing it in accordance with their privacy policy (if any), and our Privacy Policy does not apply with respect to such data provided to the third parties.
 </p>
 
@@ -126,9 +132,13 @@ THE BEAM TEAM PARTIES DO NOT ENDORSE AND ARE NOT RESPONSIBLE FOR THE ACCURACY OR
 
 <p>
 You agree to indemnify, defend and hold harmless Beam Gifts, and its subsidiaries and other affiliates, and its and their directors, officers, owners, agents, co-branders or other partners, employees, information providers, licensors, licensees, consultants, contractors and other applicable third parties (collectively "Indemnified Parties") from and against any and all claims, demands, causes of action, debt or liability, including reasonable attorneys’ fees, including without limitation attorneys’ fees and costs incurred by the Indemnified Parties arising out of, related to, or which may arise from: (a) your use of the Service; (b) any breach or non-compliance by you of any term of these Terms or our partner’s policies; (c) any dispute or litigation caused by your actions or omissions; or (d) your negligence or violation or alleged violation of any applicable law or rights of a third party.
-Equitable Remedies
-You acknowledge that the rights granted and obligations made under these Terms to Beam Gifts are of a unique and irreplaceable nature, the loss of which shall irreparably harm Beam Gifts and which cannot be replaced by monetary damages alone. Accordingly, Beam Gifts shall be entitled to injunctive or other equitable relief (without the obligations of posting any bond or surety or proof of damages) in the event of any breach or anticipatory breach by you.
+</p>
 
+
+<h5>Equitable Remedies</h5>
+
+<p>
+You acknowledge that the rights granted and obligations made under these Terms to Beam Gifts are of a unique and irreplaceable nature, the loss of which shall irreparably harm Beam Gifts and which cannot be replaced by monetary damages alone. Accordingly, Beam Gifts shall be entitled to injunctive or other equitable relief (without the obligations of posting any bond or surety or proof of damages) in the event of any breach or anticipatory breach by you.
 You irrevocably waive all rights to seek injunctive or other equitable relief, or to enjoin or restrain the operation of the Service, exploitation of any advertising or other materials issued in connection therewith, or exploitation of the Service or any content or other material used or displayed through the Service and agree to limit your claims to monetary damages (but only to the extent permissible under these Terms).
 </p>
 
