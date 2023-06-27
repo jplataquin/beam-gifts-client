@@ -76,6 +76,11 @@ Route::get('/faq',function(){
     return view('faq');
 });
 
+
+Route::get('/guide'.function(){
+    return view('guide');
+});
+
 Route::get('/validate/email/{token}',[App\Http\Controllers\ClientController::class,'validateEmail']);
 
 Route::get('/gift/qr/{order_uid}/{item_uid}',[App\Http\Controllers\GiftController::class, 'qr']);

@@ -4,7 +4,7 @@
 <div class="container">
 
     <p>
-    These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (<strong>Beam Team</strong>, <strong>we</strong>, <strong>our</strong>, or <strong>us</strong>), a proprietary gifting service platform (<strong>Service</strong>).
+    These Terms of Service (<strong>Terms</strong>) govern your use of Beam Gifts (<strong>we</strong>, <strong>our</strong>, or <strong>us</strong>), a proprietary gifting service platform (<strong>Service</strong>).
     By using the Service, you agree to be bound by these terms.
     </p>
 
