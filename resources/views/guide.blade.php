@@ -4,7 +4,7 @@
 <div class="container">
     <h1 class="mt-3 ">Guide</h1>
     
-    <div class="container">
+    <div class="container mb-5">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -52,10 +52,7 @@
 
     const myCarouselElement = $q('#carouselExampleDark').first();
 
-    const carousel = new bootstrap.Carousel(myCarouselElement, {
-    interval: 2000,
-    wrap: false
-    })
+    const carousel = new bootstrap.Carousel(myCarouselElement, {});
 
 </script>
 @endsection
