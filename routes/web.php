@@ -77,7 +77,7 @@ Route::get('/faq',function(){
 });
 
 
-Route::get('/guide'.function(){
+Route::get('/guide',function(){
     return view('guide');
 });
 
