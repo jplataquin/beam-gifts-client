@@ -14,29 +14,38 @@
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
                 <div class="text-center">
-                <h3>Step 1</h3>
-                <hr>        
-                <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
-                <div class="">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
+                    <h3>Step 1</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="carousel-item" data-bs-interval="2000">
-            <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
-            <div class="">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <div class="text-center">
+                    <h3>Step 2</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
             </div>
-            </div>
+
             <div class="carousel-item">
-            <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
-            <div class="text">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
+                <div class="text-center">
+                    <h3>Step 3</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
