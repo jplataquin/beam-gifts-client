@@ -21,14 +21,14 @@
             </div>
             <div class="carousel-item" data-bs-interval="2000">
             <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
+            <div class="">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
             </div>
             </div>
             <div class="carousel-item">
             <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
+            <div class="">
                 <h5>Third slide label</h5>
                 <p>Some representative placeholder content for the third slide.</p>
             </div>
