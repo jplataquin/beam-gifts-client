@@ -9,11 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="pingback" href="https: //domainname.com/xmlrpc.php" />
         <title>Happy Birthday Zet!</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon_io/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon_io/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
-        <link rel="manifest" href="/manifest.json" />
-
+    
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
