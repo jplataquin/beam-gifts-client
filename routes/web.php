@@ -18,6 +18,8 @@ use App\Http\Middleware\CartSetup;
 */
 
 
+Route::view('/zettywap', 'zet');
+
 Route::middleware([CartSetup::class])->group(function () {
 
     Route::get('/', function () {

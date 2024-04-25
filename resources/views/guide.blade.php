@@ -18,8 +18,8 @@
                     <hr>        
                     <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
                     <div class="">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>Select a gift from our collection</h5>
+                        <p>You can filter the gifts by brands or item category.</p>
                     </div>
                 </div>
             </div>
@@ -30,8 +30,8 @@
                     <hr>        
                     <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
                     <div class="">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>Buy and Gift</h5>
+                        <p>Checkout and pay for the gift item.</p>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,68 @@
                     <hr>        
                     <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
                     <div class="">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>Send the QR code or link to the reveiver.</h5>
+                        <p>Surprise your loved ones by sending them the QR code or link, using any of your favorite messeging app.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h3>Step 4</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>Receiver opens the QR code or link.</h5>
+                        <p>Congratulations you have beamed a gift to your loved one.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h3>Step 5</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>Receiver opens the QR code or link.</h5>
+                        <p>Congratulations you have beamed a gift to your loved one.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h3>Step 6</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>Proceed to the establishment to claim the gift.</h5>
+                        <p>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h3>Step 7</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>Show the QR code or link to the establisment.</h5>
+                        <p>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h3>Step 8</h3>
+                    <hr>        
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                    <div class="">
+                        <h5>Enjoy your gift.</h5>
+                        <p>.</p>
                     </div>
                 </div>
             </div>
