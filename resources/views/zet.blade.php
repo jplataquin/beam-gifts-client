@@ -8,53 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="pingback" href="https: //domainname.com/xmlrpc.php" />
-        <title></title>
-        <!-- style and script resources -->
-        <link rel="stylesheet" href="" media="all">
-        <script src=""></script>
-        <!--meta properties -->
-        <meta name="description" content=" Your site description." />
-        <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
-        <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
-        <link rel="canonical" href="" />
-        <!--open graph meta tags for social sites and search engines-->
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="  Opengraph content 25 char are best" />
-        <meta property="og:description" content="  #description." />
-        <meta property="og:url" content="" />
-        <meta property="og:site_name" content="" />
-        <meta property="og:image" content="images//hom-banner-compressed.jpg" />
-        <meta property="og:image:secure_url" content="images//hom-banner-compressed.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="660" />
-        <!--twitter description-->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="." />
-        <meta name="twitter:title" content="" />
-        <meta name="twitter:site" content="@" />
-        <meta name="twitter:image" content="images/hom-banner-compressed.jpg" />
-        <meta name="twitter:creator" content="@" />
-        <!--opengraph tags for location or address for information panel in google-->
-        <meta name="og:latitude" content="" />
-        <meta name="og:longitude" content="" />
-        <meta name="og:street-address" content="" />
-        <meta name="og:locality" content="" />
-        <meta name="og:region" content="" />
-        <meta name="og:postal-code" content="" />
-        <meta name="og:country-name" content="" />
-        <!--search engine verification-->
-        <meta name="google-site-verification" content="" />
-        <meta name="yandex-verification" content="" />
-        <!--powered by meta-->
-        <meta name="generator" content="" />
-        <!-- Site fevicon icons -->
-        <link rel="icon" href="images/icon/cropped-cropped-favicon-1-1-32x32.png" sizes="32x32" />
-        <link rel="icon" href="images/icon/cropped-cropped-favicon-1-1-192x192.png" sizes="192x192" />
-        <link rel="apple-touch-icon-precomposed" href="images/icon/cropped-cropped-favicon-1-1-180x180.png" />
-        <meta name="msapplication-TileImage" content="images/icon/cropped-cropped-favicon-1-1-270x270.png" />
-        <!--complete list of meta tags at - https://gist.github.com/lancejpollard/1978404 -->
-
+        <title>Happy Birthday Zet!</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon_io/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon_io/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
+        <link rel="manifest" href="/manifest.json" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -221,7 +179,7 @@ html {
                         Now I know,
                         </br>
 
-                        those things you went through
+                        that those things you went through
                         </br>
                         made you into one of the most 
                         <br>
