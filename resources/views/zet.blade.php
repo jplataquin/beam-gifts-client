@@ -223,7 +223,7 @@ html {
 
                         that what you went through
                         </br>
-                        turned you into one of the most 
+                        made you into one of the most 
                         <br>
                         beautiful woman in the world.
                         <br>
@@ -232,7 +232,7 @@ html {
                         
                     </p>
                   
-                    <img src="https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/409202311_6427551884015708_8694626795215750430_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGfVPGCmRGZnKxvgFr_QnEzvPQtgqiU5na89C2CqJTmdoRtwc42VmQwXqY1ocPzF97_IZK9WDIH_r_rqMgmY9gv&_nc_ohc=0g5oY2izoAkAb4bMgY-&_nc_ht=scontent-cdg4-1.xx&oh=00_AfBaQRKf-1R0lL40Dxf0wxhNNrScfVJ-H-EWyPLSCeJpRA&oe=662E4EF1" width="100px"/>
+                    <img src="{{asset('images/zandj.png')}}" width="100px"/>
                     
                     <p>From your number one fan, Skydiver JP</p>
                 </div>
