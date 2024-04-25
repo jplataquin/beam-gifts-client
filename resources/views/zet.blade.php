@@ -189,7 +189,7 @@ html {
                   
                     <img src="{{asset('images/zandj.png')}}" width="100px"/>
                     
-                    <p>From your #1 one fan<br>
+                    <p>From your #1 fan<br>
                     - Skydiver JP -</p>
                 </div>
             </div>
