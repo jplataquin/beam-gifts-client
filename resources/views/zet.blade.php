@@ -183,7 +183,7 @@ html {
                         beautiful woman in the world.
                         <br>
                         <br>
-                        Happly Birthday, Skydiver Zet!
+                        🎂 Happy Birthday, Skydiver Zet! 🎂
                         
                     </p>
                   
