@@ -210,18 +210,18 @@ html {
                 
                 <div class="card__panel card__panel--inside-right">
                     <p class="text-left">
-                        You endured fierce storms,
+                        You were swallowed by fierce storms.
                         </br>
-                        was defeated by rough waters.
-                        </br>
-                        </br>
-                        But here you are standing in front of me.
+                        Defeated by rough waters.
                         </br>
                         </br>
-                        Now everyone knows,
+                        But here you are, standing in front of me.
+                        </br>
+                        </br>
+                        Now I know,
                         </br>
 
-                        that what you went through
+                        those things you went through
                         </br>
                         made you into one of the most 
                         <br>
@@ -234,8 +234,8 @@ html {
                   
                     <img src="{{asset('images/zandj.png')}}" width="100px"/>
                     
-                    <p>From your number one fan, <br>
-                    "Skydiver JP"</p>
+                    <p>From your #1 one fan, <br>
+                    - Skydiver JP</p>
                 </div>
             </div>
         </div>
