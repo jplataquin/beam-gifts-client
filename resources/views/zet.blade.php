@@ -210,30 +210,28 @@ html {
                 
                 <div class="card__panel card__panel--inside-right">
                     <p class="text-left">
-                        She was swallowed
+                        You endured fierce storms,
                         </br>
-                        by an avalanche
+                        was defeated by rough waters.
                         </br>
-                        defeated by rough waters,
                         </br>
-                        but she stood in front of me
+                        But here you are standing in front of me.
                         </br>
-                        and I just knew
                         </br>
-                        I was introduced
+                        Now everyone knows, what you went through
                         </br>
-                        to the most beautiful girl
-                        </br>
-                        in the world
-                        </br></br>
-                        
-                        - Beautiful people just don't happen
+                        turned you into one of the most 
+                        <br>
+                        beautiful woman in the world.
+                        <br>
+                        <br>
+                        Happly Birthday, Skydiver Zet!
                         
                     </p>
-                   <!--
+                  
                     <img src="https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/409202311_6427551884015708_8694626795215750430_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGfVPGCmRGZnKxvgFr_QnEzvPQtgqiU5na89C2CqJTmdoRtwc42VmQwXqY1ocPzF97_IZK9WDIH_r_rqMgmY9gv&_nc_ohc=0g5oY2izoAkAb4bMgY-&_nc_ht=scontent-cdg4-1.xx&oh=00_AfBaQRKf-1R0lL40Dxf0wxhNNrScfVJ-H-EWyPLSCeJpRA&oe=662E4EF1" width="100px"/>
-                    -->
-                    <p>Your friend, Tammy</p>
+                    
+                    <p>From your number one fan, Skydiver JP</p>
                 </div>
             </div>
         </div>
