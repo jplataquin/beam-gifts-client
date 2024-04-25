@@ -381,7 +381,8 @@ html {
 
                 }else{
 
-                    audio.stop();
+                    audio.pause();
+                    audio.currentTime = 0;
                
                     if(myReq != null){
                         cancelAnimationFrame(myReq);
