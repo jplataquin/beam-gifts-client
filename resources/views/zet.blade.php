@@ -218,7 +218,10 @@ html {
                         But here you are standing in front of me.
                         </br>
                         </br>
-                        Now everyone knows, what you went through
+                        Now everyone knows,
+                        </br>
+
+                        that what you went through
                         </br>
                         turned you into one of the most 
                         <br>
